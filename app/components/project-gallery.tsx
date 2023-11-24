@@ -20,21 +20,21 @@ const cities = [
     image: gallery1,
     location: "LocationHolder",
     status: "NOW LEASING",
-    url: "/",
+    url: "/posts/1650-on-second",
   },
   {
     name: "618 CARNAVRON",
     image: gallery2,
     location: "New Westminister",
     status: "NOW SELLING",
-    url: "/",
+    url: "/posts/618-carnavron",
   },
   {
     name: "PENDRELL ST",
     image: gallery3,
     location: "LocationHolder",
     status: "NOW SELLING",
-    url: "/",
+    url: "/posts/pendrell-street",
   },
 ];
 
@@ -42,7 +42,6 @@ const handleCity = (city, target) => {
   gsap.to(target, {
     duration: 0,
     background: `url(${city}) center center`,
-    //   background: `url("https://i.imgur.com/7WOEPhU.jpeg") center center`
   });
   gsap.to(target, {
     duration: 0.4,
@@ -79,7 +78,7 @@ export default function ProjectGallery(props) {
               projectName={el.name}
               location={el.location}
               status={el.status}
-              link={""}
+              link={el.url}
             />
           </div>
         ))}

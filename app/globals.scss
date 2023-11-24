@@ -24,8 +24,7 @@ body {
   background-color: $white;
   padding: 0;
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .grid-container {
@@ -34,9 +33,19 @@ body {
   column-gap: 2rem;
 }
 
+span {
+  // font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.footer-gap {
+  padding-bottom: 12rem;
+}
+
 .container {
-  width: 1280px;
-  min-width: 1280px;
+  width: 1380px;
+  min-width: 1380px;
   margin: auto;
   .wrapper {
     // padding: 0 48px;
@@ -145,8 +154,11 @@ header {
         height: 100%;
         width: 100%;
         opacity: 0;
-        background-size: cover;
         background-repeat: no-repeat;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover !important;
         animation-name: backgroundEffect;
         animation-duration: 30s;
         animation-iteration-count: infinite;
@@ -366,11 +378,10 @@ header {
 
 .landing-bg {
   grid-column-end: -1;
-  position: absolute;
   justify-content: center;
   margin: auto;
   display: flex;
-  position: absolute;
+  //   position: absolute;
   align-items: center;
   max-height: -webkit-fill-available;
   // background-image: url("../public/favicon/portfolio-bg-v2.png");
@@ -395,7 +406,7 @@ header {
   flex-grow: 1;
   display: inline-block;
   .gallery-bg {
-    height: 500px;
+    height: 70vh;
     // background: tomato;
     width: 100%;
     // margin: 0 1rem $sm-margin 1rem;
@@ -495,7 +506,7 @@ header {
 // project page
 .project-card-content {
   width: 50vw;
-  padding: 6rem; /* margin: auto; */
+  padding: 10rem; /* margin: auto; */
   color: white; /* bottom: 0; */
   position: absolute;
   z-index: 1;
@@ -579,6 +590,9 @@ header {
   li {
     margin-bottom: 15vh;
   }
+  li:last-child {
+    margin-bottom: 0;
+  }
   li:nth-child(odd) {
     // color: #777;
     margin-left: -4rem;
@@ -605,7 +619,7 @@ header {
 }
 
 .right-col {
-  background: var(--bg-color);
+  //   background: var(--bg-color);
   width: 50vw;
   height: 100vh;
   padding: 5rem 3.5rem;
@@ -653,9 +667,9 @@ textarea::placeholder {
 
 input,
 textarea {
-  color: var(--primary-color);
+  //   color: var(--primary-color);
   font-weight: 500;
-  background: var(--bg-color);
+  background: $white;
   border: none;
   border-bottom: 1px solid var(--secondary-color);
   padding: 0.5rem 0;
@@ -836,4 +850,101 @@ input:checked + .slider:before {
     object-fit: cover;
     object-position: center center;
   }
+}
+
+.underscore-cta {
+  cursor: pointer;
+  a {
+    // color: $sprite-text;
+    display: inline-block;
+    position: relative;
+  }
+  a:after {
+    transition: 0.25s ease-in-out;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #357d97;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after,
+  .contactModal:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.underscore-cta-v2 {
+  cursor: pointer;
+  a {
+    // color: $sprite-text;
+    display: inline-block;
+    position: relative;
+  }
+  a:after {
+    transition: 0.25s ease-in-out;
+    background: none repeat scroll 0 0 transparent;
+    bottom: -12px;
+    content: "";
+    display: block;
+    height: 12px;
+    left: 50%;
+    z-index: 1;
+    position: absolute;
+    background: #357d97;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after,
+  .contactModal:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  h3,
+  p {
+    z-index: 10;
+    display: block;
+  }
+}
+
+img {
+  object-fit: cover !important;
+}
+
+// scrollbar
+
+// body::-webkit-scrollbar {
+//   width: 1rem;
+// }
+
+// body::-webkit-scrollbar-thumb {
+//   height: 4rem;
+//   border-radius: 0.5rem;
+//   border: 4px solid transparent;
+//   background-clip: content-box;
+//   background-color: #577da6a0;
+
+//   &:hover {
+//     background-color: #577da6;
+//   }
+// }
+
+// body::-webkit-scrollbar-track {
+//   background-color: $white;
+// }
+
+// ---- Scroll Video
+#set-height {
+  display: block;
+}
+#v0 {
+//   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }

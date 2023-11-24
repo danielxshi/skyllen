@@ -4,6 +4,7 @@ import ProjectMessages from "../JSON/ProjectMessages";
 import PageSection from "../components/page-section";
 import FooterMessages from "../JSON/FooterItems";
 import Link from "next/link";
+import bannerBG from "../images/contact-banner.webp"
 
 export const renderSwitch = (params) => {
   const keys = Object.keys(params);
@@ -37,7 +38,7 @@ export default function Contact() {
   console.log(FooterMessages);
   return (
     <>
-      <ParallaxBG url="https://images.pexels.com/photos/5365875/pexels-photo-5365875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+      <ParallaxBG url={bannerBG}>
         <div className="h-screen-2/3 flex">
           <Banner
             style="m-auto"

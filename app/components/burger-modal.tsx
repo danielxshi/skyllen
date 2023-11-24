@@ -23,6 +23,11 @@ import { MdClose } from "react-icons/md";
 import dallas from "../images/dallas.webp";
 import austin from "../images/austin.webp";
 import newyork from "../images/newyork.webp";
+
+import gallery1 from "../images/1650-day.webp";
+import gallery2 from "../images/618-lobby.webp";
+import gallery3 from "../images/pendrell-aerial.webp";
+
 import {
   staggerText,
   staggerReveal,
@@ -61,19 +66,17 @@ const cities = [
   {
     url: "/posts/1650-on-second",
     name: "1650 ON SECOND",
-    image: "https://i.imgur.com/7WOEPhU.jpeg",
+    image: "https://i.imgur.com/hvXK67e.jpeg",
   },
   {
     url: "/posts/618-carnavron",
     name: "618 CARNAVRON",
-    image:
-      "https://images.pexels.com/photos/2422588/pexels-photo-2422588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://i.imgur.com/6p4tNs5.jpeg",
   },
   {
     url: "/posts/pendrell-street",
     name: "PENDRELL ST",
-    image:
-      "https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://i.imgur.com/3loZccM.jpeg",
   },
 ];
 
@@ -135,7 +138,6 @@ const handleCity = (city, target) => {
   gsap.to(target, {
     duration: 0,
     background: `url(${city}) center center`,
-    //   background: `url("https://i.imgur.com/7WOEPhU.jpeg") center center`
   });
   gsap.to(target, {
     duration: 0.4,
@@ -159,40 +161,6 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
   let line2 = useRef(null);
   let line3 = useRef(null);
   let info = useRef(null);
-
-  //   useEffect(() => {
-  //     // console.log("hidden state " + this.state)
-
-  //     // console.log("setHidden" + setHidden)
-
-  //     console.log("showModal" + showModal);
-
-  //     // console.log("setShowModal" + setShowModal)
-
-  //     // If the menu is open and we click the menu button to close it.
-  //     if (showModal !== false) {
-  //       // If menu is closed and we want to open it.
-  //       console.log("show modal != false");
-  //       staggerRevealClose(reveal2, reveal1);
-  //       // Set menu to display none
-  //       gsap.to(menuLayer, { duration: 1, css: { display: "none" } });
-  //     } else if (
-  //       showModal === true ||
-  //       (showModal === true && setShowModal === null)
-  //     ) {
-  //       // Set menu to display block
-  //       gsap.to(menuLayer, { duration: 0, css: { display: "block" } });
-  //       //Allow menu to have height of 100%
-  //       gsap.to([reveal1, reveal2], {
-  //         duration: 0,
-  //         opacity: 1,
-  //         height: "100%",
-  //       });
-  //       staggerReveal(reveal1, reveal2);
-  //       fadeInUp(info);
-  //       staggerText(line1, line2, line3);
-  //     }
-  //   }, [state]);
 
   const modalRef = useRef();
   const animation = useSpring({
@@ -238,7 +206,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                       <div ref={(el) => (reveal2 = el)} className="menu-layer">
                         <div
                           ref={(el) => (cityBackground = el)}
-                          className="menu-city-background"
+                          className="menu-city-background bg-cover"
                         ></div>
 
                         {/* Using projectMessages */}
@@ -265,6 +233,17 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
                                       onMouseOut={(e) => handleHoverExit(e)}
+                                      ref={(el) => (line3 = el)}
+                                      href="/projects"
+                                      onClick={closeModal}
+                                    >
+                                      Projects
+                                    </Link>
+                                  </li>
+                                  <li>
+                                    <Link
+                                      onMouseEnter={(e) => handleHover(e)}
+                                      onMouseOut={(e) => handleHoverExit(e)}
                                       ref={(el) => (line1 = el)}
                                       href="/company"
                                       onClick={closeModal}
@@ -283,17 +262,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                       News
                                     </Link>
                                   </li>
-                                  <li>
-                                    <Link
-                                      onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line3 = el)}
-                                      href="/projects"
-                                      onClick={closeModal}
-                                    >
-                                      Projects
-                                    </Link>
-                                  </li>
+
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}

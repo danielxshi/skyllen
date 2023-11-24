@@ -15,7 +15,8 @@ export default {
       height: {
         "128": "32rem",
         "256": "64rem",
-        "screen-2/3": "60vh"
+        "screen-2/3": "60vh",
+        "screen-3/4": "75vh"
       },
       colors: {
         'white': '#fff'

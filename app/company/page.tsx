@@ -11,6 +11,7 @@ import dallas from "../images/dallas.webp";
 import ParallaxBG from "../components/ParallaxBG";
 import DescriptionImage1 from "../images/construction.webp";
 import DescriptionImage2 from "../images/streetview.webp";
+import headerBG from "../images/pendrell-aerial.webp"
 
 const descriptions = [
   {
@@ -35,7 +36,7 @@ const descriptions = [
 export default function Page() {
   return (
     <>
-      <ParallaxBG url="https://images.pexels.com/photos/5365875/pexels-photo-5365875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+      <ParallaxBG url={headerBG}>
         <Banner
           style="min-h-screen flex"
           title={ProjectMessages.CompanyTitle}

@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import BurgerModal from "./components/burger-modal";
 import ScrollObserver from "./util/scroll-observer";
 import ParallaxBG from "./components/ParallaxBG";
+import FooterBG from "./images/footer.webp"
 
 // export const metadata = {
 //   title: `Next.js and ${CMS_NAME} Example`,
@@ -36,7 +37,7 @@ export const renderSwitch = (params) => {
     case "contact":
       return (
         <div className="col-span-3">
-          <h3 className="mb-8">Let's connect</h3>
+          <h3 className="mb-8">Let's Connect</h3>
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
@@ -55,7 +56,7 @@ export const renderSwitch = (params) => {
           <h3 className="mb-8">Projects</h3>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
-              <li>
+              <li className="underscore-cta">
                 <Link key={index} href={item["url"]} className="underscore-cta">
                   {item["project"]}
                 </Link>
@@ -138,7 +139,7 @@ export default function RootLayout({
             <HeaderModal />
             <main>{children}</main>
 
-            <ParallaxBG url="https://images.pexels.com/photos/5365875/pexels-photo-5365875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+            <ParallaxBG url={FooterBG}>
               <Footer />
             </ParallaxBG>
           </section>

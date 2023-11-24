@@ -6,8 +6,8 @@ export default function Banner({ children, ...props }) {
   return (
     <div className="min-h-screen">
       <ParallaxBG
-        style="h-screen-2/3"
-        url="https://images.pexels.com/photos/5365875/pexels-photo-5365875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        style="h-screen-3/4"
+        url={props.url}
       >
         <div className="container flex h-full text-white ">
           <div className="mt-auto mb-14">

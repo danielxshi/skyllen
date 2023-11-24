@@ -34,11 +34,11 @@ const FooterItems = [
         content: [
           {
             link: "Instagram",
-            url: "https://www.instagram.com/"
+            url: "https://www.instagram.com/skyllenpacific/"
           },
           {
             link: "LinkedIN",
-            url: "https://www.linkedin.com/in/"
+            url: "https://www.linkedin.com/company/skyllen-pacific/"
           },
         ],
       },

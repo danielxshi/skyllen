@@ -18,7 +18,7 @@ const Button = ({ children, onClick, ...props }) => {
         backgroundColor: "#AACAE6",
         // scale: 1.1,
       }}
-      className="btn-wrap min-w-max align-middle w-24 font-mono font-medium text-small leading-none px-6 py-4 border-solid border border-gray-full rounded-lg"
+      className="btn-wrap min-w-max align-middle w-24 font-mono font-medium text-small leading-none px-6 py-4 border-solid border border-black rounded-lg"
     >
       {/* <a className="hit" href=""></a> */}
       {/* <div className="btn-inner"> */}

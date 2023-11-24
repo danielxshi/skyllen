@@ -5,6 +5,8 @@ import BackButton from "../Button/BackButton";
 import React, { Component } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../images/nav-logo.png"
+import ContentfulImage from "@/lib/contentful-image";
 
 class SlugNav extends Component {
   state = { clicked: false };
@@ -35,7 +37,7 @@ class SlugNav extends Component {
                 <div className="logo">
                   <Link  onClick={() => {
                       this.props.onLogoClick();
-                    }} href="/">Skyllen</Link>
+                    }} href="/"><ContentfulImage width={48} src={logo}/></Link>
                 </div>
                 <div className="menu">
                   <button

@@ -41,6 +41,7 @@ export default function Landing() {
     <>
       <ParallaxBG
         url="https://i.imgur.com/BuyW1x3.jpeg"
+        style="text-white"
       >
         <section className="landing-content">
           <motion.div
@@ -48,7 +49,7 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="header-wrapper container text-white"
+            className="header-wrapper container"
           >
             <h1 className="">
               {/* {ProjectMessages.PageItems.map((item, index) => {

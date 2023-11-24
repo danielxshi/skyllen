@@ -9,31 +9,31 @@ import image3 from "../images/618-lobby.webp";
 
 const content = [
   {
-    name: "inspiration",
+    name: "INSPIRATION",
     page: 0,
     image: image1,
     textOne:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "Skyllen Pacific is inspired by the evolving interpretations of urbanity and sustainability emerging from recent cityscapes.",
     textTwo:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "Valuing responsible investment, Skyllen champions sustainable practices during the management process to improve local infrastructure and public spaces.",
   },
   {
-    name: "motivation",
+    name: "COLLABORATION",
     page: 1,
     image: image2,
     textOne:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "Every Skyllen Pacific project involves thoughtful collaboration between project context and contemporary design.",
     textTwo:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "Engaging experienced industry professionals, Skyllen leverages progressive research and development methods to propel creative solutions into high-quality results.",
   },
   {
-    name: "determination",
+    name: "INNOVATION",
     page: 2,
     image: image3,
     textOne:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "An enriched life stems from innovative planning and design. Skyllen works with clients to transform ideas into actuality. ",
     textTwo:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "The firm’s dedication to early blueprinting sets the template for innovation, leading to conscientiously planned projects that radiate eminent design and modern experience.",
   },
 ];
 
@@ -60,7 +60,7 @@ const Works = () => (
               </WorkBleed>
               <WorkBleed progress={progress}>
                 <div className="project-card-content">
-                  <div className="justify-between h-3/4 flex flex-col">
+                  <div className="justify-between flex flex-col h-full">
                     <div>
                       <h3>{el.name} </h3>
                       <span>-</span>

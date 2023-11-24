@@ -6,6 +6,7 @@ import Banner from "../components/banner";
 import PageSection from "../components/page-section";
 import Headline from "../components/headline";
 import ContentfulImage from "@/lib/contentful-image";
+import bgBanner from "../images/news.webp"
 
 const NewsContent = [
   {
@@ -63,7 +64,7 @@ function NewsGalleryItem() {
 export default function Page() {
   return (
     <>
-      <ParallaxBG url="https://images.pexels.com/photos/3639003/pexels-photo-3639003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+      <ParallaxBG url={bgBanner}>
         <Banner
           style="min-h-screen flex"
           title={ProjectMessages.CompanyTitle}

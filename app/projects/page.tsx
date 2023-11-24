@@ -27,7 +27,7 @@ const projects = [
     name: "618 CARNAVRON",
     imageOne: projectImageL1,
     imageTwo: projectImageR1,
-    link: "/",
+    link: "/posts/618-carnavron",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
   },
@@ -36,7 +36,7 @@ const projects = [
 
     imageOne: projectImageL2,
     imageTwo: projectImageR2,
-    link: "/",
+    link: "/posts/1650-on-second",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
   },
