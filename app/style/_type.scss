@@ -1,0 +1,48 @@
+@import "_variables.scss";
+
+$sm-font: 0.9rem; // footer ?? |  base ÷ 1.65 | smaller than base
+$base-font: 1.2rem; // p | 17px
+$med-font: $base-font * 1.65; // h3 | base * 1.65
+$lrg-font: $base-font * (1.65 * 1.65); // h2 | h3 * 1.65
+$xl-font: $base-font * (1.65 * 1.65 * 1.65); // h1 | h2 * 1.65
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: $lrg-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 9.82756rem */
+  //   letter-spacing: -0.3rem;
+}
+
+h2 {
+  font-family: Voyage;
+  font-size: $lrg-font;
+//   font-style: normal;
+  font-weight: lighter;
+  line-height: 125%; /* 5.95625rem */
+//   letter-spacing: -0.2rem;
+}
+
+h3 {
+  font-family: Voyage;
+  font-size: $med-font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 5.95625rem */
+//   letter-spacing: -0.2rem;
+}
+
+p {
+  font-family: Quicksand;
+  font-size: $base-font;
+}
+
+.overline {
+  font-size: $sm-font;
+}
+
+.heavy-med{
+    // font-weight: bold;
+    font-size: $med-font;
+}

@@ -11,6 +11,7 @@ const POST_GRAPHQL_FIELDS = `
       url
     }
   }
+  projectDetails 
   excerpt
   content {
     json
