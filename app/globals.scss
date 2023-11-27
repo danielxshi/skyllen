@@ -23,6 +23,7 @@ html,
 body {
   background-color: $white;
   padding: 0;
+  overflow-x: hidden;
   margin: 0;
   font-family: "Quicksand", sans-serif;
 }
@@ -44,8 +45,9 @@ span {
 }
 
 .container {
-  width: 1380px;
-  min-width: 1380px;
+//   width: 1380px;
+  width: 90vw;
+  max-width: 1380px;
   margin: auto;
   .wrapper {
     // padding: 0 48px;
@@ -939,12 +941,12 @@ img {
 // }
 
 // ---- Scroll Video
-#set-height {
-  display: block;
-}
-#v0 {
-//   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+
+
+.video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  

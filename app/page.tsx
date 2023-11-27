@@ -1,33 +1,39 @@
-import { draftMode } from "next/headers";
-import { getAllPosts } from "@/lib/api";
+// import { draftMode } from "next/headers";
+// import { getAllPosts } from "@/lib/api";
+import React from "react";
 import Landing from "./components/landing";
 import ProjectGallery from "./components/project-gallery";
 import PageSection from "./components/page-section";
 import Headline from "./components/headline";
+import ScrollVideo from "./components/ScrollVideo/ScrollVideo";
+import { SectionLayout } from "./components/SectionLayouts";
 
-export default async function Page() {
-  const { isEnabled } = draftMode();
-  const allPosts = await getAllPosts(isEnabled);
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+type Props = {};
 
+const Page = (props: Props) => {
+  // const { isEnabled } = draftMode();
+  // const allPosts = await getAllPosts(isEnabled);
+  // const heroPost = allPosts[0];
+  // const morePosts = allPosts.slice(1);
 
-
-  
   return (
-    <div className=" ">
+    <div>
       <Landing />
 
-      <PageSection style={"container min-h-screen pt-16 pb-16 relative"}>
-        <div id="set-height"></div>
-        <p id="time"></p>
-        <video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
-          <source
-            type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
-            src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4"
-          ></source>
-        </video>
-      </PageSection>
+      {/* <div></div> */}
+
+      {/* <div className="min-h-screen w-full bg-white font-normal text-black"> */}
+      {/* <PageSection style="min-h-screen">
+        <div className="">
+          <ScrollVideo
+            src={{
+              mp4: "https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4",
+            }}
+          />
+        </div>
+      </PageSection> */}
+      {/* </div> */}
+
       <PageSection style={"container min-h-screen pt-16 pb-16"}>
         <ProjectGallery />
       </PageSection>
@@ -39,4 +45,6 @@ export default async function Page() {
       </PageSection>
     </div>
   );
-}
+};
+
+export default Page;

@@ -10,12 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import BurgerModal from "./components/burger-modal";
 import ScrollObserver from "./util/scroll-observer";
 import ParallaxBG from "./components/ParallaxBG";
-import FooterBG from "./images/footer.webp"
-
-// export const metadata = {
-//   title: `Next.js and ${CMS_NAME} Example`,
-//   description: `This is a blog built with Next.js and ${CMS_NAME}.`,
-// };
+import FooterBG from "./images/footer.webp";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,12 +19,8 @@ const inter = Inter({
 });
 
 export const renderSwitch = (params) => {
-  //   if (!params) {
-  //     return "";
-  //   }
   const keys = Object.keys(params);
   const value = keys;
-  // console.log("params" + params[0]);
   const test = params[value];
   const test2 = test["content"];
 
@@ -74,7 +65,9 @@ export const renderSwitch = (params) => {
             {test2.map((item, index) => (
               <>
                 <li key={index} className="underscore-cta">
-                  <Link locale={false} replace href={item["url"]}>{item["link"]}</Link>
+                  <Link locale={false} replace href={item["url"]}>
+                    {item["link"]}
+                  </Link>
                 </li>
               </>
             ))}

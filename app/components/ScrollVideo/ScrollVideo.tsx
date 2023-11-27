@@ -1,3 +1,4 @@
+"use client";
 import React, {
   MutableRefObject,
   useEffect,
@@ -9,13 +10,17 @@ import { useContainerScroll } from "../ScrollContainer/ScrollContainer";
 import StickyContainer, {
   useStickyContainerBounds,
 } from "../ScrollContainer/StickyContainer";
-import { useBoundingBox } from "@/hooks/useBoundingBox";
-import { useWindowDimension } from "@/hooks/useWindowDimension";
-import { clamp, motion, useMotionValue, useTransform } from "framer-motion";
+import { useBoundingBox } from "@/app/hooks/useBoundingBox";
+import { useWindowDimension } from "@/app/hooks/useWindowDimension";
+import {
+  clamp,
+  motion,
+  useMotionValue,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Sticky from "../ScrollContainer/Sticky";
-import { AnimationConfig } from "../AnimationConfig";
-
-import test from "./"
+import { AnimationConfig } from "../../util/AnimationConfig";
 
 type Props = {
   playbackConst?: number;
@@ -27,14 +32,11 @@ type Props = {
 };
 
 const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
-  const { scrollY, refreshDocumentMeasurement, scrollHeight } =
-    useContainerScroll();
+  const { scrollY } = useScroll();
   const [videoScrollDistance, setVideoScrollDistance] = useState(0);
 
-  // const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
   const containerBound = useStickyContainerBounds();
   const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
-  // const [videoRef, videoBounds] = useBoundingBox<HTMLVideoElement>([]);
   const videoFrame = useRef(0);
   const [isScrubbingVideo, setIsScrubbingVideo] = useState(false);
   const windowDim = useWindowDimension();
@@ -42,8 +44,16 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
   const scrollProgress = useMotionValue(0);
 
   useEffect(() => {
+    // console.log("scrollY changing");
+
     const scrollStartPosition = containerBound.top;
     const videoScrollDistance = containerBound.bottom - scrollStartPosition;
+
+    console.log("container bound top" + containerBound.top);
+    console.log("container bound bottom" + containerBound.bottom);
+
+    // Logging start scroll position
+    console.log("scroll start position" + scrollStartPosition);
 
     const cancel = scrollY.on("change", (v) => {
       const timeProgress = (v - scrollStartPosition) / videoScrollDistance;
@@ -55,6 +65,7 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
         timeProgressClamped * Math.floor(videoRef.current.duration);
 
       if (timeProgress > 0 && timeProgress < 1) {
+        console.log("scrubbing");
         setIsScrubbingVideo(true);
       } else {
         setIsScrubbingVideo(false);
@@ -103,7 +114,7 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
 
   const handleMetaDataLoaded = () => {
     setVideoScrollDistance(
-      Math.floor(videoRef.current.duration) * playbackConst,
+      Math.floor(videoRef.current.duration) * playbackConst
     );
   };
 
@@ -111,20 +122,20 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
     videoRef.current.load();
   }, [videoRef]);
 
-  useEffect(() => {
-    refreshDocumentMeasurement();
-  }, [videoScrollDistance]);
+  // useEffect(() => {
+  //   refreshDocumentMeasurement();
+  // }, [videoScrollDistance]);
 
   const scale = useTransform(scrollProgress, [0, 1], [2, 2]);
   const pos = useTransform(
     scrollProgress,
     [0, 0.5, 1],
-    [-windowDim.width / 3, -windowDim.width / 4, 0],
+    [-windowDim.width / 3, -windowDim.width / 4, 0]
   );
 
   const isLandscape = useMemo(
     () => windowDim.width > windowDim.height,
-    [windowDim],
+    [windowDim]
   );
 
   const videoScale = useTransform(scale, (latest) => {
@@ -159,7 +170,7 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
           // src="../../../public/about/about-intro-video-old-2.mp4"
           loop
           muted
-          autoPlay
+          // autoPlay
           className="h-[100vh] w-[100vw]"
           style={{
             zIndex: -1000,
