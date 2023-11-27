@@ -44,9 +44,9 @@ export default function Page() {
         />
       </ParallaxBG>
       <PageSection style="pt-16 pb-16 h-128 flex">
-        <div className="grid-container m-auto">
-          <h3 className="col-start-2 col-span-3">Our History |</h3>
-          <div className="content col-start-5 col-span-3">
+        <div className="grid-container m-auto container">
+          <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">Our History |</h3>
+          <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3">
             <p className="pb-8">
               Since 2008, Skyllen Pacific has been active throughout Metro
               Vancouver observing market needs and acquiring lands in strategic
@@ -70,11 +70,11 @@ export default function Page() {
               paragraphOne={el.paragraphOne}
               paragraphTwo={el.paragraphTwo}
               title={el.service}
-              style="mb-16"
+              style="mb-16 col-span-full md:col-start-1 md:col-end-4 "
               buttonText="Learn More"
               url="/"
             />
-            <div className="col-start-6 col-span-3 relative contentful-fill-container">
+            <div className="col-start-1 md:col-start-5 md:col-span-4 relative col-span-full contentful-fill-container">
               <ContentfulImage fill={true} src={el.image} alt={"construction"} quality={50} />
             </div>
           </div>

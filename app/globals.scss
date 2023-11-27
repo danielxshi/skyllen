@@ -23,7 +23,6 @@ html,
 body {
   background-color: $white;
   padding: 0;
-  overflow-x: hidden;
   margin: 0;
   font-family: "Quicksand", sans-serif;
 }
@@ -44,8 +43,15 @@ span {
   padding-bottom: 12rem;
 }
 
+.footer-container {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.663),
+    rgba(0, 0, 0, 0.679),
+    rgba(0, 0, 0, 0.795)
+  );
+}
+
 .container {
-  //   width: 1380px;
   width: 90vw;
   max-width: 1380px;
   margin: auto;
@@ -189,7 +195,6 @@ header {
               padding: 0;
               li {
                 list-style: none;
-                font-size: 6rem;
                 font-weight: 700;
                 cursor: pointer;
                 height: 135px;
@@ -506,8 +511,8 @@ header {
 
 // project page
 .project-card-content {
-  width: 50vw;
-  padding: 10rem; /* margin: auto; */
+  //   width: 50vw;
+  //   padding: 10rem; /* margin: auto; */
   color: white; /* bottom: 0; */
   position: absolute;
   z-index: 1;
@@ -516,6 +521,14 @@ header {
   flex-direction: column;
   margin-bottom: 0;
   justify-content: end;
+
+  padding: $sm-space;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.663),
+    rgba(0, 0, 0, 0.679),
+    rgba(0, 0, 0, 0.795)
+  );
+  align-items: baseline;
 }
 
 .contentful-fill-container {
@@ -940,12 +953,14 @@ img {
 // }
 
 // ---- Scroll Video
-
-.video {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+#set-height {
+  display: block;
+}
+#v0 {
+  //   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media only screen and (min-width: 800px) {

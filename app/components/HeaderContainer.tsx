@@ -35,7 +35,7 @@ class SlugNav extends Component {
             <div className="">
               <div className="inner-header">
                 <div className="logo">
-                  <Link onClick={() => {
+                  <Link  onClick={() => {
                       this.props.onLogoClick();
                     }} href="/"><ContentfulImage width={36} src={logo}/></Link>
                 </div>
