@@ -64,7 +64,7 @@ export default function ProjectGallery(props) {
       />
 
       {/* Pass in array of projects and loop for all projects */}
-      <div>
+      <div className="flex flex-col md:flex-row">
         {cities.map((el) => (
           <div
             className="gallery-button-container"

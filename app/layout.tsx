@@ -27,7 +27,7 @@ export const renderSwitch = (params) => {
   switch (keys[0]) {
     case "contact":
       return (
-        <div className="col-span-3">
+        <div className="md:col-span-3">
           <h3 className="mb-8">Let's Connect</h3>
           <ul>
             {test2.map((item, index) => (
@@ -43,7 +43,7 @@ export const renderSwitch = (params) => {
       );
     case "projects":
       return (
-        <div className="col-start-6 col-span-2">
+        <div className="md:col-start-6 md:col-span-2">
           <h3 className="mb-8">Projects</h3>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
@@ -59,7 +59,7 @@ export const renderSwitch = (params) => {
 
     case "socials":
       return (
-        <div className="col-start-8 col-span-2">
+        <div className="md:col-start-8 md:col-span-2">
           <h3 className="mb-8">Follow Us</h3>
           <ul>
             {test2.map((item, index) => (
@@ -94,10 +94,10 @@ export const renderSwitch = (params) => {
 
 function Footer() {
   return (
-    <footer className="text-white bg-accent-1 flex pt-20 footer-container">
-      <div className="content container grid-container">
+    <footer className="text-white bg-accent-1 flex pt-20">
+      <div className="content container md:grid-container flex flex-col md:flex-row">
         {FooterMessages.FooterItems.map((item, index) => {
-          return <>{renderSwitch(item)}</>;
+          return <div className="mb-8 md:mb-0">{renderSwitch(item)}</div>;
         })}
       </div>
     </footer>

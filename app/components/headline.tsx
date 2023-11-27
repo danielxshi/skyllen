@@ -5,7 +5,7 @@ export default function Headline(props) {
         <p className="uppercase">{props.overline}</p>
         <span>-</span>
       </div>
-      <h3 className="col-span-2">{props.title}</h3>
+      <h3 className="med:col-span-2 col-span-full">{props.title}</h3>
     </div>
   );
 }
