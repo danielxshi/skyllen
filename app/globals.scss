@@ -173,49 +173,34 @@ header {
       }
       .wrapper {
         position: relative;
-        height: 100%;
-        margin: auto;
         .menu-links {
           display: flex;
           justify-content: space-between;
           align-items: center;
           position: relative;
-          height: 100%;
-          display: flex;
-          margin: auto;
-          width: 200px;
+          top: 200px;
           nav {
             color: $white;
-            display: flex;
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            text-align: center;
-            width: fit-content;
+
             text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.35);
             font-family: Voyage;
-            font-size: 3rem;
+            font-size: 4.77263rem;
             font-style: normal;
             font-weight: 700;
-            line-height: 100%; /* 5.95625rem */
+            line-height: 124.8%; /* 5.95625rem */
             letter-spacing: -0.11931rem;
             display: block;
             ul {
               margin: 0;
               padding: 0;
-              height: 100%;
-              width: 100%;
-              position: relative;
               li {
                 list-style: none;
                 font-weight: 700;
-
                 cursor: pointer;
-                height: 2rem;
-                // overflow: hidden;
-                // position: relative;
-                // width: 700px;
+                height: 135px;
+                overflow: hidden;
+                position: relative;
+                width: 700px;
                 a {
                   position: absolute;
                   color: #fff;
