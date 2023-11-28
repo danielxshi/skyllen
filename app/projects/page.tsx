@@ -14,10 +14,12 @@ import projectImageR2 from "../images/1650-day.webp";
 import projectImageL3 from "../images/pendrell-aerial.webp";
 import projectImageR3 from "../images/streetview.webp";
 
+
 import {
   WorkBackground,
   WorkContainer,
   WorkBleed,
+  WorkBleedR,
   WorkContain,
 } from "../company/work";
 import ContentfulImage from "@/lib/contentful-image";
@@ -70,7 +72,7 @@ export default function Page() {
       </Parallax>
 
       {projects.map((el) => (
-        <PageSection style="pb-0 pt-0 overflow-hidden max-h-screen">
+        <PageSection style="snap-scroll-container pb-0 pt-0 overflow-hidden max-h-screen">
           <WorkContainer>
             <WorkBleed>
               <div className="project-card-content">
@@ -100,14 +102,14 @@ export default function Page() {
                 width={840}
               />
             </WorkBleed>
-            <WorkBleed>
+            <WorkBleedR>
               <ContentfulImage
                 height="100"
                 quality={75}
                 src={el.imageTwo}
                 width={840}
               />
-            </WorkBleed>
+            </WorkBleedR>
           </WorkContainer>
         </PageSection>
       ))}
