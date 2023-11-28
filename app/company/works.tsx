@@ -59,7 +59,7 @@ const Works = () => (
                 />
               </WorkBleed>
               <WorkBleed progress={progress}>
-                <div className="project-card-content w-screen">
+                <div className="project-card-content w-screen md:w-w-screen-1/2 md:p-16">
                   <div className="justify-between flex flex-col h-5/6 md:h-full">
                     <div>
                       <h3>{el.name} </h3>

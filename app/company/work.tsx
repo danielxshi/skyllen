@@ -28,7 +28,7 @@ export const WorkBleed: React.FC<{
   if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50);
   return (
     <div
-      className='h-screen absolute flex flex-col items-center justify-center text-3xl lg:text-3xl '
+      className='h-screen absolute flex flex-col items-center justify-center text-3xl lg:text-3xl md:right-0 md:w-screen-1/2'
       style={{
         transform: `translateY(${translateY}px)`,
       }}

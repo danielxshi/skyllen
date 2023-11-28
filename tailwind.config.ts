@@ -16,11 +16,14 @@ export default {
         "128": "32rem",
         "256": "64rem",
         "screen-2/3": "60vh",
-        "screen-3/4": "75vh"
+        "screen-3/4": "75vh",
+      },
+      width: {
+        "w-screen-1/2": "50vw",
       },
       colors: {
-        'white': '#fff'
-      }
+        white: "#fff",
+      },
     },
   },
   future: {

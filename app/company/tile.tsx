@@ -81,7 +81,7 @@ export const Tile: React.FC<Props> = ({ page, renderContent }) => {
   return (
     <div
       ref={refContainer}
-      className='absolute top-0 w-full'
+      className='absolute top-0 w-full md:w-w-screen-1/2'
       style={{
         pointerEvents: progress <= 0 || progress >= 1 ? 'none' : undefined,
         opacity,
