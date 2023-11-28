@@ -13,12 +13,10 @@ export default function GalleryButton(props) {
             }}
             className="relative z-10 block overflow-hidden"
           >
-            <div className="hover:cursor-pointer flex justify-center items-center">
+            <div className="hover:cursor-pointer flex justify-center items-center h-full">
               <div className="bg-gradient"></div>
               <ContentfulImage
                 src={props.url}
-                // height={props.height}
-                // width={props.width}
                 alt={props.alt}
                 quality={50}
                 fill={true}

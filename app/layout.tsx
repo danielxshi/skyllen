@@ -6,11 +6,18 @@ import FooterMessages from "./JSON/FooterItems";
 import Link from "next/link";
 import { useState } from "react";
 import Header from "./components/HeaderContainer";
-import { AnimatePresence } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
 import BurgerModal from "./components/burger-modal";
 import ScrollObserver from "./util/scroll-observer";
 import ParallaxBG from "./components/ParallaxBG";
 import FooterBG from "./images/footer.webp";
+import Logo from "./images/logo-landing.webp";
+import ContentfulImage from "@/lib/contentful-image";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -130,7 +137,41 @@ export default function RootLayout({
         <body>
           <section className="min-h-screen">
             <HeaderModal />
-            <main>{children}</main>
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{
+                opacity: 0,
+                transitionEnd: {
+                  display: "none",
+                },
+              }}
+              transition={{ delay: 0.5, duration: 3, ease: "easeInOut" }}
+              className="wrapper2 "
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+                className="loader--hero"
+              >
+                <ContentfulImage
+                  src={Logo}
+                  width={100}
+                  height={100}
+                  quality={85}
+                />
+              </motion.div>
+            </motion.div>
+            <motion.main
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+            >
+              {children}
+            </motion.main>
 
             <ParallaxBG url={FooterBG}>
               <Footer />

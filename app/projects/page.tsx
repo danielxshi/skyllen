@@ -13,12 +13,18 @@ import projectImageL2 from "../images/1650-night.webp";
 import projectImageR2 from "../images/1650-day.webp";
 import projectImageL3 from "../images/pendrell-aerial.webp";
 import projectImageR3 from "../images/streetview.webp";
-
+import {
+  Tile,
+  TileBackground,
+  TileContent,
+  TileWrapper,
+} from "../company/tile";
 
 import {
   WorkBackground,
   WorkContainer,
   WorkBleedProject,
+  WorkBleed,
   WorkBleedR,
   WorkContain,
 } from "../company/work";
@@ -27,6 +33,7 @@ import ContentfulImage from "@/lib/contentful-image";
 const projects = [
   {
     name: "618 CARNAVRON",
+    page: 0,
     imageOne: projectImageL1,
     imageTwo: projectImageR1,
     link: "/posts/618-carnavron",
@@ -36,6 +43,7 @@ const projects = [
   {
     name: "1650 ON SECOND",
 
+    page: 1,
     imageOne: projectImageL2,
     imageTwo: projectImageR2,
     link: "/posts/1650-on-second",
@@ -44,7 +52,7 @@ const projects = [
   },
   {
     name: "PENDRELL ST",
-
+    page: 2,
     imageOne: projectImageL3,
     imageTwo: projectImageR3,
     link: "/posts/pendrell-street",
@@ -71,48 +79,62 @@ export default function Page() {
         ></Banner>
       </Parallax>
 
-      {projects.map((el) => (
-        <PageSection style="snap-scroll-container pb-0 pt-0 overflow-hidden max-h-screen">
-          <WorkContainer>
-            <WorkBleedProject>
-              <div className="project-card-content">
-                <div className="justify-between h-3/4 flex flex-col">
-                  <div className="">
-                    <h3>{el.name} </h3>
-                    <span>-</span>
-                  </div>
-                  <div>
-                    <p className="tracking-tight pb-8">{el.description}</p>
-                    <Button
-                      onClick={() => {
-                        this.props.onClick();
-                      }}
-                      url={el.link}
-                    >
-                      Learn More
-                    </Button>
-                  </div>
-                </div>
-              </div>
+      <TileWrapper numOfPages={3}>
+        <TileBackground>
+          <WorkBackground />
+        </TileBackground>
+        <TileContent>
+          {projects.map((el) => (
+            <Tile
+              page={el.page}
+              renderContent={({ progress }) => (
+                <WorkContainer>
+                  <WorkBleedProject progress={progress}>
+                    <div className="project-card-content p-8">
+                      <div className="justify-between h-3/4 flex flex-col">
+                        <div className="">
+                          <h3>{el.name} </h3>
+                          <span>-</span>
+                        </div>
+                        <div>
+                          <p className="tracking-tight pb-8">
+                            {el.description}
+                          </p>
+                          <Button
+                            onClick={() => {
+                              this.props.onClick();
+                            }}
+                            url={el.link}
+                          >
+                            Learn More
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
 
-              <ContentfulImage
-                height="100"
-                quality={75}
-                src={el.imageOne}
-                width={840}
-              />
-            </WorkBleedProject>
-            <WorkBleedR>
-              <ContentfulImage
-                height="100"
-                quality={75}
-                src={el.imageTwo}
-                width={840}
-              />
-            </WorkBleedR>
-          </WorkContainer>
-        </PageSection>
-      ))}
+                    <ContentfulImage
+                      height="100"
+                      quality={75}
+                      src={el.imageOne}
+                      width={840}
+                    />
+                  </WorkBleedProject>
+                  <WorkBleed progress={progress}>
+                    <div className="project-card-content w-screen md:w-screen-1/2 md:w-2/4 md:w-w-screen-1/2">
+                      <ContentfulImage
+                        height="100"
+                        quality={75}
+                        src={el.imageTwo}
+                        width={840}
+                      />
+                    </div>
+                  </WorkBleed>
+                </WorkContainer>
+              )}
+            ></Tile>
+          ))}
+        </TileContent>
+      </TileWrapper>
     </>
   );
 }
