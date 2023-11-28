@@ -89,7 +89,7 @@ export const renderSwitch2 = (params) => {
   switch (keys[0]) {
     case "contact":
       return (
-        <div className="footer-contact-container hidden">
+        <div className="footer-contact-container">
           <ul>
             {test2.map((item, index) => (
               <>
@@ -223,7 +223,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0 }}
                           transition={{ duration: 1, ease: "easeInOut" }}
-                          className="container h-full"
+                          className="container"
                         >
                           <div className="wrapper">
                             <div className="menu-links">
