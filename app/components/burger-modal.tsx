@@ -268,7 +268,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                       onMouseEnter={(e) => handleHover(e)}
                                       onMouseOut={(e) => handleHoverExit(e)}
                                       ref={(el) => (line3 = el)}
-                                      href="/contact-us"
+                                      href="/contact"
                                       onClick={closeModal}
                                     >
                                       Contact
