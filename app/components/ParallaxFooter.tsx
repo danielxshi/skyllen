@@ -3,9 +3,14 @@ import { Parallax, Background } from "react-parallax";
 import Banner from "./banner";
 import ContentfulImage from "@/lib/contentful-image";
 
+type Props = {
+  children: React.ReactNode; // as React.FC declares it for you, just delete this line
+  style: string,
+  url: string,
+};
 
 
-export default function ParallaxFooter({ children, ...props }) {
+const ParallaxFooter : React.FC<Props> = ({ children, ...props }) => {
   return (
     // <section className={`${props.style}`}>{children}</section>
 
@@ -28,3 +33,5 @@ export default function ParallaxFooter({ children, ...props }) {
     </div>
   );
 }
+
+export default ParallaxFooter;
