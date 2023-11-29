@@ -1,7 +1,9 @@
 import gsap from "gsap";
+import { MouseEvent } from "react";
+
 
 // OPEN MENU
-export const staggerReveal = (node1, node2) => {
+export const staggerReveal = (node1: string, node2: string) => {
   gsap.from([node1, node2], {
     duration: 0.8,
     height: 0,
@@ -15,7 +17,7 @@ export const staggerReveal = (node1, node2) => {
 };
 
 // CLOSE MENU
-export const staggerRevealClose = (node1, node2) => {
+export const staggerRevealClose = (node1: string, node2: string) => {
   gsap.to([node1, node2], {
     duration: 0.8,
     height: 0,
@@ -27,7 +29,7 @@ export const staggerRevealClose = (node1, node2) => {
 };
 
 // STAGGER THE LINKS TO APPEAR
-export const staggerText = (node1, node2, node3) => {
+export const staggerText = (node1: string, node2: string, node3: string) => {
   gsap.from([node1, node2, node3], {
     duration: 0.8,
     y: 100,
@@ -40,7 +42,7 @@ export const staggerText = (node1, node2, node3) => {
 };
 
 // Fade up for the additonal info on our menu
-export const fadeInUp = node => {
+export const fadeInUp = (node: gsap.TweenTarget) => {
   gsap.from(node, {
     y: 60,
     duration: 1,
@@ -51,7 +53,7 @@ export const fadeInUp = node => {
 };
 
 // Hover on the link
-export const handleHover = e => {
+export const handleHover = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: 3,
@@ -61,7 +63,7 @@ export const handleHover = e => {
 };
 
 // Hover off the link
-export const handleHoverExit = e => {
+export const handleHoverExit = (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: -3,
@@ -71,7 +73,7 @@ export const handleHoverExit = e => {
 };
 
 // adds city image once you hover on
-export const handleCity = (city, target) => {
+export const handleCity = (city: any, target: gsap.TweenTarget) => {
   gsap.to(target, {
     duration: 0,
     background: `url(${city}) center center`
@@ -89,7 +91,7 @@ export const handleCity = (city, target) => {
 };
 
 // Removes the city image once you hover off
-export const handleCityReturn = target => {
+export const handleCityReturn = (target: gsap.TweenTarget) => {
   gsap.to(target, {
     duration: 0,
     skewY: 0
