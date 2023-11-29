@@ -40,9 +40,9 @@ class SlugNav extends Component {
                 <div className="menu">
                   <button
                     id="nav-icon2"
-                    className={this.state.clicked ? "open" : null}
+                    className={this.state.clicked ? "open" : "closed"}
                     onClick={() => {
-                      this.props.onClick();
+                      // this.props.onClick();
                       this.handleClick();
                     }}
                   >
