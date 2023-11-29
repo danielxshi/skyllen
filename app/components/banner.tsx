@@ -1,9 +1,9 @@
 
 type Props = {
-  children: React.ReactNode;
-  style: string;
-  title: string;
-  style2: string;
+  children?: React.ReactNode;
+  style?: string;
+  title?: string;
+  style2?: string;
   overline?: string;
 };
 
