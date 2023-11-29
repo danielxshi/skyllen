@@ -121,7 +121,7 @@ function HeaderModal() {
 
   return (
     <AnimatePresence>
-      <BurgerModal showModal={showModal} setShowModal={setShowModal} />
+      <BurgerModal state={setShowModal} showModal={showModal} setShowModal={setShowModal} />
       {<Header onClick={openModal} />}
     </AnimatePresence>
   );

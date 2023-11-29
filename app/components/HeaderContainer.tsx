@@ -1,9 +1,7 @@
 //Represents Slug Nav
 
 import Link from "next/link";
-import BackButton from "../Button/BackButton";
 import React, { Component } from "react";
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../images/nav-logo.png"
 import ContentfulImage from "@/lib/contentful-image";
@@ -36,8 +34,8 @@ class SlugNav extends Component {
               <div className="inner-header">
                 <div className="logo">
                   <Link  onClick={() => {
-                      this.props.onLogoClick();
-                    }} href="/"><ContentfulImage width={36} src={logo}/></Link>
+                      // this.props.onLogoClick();
+                    }} href="/"><ContentfulImage width={36} height={36} quality={85} src="../images/nav-logo.png"/></Link>
                 </div>
                 <div className="menu">
                   <button
