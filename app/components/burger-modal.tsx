@@ -280,7 +280,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                               <div ref={(el) => (info = el)} className="info">
                                 {FooterMessages.FooterItems.map(
                                   (item, index) => {
-                                    return <>{renderSwitch2(item)}</>;
+                                    return <div key={index}>{renderSwitch2(item)}</div>;
                                   }
                                 )}
                               </div>

@@ -6,7 +6,7 @@ import FooterMessages from "../JSON/FooterItems";
 import Link from "next/link";
 import bannerBG from "../images/contact-banner.webp"
 
-export const renderSwitch = (params) => {
+const renderSwitch = (params) => {
   const keys = Object.keys(params);
   const value = keys;
 
