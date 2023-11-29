@@ -4,7 +4,7 @@ type Props = {
   style: string;
   title: string;
   style2: string;
-  overline: string;
+  overline?: string;
 };
 
 const Banner = ({ children, style, title, style2, overline }: Props) => {
