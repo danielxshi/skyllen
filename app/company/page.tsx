@@ -121,8 +121,6 @@ export default function Page() {
               paragraphTwo={el.paragraphTwo}
               title={el.service}
               style="mb-16 col-span-full md:col-start-1 md:col-end-4 "
-              buttonText="Learn More"
-              url="/"
             />
             <div className="col-start-1 md:col-start-5 md:col-span-4 relative col-span-full contentful-fill-container">
               <ContentfulImage
