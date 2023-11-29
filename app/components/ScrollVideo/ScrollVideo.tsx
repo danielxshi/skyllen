@@ -9,13 +9,11 @@ import { useContainerScroll } from "../ScrollContainer/ScrollContainer";
 import StickyContainer, {
   useStickyContainerBounds,
 } from "../ScrollContainer/StickyContainer";
-import { useBoundingBox } from "@/hooks/useBoundingBox";
-import { useWindowDimension } from "@/hooks/useWindowDimension";
+import { useBoundingBox } from "@/app/hooks/useBoundingBox";
+import { useWindowDimension } from "@/app/hooks/useWindowDimension";
 import { clamp, motion, useMotionValue, useTransform } from "framer-motion";
 import Sticky from "../ScrollContainer/Sticky";
 import { AnimationConfig } from "../AnimationConfig";
-
-import test from "./"
 
 type Props = {
   playbackConst?: number;
@@ -103,7 +101,7 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
 
   const handleMetaDataLoaded = () => {
     setVideoScrollDistance(
-      Math.floor(videoRef.current.duration) * playbackConst,
+      Math.floor(videoRef.current.duration) * playbackConst
     );
   };
 
@@ -119,12 +117,12 @@ const ScrollVideo = ({ playbackConst = 150, src }: Props) => {
   const pos = useTransform(
     scrollProgress,
     [0, 0.5, 1],
-    [-windowDim.width / 3, -windowDim.width / 4, 0],
+    [-windowDim.width / 3, -windowDim.width / 4, 0]
   );
 
   const isLandscape = useMemo(
     () => windowDim.width > windowDim.height,
-    [windowDim],
+    [windowDim]
   );
 
   const videoScale = useTransform(scale, (latest) => {

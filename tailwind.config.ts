@@ -20,6 +20,7 @@ export default {
       },
       width: {
         "w-screen-1/2": "50vw",
+        "300": "300px"
       },
       colors: {
         white: "#fff",

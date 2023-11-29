@@ -102,7 +102,7 @@ export const renderSwitch = (params) => {
 
 function Footer() {
   return (
-    <footer className="text-white bg-accent-1 flex pt-20 footer-container overflow-hidden">
+    <footer className="text-white bg-accent-1 flex footer-container overflow-hidden">
       <div className="content container grid-container">
         {FooterMessages.FooterItems.map((item, index) => {
           return <>{renderSwitch(item)}</>;
@@ -146,7 +146,7 @@ export default function RootLayout({
                   display: "none",
                 },
               }}
-              transition={{ delay: 0.5, duration: 3, ease: "easeInOut" }}
+              transition={{ delay: 0.5, duration: 4.5, ease: "easeInOut" }}
               className="wrapper2 "
             >
               <motion.div
@@ -174,13 +174,12 @@ export default function RootLayout({
               {children}
             </motion.main>
 
-            <ParallaxFooter url={FooterBG}>
-
-                {/* <div className="parallax-bg z-0">
+            <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
+              {/* <div className="parallax-bg z-0">
         <ContentfulImage src={props.url} fill={true} />
       </div> */}
               <Footer />
-            </ParallaxFooter>
+            </ParallaxBG>
           </section>
         </body>
       </html>

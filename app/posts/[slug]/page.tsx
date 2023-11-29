@@ -10,10 +10,10 @@ import PageSection from "@/app/components/page-section";
 import ProjectGallery from "@/app/components/project-gallery";
 import { WorkBackground, WorkContainer, WorkBleed } from "../../company/work";
 import ContentfulImage from "@/lib/contentful-image";
+import Headline from "@/app/components/headline";
 
 import { Markdown } from "@/lib/markdown";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
-
 
 export async function generateStaticParams() {
   const allPosts = await getAllPosts(false);
@@ -56,7 +56,7 @@ export default async function PostPage({
         excerpt={post.excerpt}
         url={post.coverImage.url}
       >
-        <div className="flex w-full justify-between">
+        <div className="md:flex md:w-full justify-between">
           <div className="flex flex-col">
             <span className="mb-8 font-bold">Status</span>
             <p>{post.projectDetails["status"]}</p>
@@ -84,20 +84,30 @@ export default async function PostPage({
         </div>
       </Banner>
 
-      <PageSection style={"container pb-16 pt-16 flex"}>
+      <PageSection style={"container pb-16 pt-16 flex flex-col"}>
+        <div className="flex h-full w-full relative">
+          <div className="w-full h-screen-3/4 ">
+            <ContentfulImage src={post.coverImage.url} fill={true} />
+          </div>
+        </div>
+        <p className="mt-4">{post.excerpt}</p>
+      </PageSection>
+
+      <PageSection style={"container pb-16 pt-16 flex flex-col"}>
+        <Headline title={post.excerpt} overline={post.title} />
         <div className="flex w-full flex-col project-content-map-container">
           {dataValue.map((item, index) => (
-            <li className="flex mb-16">
-              <div key={index} className="content pr-16 w-1/2">
+            <li className="flex mb-16 flex-col md:flex-row">
+              <div key={index} className="content w-full md:pr-16 md:w-1/2">
                 <ContentfulImage
                   height={400}
                   src={require("" + item)}
-                  width={500}
+                  // width={500}
                   alt="Pink Panda"
                 />
               </div>
-              <div className="w-1/2">
-                <div className="content px-16">
+              <div className="md:w-1/2 ">
+                <div className="content w-full mt-4 md:mt-0 md:px-16 max-w-xl">
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Harum non praesentium provident quas id deserunt rem ex.
@@ -113,7 +123,6 @@ export default async function PostPage({
       <PageSection style={"footer-gap container min-h-screen pt-16 pb-16"}>
         <ProjectGallery />
       </PageSection>
-
     </>
   );
 }

@@ -1,10 +1,10 @@
 "use client";
 import ParallaxBG from "../components/ParallaxBG";
-import Button from "../components/button";
+import Button from "../components/Button/FillButton";
 
 export default function Banner({ children, ...props }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen project-banner">
       <ParallaxBG
         style="h-screen-3/4"
         url={props.url}

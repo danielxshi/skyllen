@@ -40,7 +40,7 @@ const descriptions = [
 export default function Page() {
   return (
     <>
-      <ParallaxFooter url="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4">
+      <ParallaxFooter url="https://i.imgur.com/EODCPWr.mp4">
         <Banner
           style="min-h-screen flex"
           title={ProjectMessages.CompanyTitle}
@@ -71,7 +71,7 @@ export default function Page() {
       <PageSection style="pb-16 ">
         <ParallaxBG
           style="company-parallax"
-          url="https://i.imgur.com/D5u2JE0.jpeg"
+          url="https://i.imgur.com/EODCPWr.mp4"
         >
           <div className="grid-container m-auto container">
             <div className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3 flex">
