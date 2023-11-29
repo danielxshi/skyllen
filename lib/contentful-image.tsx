@@ -1,9 +1,9 @@
 'use client'
 
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface ContentfulImageProps {
-  src: string
+  src: string | StaticImageData;
   width?: number
   quality?: number
   [key: string]: any // For other props that might be passed
