@@ -56,7 +56,7 @@ export default function Landing() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+              transition={{ delay: 3, duration: 1.5, ease: "easeInOut" }}
               className="header-wrapper container"
             >
               <h1 className="">Eminent Design, Modern Experience.</h1>

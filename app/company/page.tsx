@@ -7,11 +7,12 @@ import PageSection from "../components/page-section";
 import Works from "./works";
 import ProjectDescription from "./project-description";
 import ContentfulImage from "@/lib/contentful-image";
-import dallas from "../images/dallas.webp";
+import dallas from "@/app/images/dallas.webp";
 import ParallaxBG from "../components/ParallaxBG";
 import DescriptionImage1 from "../images/construction.webp";
 import DescriptionImage2 from "../images/streetview.webp";
-import headerBG from "../images/pendrell-aerial.webp"
+import headerBG from "../images/pendrell-aerial.webp";
+import testImage from "../images/nav-logo.png";
 
 const descriptions = [
   {
@@ -36,7 +37,7 @@ const descriptions = [
 export default function Page() {
   return (
     <>
-      <ParallaxBG url={headerBG}>
+      <ParallaxBG url={require("../images/nav-logo.png")}>
         <Banner
           style="min-h-screen flex"
           title={ProjectMessages.CompanyTitle}
@@ -45,7 +46,9 @@ export default function Page() {
       </ParallaxBG>
       <PageSection style="pt-16 pb-16 h-128 flex">
         <div className="grid-container m-auto container">
-          <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">Our History |</h3>
+          <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">
+            Our History |
+          </h3>
           <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3">
             <p className="pb-8">
               Since 2008, Skyllen Pacific has been active throughout Metro
@@ -75,7 +78,12 @@ export default function Page() {
               url="/"
             />
             <div className="col-start-1 md:col-start-5 md:col-span-4 relative col-span-full contentful-fill-container">
-              <ContentfulImage fill={true} src={el.image} alt={"construction"} quality={50} />
+              <ContentfulImage
+                fill={true}
+                src={el.image}
+                alt={"construction"}
+                quality={50}
+              />
             </div>
           </div>
         ))}
