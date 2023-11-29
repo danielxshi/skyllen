@@ -18,6 +18,7 @@ import ParallaxBG from "./components/ParallaxBG";
 import FooterBG from "./images/footer.webp";
 import Logo from "./images/logo-landing.webp";
 import ContentfulImage from "@/lib/contentful-image";
+import ParallaxFooter from "./components/ParallaxFooter";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -173,9 +174,13 @@ export default function RootLayout({
               {children}
             </motion.main>
 
-            <ParallaxBG url={FooterBG}>
+            <ParallaxFooter url={FooterBG}>
+
+                {/* <div className="parallax-bg z-0">
+        <ContentfulImage src={props.url} fill={true} />
+      </div> */}
               <Footer />
-            </ParallaxBG>
+            </ParallaxFooter>
           </section>
         </body>
       </html>

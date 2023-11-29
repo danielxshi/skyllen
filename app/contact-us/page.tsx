@@ -38,7 +38,7 @@ export default function Contact() {
   console.log(FooterMessages);
   return (
     <>
-      <ParallaxBG url={bannerBG}>
+      <ParallaxBG url="https://i.imgur.com/aIBLNdp.jpg">
         <div className="h-screen-2/3 flex">
           <Banner
             style="m-auto"

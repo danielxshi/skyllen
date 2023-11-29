@@ -447,9 +447,39 @@ header {
 .button-content {
   font-size: calc(0.12944983818770225vw + 9.514563106796116px);
 }
+.company-parallax {
+  //   position: relative;
+  //   height: 35vh;
+  //   display: flex;
+  //   color: white;
+}
+
+.company-section {
+}
+
+.project-page {
+  .project-card-content {
+    // width: 100%;
+  }
+  .text-content {
+    width: 25ch;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 // project page
 .project-card-content {
+  // Affects the whole card layout
+
+  //   width: 100%;
+  .content-container {
+    width: 25ch;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
   color: white; /* bottom: 0; */
   position: absolute;
   z-index: 1;
@@ -525,6 +555,25 @@ header {
 .custom-bg {
   height: 100vh;
   width: 100vw;
+}
+
+.company-parallax {
+  .image-container {
+    width: 12rem;
+  }
+  .react-parallax-content {
+    backdrop-filter: blur(2px);
+    position: relative;
+    height: 50vh;
+    display: flex;
+    color: white;
+
+    img {
+      // width: fit-content;
+      width: 12rem;
+      position: relative !important;
+    }
+  }
 }
 
 .react-parallax-content {
@@ -915,4 +964,3 @@ img {
 .social-media-container::-webkit-scrollbar-thumb {
   background: #333;
 }
-

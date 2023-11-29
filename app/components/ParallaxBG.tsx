@@ -3,6 +3,8 @@ import { Parallax, Background } from "react-parallax";
 import Banner from "./banner";
 import ContentfulImage from "@/lib/contentful-image";
 
+
+
 export default function ParallaxBG({ children, ...props }) {
   return (
     // <section className={`${props.style}`}>{children}</section>

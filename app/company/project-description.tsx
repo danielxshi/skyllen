@@ -15,14 +15,14 @@ export default function ProjectDescription(props) {
           <p className="mb-4">{props.paragraphOne}</p>
           <p>{props.paragraphTwo}</p>
         </div>
-        <Button
+        {/* <Button
           onClick={() => {
             this.props.onClick();
           }}
           url={props.url}
         >
           {props.buttonText}
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

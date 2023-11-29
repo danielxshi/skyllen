@@ -8,6 +8,7 @@ import Headline from "../components/headline";
 import ContentfulImage from "@/lib/contentful-image";
 import bgBanner from "../images/news.webp";
 
+
 const NewsContent = [
   {
     // url: "/posts/cool-dogs",
@@ -65,7 +66,7 @@ function NewsGalleryItem() {
 export default function Page() {
   return (
     <>
-      <ParallaxBG url={bgBanner}>
+      <ParallaxBG url="https://i.imgur.com/p1QJ3xJ.jpg">
         <Banner
           style="min-h-screen flex"
           title={ProjectMessages.CompanyTitle}

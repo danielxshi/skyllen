@@ -63,11 +63,11 @@ const projects = [
 
 export default function Page() {
   return (
-    <>
+    <div className="project-page">
       {/* Insert background image */}
       <Parallax
         blur={{ min: -20, max: 15 }}
-        bgImage="https://images.pexels.com/photos/2271442/pexels-photo-2271442.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+        bgImage="https://i.imgur.com/D5u2JE0.jpg"
         bgImageAlt="the dog"
         className=""
         strength={-100}
@@ -90,8 +90,8 @@ export default function Page() {
               renderContent={({ progress }) => (
                 <WorkContainer>
                   <WorkBleedProject progress={progress}>
-                    <div className="project-card-content p-8">
-                      <div className="justify-between h-3/4 flex flex-col">
+                    <div className="project-card-content p-8 w-full">
+                      <div className="text-content justify-between h-3/4 flex flex-col">
                         <div className="">
                           <h3>{el.name} </h3>
                           <span>-</span>
@@ -135,6 +135,6 @@ export default function Page() {
           ))}
         </TileContent>
       </TileWrapper>
-    </>
+    </div>
   );
 }

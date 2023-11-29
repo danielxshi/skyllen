@@ -12,7 +12,10 @@ import ParallaxBG from "../components/ParallaxBG";
 import DescriptionImage1 from "../images/construction.webp";
 import DescriptionImage2 from "../images/streetview.webp";
 import headerBG from "../images/pendrell-aerial.webp";
-import testImage from "../images/nav-logo.png";
+import testImage from "@/public/images/1650-night.webp";
+import ParallaxFooter from "../components/ParallaxFooter";
+import Logo from "@/public/images/logo-landing.webp";
+// import LandingVideo from "./"
 
 const descriptions = [
   {
@@ -37,13 +40,13 @@ const descriptions = [
 export default function Page() {
   return (
     <>
-      <ParallaxBG url={require("../images/nav-logo.png")}>
+      <ParallaxFooter url="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4">
         <Banner
           style="min-h-screen flex"
           title={ProjectMessages.CompanyTitle}
           overline="COMPANY"
         />
-      </ParallaxBG>
+      </ParallaxFooter>
       <PageSection style="pt-16 pb-16 h-128 flex">
         <div className="grid-container m-auto container">
           <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">
@@ -65,7 +68,51 @@ export default function Page() {
         </div>
       </PageSection>
       <Works />
-      <PageSection style="h-min pt-16 pb-16 lrg-padding-top">
+      <PageSection style="pb-16 ">
+        <ParallaxBG
+          style="company-parallax"
+          url="https://i.imgur.com/D5u2JE0.jpeg"
+        >
+          <div className="grid-container m-auto container">
+            <div className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3 flex">
+              {/* <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+                className="loader--hero"
+              > */}
+
+              <div className="image-container">
+                <ContentfulImage
+                  src={Logo}
+                  // width={48}
+                  fill={true}
+                  // height={48}
+                  quality={85}
+                />
+              </div>
+              {/* </motion.div> */}
+            </div>
+            <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3">
+              <p className="pb-8">
+                Since 2008, Skyllen Pacific has been active throughout Metro
+                Vancouver observing market needs and acquiring lands in
+                strategic parts of the region.{" "}
+              </p>
+              <p>
+                With over thirty years of practiced expertise spanning across
+                two continents, the Skyllen Group is committed to exceeding
+                Vancouver's real estate development goals with quality homes
+                that prioritize revolutionary design and thoughtful
+                functionality.
+              </p>
+            </div>
+          </div>
+        </ParallaxBG>
+      </PageSection>
+      <PageSection style="h-min pt-16 pb-16 lrg-padding-top company-section">
         {descriptions.map((el) => (
           <div className="container grid-container company-service">
             <ProjectDescription
