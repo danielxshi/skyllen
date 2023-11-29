@@ -1,29 +1,34 @@
 import Button from "../components/button";
 
-export default function ProjectDescription(props) {
+type Props = {
+  style: string;
+  title: string;
+  paragraphOne: string;
+  paragraphTwo: string;
+};
+
+const ProjectDescription = ({
+  style,
+  title,
+  paragraphOne,
+  paragraphTwo,
+}: Props) => {
   return (
-    // <section className={`${props.style}`}>
     <div
-      className={`col-start:1 col-span-full md:col-start-2 md:col-span-3 ${props.style}`}
+      className={`col-start:1 col-span-full md:col-start-2 md:col-span-3 ${style}`}
     >
       <div className="mb-16">
-        <h3>{props.title}</h3>
+        <h3>{title}</h3>
         <span>-</span>
       </div>
       <div>
         <div className="mb-4">
-          <p className="mb-4">{props.paragraphOne}</p>
-          <p>{props.paragraphTwo}</p>
+          <p className="mb-4">{paragraphOne}</p>
+          <p>{paragraphTwo}</p>
         </div>
-        {/* <Button
-          onClick={() => {
-            this.props.onClick();
-          }}
-          url={props.url}
-        >
-          {props.buttonText}
-        </Button> */}
       </div>
     </div>
   );
-}
+};
+
+export default ProjectDescription;
