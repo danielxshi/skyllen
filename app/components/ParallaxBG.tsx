@@ -4,18 +4,24 @@ import Banner from "./banner";
 import ContentfulImage from "@/lib/contentful-image";
 
 
+type Props = {
+  children?: React.ReactNode;
+  style?: string;
+  url: string;
+};
 
-export default function ParallaxBG({ children, ...props }) {
+
+const ParallaxBG = ({ children, style, url }: Props) => {
   return (
     // <section className={`${props.style}`}>{children}</section>
 
-    <div className={`parallax-bg-container relative ${props.style}`}>
+    <div className={`parallax-bg-container relative ${style}`}>
       {/* <div className="z-10 block relative gallery-bg">{children}</div> */}
 
 
       <Parallax
         blur={{ min: -20, max: 15 }}
-        bgImage={props.url}
+        bgImage={url}
         bgImageAlt="the dog"
         className=""
         strength={-100}
@@ -28,3 +34,5 @@ export default function ParallaxBG({ children, ...props }) {
     </div>
   );
 }
+
+export default ParallaxBG;

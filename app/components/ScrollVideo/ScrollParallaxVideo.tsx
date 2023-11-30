@@ -106,7 +106,7 @@ const ParallaxScrollVideo = () => {
   }, []);
   const handleMetaDataLoaded = () => {
     setVideoScrollDistance(
-      Math.floor(videoRef.current.duration) * playbackConst
+      Math.floor(videoRef.current.duration) * 500
     );
   };
 

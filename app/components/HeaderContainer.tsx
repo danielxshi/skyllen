@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../images/nav-logo.png"
 import ContentfulImage from "@/lib/contentful-image";
 
+
 class SlugNav extends Component {
   state = { clicked: false };
 

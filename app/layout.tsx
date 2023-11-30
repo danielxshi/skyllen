@@ -28,7 +28,7 @@ const inter = Inter({
 
 export const renderSwitch = (params) => {
   const keys = Object.keys(params);
-  const value = keys;
+  const value = typeof keys;
   const test = params[value];
   const test2 = test["content"];
 
@@ -122,7 +122,9 @@ function HeaderModal() {
   return (
     <AnimatePresence>
       <BurgerModal state={setShowModal} showModal={showModal} setShowModal={setShowModal} />
-      {<Header onClick={openModal} />}
+      {<Header 
+      // onClick={openModal} 
+      />}
     </AnimatePresence>
   );
 }

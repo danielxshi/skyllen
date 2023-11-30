@@ -39,7 +39,7 @@ export default function App() {
       const scrollSection = scrollSectionRef.current;
       console.log("scrollSection", videoRef.current.duration);
       if (videoRef?.current) {
-        scrollSection.style.height =
+        // scrollSection.style.height =
           Math.floor(duration) * playbackConst + "px";
       }
       console.log(duration); // Output: video duration in seconds

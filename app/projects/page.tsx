@@ -102,7 +102,7 @@ export default function Page() {
                           </p>
                           <Button
                             onClick={() => {
-                              this.props.onClick();
+                              // this.props.onClick();
                             }}
                             url={el.link}
                           >

@@ -80,9 +80,47 @@ const cities = [
   },
 ];
 
-export const renderSwitch2 = (params) => {
+export const renderSwitch2 = (
+  params:
+    | {
+        contact: {
+          content: {
+            email: string;
+            address: string;
+            city: string;
+            phone: string;
+          }[];
+        };
+        projects?: undefined;
+        socials?: undefined;
+        copyright?: undefined;
+      }
+    | {
+        projects: { content: { project: string; url: string }[] };
+        contact?: undefined;
+        socials?: undefined;
+        copyright?: undefined;
+      }
+    | {
+        socials: { content: { link: string; url: string }[] };
+        contact?: undefined;
+        projects?: undefined;
+        copyright?: undefined;
+      }
+    | {
+        copyright: { content: { text: string }[] };
+        contact?: undefined;
+        projects?: undefined;
+        socials?: undefined;
+      }
+) => {
+  type Bar = {
+    [key: string]: string;
+  };
+
   const keys = Object.keys(params);
-  const value = keys;
+  const value = typeof keys;
+  // test: String;
   const test = params[value];
   const test2 = test["content"];
 
@@ -91,14 +129,33 @@ export const renderSwitch2 = (params) => {
       return (
         <div className="footer-contact-container hidden">
           <ul>
-            {test2.map((item, index) => (
-              <>
-                <li className="underscore-cta">{item["email"]}</li>
-                <li className="underscore-cta">{item["address"]}</li>
-                <li className="underscore-cta">{item["city"]}</li>
-                <li className="underscore-cta">{item["phone"]}</li>
-              </>
-            ))}
+            {test2.map(
+              (
+                item: {
+                  [x: string]:
+                    | string
+                    | number
+                    | boolean
+                    | React.ReactElement<
+                        any,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | React.ReactPortal
+                    | React.PromiseLikeOfReactNode
+                    | null
+                    | undefined;
+                },
+                index: any
+              ) => (
+                <>
+                  <li className="underscore-cta">{item["email"]}</li>
+                  <li className="underscore-cta">{item["address"]}</li>
+                  <li className="underscore-cta">{item["city"]}</li>
+                  <li className="underscore-cta">{item["phone"]}</li>
+                </>
+              )
+            )}
           </ul>
         </div>
       );
@@ -108,9 +165,9 @@ export const renderSwitch2 = (params) => {
   }
 };
 
-export const renderSwitch = (params) => {
+export const renderSwitch = (params: { [x: string]: any }) => {
   const keys = Object.keys(params);
-  const value = keys;
+  const value = typeof keys;
   const test = params[value];
   const test2 = test["content"];
 
@@ -119,13 +176,32 @@ export const renderSwitch = (params) => {
       return (
         <div className="experience-container">
           <ul>
-            {test2.map((item, index) => (
-              <>
-                <li key={index}>
-                  <p className="whitespace-nowrap	">{item["header"]}</p>
-                </li>
-              </>
-            ))}
+            {test2.map(
+              (
+                item: {
+                  [x: string]:
+                    | string
+                    | number
+                    | boolean
+                    | React.ReactElement<
+                        any,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | React.ReactPortal
+                    | React.PromiseLikeOfReactNode
+                    | null
+                    | undefined;
+                },
+                index: React.Key | null | undefined
+              ) => (
+                <>
+                  <li key={index}>
+                    <p className="whitespace-nowrap	">{item["header"]}</p>
+                  </li>
+                </>
+              )
+            )}
           </ul>
         </div>
       );
@@ -134,7 +210,7 @@ export const renderSwitch = (params) => {
   }
 };
 
-const handleCity = (city, target) => {
+const handleCity = (city: string, target: gsap.TweenTarget) => {
   gsap.to(target, {
     duration: 0,
     background: `url(${city}) center center`,
@@ -153,7 +229,7 @@ const handleCity = (city, target) => {
 
 export const BurgerModal = ({ showModal, setShowModal, state }) => {
   // Create varibles of our dom nodes
-  let menuLayer = useRef(null);
+  let menuLayer = React.useRef<HTMLInputElement>(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
   let cityBackground = useRef(null);
@@ -162,7 +238,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
   let line3 = useRef(null);
   let info = useRef(null);
 
-  const modalRef = useRef();
+  const modalRef = React.useRef<HTMLInputElement>(null);
+
   const animation = useSpring({
     config: {
       duration: 500,
@@ -170,7 +247,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
     opacity: showModal ? 1 : 0,
   });
 
-  const closeModal = () => {
+  const closeModal = (e) => {
     console.log("close modal");
     if (modalRef.current === e.target) {
       setShowModal(false);
@@ -184,7 +261,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
 
   return (
     <header className="burger-menu">
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showModal ? (
           <motion.div ref={modalRef}>
             <Background ref={modalRef}>
@@ -194,7 +271,6 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                     className=""
                     animate={hidden ? "hidden" : "visible"}
                   >
-                    {/* Akram Burger */}
                     <div
                       ref={(el) => (menuLayer = el)}
                       className="hamburger-menu"
@@ -208,15 +284,6 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                           ref={(el) => (cityBackground = el)}
                           className="menu-city-background bg-cover"
                         ></div>
-
-                        {/* Using projectMessages */}
-                        {/* {ProjectMessages.PageItems.map((item, index) => {
-                          return <>{renderSwitch(item)}</>;
-                        })} */}
-
-                        {/* {ProjectMessages.PageItems.map((item, index) => {
-                          return <p>{item}<p/>;
-                        })} */}
 
                         <motion.div
                           initial={{ opacity: 0 }}
@@ -280,7 +347,11 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                               <div ref={(el) => (info = el)} className="info">
                                 {FooterMessages.FooterItems.map(
                                   (item, index) => {
-                                    return <div key={index}>{renderSwitch2(item)}</div>;
+                                    return (
+                                      <div key={index}>
+                                        {renderSwitch2(item)}
+                                      </div>
+                                    );
                                   }
                                 )}
                               </div>
@@ -303,18 +374,17 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                               </div>
                             </div>
                           </div>
-                          {/* <ContentfulImage src={dallas} width={500} quality={50}/> */}
                         </motion.div>
                       </div>
                     </div>
-                    {/* End of Akaram Burger */}
+
                   </motion.div>
                 </ModalWrapper>
               </a.div>
             </Background>
           </motion.div>
         ) : null}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </header>
   );
 };

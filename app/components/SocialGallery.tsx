@@ -72,10 +72,10 @@ export default function first(props) {
                 transition: { duration: 1 },
               }}
               className="social-media-content relative z-10 block"
-              key={el.name}
+              key={el.key}
             >
               <ContentfulImage src={el.image} fill={true} />
-            </motion.div>
+          </motion.div>
           </Link>
         ))}
       </div>

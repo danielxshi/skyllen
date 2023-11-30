@@ -8,7 +8,7 @@ import bannerBG from "../images/contact-banner.webp"
 
 const renderSwitch = (params) => {
   const keys = Object.keys(params);
-  const value = keys;
+  const value = typeof keys;
 
   const test = params[value];
   const test2 = test["content"];
@@ -51,7 +51,7 @@ export default function Contact() {
         <div className="container grid-container">
           <div className="grid-start-1 col-span-6">
             <form id="contact-form" method="post">
-              <label for="name">Full name</label>
+              <label htmlFor="name">Full name</label>
               <input
                 type="text"
                 id="name"
@@ -59,7 +59,7 @@ export default function Contact() {
                 placeholder="Your Full Name"
                 required
               />
-              <label for="email">Email Address</label>
+              <label htmlFor="email">Email Address</label>
               <input
                 type="email"
                 id="email"
@@ -67,9 +67,9 @@ export default function Contact() {
                 placeholder="Your Email Address"
                 required
               />
-              {/* <label for="email">Email Address</label>
+              {/* <label htmlFor="email">Email Address</label>
   <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-      <label for="message">Message</label>
+      <label htmlFor="message">Message</label>
   <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea> */}
               <button type="submit" id="submit" name="submit">
                 Send
