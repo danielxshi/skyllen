@@ -80,135 +80,135 @@ const cities = [
   },
 ];
 
-export const renderSwitch2 = (
-  params:
-    | {
-        contact: {
-          content: {
-            email: string;
-            address: string;
-            city: string;
-            phone: string;
-          }[];
-        };
-        projects?: undefined;
-        socials?: undefined;
-        copyright?: undefined;
-      }
-    | {
-        projects: { content: { project: string; url: string }[] };
-        contact?: undefined;
-        socials?: undefined;
-        copyright?: undefined;
-      }
-    | {
-        socials: { content: { link: string; url: string }[] };
-        contact?: undefined;
-        projects?: undefined;
-        copyright?: undefined;
-      }
-    | {
-        copyright: { content: { text: string }[] };
-        contact?: undefined;
-        projects?: undefined;
-        socials?: undefined;
-      }
-) => {
-  type Bar = {
-    [key: string]: string;
-  };
+// export const renderSwitch2 = (
+//   params:
+//     | {
+//         contact: {
+//           content: {
+//             email: string;
+//             address: string;
+//             city: string;
+//             phone: string;
+//           }[];
+//         };
+//         projects?: undefined;
+//         socials?: undefined;
+//         copyright?: undefined;
+//       }
+//     | {
+//         projects: { content: { project: string; url: string }[] };
+//         contact?: undefined;
+//         socials?: undefined;
+//         copyright?: undefined;
+//       }
+//     | {
+//         socials: { content: { link: string; url: string }[] };
+//         contact?: undefined;
+//         projects?: undefined;
+//         copyright?: undefined;
+//       }
+//     | {
+//         copyright: { content: { text: string }[] };
+//         contact?: undefined;
+//         projects?: undefined;
+//         socials?: undefined;
+//       }
+// ) => {
+//   type Bar = {
+//     [key: string]: string;
+//   };
 
-  const keys = Object.keys(params);
-  const value = typeof keys;
-  // test: String;
-  const test = params[value];
-  const test2 = test["content"];
+//   const keys = Object.keys(params);
+//   const value = typeof keys;
+//   // test: String;
+//   const test = params[value];
+//   const test2 = test["content"];
 
-  switch (keys[0]) {
-    case "contact":
-      return (
-        <div className="footer-contact-container hidden">
-          <ul>
-            {test2.map(
-              (
-                item: {
-                  [x: string]:
-                    | string
-                    | number
-                    | boolean
-                    | React.ReactElement<
-                        any,
-                        string | React.JSXElementConstructor<any>
-                      >
-                    | Iterable<React.ReactNode>
-                    | React.ReactPortal
-                    | React.PromiseLikeOfReactNode
-                    | null
-                    | undefined;
-                },
-                index: any
-              ) => (
-                <>
-                  <li className="underscore-cta">{item["email"]}</li>
-                  <li className="underscore-cta">{item["address"]}</li>
-                  <li className="underscore-cta">{item["city"]}</li>
-                  <li className="underscore-cta">{item["phone"]}</li>
-                </>
-              )
-            )}
-          </ul>
-        </div>
-      );
+//   switch (keys[0]) {
+//     case "contact":
+//       return (
+//         <div className="footer-contact-container hidden">
+//           <ul>
+//             {test2.map(
+//               (
+//                 item: {
+//                   [x: string]:
+//                     | string
+//                     | number
+//                     | boolean
+//                     | React.ReactElement<
+//                         any,
+//                         string | React.JSXElementConstructor<any>
+//                       >
+//                     | Iterable<React.ReactNode>
+//                     | React.ReactPortal
+//                     | React.PromiseLikeOfReactNode
+//                     | null
+//                     | undefined;
+//                 },
+//                 index: any
+//               ) => (
+//                 <>
+//                   <li className="underscore-cta">{item["email"]}</li>
+//                   <li className="underscore-cta">{item["address"]}</li>
+//                   <li className="underscore-cta">{item["city"]}</li>
+//                   <li className="underscore-cta">{item["phone"]}</li>
+//                 </>
+//               )
+//             )}
+//           </ul>
+//         </div>
+//       );
 
-    default:
-      return null;
-  }
-};
+//     default:
+//       return null;
+//   }
+// };
 
-export const renderSwitch = (params: { [x: string]: any }) => {
-  const keys = Object.keys(params);
-  const value = typeof keys;
-  const test = params[value];
-  const test2 = test["content"];
+// export const renderSwitch = (params: { [x: string]: any }) => {
+//   const keys = Object.keys(params);
+//   const value = typeof keys;
+//   const test = params[value];
+//   const test2 = test["content"];
 
-  switch (keys[0]) {
-    case "home":
-      return (
-        <div className="experience-container">
-          <ul>
-            {test2.map(
-              (
-                item: {
-                  [x: string]:
-                    | string
-                    | number
-                    | boolean
-                    | React.ReactElement<
-                        any,
-                        string | React.JSXElementConstructor<any>
-                      >
-                    | Iterable<React.ReactNode>
-                    | React.ReactPortal
-                    | React.PromiseLikeOfReactNode
-                    | null
-                    | undefined;
-                },
-                index: React.Key | null | undefined
-              ) => (
-                <>
-                  <li key={index}>
-                    <p className="whitespace-nowrap	">{item["header"]}</p>
-                  </li>
-                </>
-              )
-            )}
-          </ul>
-        </div>
-      );
-    default:
-      return <>{keys[0]}</>;
-  }
-};
+//   switch (keys[0]) {
+//     case "home":
+//       return (
+//         <div className="experience-container">
+//           <ul>
+//             {test2.map(
+//               (
+//                 item: {
+//                   [x: string]:
+//                     | string
+//                     | number
+//                     | boolean
+//                     | React.ReactElement<
+//                         any,
+//                         string | React.JSXElementConstructor<any>
+//                       >
+//                     | Iterable<React.ReactNode>
+//                     | React.ReactPortal
+//                     | React.PromiseLikeOfReactNode
+//                     | null
+//                     | undefined;
+//                 },
+//                 index: React.Key | null | undefined
+//               ) => (
+//                 <>
+//                   <li key={index}>
+//                     <p className="whitespace-nowrap	">{item["header"]}</p>
+//                   </li>
+//                 </>
+//               )
+//             )}
+//           </ul>
+//         </div>
+//       );
+//     default:
+//       return <>{keys[0]}</>;
+//   }
+// };
 
 const handleCity = (city: string, target: gsap.TweenTarget) => {
   gsap.to(target, {

@@ -14,29 +14,29 @@ import gsap from "gsap";
 import ContentfulImage from "@/lib/contentful-image";
 import Logo from "../images/logo-landing.webp";
 
-export const renderSwitch = (params) => {
-  const keys = Object.keys(params);
-  const value = typeof keys;
-  const test = params[value];
-  const test2 = test["content"];
+// export const renderSwitch = (params) => {
+//   const keys = Object.keys(params);
+//   const value = typeof keys;
+//   const test = params[value];
+//   const test2 = test["content"];
 
-  switch (keys[0]) {
-    case "home":
-      return (
-        <>
-          {test2.map((item, index) => (
-            <>
-              <h1 key={index} className="">
-                {item["header"]}
-              </h1>
-            </>
-          ))}
-        </>
-      );
-    default:
-      return null;
-  }
-};
+//   switch (keys[0]) {
+//     case "home":
+//       return (
+//         <>
+//           {test2.map((item, index) => (
+//             <>
+//               <h1 key={index} className="">
+//                 {item["header"]}
+//               </h1>
+//             </>
+//           ))}
+//         </>
+//       );
+//     default:
+//       return null;
+//   }
+// };
 
 export default function Landing() {
   let dataValue = Object.values(dallas);
