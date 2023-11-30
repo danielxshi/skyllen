@@ -35,11 +35,6 @@ export default async function PostPage({
   let dataValue = Object.values(post.projectDetails["images"]);
   let dataValue2 = Object.values(post.projectDetails);
 
-  // console.log(post.projectDetails);
-  // console.log(post.projectDetails["images"]);
-
-  // console.log(dataValue);
-  // console.log(dataKeys);
 
   return (
     <>

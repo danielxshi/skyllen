@@ -9,7 +9,10 @@ import React, {
   useCallback,
   Children,
   useState,
+  SetStateAction,
+  MutableRefObject,
 } from "react";
+
 import ReactDom from "react-dom";
 import { useSpring, animated as a } from "react-spring";
 import {
@@ -80,135 +83,134 @@ const cities = [
   },
 ];
 
-// export const renderSwitch2 = (
-//   params:
-//     | {
-//         contact: {
-//           content: {
-//             email: string;
-//             address: string;
-//             city: string;
-//             phone: string;
-//           }[];
-//         };
-//         projects?: undefined;
-//         socials?: undefined;
-//         copyright?: undefined;
-//       }
-//     | {
-//         projects: { content: { project: string; url: string }[] };
-//         contact?: undefined;
-//         socials?: undefined;
-//         copyright?: undefined;
-//       }
-//     | {
-//         socials: { content: { link: string; url: string }[] };
-//         contact?: undefined;
-//         projects?: undefined;
-//         copyright?: undefined;
-//       }
-//     | {
-//         copyright: { content: { text: string }[] };
-//         contact?: undefined;
-//         projects?: undefined;
-//         socials?: undefined;
-//       }
-// ) => {
-//   type Bar = {
-//     [key: string]: string;
-//   };
+export const renderSwitch2 = (
+  params:
+    | {
+        contact: {
+          content: {
+            email: string;
+            address: string;
+            city: string;
+            phone: string;
+          }[];
+        };
+        projects?: undefined;
+        socials?: undefined;
+        copyright?: undefined;
+      }
+    | {
+        projects: { content: { project: string; url: string }[] };
+        contact?: undefined;
+        socials?: undefined;
+        copyright?: undefined;
+      }
+    | {
+        socials: { content: { link: string; url: string }[] };
+        contact?: undefined;
+        projects?: undefined;
+        copyright?: undefined;
+      }
+    | {
+        copyright: { content: { text: string }[] };
+        contact?: undefined;
+        projects?: undefined;
+        socials?: undefined;
+      }
+) => {
+  type Bar = {
+    [key: string]: string;
+  };
 
-//   const keys = Object.keys(params);
-//   const value = typeof keys;
-//   // test: String;
-//   const test = params[value];
-//   const test2 = test["content"];
+  const keys = Object.keys(params);
+  const value = keys;
+  const test = params[value[0]];
+  const test2 = test["content"];
 
-//   switch (keys[0]) {
-//     case "contact":
-//       return (
-//         <div className="footer-contact-container hidden">
-//           <ul>
-//             {test2.map(
-//               (
-//                 item: {
-//                   [x: string]:
-//                     | string
-//                     | number
-//                     | boolean
-//                     | React.ReactElement<
-//                         any,
-//                         string | React.JSXElementConstructor<any>
-//                       >
-//                     | Iterable<React.ReactNode>
-//                     | React.ReactPortal
-//                     | React.PromiseLikeOfReactNode
-//                     | null
-//                     | undefined;
-//                 },
-//                 index: any
-//               ) => (
-//                 <>
-//                   <li className="underscore-cta">{item["email"]}</li>
-//                   <li className="underscore-cta">{item["address"]}</li>
-//                   <li className="underscore-cta">{item["city"]}</li>
-//                   <li className="underscore-cta">{item["phone"]}</li>
-//                 </>
-//               )
-//             )}
-//           </ul>
-//         </div>
-//       );
+  switch (keys[0]) {
+    case "contact":
+      return (
+        <div className="footer-contact-container hidden">
+          <ul>
+            {test2.map(
+              (
+                item: {
+                  [x: string]:
+                    | string
+                    | number
+                    | boolean
+                    | React.ReactElement<
+                        any,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | React.ReactPortal
+                    | React.PromiseLikeOfReactNode
+                    | null
+                    | undefined;
+                },
+                index: any
+              ) => (
+                <>
+                  <li className="underscore-cta">{item["email"]}</li>
+                  <li className="underscore-cta">{item["address"]}</li>
+                  <li className="underscore-cta">{item["city"]}</li>
+                  <li className="underscore-cta">{item["phone"]}</li>
+                </>
+              )
+            )}
+          </ul>
+        </div>
+      );
 
-//     default:
-//       return null;
-//   }
-// };
+    default:
+      return null;
+  }
+};
 
-// export const renderSwitch = (params: { [x: string]: any }) => {
-//   const keys = Object.keys(params);
-//   const value = typeof keys;
-//   const test = params[value];
-//   const test2 = test["content"];
+export const renderSwitch = (params: { [x: string]: any }) => {
+  const keys = Object.keys(params);
+  const value = keys;
+  const test = params[value[0]];
+  const test2 = test["content"];
 
-//   switch (keys[0]) {
-//     case "home":
-//       return (
-//         <div className="experience-container">
-//           <ul>
-//             {test2.map(
-//               (
-//                 item: {
-//                   [x: string]:
-//                     | string
-//                     | number
-//                     | boolean
-//                     | React.ReactElement<
-//                         any,
-//                         string | React.JSXElementConstructor<any>
-//                       >
-//                     | Iterable<React.ReactNode>
-//                     | React.ReactPortal
-//                     | React.PromiseLikeOfReactNode
-//                     | null
-//                     | undefined;
-//                 },
-//                 index: React.Key | null | undefined
-//               ) => (
-//                 <>
-//                   <li key={index}>
-//                     <p className="whitespace-nowrap	">{item["header"]}</p>
-//                   </li>
-//                 </>
-//               )
-//             )}
-//           </ul>
-//         </div>
-//       );
-//     default:
-//       return <>{keys[0]}</>;
-//   }
-// };
+  switch (keys[0]) {
+    case "home":
+      return (
+        <div className="experience-container">
+          <ul>
+            {test2.map(
+              (
+                item: {
+                  [x: string]:
+                    | string
+                    | number
+                    | boolean
+                    | React.ReactElement<
+                        any,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | React.ReactPortal
+                    | React.PromiseLikeOfReactNode
+                    | null
+                    | undefined;
+                },
+                index: React.Key | null | undefined
+              ) => (
+                <>
+                  <li key={index}>
+                    <p className="whitespace-nowrap	">{item["header"]}</p>
+                  </li>
+                </>
+              )
+            )}
+          </ul>
+        </div>
+      );
+    default:
+      return <>{keys[0]}</>;
+  }
+};
 
 const handleCity = (city: string, target: gsap.TweenTarget) => {
   gsap.to(target, {
@@ -229,7 +231,10 @@ const handleCity = (city: string, target: gsap.TweenTarget) => {
 
 export const BurgerModal = ({ showModal, setShowModal, state }) => {
   // Create varibles of our dom nodes
-  let menuLayer = React.useRef<HTMLInputElement>(null);
+  // let menuLayer = React.useRef() as React.MutableRefObject<HTMLInputElement>;
+  // let menuLayer = (React.MutableRefObject<HTMLInputElement | null> =
+  //   useRef(null));
+  let menuLayer: React.MutableRefObject<null>;
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
   let cityBackground = useRef(null);
@@ -256,7 +261,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
 
   const [hidden, setHidden] = useState(false);
   //   const [pos, setPos] = useState(0);
-  const [element, setElement] = useState(null);
+  const [element, setElement] = useState<null | HTMLDivElement>(null);
   // useEventListener("scroll", (ev) => setPos(ev.target.scrollTop), element);
 
   return (
@@ -266,22 +271,25 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
           <motion.div ref={modalRef}>
             <Background ref={modalRef}>
               <a.div className="" style={animation}>
-                {/* <ModalWrapper ref={(el) => setElement(el)}>
+                <ModalWrapper ref={(el) => setElement(el)}>
                   <motion.div
                     className=""
                     animate={hidden ? "hidden" : "visible"}
                   >
                     <div
-                      ref={(el) => (menuLayer = el)}
+                      // ref={(el) => (menuLayer = el)}
                       className="hamburger-menu"
                     >
                       <div
-                        ref={(el) => (reveal1 = el)}
+                        // ref={(el) => (reveal1 = el)}
                         className="menu-secondary-background-color"
                       ></div>
-                      <div ref={(el) => (reveal2 = el)} className="menu-layer">
+                      <div
+                        // ref={(el) => (reveal2 = el)}
+                        className="menu-layer"
+                      >
                         <div
-                          ref={(el) => (cityBackground = el)}
+                          // ref={(el) => (cityBackground = el)}
                           className="menu-city-background bg-cover"
                         ></div>
 
@@ -299,8 +307,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line3 = el)}
+                                      // onMouseOut={(e) => handleHoverExit(e)}
+                                      // ref={(el) => (line3 = el)}
                                       href="/projects"
                                       onClick={closeModal}
                                     >
@@ -310,8 +318,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line1 = el)}
+                                      // onMouseOut={(e) => handleHoverExit(e)}
+                                      // ref={(el) => (line1 = el)}
                                       href="/company"
                                       onClick={closeModal}
                                     >
@@ -321,8 +329,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line2 = el)}
+                                      // onMouseOut={(e) => handleHoverExit(e)}
+                                      // ref={(el) => (line2 = el)}
                                       href="/news"
                                       onClick={closeModal}
                                     >
@@ -333,8 +341,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line3 = el)}
+                                      // onMouseOut={(e) => handleHoverExit(e)}
+                                      // ref={(el) => (line3 = el)}
                                       href="/contact"
                                       onClick={closeModal}
                                     >
@@ -344,7 +352,10 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                 </ul>
                               </nav>
 
-                              <div ref={(el) => (info = el)} className="info">
+                              <div
+                                // ref={(el) => (info = el)}
+                                className="info"
+                              >
                                 {FooterMessages.FooterItems.map(
                                   (item, index) => {
                                     return (
@@ -377,9 +388,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                         </motion.div>
                       </div>
                     </div>
-
                   </motion.div>
-                </ModalWrapper> */}
+                </ModalWrapper>
               </a.div>
             </Background>
           </motion.div>
@@ -390,23 +400,3 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
 };
 
 export default BurgerModal;
-
-// export async function getStaticProps({ params, preview = false }) {
-//   const data = await getPostAndMorePosts(params.slug, preview);
-
-//   return {
-//     props: {
-//       preview,
-//       post: data?.post ?? null,
-//       morePosts: data?.morePosts ?? null,
-//     },
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   const allPosts = await getAllPostsWithSlug();
-//   return {
-//     paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
-//     fallback: true,
-//   };
-// }

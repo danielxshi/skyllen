@@ -3,11 +3,15 @@
 import Link from "next/link";
 import React, { Component } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../images/nav-logo.png"
+import logo from "../images/nav-logo.png";
 import ContentfulImage from "@/lib/contentful-image";
 
+type Props = {
+  onClick
+};
 
-class SlugNav extends Component {
+
+class SlugNav extends Component<Props> {
   state = { clicked: false };
 
   handleClick = () => {
@@ -16,10 +20,9 @@ class SlugNav extends Component {
     // setTimeout(() => {
     // }, 1200)
 
-    console.log(this.state) 
+    console.log(this.state);
   };
-  
-  
+
   render() {
     return (
       <AnimatePresence>
@@ -34,16 +37,26 @@ class SlugNav extends Component {
             <div className="">
               <div className="inner-header">
                 <div className="logo">
-                  <Link  onClick={() => {
+                  <Link
+                    onClick={() => {
                       // this.props.onLogoClick();
-                    }} href="/"><ContentfulImage width={36} height={36} quality={85} src="../images/nav-logo.png"/></Link>
+                    }}
+                    href="/"
+                  >
+                    <ContentfulImage
+                      width={36}
+                      height={36}
+                      quality={85}
+                      src="../images/nav-logo.png"
+                    />
+                  </Link>
                 </div>
                 <div className="menu">
                   <button
                     id="nav-icon2"
                     className={this.state.clicked ? "open" : "closed"}
                     onClick={() => {
-                      // this.props.onClick();
+                      this.props.onClick();
                       this.handleClick();
                     }}
                   >
