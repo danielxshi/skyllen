@@ -7,21 +7,15 @@ import logo from "../images/nav-logo.png";
 import ContentfulImage from "@/lib/contentful-image";
 
 type Props = {
-  onClick
-  onLogoClick
+  onClick;
+  onLogoClick;
 };
-
 
 class SlugNav extends Component<Props> {
   state = { clicked: false };
 
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
-    // Disable menu for 1200ms *incomplete*
-    // setTimeout(() => {
-    // }, 1200)
-
-    console.log(this.state);
   };
 
   render() {

@@ -44,6 +44,13 @@ import {
 import FooterMessages from "../JSON/FooterItems";
 import ContentfulImage from "@/lib/contentful-image";
 
+type Props = {
+  showModal;
+  setShowModal;
+  state;
+  ListClick;
+};
+
 const Background = styled.div`
   height: 100%;
   position: fixed;
@@ -229,14 +236,26 @@ const handleCity = (city: string, target: gsap.TweenTarget) => {
   });
 };
 
-export const BurgerModal = ({ showModal, setShowModal, state }) => {
+export const BurgerModal = ({ showModal, setShowModal, state, ListClick }: Props) => {
   let menuLayer: React.MutableRefObject<null> | HTMLDivElement | null;
   let reveal1: React.MutableRefObject<null> | HTMLDivElement | null;
   let reveal2: React.MutableRefObject<null> | HTMLDivElement | null;
   let cityBackground: React.MutableRefObject<null> | HTMLDivElement | null;
-  let line1: React.MutableRefObject<null> | HTMLDivElement | HTMLAnchorElement | null;
-  let line2: React.MutableRefObject<null> | HTMLDivElement | HTMLAnchorElement | null;
-  let line3: React.MutableRefObject<null> | HTMLDivElement | HTMLAnchorElement | null;
+  let line1:
+    | React.MutableRefObject<null>
+    | HTMLDivElement
+    | HTMLAnchorElement
+    | null;
+  let line2:
+    | React.MutableRefObject<null>
+    | HTMLDivElement
+    | HTMLAnchorElement
+    | null;
+  let line3:
+    | React.MutableRefObject<null>
+    | HTMLDivElement
+    | HTMLAnchorElement
+    | null;
   let info = useRef(null);
 
   const modalRef = React.useRef<HTMLInputElement>(null);
@@ -248,17 +267,18 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
     opacity: showModal ? 1 : 0,
   });
 
+  console.log("test Show b4" + setShowModal);
   const closeModal = (e) => {
     console.log("close modal");
+    console.log(setShowModal);
     if (modalRef.current === e.target) {
       setShowModal(false);
     }
   };
+  
 
   const [hidden, setHidden] = useState(false);
-  //   const [pos, setPos] = useState(0);
   const [element, setElement] = useState<null | HTMLDivElement>(null);
-  // useEventListener("scroll", (ev) => setPos(ev.target.scrollTop), element);
 
   return (
     <header className="burger-menu">
@@ -280,10 +300,7 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                         ref={(el) => (reveal1 = el)}
                         className="menu-secondary-background-color"
                       ></div>
-                      <div
-                        ref={(el) => (reveal2 = el)}
-                        className="menu-layer"
-                      >
+                      <div ref={(el) => (reveal2 = el)} className="menu-layer">
                         <div
                           ref={(el) => (cityBackground = el)}
                           className="menu-city-background bg-cover"
@@ -306,7 +323,9 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                       onMouseOut={(e) => handleHoverExit(e)}
                                       ref={(el) => (line3 = el)}
                                       href="/projects"
-                                      onClick={closeModal}
+                                      onClick={() => {
+                                        ListClick.onClick();
+                                      }}
                                     >
                                       Projects
                                     </Link>
@@ -317,7 +336,9 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                       onMouseOut={(e) => handleHoverExit(e)}
                                       ref={(el) => (line1 = el)}
                                       href="/company"
-                                      onClick={closeModal}
+                                      onClick={() => {
+                                        ListClick.onClick();
+                                      }}
                                     >
                                       Company
                                     </Link>
@@ -328,7 +349,9 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                       onMouseOut={(e) => handleHoverExit(e)}
                                       ref={(el) => (line2 = el)}
                                       href="/news"
-                                      onClick={closeModal}
+                                      onClick={() => {
+                                        ListClick.onClick();
+                                      }}
                                     >
                                       News
                                     </Link>
@@ -340,7 +363,9 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                       onMouseOut={(e) => handleHoverExit(e)}
                                       ref={(el) => (line3 = el)}
                                       href="/contact"
-                                      onClick={closeModal}
+                                      onClick={() => {
+                                        ListClick.onClick();
+                                      }}
                                     >
                                       Contact
                                     </Link>
@@ -366,7 +391,9 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                 PROJECTS:
                                 {cities.map((el) => (
                                   <Link
-                                    onClick={closeModal}
+                                    onClick={() => {
+                                        ListClick.onClick();
+                                      }}
                                     href={el.url}
                                     onMouseEnter={() =>
                                       handleCity(el.image, cityBackground)

@@ -13,11 +13,27 @@ import ParallaxBG from "./components/ParallaxBG";
 import Logo from "./images/logo-landing.webp";
 import ContentfulImage from "@/lib/contentful-image";
 import React from "react";
+import localFont from "next/font/local";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+const quicksand = localFont({
+  src: [
+    {
+      path: "./fonts/quicksand/Quicksand-VariableFont_wght.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
+
+const quicksandBold = localFont({
+  src: [
+    {
+      path: "./fonts/quicksand/Quicksand-VariableFont_wght.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const renderSwitch = (params: { [x: string]: any }) => {
@@ -30,7 +46,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "contact":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-span-3">
-          <h3 className="mb-8">Let's Connect</h3>
+          <h3 className={`mb-8 ${quicksandBold.className}`}>Let's Connect</h3>
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
@@ -46,7 +62,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "projects":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-start-6 md:col-span-2">
-          <h3 className="mb-8">Projects</h3>
+          <h3 className={`mb-8 ${quicksandBold.className}`}>Projects</h3>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
               <li className="underscore-cta">
@@ -62,7 +78,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "socials":
       return (
         <div className="md:col-start-8 md:col-span-2">
-          <h3 className="mb-8">Follow Us</h3>
+          <h3 className={`mb-8 ${quicksandBold.className}`}>Follow Us</h3>
           <ul>
             {test2.map((item, index) => (
               <>
@@ -115,7 +131,7 @@ function HeaderModal() {
     setShowModal((prev) => !prev);
   };
 
-  const closeModal = (e) => {
+  const closeModal2 = (e) => {
     console.log("close modal");
     if (modalRef.current === e.target) {
       setShowModal(false);
@@ -128,8 +144,9 @@ function HeaderModal() {
         state={setShowModal}
         showModal={showModal}
         setShowModal={setShowModal}
+        ListClick={closeModal2}
       />
-      {<Header onLogoClick={closeModal} onClick={openModal} />}
+      {<Header onLogoClick={closeModal2} onClick={openModal} />}
     </AnimatePresence>
   );
 }
@@ -141,7 +158,7 @@ export default function RootLayout({
 }) {
   return (
     <ScrollObserver>
-      <html lang="en" className={inter.variable}>
+      <html lang="en" className={`${quicksand.className}`}>
         <body>
           <section className="min-h-screen">
             <HeaderModal />

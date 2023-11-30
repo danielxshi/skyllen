@@ -1,6 +1,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import ContentfulImage from "@/lib/contentful-image";
 import Link from "next/link";
+import localFont from "next/font/local";
+
+const quicksand = localFont({
+  src: [
+    {
+      path: "../fonts/quicksand/Quicksand-VariableFont_wght.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
+
 export default function GalleryButton(props) {
   return (
     <div>
@@ -29,9 +41,11 @@ export default function GalleryButton(props) {
                   scale: 0.85,
                   transition: { duration: 1 },
                 }}
-                className="flex heavy-med m-auto w-full justify-center text-center font-bold relative text-white h-full align-middle justify-center items-center"
+                className="flex heavy-med m-auto w-full tracking-tighter justify-center text-center font-bold relative text-white h-full align-middle justify-center items-center"
               >
-                {props.status}
+                <strong className={`${quicksand.className}`}>
+                  {props.status}
+                </strong>
               </motion.span>
             </div>
           </motion.div>

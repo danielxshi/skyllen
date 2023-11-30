@@ -36,22 +36,20 @@ import projectImageR2 from "../../images/1650-day.webp";
 import projectImageL3 from "../../images/pendrell-aerial.webp";
 import projectImageR3 from "../../images/streetview.webp";
 import ContentfulImage from "@/lib/contentful-image";
+import localFont from "next/font/local";
 
-// type Props = {
-//   playbackConst?: number;
-//   src: {
-//     webm: string;
-//     mp4: string;
-//     webmVp9: string;
-//   };
-// };
+const quicksand = localFont({
+  src: [
+    {
+      path: "../../fonts/quicksand/Quicksand-VariableFont_wght.ttf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+});
 
 const ParallaxScrollVideo = () => {
   const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
-  //   Testing Video height using framermotion
-  //   const { scrollY, refreshDocumentMeasurement, scrollHeight } =
-  //     useScroll();
-
   const [videoScrollDistance, setVideoScrollDistance] = useState(0);
 
   const scrollSectionRef = useRef<HTMLDivElement>(null);
@@ -67,7 +65,7 @@ const ParallaxScrollVideo = () => {
       imageTwo: projectImageR1,
       link: "/posts/618-carnavron",
       description:
-        "We're a multi-disciplinary Real Estate development firm focusing on developing properties that connect Nature, Architecture, Technology, and Functionality."
+        "We're a multi-disciplinary Real Estate development firm focusing on developing properties that connect Nature, Architecture, Technology, and Functionality.",
     },
     {
       name: "We are inspired by",
@@ -105,9 +103,7 @@ const ParallaxScrollVideo = () => {
     window.requestAnimationFrame(scrollPlay);
   }, []);
   const handleMetaDataLoaded = () => {
-    setVideoScrollDistance(
-      Math.floor(videoRef.current.duration) * 500
-    );
+    setVideoScrollDistance(Math.floor(videoRef.current.duration) * 500);
   };
 
   useEffect(() => {
@@ -167,7 +163,7 @@ const ParallaxScrollVideo = () => {
                   <div className="project-card-content p-8 md:w-w-screen-1/2 w-screen">
                     <div className="text-content justify-between h-3/4 flex flex-col mr-auto ml-auto w-300">
                       <div className="">
-                        <h3>{el.name} </h3>
+                        <h3 className={`${quicksand.className}`}>{el.name} </h3>
                         <span>-</span>
                       </div>
                       <div>

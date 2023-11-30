@@ -24,7 +24,7 @@ body {
   background-color: $white;
   padding: 0;
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  //   font-family: "Quicksand", sans-serif;
   p {
     line-height: 170%;
   }
@@ -37,7 +37,6 @@ body {
 }
 
 span {
-  // font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
@@ -60,7 +59,6 @@ span {
   max-width: 1380px;
   margin: auto;
   .wrapper {
-    // padding: 0 48px;
     .home {
       display: flex;
       justify-content: center;
@@ -217,10 +215,7 @@ header {
                 font-weight: 700;
 
                 cursor: pointer;
-                height: 2rem;
-                // overflow: hidden;
-                // position: relative;
-                // width: 700px;
+                height: 3rem;
                 a {
                   position: absolute;
                   color: #fff;
@@ -631,7 +626,7 @@ header {
 label,
 button,
 .description {
-  font-family: "Jost", sans-serif;
+  //   font-family: "Jost", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1rem;
 }
@@ -755,7 +750,7 @@ input:checked + .slider:before {
   margin: 0.125rem 0;
   font-size: 0.75rem;
   text-transform: uppercase;
-  font-family: "Jost";
+  //   font-family: "Jost";
   color: var(--secondary-color);
 }
 
@@ -862,6 +857,12 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
+  nav {
+    font-size: 5rem !important;
+    ul li {
+      height: 5rem !important;
+    }
+  }
   .project-content-map-container {
     li {
       margin-bottom: 15vh;
