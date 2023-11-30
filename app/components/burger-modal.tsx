@@ -261,12 +261,12 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
 
   return (
     <header className="burger-menu">
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {showModal ? (
           <motion.div ref={modalRef}>
             <Background ref={modalRef}>
               <a.div className="" style={animation}>
-                <ModalWrapper ref={(el) => setElement(el)}>
+                {/* <ModalWrapper ref={(el) => setElement(el)}>
                   <motion.div
                     className=""
                     animate={hidden ? "hidden" : "visible"}
@@ -379,12 +379,12 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                     </div>
 
                   </motion.div>
-                </ModalWrapper>
+                </ModalWrapper> */}
               </a.div>
             </Background>
           </motion.div>
         ) : null}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </header>
   );
 };

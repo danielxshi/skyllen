@@ -89,7 +89,7 @@ export default async function PostPage({
       <PageSection style={"container pb-16 pt-16 flex flex-col"}>
         <Headline title={post.excerpt} overline={post.title} />
         <div className="flex w-full flex-col project-content-map-container">
-          {/* {dataValue.map((item, index) => (
+          {dataValue.map((item, index) => (
             <li className="flex mb-16 flex-col md:flex-row">
               <div key={index} className="content w-full md:pr-16 md:w-1/2">
                 <ContentfulImage
@@ -109,7 +109,7 @@ export default async function PostPage({
                 </div>
               </div>
             </li>
-          ))} */}
+          ))}
         </div>
       </PageSection>
       <PageSection style={"footer-gap container min-h-screen pt-16 pb-16"}>
