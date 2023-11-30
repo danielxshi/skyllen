@@ -3,7 +3,7 @@ import { MouseEvent } from "react";
 
 
 // OPEN MENU
-export const staggerReveal = (node1: string, node2: string) => {
+export const staggerReveal = (node1, node2) => {
   gsap.from([node1, node2], {
     duration: 0.8,
     height: 0,
@@ -17,7 +17,7 @@ export const staggerReveal = (node1: string, node2: string) => {
 };
 
 // CLOSE MENU
-export const staggerRevealClose = (node1: string, node2: string) => {
+export const staggerRevealClose = (node1, node2) => {
   gsap.to([node1, node2], {
     duration: 0.8,
     height: 0,
@@ -63,7 +63,7 @@ export const handleHover = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEve
 };
 
 // Hover off the link
-export const handleHoverExit = (e: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+export const handleHoverExit = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: -3,

@@ -230,17 +230,13 @@ const handleCity = (city: string, target: gsap.TweenTarget) => {
 };
 
 export const BurgerModal = ({ showModal, setShowModal, state }) => {
-  // Create varibles of our dom nodes
-  // let menuLayer = React.useRef() as React.MutableRefObject<HTMLInputElement>;
-  // let menuLayer = (React.MutableRefObject<HTMLInputElement | null> =
-  //   useRef(null));
-  let menuLayer: React.MutableRefObject<null>;
-  let reveal1 = useRef(null);
-  let reveal2 = useRef(null);
-  let cityBackground = useRef(null);
-  let line1 = useRef(null);
-  let line2 = useRef(null);
-  let line3 = useRef(null);
+  let menuLayer: React.MutableRefObject<null> | HTMLDivElement | null;
+  let reveal1: React.MutableRefObject<null> | HTMLDivElement | null;
+  let reveal2: React.MutableRefObject<null> | HTMLDivElement | null;
+  let cityBackground: React.MutableRefObject<null> | HTMLDivElement | null;
+  let line1: React.MutableRefObject<null> | HTMLDivElement | HTMLAnchorElement | null;
+  let line2: React.MutableRefObject<null> | HTMLDivElement | HTMLAnchorElement | null;
+  let line3: React.MutableRefObject<null> | HTMLDivElement | HTMLAnchorElement | null;
   let info = useRef(null);
 
   const modalRef = React.useRef<HTMLInputElement>(null);
@@ -277,19 +273,19 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                     animate={hidden ? "hidden" : "visible"}
                   >
                     <div
-                      // ref={(el) => (menuLayer = el)}
+                      ref={(el) => (menuLayer = el)}
                       className="hamburger-menu"
                     >
                       <div
-                        // ref={(el) => (reveal1 = el)}
+                        ref={(el) => (reveal1 = el)}
                         className="menu-secondary-background-color"
                       ></div>
                       <div
-                        // ref={(el) => (reveal2 = el)}
+                        ref={(el) => (reveal2 = el)}
                         className="menu-layer"
                       >
                         <div
-                          // ref={(el) => (cityBackground = el)}
+                          ref={(el) => (cityBackground = el)}
                           className="menu-city-background bg-cover"
                         ></div>
 
@@ -307,8 +303,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      // onMouseOut={(e) => handleHoverExit(e)}
-                                      // ref={(el) => (line3 = el)}
+                                      onMouseOut={(e) => handleHoverExit(e)}
+                                      ref={(el) => (line3 = el)}
                                       href="/projects"
                                       onClick={closeModal}
                                     >
@@ -318,8 +314,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      // onMouseOut={(e) => handleHoverExit(e)}
-                                      // ref={(el) => (line1 = el)}
+                                      onMouseOut={(e) => handleHoverExit(e)}
+                                      ref={(el) => (line1 = el)}
                                       href="/company"
                                       onClick={closeModal}
                                     >
@@ -329,8 +325,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      // onMouseOut={(e) => handleHoverExit(e)}
-                                      // ref={(el) => (line2 = el)}
+                                      onMouseOut={(e) => handleHoverExit(e)}
+                                      ref={(el) => (line2 = el)}
                                       href="/news"
                                       onClick={closeModal}
                                     >
@@ -341,8 +337,8 @@ export const BurgerModal = ({ showModal, setShowModal, state }) => {
                                   <li>
                                     <Link
                                       onMouseEnter={(e) => handleHover(e)}
-                                      // onMouseOut={(e) => handleHoverExit(e)}
-                                      // ref={(el) => (line3 = el)}
+                                      onMouseOut={(e) => handleHoverExit(e)}
+                                      ref={(el) => (line3 = el)}
                                       href="/contact"
                                       onClick={closeModal}
                                     >

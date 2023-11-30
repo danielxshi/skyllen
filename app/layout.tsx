@@ -12,6 +12,7 @@ import ScrollObserver from "./util/scroll-observer";
 import ParallaxBG from "./components/ParallaxBG";
 import Logo from "./images/logo-landing.webp";
 import ContentfulImage from "@/lib/contentful-image";
+import React from "react";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -106,10 +107,19 @@ function Footer() {
 }
 
 function HeaderModal() {
+  const modalRef = React.useRef<HTMLInputElement>(null);
+
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
     setShowModal((prev) => !prev);
+  };
+
+  const closeModal = (e) => {
+    console.log("close modal");
+    if (modalRef.current === e.target) {
+      setShowModal(false);
+    }
   };
 
   return (
@@ -119,7 +129,7 @@ function HeaderModal() {
         showModal={showModal}
         setShowModal={setShowModal}
       />
-      {<Header onClick={openModal} />}
+      {<Header onLogoClick={closeModal} onClick={openModal} />}
     </AnimatePresence>
   );
 }
