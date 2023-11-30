@@ -8,6 +8,7 @@ import ContentfulImage from "@/lib/contentful-image";
 
 type Props = {
   onClick
+  onLogoClick
 };
 
 
@@ -39,7 +40,7 @@ class SlugNav extends Component<Props> {
                 <div className="logo">
                   <Link
                     onClick={() => {
-                      // this.props.onLogoClick();
+                      this.props.onLogoClick();
                     }}
                     href="/"
                   >
