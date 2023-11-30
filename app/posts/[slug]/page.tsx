@@ -104,7 +104,7 @@ export default async function PostPage({
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Harum non praesentium provident quas id deserunt rem ex.
                     Atque ab, soluta id pariatur numquam aperiam quidem dicta
-                    officiis distinctio. Libero, recusandae.
+                    {/* officiis distinctio. Libero, recusandae. */}
                   </p>
                 </div>
               </div>
