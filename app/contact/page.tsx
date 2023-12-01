@@ -47,7 +47,7 @@ export default function Contact() {
           />
         </div>
       </ParallaxBG>
-      <PageSection style="pt-16 pb-16 md:h-128 flex">
+      <PageSection style="pt-16 pb-16 md:h-128 flex md:pb-32">
         <div className="container grid-container">
           <div className="grid-start-1 md:col-span-6 col-span-full">
             <form id="contact-form" method="post">

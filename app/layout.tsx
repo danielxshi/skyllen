@@ -54,13 +54,13 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "contact":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-span-3">
-          <h3 className={`mb-8 ${montserrat.className}`}>Let's Connect</h3>
+          <p className={`mb-4 uppercase ${montserrat.className}`}>
+            Let's Connect
+          </p>
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
-                <li className={`mb-8 ${quicksandBold.className}`}>
-                  {item["email"]}
-                </li>
+                <li>{item["email"]}</li>
                 <li className="">{item["address"]}</li>
                 <li className="">{item["city"]}</li>
                 <li className="">{item["phone"]}</li>
@@ -72,7 +72,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "projects":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-start-6 md:col-span-2">
-          <h3 className={`mb-8 ${montserrat.className}`}>Projects</h3>
+          <p className={`mb-4 uppercase ${montserrat.className}`}>Projects</p>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
               <li className="underscore-cta">
@@ -88,7 +88,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "socials":
       return (
         <div className="md:col-start-8 md:col-span-2">
-          <h3 className={`mb-8 ${montserrat.className}`}>Follow Us</h3>
+          <p className={`mb-4 uppercase ${montserrat.className}`}>Follow Us</p>
           <ul>
             {test2.map((item, index) => (
               <>
@@ -105,7 +105,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
 
     case "copyright":
       return (
-        <div className="mt-20 col-span-full flex flex-row-reverse pb-4">
+        <div className="mt-20 col-span-full flex flex-row-reverse pb-4 copyright">
           <ul>
             {test2.map((item, index) => (
               <>

@@ -6,6 +6,17 @@ import ContentfulImage from "@/lib/contentful-image";
 import image1 from "../images/living-space-landing.webp";
 import image2 from "../images/pendrell-aerial.webp";
 import image3 from "../images/618-lobby.webp";
+import localFont from "next/font/local";
+
+const montserrattBold = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 const content = [
   {
@@ -37,7 +48,7 @@ const content = [
   },
 ];
 
-const Works = () => (
+const Works = ({ style }: { style?: string }) => (
   <TileWrapper numOfPages={3}>
     <TileBackground>
       <WorkBackground />
@@ -59,10 +70,14 @@ const Works = () => (
                 />
               </WorkBleed>
               <WorkBleed progress={progress}>
-                <div className="project-card-content w-screen md:w-2/4 md:p-16 md:px-5 md:w-w-screen-1/2">
+                <div
+                  className={`project-card-content w-screen md:w-2/4 md:p-16 md:px-5 md:w-w-screen-1/2 ${style}`}
+                >
                   <div className="justify-between flex flex-col h-5/6 md:h-full content-container container">
                     <div>
-                      <h3>{el.name} </h3>
+                      <h3 className={` ${montserrattBold.className}`}>
+                        {el.name}{" "}
+                      </h3>
                     </div>
                     <div>
                       <p className="tracking-tight pb-8">{el.textOne}</p>

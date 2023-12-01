@@ -46,12 +46,24 @@ span {
 }
 
 .footer-container {
-  padding-top: 18vh;
+  .container {
+    margin-bottom: 0 !important;
+    margin-top: 2rem;
+  }
+  padding-top: 5vh;
+  // padding-top: 18vh;
+  min-height: 55vh;
   background: linear-gradient(
     rgba(0, 0, 0, 0.165),
     rgba(0, 0, 0, 0.379),
     rgba(0, 0, 0, 0.495)
   );
+  .copyright {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: auto;
+  }
 }
 
 .container {
@@ -484,7 +496,7 @@ header {
     margin-left: auto;
     margin-right: auto;
   }
-  color: white; /* bottom: 0; */
+  // color: white; /* bottom: 0; */
   position: absolute;
   z-index: 1;
   height: 100%;
@@ -492,12 +504,15 @@ header {
   flex-direction: column;
   margin-bottom: 0;
   justify-content: end;
+  align-items: baseline;
+}
+
+.bg-gradient {
   background: linear-gradient(
     rgba(0, 0, 0, 0.663),
     rgba(0, 0, 0, 0.679),
     rgba(0, 0, 0, 0.795)
   );
-  align-items: baseline;
 }
 
 .contentful-fill-container {
@@ -514,6 +529,8 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    width: 100%;
+    min-width: 50vw;
     // width: fit-content;
   }
 }
@@ -874,6 +891,9 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
+  .text-bubble-content {
+    margin-bottom: 1.8rem;
+  }
   .company-parallax {
     .image-container {
       width: 12rem;
@@ -1066,3 +1086,13 @@ img {
 #scrollSection {
   display: block;
 }
+
+.copyright {
+  * {
+    font-size: 0.9rem;
+  }
+}
+
+// @media only screen and (max-width: 600px) and (hover: none) {
+
+// }

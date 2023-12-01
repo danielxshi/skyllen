@@ -90,7 +90,7 @@ export default function Page() {
               renderContent={({ progress }) => (
                 <WorkContainer>
                   <WorkBleedProject progress={progress}>
-                    <div className="project-card-content p-8 w-full">
+                    <div className="project-card-content bg-gradient text-white p-12 md:p-52 w-full">
                       <div className="text-content justify-between h-3/4 flex flex-col">
                         <div className="">
                           <h3>{el.name} </h3>

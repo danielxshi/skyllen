@@ -33,7 +33,7 @@ export default function Page() {
           />
         </ProjectGallery>
       </PageSection>
-      <PageSection style={"container pt-16 md:pb-52 pb-16 "}>
+      <PageSection style={"container pt-16 md:pb-32 pb-16 "}>
         <SocialGallery />
       </PageSection>
     </div>

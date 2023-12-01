@@ -15,15 +15,15 @@ const FooterItems = [
       projects: {
         content: [
           {
-            project: "618 CARNAVRON",
+            project: "618 Carnavron",
             url: "/posts/618-carnavron"
           },
           {
-            project: "1650 ON SECOND",
+            project: "1650 On Second",
             url: "/posts/1650-on-second"
           },
           {
-            project: "PENDRELL ST",
+            project: "Pendrell St",
             url: "/posts/pendrell-street"
           },
         ],
@@ -47,7 +47,7 @@ const FooterItems = [
       copyright: {
         content: [
           {
-            text: "2023 SKYLLEN PACIFIC | ALL RIGHTS RESERVED | SITE BY A LAB CREATIVE",
+            text: "2023 Skyllen Pacific | All Rights Reserved | Site by A Lab Creative",
           }
         ],
       },

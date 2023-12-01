@@ -74,7 +74,7 @@ export default function Page() {
         />
       </ParallaxBG>
 
-      <PageSection style="container pt-16 pb-16">
+      <PageSection style="container pt-16 pb-16 md:pb-52">
         <Headline overline="news" title="Stay updated with Skyllen" />
         <NewsGalleryItem />
       </PageSection>

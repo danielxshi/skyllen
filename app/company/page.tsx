@@ -61,7 +61,7 @@ export default function Page() {
       <PageSection style="pt-16 pb-16 md:h-128 flex">
         <div className="grid-container m-auto container">
           <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">
-            Our History |
+            Our History
           </h3>
           <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3">
             <p className="pb-8">
@@ -78,7 +78,7 @@ export default function Page() {
           </div>
         </div>
       </PageSection>
-      <Works />
+      <Works style="bg-white text-black"/>
       <PageSection style="pb-16 ">
         <ParallaxBG
           style="company-parallax"
@@ -123,7 +123,7 @@ export default function Page() {
           </div>
         </ParallaxBG>
       </PageSection>
-      <PageSection style="h-min pt-16 pb-16 lrg-padding-top company-section">
+      <PageSection style="h-min pt-16 pb-16 md:pb-32 lrg-padding-top company-section">
         {descriptions.map((el) => (
           <div className="container grid-container company-service">
             <ProjectDescription

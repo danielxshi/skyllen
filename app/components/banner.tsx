@@ -59,7 +59,7 @@ const Banner = ({ children, style, style2, overline }: Props) => {
           .
         </h1>
         <div className="flex justify-center flex-col m-auto w-fit text-center mt-8">
-          <p>{overline}</p>
+          <p className={` ${montserrattBold.className}`}>{overline}</p>
         </div>
       </div>
     </section>

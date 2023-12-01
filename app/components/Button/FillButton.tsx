@@ -3,18 +3,29 @@ import React from "react";
 import { motion } from "framer-motion";
 import { AnimationConfig } from "@/app//util/AnimationConfig";
 import Link from "next/link";
+import localFont from "next/font/local";
 
 type Props = {
   children?: React.ReactNode;
   url: string;
 };
 
+const montserratt = localFont({
+  src: [
+    {
+      path: "../../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
 const Button = ({ children, url }: Props) => {
   return (
     <motion.div
       initial={{
         backgroundColor: "rgba(0,0,0)",
-        color: "white"
+        color: "white",
       }}
       whileHover={{
         color: "#AACAE6",
@@ -24,7 +35,7 @@ const Button = ({ children, url }: Props) => {
     >
       <Link
         href={url}
-        className="button-content flex justify-center m-auto align-middle "
+        className={`button-content flex justify-center m-auto align-middle ${montserratt.className}`}
       >
         {children}
       </Link>

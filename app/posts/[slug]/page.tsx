@@ -10,6 +10,17 @@ import Headline from "@/app/components/headline";
 import { Markdown } from "@/lib/markdown";
 import Button from "@/app/components/Button/FillButton";
 import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
+import localFont from "next/font/local";
+
+const montserratt = localFont({
+  src: [
+    {
+      path: "../../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 export async function generateStaticParams() {
   const allPosts = await getAllPosts(false);
@@ -44,27 +55,37 @@ export default async function PostPage({
       >
         <div className="md:flex md:w-full justify-between">
           <div className="flex flex-col">
-            <span className="mb-8 font-bold">Status</span>
+            <span className={`mb-8 font-bold ${montserratt.className}`}>
+              Status
+            </span>
             <p>{post.projectDetails["status"]}</p>
           </div>
 
           <div className="flex flex-col">
-            <span className="mb-8 font-bold">Type</span>
+            <span className={`mb-8 font-bold ${montserratt.className}`}>
+              Type
+            </span>
             <p>{post.projectDetails["type"]}</p>
           </div>
 
           <div className="flex flex-col">
-            <span className="mb-8 font-bold">Location</span>
+            <span className={`mb-8 font-bold ${montserratt.className}`}>
+              Location
+            </span>
             <p>{post.projectDetails["location"]}</p>
           </div>
 
           <div className="flex flex-col">
-            <span className="mb-8 font-bold">Estimated Completion</span>
+            <span className={`mb-8 font-bold ${montserratt.className}`}>
+              Estimated Completion
+            </span>
             <p>{post.projectDetails["estimate"]}</p>
           </div>
 
           <div className="flex flex-col">
-            <span className="mb-8 font-bold">Homes</span>
+            <span className={`mb-8 font-bold ${montserratt.className}`}>
+              Homes
+            </span>
             <p>{post.projectDetails["count"]}</p>
           </div>
         </div>
@@ -96,8 +117,8 @@ export default async function PostPage({
               <p className="mt-4 sub">{post.projectImageTwoText}</p>
             </div>
 
-            <div className="mt-auto">
-              <p>{post.projectTextBubbleOne}</p>
+            <div className="mt-auto w-300">
+              <p className="text-bubble-content">{post.projectTextBubbleOne}</p>
             </div>
           </div>
         </PageSection>
@@ -107,9 +128,8 @@ export default async function PostPage({
         >
           <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-16 md:pb-0">
             <div className="mt-auto">
-              <p>{post.projectTextBubbleTwo}</p>
+              <p className="text-bubble-content">{post.projectTextBubbleTwo}</p>
             </div>
-            <p className="mt-4 sub">{post.projectImageTwoText}</p>
           </div>
 
           <div className="flex  md:col-start-4 md:col-span-4 flex-col col-span-full">
@@ -144,7 +164,9 @@ export default async function PostPage({
             </div>
 
             <div className="mt-auto">
-              <p>{post.projectTextBubbleThree}</p>
+              <p className="text-bubble-content">
+                {post.projectTextBubbleThree}
+              </p>
             </div>
           </div>
         </PageSection>
@@ -181,9 +203,8 @@ export default async function PostPage({
             <ContentfulImage src={post.coverImage.url} fill={true} />
           </div>
         </div>
-        <p className="mt-4 sub m-auto">{post.excerpt}</p>
       </PageSection>
-      <PageSection style={"container min-h-screen pt-16 pb-16"}>
+      <PageSection style={"container min-h-screen pt-16 pb-16 md:pb-32"}>
         <ProjectGallery />
       </PageSection>
     </>
