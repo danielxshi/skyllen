@@ -141,9 +141,9 @@ const ParallaxScrollVideo = () => {
         <WorkBackground />
       </TileBackground>
       <TileContent>
-        <ParallaxFooter url="https://i.imgur.com/7RiSQz1.mp4">
+        {/* <ParallaxFooter url="https://i.imgur.com/7RiSQz1.mp4">
           <div className="min-h-screen"></div>
-        </ParallaxFooter>
+        </ParallaxFooter> */}
         {projects.map((el) => (
           <Tile
             page={el.page}
