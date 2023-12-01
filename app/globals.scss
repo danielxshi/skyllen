@@ -607,6 +607,14 @@ header {
   position: relative;
 }
 
+.bg-blur-black {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.663),
+    rgba(0, 0, 0, 0.363),
+    rgba(0, 0, 0, 0.068)
+  ) !important;
+}
+
 // contact form
 // https://codepen.io/Anup-Gautam/pen/zYepBmY?editors=0100
 
@@ -924,6 +932,40 @@ img {
 }
 
 // Animation
+.l-image-1,
+.l-image-2,
+.l-image-3,
+.l-image-4,
+.l-image-5 {
+  position: absolute;
+  width: fit-content;
+}
+
+.l-image-4,
+.l-image-5 {
+  top: 100px;
+}
+
+.l-image-2,
+.l-image-3 {
+  bottom: 100px;
+}
+
+.landing-images {
+  background-color: rgb(255, 255, 255, 0.4);
+  margin: auto;
+  //   background-color: $white;
+  position: relative;
+  width: 1500px;
+  height: 100vh;
+  display: flex;
+  div:nth-child(odd) {
+    right: 50px !important;
+  }
+  div:nth-child(even) {
+    left: 50px !important;
+  }
+}
 
 .loader--hero {
   display: flex;
@@ -931,7 +973,7 @@ img {
   height: 100vh;
   width: 100%;
   img {
-    margin: auto !important;
+    margin: auto;
   }
   z-index: 9999;
 }

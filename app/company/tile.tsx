@@ -1,5 +1,5 @@
-import React, { useContext, useRef } from 'react';
-import { ScrollContext } from '../util/scroll-observer';
+import React, { useContext, useRef } from "react";
+import { ScrollContext } from "../util/scroll-observer";
 
 interface WrapperProps {
   numOfPages: number;
@@ -41,9 +41,9 @@ export const TileWrapper: React.FC<WrapperProps> = ({
     <TileContext.Provider value={{ numOfPages, currentPage }}>
       <div
         ref={refContainer}
-        className='relative bg-black text-white'
+        className="relative text-black"
         style={{
-          height: numOfPages * 100 + 'vh',
+          height: numOfPages * 100 + "vh",
         }}
       >
         {children}
@@ -55,12 +55,12 @@ export const TileWrapper: React.FC<WrapperProps> = ({
 export const TileBackground: React.FC<{ children: any }> = ({
   children,
 }: any) => {
-  return <div className='absolute h-full w-full'>{children}</div>;
+  return <div className="absolute h-full w-full">{children}</div>;
 };
 
 export const TileContent: React.FC<{ children: any }> = ({ children }: any) => {
   return (
-    <div className='sticky top-0 h-screen overflow-hidden'>{children}</div>
+    <div className="sticky top-0 h-screen overflow-hidden">{children}</div>
   );
 };
 
@@ -81,9 +81,9 @@ export const Tile: React.FC<Props> = ({ page, renderContent }) => {
   return (
     <div
       ref={refContainer}
-      className='absolute top-0 w-full md:w-w-screen-1/2'
+      className="absolute top-0 w-full md:w-w-screen-1/2"
       style={{
-        pointerEvents: progress <= 0 || progress >= 1 ? 'none' : undefined,
+        pointerEvents: progress <= 0 || progress >= 1 ? "none" : undefined,
         opacity,
       }}
     >

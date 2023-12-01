@@ -90,7 +90,7 @@ const ParallaxScrollVideo = () => {
 
   useEffect(() => {
     setLoaded(true);
-    const playbackConst = 500; // Adjust the constant as needed
+    const playbackConst = 250; // Adjust the constant as needed
     // Use requestAnimationFrame for smooth playback
     function scrollPlay() {
       if (videoRef.current) {
@@ -143,23 +143,45 @@ const ParallaxScrollVideo = () => {
           <Tile
             page={el.page}
             renderContent={({ progress }) => (
-              <WorkContainer>
-                <div
-                  className="relative h-fit md:w-w-screen-1/2"
-                  style={{
-                    height: videoScrollDistance,
-                  }}
-                >
-                  <motion.video ref={videoRef} id="v0" preload="preload">
-                    <source
-                      type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
-                      src={el.imageOne}
-                    ></source>
-                  </motion.video>
-                  <div ref={scrollSectionRef} id="scrollSection"></div>
+              <div
+                className="relative h-fit w-screen "
+                style={{
+                  height: videoScrollDistance,
+                }}
+              >
+                <div className="h-screen flex flex-col-reverse p-8 w-screen absolute z-50 text-white bg-blur-black">
+                  <div className="mb-auto text-content h-3/4 mt-auto flex flex-col mr-auto ml-auto w-600 justify-center">
+                    {/* <div className="">
+                      <h3
+                        className={`m-auto flex w-full text-center ${quicksand.className}`}
+                      >
+                        {el.name}{" "}
+                      </h3>
+                      <span>-</span>
+                    </div> */}
+                    <div>
+                      <h3 className="tracking-tight pb-8 text-center">{el.description}</h3>
+                    </div>
+                  </div>
                 </div>
+                <div ref={scrollSectionRef} id="scrollSection"></div>
+                <motion.video ref={videoRef} id="v0" preload="preload">
+                  <source
+                    type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+                    src={el.imageOne}
+                  ></source>
+                </motion.video>
+              </div>
+            )}
+          ></Tile>
+        ))}
+      </TileContent>
+    </TileWrapper>
+  );
+};
 
-                <WorkBleed progress={progress}>
+{
+  /* <WorkBleed progress={progress}>
                   <div className="project-card-content p-8 md:w-w-screen-1/2 w-screen">
                     <div className="text-content justify-between h-3/4 flex flex-col mr-auto ml-auto w-300">
                       <div className="">
@@ -172,21 +194,9 @@ const ParallaxScrollVideo = () => {
                     </div>
                   </div>
 
-                  {/* <ContentfulImage
-                    height="100"
-                    quality={75}
-                    src={el.imageOne}
-                    width={840}
-                  /> */}
-                </WorkBleed>
-              </WorkContainer>
-            )}
-          ></Tile>
-        ))}
-      </TileContent>
-    </TileWrapper>
-  );
-};
+
+                </WorkBleed> */
+}
 
 // Working small section for parallax video
 {

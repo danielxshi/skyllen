@@ -1,4 +1,3 @@
-// "use client"
 import { draftMode } from "next/headers";
 import { getAllPosts } from "@/lib/api";
 import Landing from "./components/landing";

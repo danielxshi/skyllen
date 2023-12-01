@@ -1,5 +1,4 @@
 "use client";
-
 import ProjectMessages from "../JSON/ProjectMessages";
 import ParallaxBG from "./ParallaxBG";
 import {
@@ -14,6 +13,8 @@ import gsap from "gsap";
 import ContentfulImage from "@/lib/contentful-image";
 import Logo from "../images/logo-landing.webp";
 import localFont from "next/font/local";
+// import { useState } from "react";
+
 
 const montserratt = localFont({
   src: [
@@ -50,6 +51,15 @@ export const renderSwitch = (params) => {
 };
 
 export default function Landing() {
+  // const [loading, setLoading] = useState(true);
+
+
+  // useEffect(() => {
+  //   loading
+  //     ? document.querySelector("body").classList.add("loading")
+  //     : document.querySelector("body").classList.remove("loading");
+  // }, [loading]);
+
   let dataValue = Object.values(dallas);
   return (
     <>

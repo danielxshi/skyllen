@@ -14,7 +14,11 @@ import Logo from "./images/logo-landing.webp";
 import ContentfulImage from "@/lib/contentful-image";
 import React from "react";
 import localFont from "next/font/local";
-
+import dallas from "../app/images/living-space-landing.webp";
+import image2 from "../app/images/618-lobby.webp";
+import image3 from "../app/images/living-space.webp";
+import image4 from "../app/images/pendrell-aerial.webp";
+import image5 from "../app/images/pendrell-aerial.webp";
 
 const quicksand = localFont({
   src: [
@@ -172,16 +176,22 @@ export default function RootLayout({
                   display: "none",
                 },
               }}
-              transition={{ delay: 0.5, duration: 4.5, ease: "easeInOut" }}
-              className="wrapper2 "
+              transition={{
+                delay: 0.5,
+                duration: 4.5,
+                ease: "easeInOut",
+                type: "tween",
+              }}
+              className="wrapper2"
             >
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
                 }}
                 transition={{ duration: 2, ease: "easeInOut" }}
-                className="loader--hero"
+                className="loader--hero "
               >
                 <ContentfulImage
                   src={Logo}
