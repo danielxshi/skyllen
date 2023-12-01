@@ -3,10 +3,11 @@ import ContentfulImage from "@/lib/contentful-image";
 import Link from "next/link";
 import localFont from "next/font/local";
 
-const quicksand = localFont({
+
+const montserrat = localFont({
   src: [
     {
-      path: "../fonts/quicksand/Quicksand-VariableFont_wght.ttf",
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
       weight: "700",
       style: "normal",
     },
@@ -43,7 +44,7 @@ export default function GalleryButton(props) {
                 }}
                 className="flex heavy-med m-auto w-full tracking-tighter justify-center text-center font-bold relative text-white h-full align-middle justify-center items-center"
               >
-                <strong className={`${quicksand.className}`}>
+                <strong className={`${montserrat.className}`}>
                   {props.status}
                 </strong>
               </motion.span>

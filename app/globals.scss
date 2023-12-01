@@ -873,21 +873,14 @@ img {
   position: relative;
 }
 
-// @media only screen and (min-width: 1900px) {
-//     .container {
-//         max-width: 90vw !important;
-//         width: 90vw !important;
-//     }
-// }
-
 @media only screen and (min-width: 800px) {
   .company-parallax {
     .image-container {
-      width: 4rem;
+      width: 12rem;
     }
     .react-parallax-content {
       img {
-        width: 4rem;
+        width: 12rem;
       }
     }
   }

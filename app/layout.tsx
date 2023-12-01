@@ -20,6 +20,7 @@ import image3 from "../app/images/living-space.webp";
 import image4 from "../app/images/pendrell-aerial.webp";
 import image5 from "../app/images/pendrell-aerial.webp";
 
+
 const quicksand = localFont({
   src: [
     {
@@ -40,6 +41,17 @@ const quicksandBold = localFont({
   ],
 });
 
+
+const montserrat = localFont({
+  src: [
+    {
+      path: "./fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
+
 export const renderSwitch = (params: { [x: string]: any }) => {
   const keys = Object.keys(params);
   const value = keys;
@@ -50,7 +62,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "contact":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-span-3">
-          <h3 className={`mb-8 ${quicksandBold.className}`}>Let's Connect</h3>
+          <h3 className={`mb-8 ${montserrat.className}`}>Let's Connect</h3>
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
@@ -68,7 +80,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "projects":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-start-6 md:col-span-2">
-          <h3 className={`mb-8 ${quicksandBold.className}`}>Projects</h3>
+          <h3 className={`mb-8 ${montserrat.className}`}>Projects</h3>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
               <li className="underscore-cta">
@@ -84,7 +96,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "socials":
       return (
         <div className="md:col-start-8 md:col-span-2">
-          <h3 className={`mb-8 ${quicksandBold.className}`}>Follow Us</h3>
+          <h3 className={`mb-8 ${montserrat.className}`}>Follow Us</h3>
           <ul>
             {test2.map((item, index) => (
               <>
