@@ -90,27 +90,27 @@ const ParallaxScrollVideo = () => {
     },
   ];
 
-  useEffect(() => {
-    setLoaded(true);
-    const playbackConst = 250; // Adjust the constant as needed
-    // Use requestAnimationFrame for smooth playback
-    function scrollPlay() {
-      if (videoRef.current) {
-        const frameNumber = window.pageYOffset / playbackConst;
-        videoRef.current.currentTime = frameNumber;
-      }
-      window.requestAnimationFrame(scrollPlay);
-    }
+  // useEffect(() => {
+  //   setLoaded(true);
+  //   const playbackConst = 250; // Adjust the constant as needed
+  //   // Use requestAnimationFrame for smooth playback
+  //   function scrollPlay() {
+  //     if (videoRef.current) {
+  //       const frameNumber = window.pageYOffset / playbackConst;
+  //       videoRef.current.currentTime = frameNumber;
+  //     }
+  //     window.requestAnimationFrame(scrollPlay);
+  //   }
 
-    window.requestAnimationFrame(scrollPlay);
-  }, []);
-  const handleMetaDataLoaded = () => {
-    setVideoScrollDistance(Math.floor(videoRef.current.duration) * 500);
-  };
+  //   window.requestAnimationFrame(scrollPlay);
+  // }, []);
+  // const handleMetaDataLoaded = () => {
+  //   setVideoScrollDistance(Math.floor(videoRef.current.duration) * 500);
+  // };
 
-  useEffect(() => {
-    videoRef.current.load();
-  }, [videoRef]);
+  // useEffect(() => {
+  //   videoRef.current.load();
+  // }, [videoRef]);
 
   useEffect(() => {
     // refreshDocumentMeasurement();
@@ -141,9 +141,9 @@ const ParallaxScrollVideo = () => {
         <WorkBackground />
       </TileBackground>
       <TileContent>
-        {/* <ParallaxFooter url="https://i.imgur.com/7RiSQz1.mp4">
+        <ParallaxFooter url="https://i.imgur.com/7RiSQz1.mp4">
           <div className="min-h-screen"></div>
-        </ParallaxFooter> */}
+        </ParallaxFooter>
         {projects.map((el) => (
           <Tile
             page={el.page}
