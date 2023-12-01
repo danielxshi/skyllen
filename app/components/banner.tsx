@@ -59,7 +59,6 @@ const Banner = ({ children, style, style2, overline }: Props) => {
           .
         </h1>
         <div className="flex justify-center flex-col m-auto w-fit text-center mt-8">
-          <span>-</span>
           <p>{overline}</p>
         </div>
       </div>

@@ -80,7 +80,7 @@ export default function Landing() {
               transition={{ delay: 3, duration: 1.5, ease: "easeInOut" }}
               className="header-wrapper container"
             >
-              <h1 className={`${montserratt.className}`}>Eminent Design, Modern Experience.</h1>
+              <h1 className={`${montserratt.className}`}>Eminent Design, <br/>Modern Experience.</h1>
               <a className="absolute left-2/4 bottom-16" href="#demo">
                 <div className="box">
                   <span></span>

@@ -63,7 +63,6 @@ const Works = () => (
                   <div className="justify-between flex flex-col h-5/6 md:h-full content-container container">
                     <div>
                       <h3>{el.name} </h3>
-                      <span>-</span>
                     </div>
                     <div>
                       <p className="tracking-tight pb-8">{el.textOne}</p>

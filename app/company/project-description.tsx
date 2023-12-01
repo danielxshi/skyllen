@@ -19,7 +19,6 @@ const ProjectDescription = ({
     >
       <div className="mb-16">
         <h3>{title}</h3>
-        <span>-</span>
       </div>
       <div>
         <div className="mb-4">

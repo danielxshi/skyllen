@@ -94,7 +94,6 @@ export default function Page() {
                       <div className="text-content justify-between h-3/4 flex flex-col">
                         <div className="">
                           <h3>{el.name} </h3>
-                          <span>-</span>
                         </div>
                         <div>
                           <p className="tracking-tight pb-8">
