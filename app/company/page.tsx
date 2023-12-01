@@ -15,7 +15,18 @@ import headerBG from "../images/pendrell-aerial.webp";
 import testImage from "@/public/images/1650-night.webp";
 import ParallaxFooter from "../components/ParallaxFooter";
 import Logo from "@/public/images/logo-landing.webp";
-// import LandingVideo from "./"
+import localFont from "next/font/local";
+
+const montserratt = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
 
 const descriptions = [
   {

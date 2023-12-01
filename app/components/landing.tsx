@@ -13,6 +13,17 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import ContentfulImage from "@/lib/contentful-image";
 import Logo from "../images/logo-landing.webp";
+import localFont from "next/font/local";
+
+const montserratt = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 export const renderSwitch = (params) => {
   const keys = Object.keys(params);
@@ -59,7 +70,7 @@ export default function Landing() {
               transition={{ delay: 3, duration: 1.5, ease: "easeInOut" }}
               className="header-wrapper container"
             >
-              <h1 className="">Eminent Design, Modern Experience.</h1>
+              <h1 className={`${montserratt.className}`}>Eminent Design, Modern Experience.</h1>
               <a className="absolute left-2/4 bottom-16" href="#demo">
                 <div className="box">
                   <span></span>

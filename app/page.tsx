@@ -1,3 +1,4 @@
+// "use client"
 import { draftMode } from "next/headers";
 import { getAllPosts } from "@/lib/api";
 import Landing from "./components/landing";
@@ -8,11 +9,16 @@ import React, { useRef, useEffect } from "react";
 import SocialGallery from "./components/SocialGallery";
 import ScrollParallaxVideo from "./components/ScrollVideo/ScrollParallaxVideo";
 
-export default async function Page() {
+
+export default function Page() {
   const { isEnabled } = draftMode();
-  const allPosts = await getAllPosts(isEnabled);
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  // const allPosts = await getAllPosts(isEnabled);
+  // const heroPost = allPosts[0];
+  // const morePosts = allPosts.slice(1);
+
+  // Loader
+  // const [loading, setLoading] = useState(true);
+
 
   return (
     <div className="">

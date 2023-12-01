@@ -15,6 +15,7 @@ import ContentfulImage from "@/lib/contentful-image";
 import React from "react";
 import localFont from "next/font/local";
 
+
 const quicksand = localFont({
   src: [
     {
@@ -24,7 +25,6 @@ const quicksand = localFont({
     },
   ],
 });
-
 
 const quicksandBold = localFont({
   src: [
@@ -50,7 +50,9 @@ export const renderSwitch = (params: { [x: string]: any }) => {
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
-                <li className={`mb-8 ${quicksandBold.className}`}>{item["email"]}</li>
+                <li className={`mb-8 ${quicksandBold.className}`}>
+                  {item["email"]}
+                </li>
                 <li className="">{item["address"]}</li>
                 <li className="">{item["city"]}</li>
                 <li className="">{item["phone"]}</li>
