@@ -18,7 +18,7 @@ const Banner = ({ children, url, excerpt, title, website }: Props) => {
           <div className="mt-auto mb-14">
             <p className="">{excerpt}</p>
             <h1 className="m-auto mb-14">{title} </h1>
-            <Button url={website}>VISIT THE WEBSITE</Button>
+            {/* <Button url={website}>VISIT THE WEBSITE</Button> */}
           </div>
         </div>
       </ParallaxBG>

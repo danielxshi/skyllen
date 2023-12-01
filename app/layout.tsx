@@ -50,10 +50,10 @@ export const renderSwitch = (params: { [x: string]: any }) => {
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
-                <li className="underscore-cta">{item["email"]}</li>
-                <li className="underscore-cta">{item["address"]}</li>
-                <li className="underscore-cta">{item["city"]}</li>
-                <li className="underscore-cta">{item["phone"]}</li>
+                <li className={`mb-8 ${quicksandBold.className}`}>{item["email"]}</li>
+                <li className="">{item["address"]}</li>
+                <li className="">{item["city"]}</li>
+                <li className="">{item["phone"]}</li>
               </div>
             ))}
           </ul>

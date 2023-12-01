@@ -21,7 +21,12 @@ export default async function Page() {
         <ScrollParallaxVideo />
       </PageSection>
       <PageSection style={"container min-h-screen pt-16 pb-16"}>
-        <ProjectGallery />
+        <ProjectGallery>
+          <Headline
+            overline="our projects"
+            title="Smart Design and Distinct Spaces"
+          />
+        </ProjectGallery>
       </PageSection>
       <PageSection style={"container pt-16 pb-16 "}>
         <SocialGallery />

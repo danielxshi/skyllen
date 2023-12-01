@@ -276,7 +276,14 @@ header {
 .burger-menu {
   cursor: pointer;
   * {
-    color: white !important;
+    color: white;
+  }
+  .menu-links {
+    ul li a:hover {
+      color: #154050 !important;
+      stroke: $white;
+      fill: none;
+    }
   }
 }
 

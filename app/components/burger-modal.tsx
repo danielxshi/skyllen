@@ -236,7 +236,12 @@ const handleCity = (city: string, target: gsap.TweenTarget) => {
   });
 };
 
-export const BurgerModal = ({ showModal, setShowModal, state, ListClick }: Props) => {
+export const BurgerModal = ({
+  showModal,
+  setShowModal,
+  state,
+  ListClick,
+}: Props) => {
   let menuLayer: React.MutableRefObject<null> | HTMLDivElement | null;
   let reveal1: React.MutableRefObject<null> | HTMLDivElement | null;
   let reveal2: React.MutableRefObject<null> | HTMLDivElement | null;
@@ -267,15 +272,11 @@ export const BurgerModal = ({ showModal, setShowModal, state, ListClick }: Props
     opacity: showModal ? 1 : 0,
   });
 
-  console.log("test Show b4" + setShowModal);
   const closeModal = (e) => {
-    console.log("close modal");
-    console.log(setShowModal);
     if (modalRef.current === e.target) {
       setShowModal(false);
     }
   };
-  
 
   const [hidden, setHidden] = useState(false);
   const [element, setElement] = useState<null | HTMLDivElement>(null);
@@ -390,20 +391,22 @@ export const BurgerModal = ({ showModal, setShowModal, state, ListClick }: Props
                               <div className="locations">
                                 PROJECTS:
                                 {cities.map((el) => (
-                                  <Link
-                                    onClick={() => {
+                                  // <div className="underscore-cta">
+                                    <Link
+                                      onClick={() => {
                                         ListClick.onClick();
                                       }}
-                                    href={el.url}
-                                    onMouseEnter={() =>
-                                      handleCity(el.image, cityBackground)
-                                    }
-                                    onMouseOut={() =>
-                                      handleCityReturn(cityBackground)
-                                    }
-                                  >
-                                    {el.name}
-                                  </Link>
+                                      href={el.url}
+                                      onMouseEnter={() =>
+                                        handleCity(el.image, cityBackground)
+                                      }
+                                      onMouseOut={() =>
+                                        handleCityReturn(cityBackground)
+                                      }
+                                    >
+                                      {el.name}
+                                    </Link>
+                                  // </div>
                                 ))}
                               </div>
                             </div>

@@ -101,6 +101,7 @@ export default function Page() {
                             {el.description}
                           </p>
                           <Button
+                            style="border-white"
                             onClick={() => {
                               // this.props.onClick();
                             }}

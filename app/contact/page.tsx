@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <>
       <ParallaxBG url="https://i.imgur.com/aIBLNdp.jpg">
-        <div className="h-screen-2/3 flex">
+        <div className="h-screen-3/4 flex">
           <Banner
             style="m-auto"
             title={ProjectMessages.CompanyTitle}
@@ -78,9 +78,9 @@ export default function Contact() {
           </div>
           <div className="grid-start-6 col-span-2">
             <h3 className="mb-4">Skyllen Pacific</h3>
-            {/* {FooterMessages.FooterItems.map((item, index) => {
+            {FooterMessages.FooterItems.map((item, index) => {
               return <>{renderSwitch(item)}</>;
-            })} */}
+            })}
             <Link className="font-bold underline" href="/">
               Homeowner Care
             </Link>

@@ -51,14 +51,14 @@ export default function GalleryButton(props) {
           </motion.div>
         </div>
       </Link>
-      <div className="underscore-cta-v2">
+      {/* <div className="underscore-cta-v2">
         <Link href={props.link}>
           <div className=" text-container">
             <h3 className=" mb-2">{props.projectName}</h3>
             <p>{props.location}</p>
           </div>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

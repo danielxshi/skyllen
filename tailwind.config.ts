@@ -17,10 +17,13 @@ export default {
         "256": "64rem",
         "screen-2/3": "60vh",
         "screen-3/4": "75vh",
+        "300": "300px",
+        "450": "450px",
       },
       width: {
         "w-screen-1/2": "50vw",
-        "300": "300px"
+        "300": "300px",
+        "600": "600px"
       },
       colors: {
         white: "#fff",

@@ -14,6 +14,10 @@ import React, {
   useState,
 } from "react";
 
+type Props = {
+  children?: React.ReactNode;
+};
+
 const cities = [
   {
     name: "1650 ON SECOND",
@@ -55,14 +59,10 @@ const handleCity = (city, target) => {
   });
 };
 
-export default function ProjectGallery(props) {
+const ProjectGallery = ({ children }: Props) => {
   return (
     <section>
-      <Headline
-        overline="our projects"
-        title="Smart Design and Distinct Spaces"
-      />
-
+      {children}
       <div className="flex flex-col md:flex-row">
         {cities.map((el) => (
           <div className="gallery-button-container" key={el.name}>
@@ -79,3 +79,5 @@ export default function ProjectGallery(props) {
     </section>
   );
 }
+
+export default ProjectGallery;
