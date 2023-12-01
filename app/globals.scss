@@ -56,7 +56,7 @@ span {
 
 .container {
   width: 90vw;
-  max-width: 1380px;
+  max-width: 1680px;
   margin: auto;
   .wrapper {
     .home {
@@ -864,6 +864,13 @@ img {
   scroll-snap-align: start;
   position: relative;
 }
+
+// @media only screen and (min-width: 1900px) {
+//     .container {
+//         max-width: 90vw !important;
+//         width: 90vw !important;
+//     }
+// }
 
 @media only screen and (min-width: 800px) {
   .company-parallax {
