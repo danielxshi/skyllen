@@ -27,7 +27,6 @@ const montserratt = localFont({
   ],
 });
 
-
 const descriptions = [
   {
     image: DescriptionImage1,
@@ -78,7 +77,7 @@ export default function Page() {
           </div>
         </div>
       </PageSection>
-      <Works style="bg-white text-black"/>
+      <Works style="bg-white text-black" />
       <PageSection style="pb-16 ">
         <ParallaxBG
           style="company-parallax"
@@ -86,23 +85,8 @@ export default function Page() {
         >
           <div className="grid-container m-auto container">
             <div className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3 flex">
-              {/* <motion.div
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-                className="loader--hero"
-              > */}
-
               <div className="image-container">
-                <ContentfulImage
-                  src={Logo}
-                  // width={48}
-                  fill={true}
-                  // height={48}
-                  quality={85}
-                />
+                <ContentfulImage src={Logo} fill={true} quality={85} />
               </div>
               {/* </motion.div> */}
             </div>
