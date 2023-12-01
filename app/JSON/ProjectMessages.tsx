@@ -1,4 +1,4 @@
-const CompanyTitle = "We're a multi-disciplinary Real Estate development firm focusing on developing properties that connect Nature, Architecture, Technology, and Functionality.";
+const CompanyTitle = " We're a multi-disciplinary Real Estate development firm focusing on developing properties that connect Nature, Architecture, Technology, and Functionality.";
 
 
 const Company = [

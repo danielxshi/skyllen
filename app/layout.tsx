@@ -1,6 +1,5 @@
 "use client";
 import "./globals.scss";
-import { Inter } from "next/font/google";
 import { EXAMPLE_PATH, CMS_NAME } from "@/lib/constants";
 import FooterMessages from "./JSON/FooterItems";
 import Link from "next/link";
@@ -14,12 +13,6 @@ import Logo from "./images/logo-landing.webp";
 import ContentfulImage from "@/lib/contentful-image";
 import React from "react";
 import localFont from "next/font/local";
-import dallas from "../app/images/living-space-landing.webp";
-import image2 from "../app/images/618-lobby.webp";
-import image3 from "../app/images/living-space.webp";
-import image4 from "../app/images/pendrell-aerial.webp";
-import image5 from "../app/images/pendrell-aerial.webp";
-
 
 const quicksand = localFont({
   src: [
@@ -40,7 +33,6 @@ const quicksandBold = localFont({
     },
   ],
 });
-
 
 const montserrat = localFont({
   src: [
@@ -196,7 +188,6 @@ export default function RootLayout({
               }}
               className="wrapper2"
             >
-
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{

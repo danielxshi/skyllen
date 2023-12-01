@@ -74,7 +74,7 @@ export default function Page() {
       >
         <Banner
           style="min-h-screen flex"
-          title={ProjectMessages.CompanyTitle}
+          // title={ProjectMessages.CompanyTitle}
           overline="PROJECT"
         ></Banner>
       </Parallax>

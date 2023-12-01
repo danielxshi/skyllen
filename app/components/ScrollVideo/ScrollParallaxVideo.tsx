@@ -37,6 +37,8 @@ import projectImageL3 from "../../images/pendrell-aerial.webp";
 import projectImageR3 from "../../images/streetview.webp";
 import ContentfulImage from "@/lib/contentful-image";
 import localFont from "next/font/local";
+import ParallaxFooter from "../ParallaxFooter";
+import Banner from "../banner";
 
 const quicksand = localFont({
   src: [
@@ -139,15 +141,18 @@ const ParallaxScrollVideo = () => {
         <WorkBackground />
       </TileBackground>
       <TileContent>
+        <ParallaxFooter url="https://i.imgur.com/7RiSQz1.mp4">
+          <div className="min-h-screen"></div>
+        </ParallaxFooter>
         {projects.map((el) => (
           <Tile
             page={el.page}
             renderContent={({ progress }) => (
               <div
-                className="relative h-fit w-screen "
-                style={{
-                  height: videoScrollDistance,
-                }}
+              // className="relative h-fit w-screen "
+              // style={{
+              //   height: videoScrollDistance,
+              // }}
               >
                 <div className="h-screen flex flex-col-reverse p-8 w-screen absolute z-50 text-white bg-blur-black">
                   <div className="mb-auto text-content h-3/4 mt-auto flex flex-col mr-auto ml-auto w-600 justify-center">
@@ -160,17 +165,19 @@ const ParallaxScrollVideo = () => {
                       <span>-</span>
                     </div> */}
                     <div>
-                      <h3 className="tracking-tight pb-8 text-center">{el.description}</h3>
+                      <h3 className="tracking-tight pb-8 text-center">
+                        {el.description}
+                      </h3>
                     </div>
                   </div>
                 </div>
-                <div ref={scrollSectionRef} id="scrollSection"></div>
-                <motion.video ref={videoRef} id="v0" preload="preload">
+                {/* <div ref={scrollSectionRef} id="scrollSection"></div> */}
+                {/* <motion.video ref={videoRef} id="v0" preload="preload">
                   <source
                     type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
                     src={el.imageOne}
                   ></source>
-                </motion.video>
+                </motion.video> */}
               </div>
             )}
           ></Tile>

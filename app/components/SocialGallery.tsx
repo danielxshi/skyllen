@@ -12,39 +12,43 @@ import image6 from "@/public/images/ig/ig6.webp";
 
 const content = [
   {
-    image: image1,
-    key: 1,
+    image: image6,
+    key: 6,
     url: "https://www.instagram.com/p/CxbE7RvvKAA/?img_index=1",
-    alt: "Skyllen Instagram Picture",
-  },
-  {
-    image: image2,
-    key: 2,
-    url: "https://www.instagram.com/p/CwWI5OtvqhA/",
-    alt: "Skyllen Instagram Picture",
-  },
-  {
-    image: image3,
-    key: 3,
-    url: "https://www.instagram.com/p/CvYXpq_vCli/",
-    alt: "Skyllen Instagram Picture",
-  },
-  {
-    image: image4,
-    key: 4,
-    url: "https://www.instagram.com/p/CunI6jeyI7o/?img_index=1",
     alt: "Skyllen Instagram Picture",
   },
   {
     image: image5,
     key: 5,
+    url: "https://www.instagram.com/p/CwWI5OtvqhA/",
+    alt: "Skyllen Instagram Picture",
+  },
+  {
+    image: image4,
+    key: 4,
+    url: "https://www.instagram.com/p/CvYXpq_vCli/",
+    alt: "Skyllen Instagram Picture",
+  },
+
+  {
+    image: image3,
+    key: 3,
+    url: "https://www.instagram.com/p/CunI6jeyI7o/?img_index=1",
+
+    alt: "Skyllen Instagram Picture",
+  },
+  {
+    image: image2,
+    key: 2,
     url: "https://www.instagram.com/p/Ct-Kq0Uv3Pu/",
     alt: "Skyllen Instagram Picture",
   },
   {
-    image: image6,
-    key: 6,
+    image: image1,
+    key: 1,
+    // url: "https://www.instagram.com/p/CxbE7RvvKAA/?img_index=1",
     url: "https://www.instagram.com/p/CrhBVDGvtX3/",
+
     alt: "Skyllen Instagram Picture",
   },
 ];
@@ -68,7 +72,7 @@ export default function first(props) {
 
       <div className="social-media-container overflow-x-scroll">
         {content.map((el) => (
-          <Link href={el.url}>
+          <Link rel="noopener noreferrer" target="_blank" href={el.url}>
             <motion.div
               whileHover={{
                 scale: 1.05,

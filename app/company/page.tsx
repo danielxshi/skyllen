@@ -54,7 +54,7 @@ export default function Page() {
       <ParallaxFooter url="https://i.imgur.com/EODCPWr.mp4">
         <Banner
           style="min-h-screen flex"
-          title={ProjectMessages.CompanyTitle}
+          // title={ProjectMessages.CompanyTitle}
           overline="COMPANY"
         />
       </ParallaxFooter>

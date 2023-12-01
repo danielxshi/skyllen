@@ -69,7 +69,7 @@ export default function Page() {
       <ParallaxBG url="https://i.imgur.com/p1QJ3xJ.jpg">
         <Banner
           style="min-h-screen flex"
-          title={ProjectMessages.CompanyTitle}
+          // title={ProjectMessages.CompanyTitle}
           overline="COMPANY"
         />
       </ParallaxBG>

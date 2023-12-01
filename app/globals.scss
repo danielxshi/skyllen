@@ -877,16 +877,18 @@ img {
   .company-parallax {
     .image-container {
       width: 12rem;
+      height: 12rem;
     }
     .react-parallax-content {
       img {
         width: 12rem;
+        height: 12rem;
       }
     }
   }
   .company-parallax {
     .react-parallax-content {
-      height: 50vh;
+      height: fit-content;
     }
   }
   .project-card-content {

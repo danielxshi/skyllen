@@ -42,7 +42,7 @@ export default function Contact() {
         <div className="h-screen md:h-screen-3/4 flex">
           <Banner
             style="m-auto"
-            title={ProjectMessages.CompanyTitle}
+            // title={ProjectMessages.CompanyTitle}
             overline="COMPANY"
           />
         </div>

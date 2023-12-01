@@ -42,7 +42,7 @@ export default function GalleryButton(props) {
                   scale: 0.85,
                   transition: { duration: 1 },
                 }}
-                className="flex heavy-med m-auto w-full tracking-tighter justify-center text-center font-bold relative text-white h-full align-middle justify-center items-center"
+                className="flex heavy-med m-auto w-full tracking-tighter text-center font-bold relative text-white h-full align-middle justify-center items-center"
               >
                 <strong className={`${montserrat.className}`}>
                   {props.status}
@@ -52,14 +52,14 @@ export default function GalleryButton(props) {
           </motion.div>
         </div>
       </Link>
-      {/* <div className="underscore-cta-v2">
+      <div className="underscore-cta-v2 gallery-text-container">
         <Link href={props.link}>
           <div className=" text-container">
             <h3 className=" mb-2">{props.projectName}</h3>
             <p>{props.location}</p>
           </div>
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 }

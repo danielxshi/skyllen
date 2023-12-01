@@ -65,7 +65,10 @@ const ProjectGallery = ({ children }: Props) => {
       {children}
       <div className="flex flex-col md:flex-row">
         {cities.map((el) => (
-          <div className="gallery-button-container" key={el.name}>
+          <div
+            className="gallery-button-container mb-16 last:mb-0 md:mb-0"
+            key={el.name}
+          >
             <GalleryButton
               url={el.image}
               projectName={el.name}
@@ -78,6 +81,6 @@ const ProjectGallery = ({ children }: Props) => {
       </div>
     </section>
   );
-}
+};
 
 export default ProjectGallery;
