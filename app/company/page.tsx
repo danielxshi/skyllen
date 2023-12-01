@@ -47,7 +47,7 @@ export default function Page() {
           overline="COMPANY"
         />
       </ParallaxFooter>
-      <PageSection style="pt-16 pb-16 h-128 flex">
+      <PageSection style="pt-16 pb-16 md:h-128 flex">
         <div className="grid-container m-auto container">
           <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">
             Our History |
@@ -120,7 +120,7 @@ export default function Page() {
               paragraphOne={el.paragraphOne}
               paragraphTwo={el.paragraphTwo}
               title={el.service}
-              style="mb-16 col-span-full md:col-start-1 md:col-end-4 "
+              style="md:mb-16 col-span-full md:col-start-1 md:col-end-4 "
             />
             <div className="col-start-1 md:col-start-5 md:col-span-4 relative col-span-full contentful-fill-container">
               <ContentfulImage

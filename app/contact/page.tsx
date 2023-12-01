@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <>
       <ParallaxBG url="https://i.imgur.com/aIBLNdp.jpg">
-        <div className="h-screen-3/4 flex">
+        <div className="h-screen md:h-screen-3/4 flex">
           <Banner
             style="m-auto"
             title={ProjectMessages.CompanyTitle}
@@ -47,9 +47,9 @@ export default function Contact() {
           />
         </div>
       </ParallaxBG>
-      <PageSection style="pt-16 pb-16 h-128 flex">
+      <PageSection style="pt-16 pb-16 md:h-128 flex">
         <div className="container grid-container">
-          <div className="grid-start-1 col-span-6">
+          <div className="grid-start-1 md:col-span-6 col-span-full">
             <form id="contact-form" method="post">
               <label htmlFor="name">Full name</label>
               <input
@@ -76,7 +76,7 @@ export default function Contact() {
               </button>
             </form>
           </div>
-          <div className="grid-start-6 col-span-2">
+          <div className="mt-16 pb-16 md:pb-0 md:mt-0 md:grid-start-6 md:col-span-2">
             <h3 className="mb-4">Skyllen Pacific</h3>
             {FooterMessages.FooterItems.map((item, index) => {
               return <>{renderSwitch(item)}</>;

@@ -42,7 +42,7 @@ function NewsGalleryItem() {
   return (
     <ul className="news-gallery-container grid-container">
       {NewsContent.map((el) => (
-        <li className="mb-16 news-content-container col-span-4">
+        <li className="mb-16 news-content-container col-span-full md:col-span-4">
           <div className="relative w-full image-container">
             <ContentfulImage
               src="https://images.pexels.com/photos/3639003/pexels-photo-3639003.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"

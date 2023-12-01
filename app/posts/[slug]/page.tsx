@@ -71,7 +71,7 @@ export default async function PostPage({
       </Banner>
 
       <PageSection style={"container pb-16 pt-16"}>
-        <h2 className="w-600">{post.projectPreviewDescription}</h2>
+        <h2 className="md:w-600">{post.projectPreviewDescription}</h2>
         <div className="mt-4">
           <Button url={post.website}>VISIT THE WEBSITE</Button>
         </div>
@@ -79,17 +79,16 @@ export default async function PostPage({
 
       <div className={post.projectDetails["state"]}>
         <PageSection
-          style={"container grid-container pb-16 pt-16 flex flex-col"}
+          style={"container grid-container md:pb-16 pt-16 flex flex-col"}
         >
-          {/* <p>{JSON.stringify(post.projectDetails["cool"])}</p> */}
-          <div className="flex h-full md:col-start-1 md:col-span-3 flex-col">
+          <div className="flex h-full md:col-start-1 md:col-span-3 col-span-full flex-col md:pb-0 pb-16">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
               <ContentfulImage src={post.projectImageOne?.url} fill={true} />
             </div>
             <p className="mt-4 sub">{post.projectImageOneText}</p>
           </div>
 
-          <div className="flex  md:col-start-5 md:col-span-3 flex-col">
+          <div className="flex  md:col-start-5 md:col-span-3 flex-col col-span-full">
             <div>
               <div className="w-full h-300 relative flex flex-col">
                 <ContentfulImage src={post.projectImageTwo?.url} fill={true} />
@@ -104,16 +103,16 @@ export default async function PostPage({
         </PageSection>
 
         <PageSection
-          style={"container grid-container pb-16 pt-16 flex flex-col"}
+          style={"container grid-container md:pb-16 pt-16 flex flex-col"}
         >
-          <div className="flex h-full md:col-start-1 md:col-span-2 flex-col">
+          <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-16 md:pb-0">
             <div className="mt-auto">
               <p>{post.projectTextBubbleTwo}</p>
             </div>
             <p className="mt-4 sub">{post.projectImageTwoText}</p>
           </div>
 
-          <div className="flex  md:col-start-4 md:col-span-4 flex-col">
+          <div className="flex  md:col-start-4 md:col-span-4 flex-col col-span-full">
             <div>
               <div className="w-full h-450 relative flex flex-col">
                 <ContentfulImage
@@ -127,16 +126,16 @@ export default async function PostPage({
         </PageSection>
 
         <PageSection
-          style={"container grid-container pb-16 pt-16 flex flex-col"}
+          style={"container grid-container md:pb-16 pt-16 flex flex-col"}
         >
-          <div className="flex h-full md:col-start-1 md:col-span-3 flex-col">
+          <div className="flex h-full md:col-start-1 md:col-span-3 flex-col col-span-full md:pb-0 pb-16">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
               <ContentfulImage src={post.projectImageFour?.url} fill={true} />
             </div>
             <p className="mt-4 sub">{post.projectImageFourText}</p>
           </div>
 
-          <div className="flex  md:col-start-6 md:col-span-2 flex-col">
+          <div className="flex  md:col-start-6 md:col-span-2 flex-col col-span-full">
             <div>
               <div className="w-full h-450 relative flex flex-col">
                 <ContentfulImage src={post.projectImageFive?.url} fill={true} />
@@ -176,7 +175,7 @@ export default async function PostPage({
         </div>
       </PageSection> */}
 
-      <PageSection style={"container pb-16 pt-16 flex flex-col"}>
+      <PageSection style={"container md:pb-16 pt-16 flex flex-col"}>
         <div className="flex h-full relative w-11/12 m-auto">
           <div className="w-full h-screen-3/4 ">
             <ContentfulImage src={post.coverImage.url} fill={true} />
@@ -184,7 +183,7 @@ export default async function PostPage({
         </div>
         <p className="mt-4 sub m-auto">{post.excerpt}</p>
       </PageSection>
-      <PageSection style={"footer-gap container min-h-screen pt-16 pb-16"}>
+      <PageSection style={"container min-h-screen pt-16 pb-16"}>
         <ProjectGallery />
       </PageSection>
     </>
