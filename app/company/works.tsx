@@ -3,9 +3,9 @@ import React from "react";
 import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
 import { WorkBackground, WorkContainer, WorkBleed } from "./work";
 import ContentfulImage from "@/lib/contentful-image";
-import image1 from "../images/living-space-landing.webp";
-import image2 from "../images/pendrell-aerial.webp";
-import image3 from "../images/618-lobby.webp";
+import image1 from "../../public/images/INSPIRATION.webp";
+import image2 from "../../public/images/COLLABORATION.webp";
+import image3 from "../../public/images/INNOVATION.webp";
 import localFont from "next/font/local";
 
 const montserrattBold = localFont({

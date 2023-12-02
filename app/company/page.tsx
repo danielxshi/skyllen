@@ -13,7 +13,7 @@ import DescriptionImage1 from "../images/construction.webp";
 import DescriptionImage2 from "../images/streetview.webp";
 import headerBG from "../images/pendrell-aerial.webp";
 import testImage from "@/public/images/1650-night.webp";
-import ParallaxFooter from "../components/ParallaxFooter";
+import ParallaxFooter from "../components/VideoParallax";
 import Logo from "@/public/images/logo-landing.webp";
 import localFont from "next/font/local";
 

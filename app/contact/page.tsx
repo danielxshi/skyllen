@@ -1,3 +1,4 @@
+"use client";
 import ParallaxBG from "../components/ParallaxBG";
 import Banner from "../components/banner";
 import ProjectMessages from "../JSON/ProjectMessages";
@@ -5,6 +6,19 @@ import PageSection from "../components/page-section";
 import FooterMessages from "../JSON/FooterItems";
 import Link from "next/link";
 import bannerBG from "../images/contact-banner.webp";
+import Button from "../components/Button/FillButton";
+import localFont from "next/font/local";
+import { motion } from "framer-motion";
+
+const montserratt = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 const renderSwitch = (params) => {
   const keys = Object.keys(params);
@@ -47,9 +61,9 @@ export default function Contact() {
           />
         </div>
       </ParallaxBG>
-      <PageSection style="pt-16 pb-16 md:h-128 flex md:pb-32">
-        <div className="container grid-container">
-          <div className="grid-start-1 md:col-span-6 col-span-full">
+      <PageSection style="pt-16 pb-16  flex md:pb-32">
+        <div className="container grid-container form-container">
+          <div className="md:col-span-6 md:col-start-5">
             <form id="contact-form" method="post">
               <label htmlFor="name">Full name</label>
               <input
@@ -67,17 +81,65 @@ export default function Contact() {
                 placeholder="Your Email Address"
                 required
               />
+              <label htmlFor="email">Phone</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Phone"
+                required
+              />
+              <label htmlFor="email">Postal Code</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Postal Code"
+                required
+              />
+              <label htmlFor="email">Are you a realtor</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Company"
+                required
+              />
+              {/* <select id="cars" name="cars">
+                <option value="volvo">Yes</option>
+                <option value="saab">No</option>
+              </select> */}
               {/* <label htmlFor="email">Email Address</label>
   <input type="email" id="email" name="email" placeholder="Your Email Address" required>
       <label htmlFor="message">Message</label>
   <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea> */}
-              <button type="submit" id="submit" name="submit">
-                Send
-              </button>
+
+              <motion.div
+                initial={{
+                  backgroundColor: "rgba(0,0,0)",
+                  color: "white",
+                }}
+                whileHover={{
+                  color: "#AACAE6",
+                  fontWeight: "bold",
+                }}
+                className="md:mt-8 mt-4 btn-wrap min-w-max align-middle w-24 font-mono font-medium text-small leading-none px-6 py-4 border-solid border border-black rounded-full"
+              >
+                <button
+                  className={`button-content flex justify-center m-auto align-middle ${montserratt.className}`}
+                  type="submit"
+                  id="submit"
+                  name="submit"
+                >
+                  SUBMIT
+                </button>
+              </motion.div>
             </form>
           </div>
-          <div className="mt-16 pb-16 md:pb-0 md:mt-0 md:grid-start-6 md:col-span-2">
-            <h3 className="mb-4">Skyllen Pacific</h3>
+          <div className="mt-16 pb-16 md:pb-0 md:mt-0 md:col-start-1 md:row-start-1 md:col-span-2">
+            <p className={`mb-4 uppercase ${montserratt.className}`}>
+              Skyllen Pacific
+            </p>
             {FooterMessages.FooterItems.map((item, index) => {
               return <>{renderSwitch(item)}</>;
             })}

@@ -673,10 +673,9 @@ label,
 }
 
 form {
-  width: 31.25rem;
+  // width: 30rem;
+  // max-width: 30rem;
   position: relative;
-  margin-top: 2rem;
-  padding: 1rem 0;
 }
 
 input,
@@ -684,6 +683,7 @@ textarea,
 label {
   width: 40vw;
   display: block;
+  margin-left: auto;
 }
 
 placeholder,
@@ -694,7 +694,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--secondary-color);
+  color: $black;
 }
 
 input,
@@ -703,7 +703,7 @@ textarea {
   font-weight: 500;
   background: $white;
   border: none;
-  border-bottom: 1px solid var(--secondary-color);
+  border-bottom: 1px solid #0b0b0b;
   padding: 0.5rem 0;
   margin-bottom: 1rem;
   outline: none;
@@ -785,7 +785,7 @@ input:checked + .slider:before {
   font-size: 0.75rem;
   text-transform: uppercase;
   //   font-family: "Jost";
-  color: var(--secondary-color);
+  color: $black;
 }
 
 #success-msg {
@@ -832,6 +832,23 @@ input:checked + .slider:before {
   .contactModal:hover:after {
     width: 100%;
     left: 0;
+  }
+}
+
+.news-content-container {
+  .img-content {
+    height: fit-content;
+  }
+}
+
+.form-container {
+  input {
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  .btn-wrap {
+    margin-left: auto;
   }
 }
 
