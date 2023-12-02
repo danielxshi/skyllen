@@ -16,6 +16,7 @@ import testImage from "@/public/images/1650-night.webp";
 import ParallaxFooter from "../components/VideoParallax";
 import Logo from "@/public/images/logo-landing.webp";
 import localFont from "next/font/local";
+// import test from "./train.gif"
 
 const montserratt = localFont({
   src: [
@@ -50,7 +51,7 @@ const descriptions = [
 export default function Page() {
   return (
     <>
-      <ParallaxFooter url="https://i.imgur.com/EODCPWr.mp4">
+      <ParallaxFooter url={require('./train.gif')}>
         <Banner
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
@@ -81,7 +82,7 @@ export default function Page() {
       <PageSection style="pb-16 ">
         <ParallaxBG
           style="company-parallax"
-          url="https://i.imgur.com/EODCPWr.mp4"
+          url={require('./train.gif')}
         >
           <div className="grid-container m-auto container">
             <div className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3 flex">

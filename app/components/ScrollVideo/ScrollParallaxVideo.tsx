@@ -40,6 +40,7 @@ import localFont from "next/font/local";
 import ParallaxFooter from "../ParallaxFooter";
 import Banner from "../banner";
 
+
 const quicksand = localFont({
   src: [
     {
@@ -141,7 +142,9 @@ const ParallaxScrollVideo = () => {
         <WorkBackground />
       </TileBackground>
       <TileContent>
-        <ParallaxFooter url="https://i.imgur.com/7RiSQz1.mp4">
+        <ParallaxFooter 
+        
+        url={require('../../company/train.gif')}>
           <div className="min-h-screen"></div>
         </ParallaxFooter>
         {projects.map((el) => (
