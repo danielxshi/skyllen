@@ -844,7 +844,7 @@ input:checked + .slider:before {
   a:after {
     transition: 0.25s ease-in-out;
     background: none repeat scroll 0 0 transparent;
-    bottom: -12px;
+    // bottom: -12px;
     content: "";
     display: block;
     height: 2px;

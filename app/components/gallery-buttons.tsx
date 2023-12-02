@@ -55,7 +55,7 @@ export default function GalleryButton(props) {
       <div className="underscore-cta-v2 gallery-text-container">
         <Link href={props.link}>
           <div className=" text-container">
-            <p className={`uppercase mb-2 ${montserrat.className}`}>{props.projectName}</p>
+            <p className={`uppercase  ${montserrat.className}`}>{props.projectName}</p>
             <p>{props.location}</p>
           </div>
         </Link>
