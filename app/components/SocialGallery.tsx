@@ -58,7 +58,7 @@ export default function first(props) {
     <>
       <Headline
         overline="social media"
-        title="Smart Design and Distinct Spaces"
+        title="Stay updated with us"
       />
 
       {/* <motion.div
