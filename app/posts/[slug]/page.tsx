@@ -118,7 +118,9 @@ export default async function PostPage({
             </div>
 
             <div className="mt-auto w-300">
-              <p className="text-bubble-content">{post.projectTextBubbleOne}</p>
+              <p className="text-bubble-content">
+                {post.projectTextBubbleFour}
+              </p>
             </div>
           </div>
         </PageSection>
@@ -128,7 +130,9 @@ export default async function PostPage({
         >
           <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-16 md:pb-0">
             <div className="mt-auto">
-              <p className="text-bubble-content">{post.projectTextBubbleTwo}</p>
+              <p className="text-bubble-content">
+                {post.projectTextBubbleFive}
+              </p>
             </div>
           </div>
 
@@ -164,9 +168,7 @@ export default async function PostPage({
             </div>
 
             <div className="mt-auto">
-              <p className="text-bubble-content">
-                {post.projectTextBubbleThree}
-              </p>
+              <p className="text-bubble-content">{post.projectTextBubbleSix}</p>
             </div>
           </div>
         </PageSection>

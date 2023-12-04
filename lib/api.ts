@@ -27,6 +27,7 @@ const POST_GRAPHQL_FIELDS = `
   projectTextBubbleOne
   projectTextBubbleTwo
   projectTextBubbleThree
+  projectTextBubbleFour
   projectPreviewDescription
   website
   date

@@ -109,7 +109,10 @@ export const renderSwitch = (params: { [x: string]: any }) => {
           <ul>
             {test2.map((item, index) => (
               <>
-                <footer key={index}>&copy; {item["text"]}</footer>
+                <footer key={index}>
+                  &copy; {item["text"]}&nbsp;{" "}
+                  <Link href={item["url"]}>{item["copy"]}</Link>
+                </footer>
               </>
             ))}
           </ul>

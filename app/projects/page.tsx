@@ -8,11 +8,11 @@ import dallas from "../images/dallas.webp";
 import { Parallax, Background } from "react-parallax";
 import ParallaxBG from "../components/ParallaxBG";
 import projectImageL1 from "../images/living-space-landing.webp";
-import projectImageR1 from "../images/living-space.webp";
-import projectImageL2 from "../images/1650-night.webp";
-import projectImageR2 from "../images/1650-day.webp";
+import projectImageR1 from "../../public/images/carnavron/618-Hero.webp";
+import projectImageL2 from "../../public/images/second/1650-signage.webp";
+import projectImageR2 from "../images/1650-night.webp";
 import projectImageL3 from "../images/pendrell-aerial.webp";
-import projectImageR3 from "../images/streetview.webp";
+import projectImageR3 from "../../public/images/pendrell/Hero-Pendrell.webp";
 import {
   Tile,
   TileBackground,
@@ -38,7 +38,7 @@ const projects = [
     imageTwo: projectImageR1,
     link: "/posts/618-carnavron",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "An established neighbourhood connecting a rich past to a modern downtown lifestle - 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
   },
   {
     name: "1650 ON SECOND",
@@ -48,7 +48,7 @@ const projects = [
     imageTwo: projectImageR2,
     link: "/posts/1650-on-second",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "A vibrant four-storey centerpiece providing bright showroom and office opportunities set in Kitsilano's trendiest business district.",
   },
   {
     name: "PENDRELL ST",
@@ -57,7 +57,7 @@ const projects = [
     imageTwo: projectImageR3,
     link: "/posts/pendrell-street",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, fuga. Sit ab, cupiditate possimus nisi nemo esse laboriosam libero, labore a iusto voluptatibus modi. Ipsa maiores tempore odit eius placeat?",
+      "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.",
   },
 ];
 

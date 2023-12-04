@@ -9,6 +9,7 @@ import bannerBG from "../images/contact-banner.webp";
 import Button from "../components/Button/FillButton";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
+import test from "../images/SkyllenSign.webp"
 
 const montserratt = localFont({
   src: [
@@ -62,7 +63,7 @@ export default function Contact() {
   console.log(FooterMessages);
   return (
     <>
-      <ParallaxBG url="https://i.imgur.com/aIBLNdp.jpg">
+      <ParallaxBG url="../images/SkyllenSign.webp">
         <div className="h-screen md:h-screen-3/4 flex">
           <Banner
             style="m-auto"
