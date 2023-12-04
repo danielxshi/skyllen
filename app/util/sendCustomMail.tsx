@@ -19,9 +19,9 @@ const sendMail = async () => {
   } catch (error) {
     console.error(error);
 
-    if (error.response) {
-      console.error(error.response.body);
-    }
+    // if (error.response) {
+    //   console.error(error.response.body);
+    // }
   }
 };
 
