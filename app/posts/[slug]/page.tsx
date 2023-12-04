@@ -80,7 +80,7 @@ export default async function PostPage({
             <p>{post.projectDetails["estimate"]}</p>
           </div>
 
-          <div className="flex flex-col">
+          <div className={`flex flex-col ${post.projectDetails["count"]}`}>
             <span className={`mb-8 font-bold ${montserratt.className}`}>
               Homes
             </span>
