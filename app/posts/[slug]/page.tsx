@@ -36,8 +36,6 @@ export default async function PostPage({
 }) {
   const { isEnabled } = draftMode();
   const { post, morePosts } = await getPostAndMorePosts(params.slug, isEnabled);
-  console.log("test" + post.projectDetails["status"]);
-  console.log("test");
 
   const test = post.projectDetails["status"];
 
