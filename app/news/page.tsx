@@ -100,7 +100,7 @@ export default function Page() {
         <Banner
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
-          overline="COMPANY"
+          overline="NEWS"
         >
           We are inspired by the{" "}
           <strong className={` ${montserrattBold.className}`}>

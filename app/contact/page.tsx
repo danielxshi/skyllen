@@ -68,7 +68,7 @@ export default function Contact() {
           <Banner
             style="m-auto"
             // title={ProjectMessages.CompanyTitle}
-            overline="COMPANY"
+            overline="CONTACT"
           >
             <strong className={` ${montserratt.className}`}>
               {" "}
