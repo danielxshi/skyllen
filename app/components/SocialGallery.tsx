@@ -46,7 +46,6 @@ const content = [
   {
     image: image1,
     key: 1,
-    // url: "https://www.instagram.com/p/CxbE7RvvKAA/?img_index=1",
     url: "https://www.instagram.com/p/CrhBVDGvtX3/",
 
     alt: "Skyllen Instagram Picture",
@@ -56,19 +55,7 @@ const content = [
 export default function first(props) {
   return (
     <>
-      <Headline
-        overline="social media"
-        title="Stay updated with us"
-      />
-
-      {/* <motion.div
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 1 },
-            }}
-            className="relative z-10 block overflow-hidden"
-          >
-            <div className="hover:cursor-pointer flex justify-center items-center h-full"></div> */}
+      <Headline overline="social media" title="Stay updated with us" />
 
       <div className="social-media-container overflow-x-scroll">
         {content.map((el) => (
