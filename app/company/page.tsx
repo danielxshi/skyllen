@@ -56,7 +56,27 @@ export default function Page() {
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
           overline="COMPANY"
-        />
+        >
+          We're a{" "}
+          <strong className={` ${montserratt.className}`}>
+            multi-disciplinary
+          </strong>{" "}
+          Real Estate development firm focusing on developing properties that
+          connect{" "}
+          <strong className={` ${montserratt.className}`}>Nature</strong>,{" "}
+          <strong className={` ${montserratt.className}`}>
+            Architecture
+          </strong>
+          ,{" "}
+          <strong className={` ${montserratt.className}`}>
+            Technology
+          </strong>
+          , and{" "}
+          <strong className={` ${montserratt.className}`}>
+            Functionality
+          </strong>
+          .
+        </Banner>
       </ParallaxFooter>
       <PageSection style="pt-16 pb-16 md:h-128 flex">
         <div className="grid-container m-auto container">

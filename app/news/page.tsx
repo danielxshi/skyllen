@@ -9,7 +9,17 @@ import ContentfulImage from "@/lib/contentful-image";
 import bgBanner from "../images/news.webp";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import localFont from "next/font/local";
 
+const montserrattBold = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 const NewsContent = [
   {
@@ -70,8 +80,10 @@ function NewsGalleryItem() {
           </motion.div>
           <div className="mt-4">
             <div className="mb-4">
-              <p>{el.date}</p>
-              <h3 className="underline underline-offset-4">{el.name}</h3>
+              <Link href={el.url}>
+                <p>{el.date}</p>
+                <h3 className="underline underline-offset-4">{el.name}</h3>
+              </Link>
             </div>
             <p>{el.excerpt}</p>
           </div>
@@ -89,7 +101,19 @@ export default function Page() {
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
           overline="COMPANY"
-        />
+        >
+          We are inspired by the{" "}
+          <strong className={` ${montserrattBold.className}`}>
+            evolving interpretations
+          </strong>{" "}
+          of{" "}
+          <strong className={` ${montserrattBold.className}`}>urbanity</strong>{" "}
+          and{" "}
+          <strong className={` ${montserrattBold.className}`}>
+            sustainability
+          </strong>{" "}
+          emerging from recent cityscapes.
+        </Banner>
       </ParallaxBG>
 
       <PageSection style="container pt-16 pb-16 md:pb-32">

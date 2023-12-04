@@ -33,12 +33,12 @@ type Props = {
 const Banner = ({ children, style, style2, overline }: Props) => {
   return (
     <section className={`banner-container container ${style}`}>
-      {children}
       <div className={`m-auto h-full flex h-fit flex-col md:w-4/5 ${style2}`}>
         <h1
           className={`text-center text-xl md:text-5xl ${montserratt.className}`}
         >
-          We're a{" "}
+          {children}
+          {/* We're a{" "}
           <strong className={` ${montserrattBold.className}`}>
             multi-disciplinary
           </strong>{" "}
@@ -56,7 +56,7 @@ const Banner = ({ children, style, style2, overline }: Props) => {
           <strong className={` ${montserrattBold.className}`}>
             Functionality
           </strong>
-          .
+          . */}
         </h1>
         <div className="flex justify-center flex-col m-auto w-fit text-center mt-8">
           <p className={` ${montserrattBold.className}`}>{overline}</p>

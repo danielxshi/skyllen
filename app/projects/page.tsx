@@ -13,6 +13,27 @@ import projectImageL2 from "../../public/images/second/1650-signage.webp";
 import projectImageR2 from "../images/1650-night.webp";
 import projectImageL3 from "../images/pendrell-aerial.webp";
 import projectImageR3 from "../../public/images/pendrell/Hero-Pendrell.webp";
+import localFont from "next/font/local";
+
+const montserratt = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-VariableFont_wght.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
+
+const montserrattBold = localFont({
+  src: [
+    {
+      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 import {
   Tile,
   TileBackground,
@@ -76,7 +97,25 @@ export default function Page() {
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
           overline="PROJECT"
-        ></Banner>
+        >
+          We prioritizes{" "}
+          <strong className={` ${montserrattBold.className}`}>
+            smart design
+          </strong>{" "}
+          and{" "}
+          <strong className={` ${montserrattBold.className}`}>
+            distinct spaces
+          </strong>{" "}
+          to craft{" "}
+          <strong className={` ${montserrattBold.className}`}>
+            enduring homes
+          </strong>{" "}
+          and{" "}
+          <strong className={` ${montserrattBold.className}`}>
+            workplaces
+          </strong>
+          .
+        </Banner>
       </Parallax>
 
       <TileWrapper numOfPages={3}>

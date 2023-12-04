@@ -9,7 +9,7 @@ import bannerBG from "../images/contact-banner.webp";
 import Button from "../components/Button/FillButton";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
-import test from "../images/SkyllenSign.webp"
+import test from "../images/SkyllenSign.webp";
 
 const montserratt = localFont({
   src: [
@@ -69,7 +69,12 @@ export default function Contact() {
             style="m-auto"
             // title={ProjectMessages.CompanyTitle}
             overline="COMPANY"
-          />
+          >
+            <strong className={` ${montserratt.className}`}>
+              {" "}
+              Get in Touch.
+            </strong>
+          </Banner>
         </div>
       </ParallaxBG>
       <PageSection style="pt-16 pb-16  flex md:pb-32">

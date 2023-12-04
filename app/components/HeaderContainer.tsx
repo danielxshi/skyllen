@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { Component } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../images/nav-logo.png";
+import logo from "../../public/images/logo-full.webp";
 import ContentfulImage from "@/lib/contentful-image";
 
 type Props = {
@@ -39,10 +39,10 @@ class SlugNav extends Component<Props> {
                     href="/"
                   >
                     <ContentfulImage
-                      width={36}
-                      height={36}
+                      width={100}
+                      height={100}
                       quality={85}
-                      src="../images/nav-logo.png"
+                      src={logo}
                     />
                   </Link>
                 </div>
