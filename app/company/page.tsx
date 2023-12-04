@@ -51,7 +51,7 @@ const descriptions = [
 export default function Page() {
   return (
     <>
-      <ParallaxFooter url={require('./train.gif')}>
+      <ParallaxFooter url={require("./train.gif")}>
         <Banner
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
@@ -79,19 +79,16 @@ export default function Page() {
         </div>
       </PageSection>
       <Works style="bg-white text-black" />
+
       <PageSection style="pb-16 ">
-        <ParallaxBG
-          style="company-parallax"
-          url={require('./train.gif')}
-        >
-          <div className="grid-container m-auto container">
+        <ParallaxFooter style="company-parallax" url={require("./train.gif")}>
+          <div className="grid-container m-auto container md:py-16 py-8">
             <div className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3 flex">
-              <div className="image-container">
+              <div className="image-container relative">
                 <ContentfulImage src={Logo} fill={true} quality={85} />
               </div>
-              {/* </motion.div> */}
             </div>
-            <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3">
+            <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3 text-white">
               <p className="pb-8">
                 Since 2008, Skyllen Pacific has been active throughout Metro
                 Vancouver observing market needs and acquiring lands in
@@ -106,8 +103,9 @@ export default function Page() {
               </p>
             </div>
           </div>
-        </ParallaxBG>
+        </ParallaxFooter>
       </PageSection>
+
       <PageSection style="h-min pt-16 pb-16 md:pb-32 lrg-padding-top company-section">
         {descriptions.map((el) => (
           <div className="container grid-container company-service">

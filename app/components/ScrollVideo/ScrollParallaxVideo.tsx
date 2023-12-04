@@ -144,7 +144,7 @@ const ParallaxScrollVideo = () => {
       <TileContent>
         <ParallaxFooter 
         
-        url={require('../../company/train.gif')}>
+      url={require('../../company/train.gif')}>
           <div className="min-h-screen"></div>
         </ParallaxFooter>
         {projects.map((el) => (

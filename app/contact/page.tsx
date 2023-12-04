@@ -49,6 +49,16 @@ const renderSwitch = (params) => {
 };
 
 export default function Contact() {
+  async function handleOnSubmit(e) {
+    e.preventDefault();
+    const formData = {};
+    Array.from(e.currentTarget.elements).forEach(field => {
+      if(!field.name) return;
+      formData[field.name] = field.value;
+    });
+    console.log(formData);
+  }
+
   console.log(FooterMessages);
   return (
     <>
@@ -64,7 +74,7 @@ export default function Contact() {
       <PageSection style="pt-16 pb-16  flex md:pb-32">
         <div className="container grid-container form-container">
           <div className="md:col-span-6 md:col-start-5">
-            <form id="contact-form" method="post">
+            <form id="contact-form" method="post" onSubmit={handleOnSubmit}>
               <label htmlFor="name">Full name</label>
               <input
                 type="text"

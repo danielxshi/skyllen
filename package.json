@@ -9,6 +9,7 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.17.1",
     "@contentful/rich-text-types": "^16.2.1",
+    "@sendgrid/mail": "^6.5.5",
     "@tailwindcss/typography": "0.5.9",
     "@types/node": "^20.10.1",
     "@types/react": "^18.2.20",
