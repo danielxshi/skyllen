@@ -39,8 +39,8 @@ class SlugNav extends Component<Props> {
                     href="/"
                   >
                     <ContentfulImage
-                      width={100}
-                      height={100}
+                      width={120}
+                      height={120}
                       quality={85}
                       src={logo}
                     />
