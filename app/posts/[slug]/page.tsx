@@ -202,7 +202,7 @@ export default async function PostPage({
       <PageSection style={"container md:pb-16 pt-16 flex flex-col"}>
         <div className="flex h-full relative w-11/12 m-auto">
           <div className="w-full h-screen-3/4 ">
-            <ContentfulImage src={post.coverImage.url} fill={true} />
+            <ContentfulImage src={post.render.url} fill={true} />
           </div>
         </div>
       </PageSection>

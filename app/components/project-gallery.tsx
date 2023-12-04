@@ -37,7 +37,7 @@ const cities = [
     name: "PENDRELL ST",
     image: gallery3,
     location: "Downtown Vancouver, BC",
-    status: "NOW SELLING",
+    status: "COMING SOON",
     url: "/posts/pendrell-street",
   },
 ];

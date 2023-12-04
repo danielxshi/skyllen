@@ -19,6 +19,9 @@ const POST_GRAPHQL_FIELDS = `
   projectImageFive {
     url
   }
+  render {
+    url
+  }
   projectImageOneText
   projectImageTwoText
   projectImageThreeText
