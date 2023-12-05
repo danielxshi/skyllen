@@ -9,7 +9,7 @@ import Headline from "@/app/components/headline";
 
 import { Markdown } from "@/lib/markdown";
 import Button from "@/app/components/Button/FillButton";
-import { getAllPosts, getPostAndMorePosts } from "@/lib/api";
+import { getAllPosts, getPostAndMorePosts, getPostAndMorePostsLocalized, getAllPostsLocalized } from "@/lib/api";
 import localFont from "next/font/local";
 
 const montserratt = localFont({
@@ -35,8 +35,8 @@ export default async function PostPage({
   params: { slug: string };
 }) {
   const { isEnabled } = draftMode();
-  const { post, morePosts } = await getPostAndMorePosts(params.slug, isEnabled);
-
+  const { post, morePosts } = await getPostAndMorePostsLocalized(false, params.slug, isEnabled);
+  
   const test = post.projectDetails["status"];
 
   // Data from Contentful

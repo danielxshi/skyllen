@@ -112,8 +112,13 @@ export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
         }
       }
     }`,
-    isDraftMode
+    isDraftMode,
+
   );
+
+  // console.log("\n\n\ngetAllPosts: \n")
+  // console.dir(entries, { depth: null }); // This will log the entire entries object
+
   return extractPostEntries(entries);
 }
 
@@ -121,11 +126,48 @@ export async function getPostAndMorePosts(
   slug: string,
   preview: boolean
 ): Promise<any> {
+  return await getPostAndMorePostsLocalized(true, slug, preview);
+}
+
+export async function getAllPostsLocalized(
+  isEnglish: boolean,
+  isDraftMode: boolean
+  ): Promise<any[]> {
+    const entries = await fetchGraphQL(
+      `query {
+        postCollection(where: { slug_exists: true }, order: date_DESC, 
+          locale: ${isEnglish ? '"en-US"' : '"zh-CN"'},
+          preview: ${
+          isDraftMode ? "true" : "false"
+        }) {
+          items {
+            ${POST_GRAPHQL_FIELDS}
+          }
+        }
+      }`,
+      isDraftMode,
+    );
+  
+    // console.log("\n\n\ngetAllPosts: \n")
+    // console.dir(entries, { depth: null }); 
+  
+    return extractPostEntries(entries);
+}
+
+export async function getPostAndMorePostsLocalized(
+  isEnglish: boolean,
+  slug: string,
+  preview: boolean
+): Promise<any> {
   const entry = await fetchGraphQL(
     `query {
-      postCollection(where: { slug: "${slug}" }, preview: ${
-      preview ? "true" : "false"
-    }, limit: 1) {
+      postCollection(where: { slug: "${slug}" }, 
+      preview: ${
+        preview ? "true" : "false"
+      }, 
+      limit: 1,
+      locale: ${isEnglish ? '"en-US"' : '"zh-CN"'}
+      ) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -135,9 +177,15 @@ export async function getPostAndMorePosts(
   );
   const entries = await fetchGraphQL(
     `query {
-      postCollection(where: { slug_not_in: "${slug}" }, order: date_DESC, preview: ${
-      preview ? "true" : "false"
-    }, limit: 2) {
+      postCollection(where: { 
+        slug_not_in: "${slug}" 
+      }, 
+      order: date_DESC, 
+      preview: ${
+        preview ? "true" : "false"
+      }, 
+      limit: 2,
+      locale: ${isEnglish ? '"en-US"' : '"zh-CN"'}) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -145,6 +193,10 @@ export async function getPostAndMorePosts(
     }`,
     preview
   );
+
+  // console.log("\n\n\ngetPostAndMorePosts: \n");
+  // console.dir(entries, { depth: null }); 
+  
   return {
     post: extractPost(entry),
     morePosts: extractPostEntries(entries),
