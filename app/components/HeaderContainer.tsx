@@ -11,6 +11,10 @@ type Props = {
   onLogoClick;
 };
 
+function toggleLanguage() {
+  console.log("language toggle");
+}
+
 class SlugNav extends Component<Props> {
   state = { clicked: false };
 
@@ -29,7 +33,7 @@ class SlugNav extends Component<Props> {
             transition={{ duration: 1.25, ease: "easeInOut" }}
             className="container"
           >
-            <div className="">
+            <div>
               <div className="inner-header">
                 <div className="logo">
                   <Link
@@ -48,6 +52,14 @@ class SlugNav extends Component<Props> {
                 </div>
                 <div className="menu">
                   <button
+                    //Change this to toggleLanguage
+                    onClick={() => toggleLanguage()}
+                    className="z-10 text-white text-lg lang-btn"
+                  >
+                    EN
+                  </button>
+
+                  <button
                     id="nav-icon2"
                     className={this.state.clicked ? "open" : "closed"}
                     onClick={() => {
@@ -64,8 +76,6 @@ class SlugNav extends Component<Props> {
                   </button>
                 </div>
               </div>
-
-              {/* <NavButton text="testing" /> */}
             </div>
           </motion.nav>
         </header>
@@ -74,5 +84,3 @@ class SlugNav extends Component<Props> {
   }
 }
 export default SlugNav;
-
-//Add open modal and animate onClick!

@@ -43,6 +43,10 @@ export default function Landing() {
                 {EN.HEADER_PT_1},
                 <br/>
                 {EN.HEADER_PT_2}
+                <br/>
+                {CH.HEADER_PT_1}
+                <br/>
+                {CH.HEADER_PT_2}
               </h1>
               <a className="absolute left-2/4 bottom-16" href="#demo">
                 <div className="box">
