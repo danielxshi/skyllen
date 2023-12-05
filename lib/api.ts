@@ -102,24 +102,7 @@ export async function getPreviewPostBySlug(slug: string | null): Promise<any> {
 }
 
 export async function getAllPosts(isDraftMode: boolean): Promise<any[]> {
-  const entries = await fetchGraphQL(
-    `query {
-      postCollection(where: { slug_exists: true }, order: date_DESC, preview: ${
-        isDraftMode ? "true" : "false"
-      }) {
-        items {
-          ${POST_GRAPHQL_FIELDS}
-        }
-      }
-    }`,
-    isDraftMode,
-
-  );
-
-  // console.log("\n\n\ngetAllPosts: \n")
-  // console.dir(entries, { depth: null }); // This will log the entire entries object
-
-  return extractPostEntries(entries);
+  return await getAllPostsLocalized(true, isDraftMode);
 }
 
 export async function getPostAndMorePosts(
