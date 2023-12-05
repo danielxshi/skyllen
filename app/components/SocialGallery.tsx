@@ -9,6 +9,7 @@ import image3 from "@/public/images/ig/ig3.webp";
 import image4 from "@/public/images/ig/ig4.webp";
 import image5 from "@/public/images/ig/ig5.webp";
 import image6 from "@/public/images/ig/ig6.webp";
+import EN from "../../src/i18n/en";
 
 const content = [
   {
@@ -85,7 +86,7 @@ export default function first(props) {
           target="_blank"
           href="https://www.instagram.com/skyllenpacific/"
         >
-          Follow our social media
+          {EN.SOCIAL_CTA}
         </Link>
       </div>
     </>
