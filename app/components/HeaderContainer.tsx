@@ -5,17 +5,19 @@ import React, { Component } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/images/logo-full.webp";
 import ContentfulImage from "@/lib/contentful-image";
+import { getLocale, toggleLocale } from "@/src/i18n";
 
 type Props = {
   onClick;
   onLogoClick;
 };
 
-function toggleLanguage() {
-  console.log("language toggle");
+function localeClicked() {
+  toggleLocale();
+  location.reload();
 }
 
-class SlugNav extends Component<Props> {
+class SlugNav extends Component<Props, any> {
   state = { clicked: false };
 
   handleClick = () => {
@@ -23,6 +25,7 @@ class SlugNav extends Component<Props> {
   };
 
   render() {
+    const locale = getLocale();
     return (
       <AnimatePresence>
         <header className="navbar">
@@ -53,10 +56,10 @@ class SlugNav extends Component<Props> {
                 <div className="menu">
                   <button
                     //Change this to toggleLanguage
-                    onClick={() => toggleLanguage()}
+                    onClick={() => localeClicked()}
                     className="z-10 text-white text-lg lang-btn"
                   >
-                    EN
+                    {locale}
                   </button>
 
                   <button

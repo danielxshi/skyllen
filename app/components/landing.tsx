@@ -1,12 +1,9 @@
 "use client";
-import ProjectMessages from "../JSON/ProjectMessages";
 import ParallaxBG from "./ParallaxBG";
 import { motion } from "framer-motion";
-import dallas from "../images/living-space-landing.webp";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import localFont from "next/font/local";
-import EN from "../../src/i18n/en";
-import CH from "../../src/i18n/ch/"
+import { getLocalizedMessages } from "@/src/i18n";
 
 const montserratt = localFont({
   src: [
@@ -19,7 +16,8 @@ const montserratt = localFont({
 });
 
 export default function Landing() {
-  let dataValue = Object.values(dallas);
+  //let dataValue = Object.values(dallas);
+  const localizedMessages = getLocalizedMessages();
   return (
     <>
       <motion.div
@@ -40,13 +38,9 @@ export default function Landing() {
               className="header-wrapper container"
             >
               <h1 className={`${montserratt.className}`}>
-                {EN.HEADER_PT_1},
+                {localizedMessages.HEADER_PT_1},
                 <br/>
-                {EN.HEADER_PT_2}
-                <br/>
-                {CH.HEADER_PT_1}
-                <br/>
-                {CH.HEADER_PT_2}
+                {localizedMessages.HEADER_PT_2}
               </h1>
               <a className="absolute left-2/4 bottom-16" href="#demo">
                 <div className="box">
