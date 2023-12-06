@@ -46,51 +46,51 @@ const en = {
 
   // COMPANY
   COMPANY_HEADER:
-    "我们是一家多学科的房地产开发公司，专注于开发能够融合自然、建筑、技术和功能的物业。",
-  COMPANY_OVERLINE: "公司简介",
-  COMPANY_SECTION_TITLE: "品牌故事",
+    "We're a multi-disciplinary Real Estate development firm focusing on developing properties that connect Nature, Architecture, Technology, and Functionality.",
+  COMPANY_OVERLINE: "COMPANY",
+  COMPANY_SECTION_TITLE: "Our History",
   COMPANY_SECTION_PARAGRAPH_1:
-    "自2008年以来，Skyllen Pacific 一直在大温哥华地区活跃，观察市场需求并在该地区的战略性部分购置土地。",
+    "Since 2008, Skyllen Pacific has been active throughout Metro Vancouver observing market needs and acquiring lands in strategic parts of the region.",
   COMPANY_SECTION_PARAGRAPH_2:
-    "凭借跨足两大洲的三十多年经验，Skyllen Pacific 集团致力于通过注重革命性设计和周到功能的高品质住宅，超越温哥华的房地产发展目标。",
-  COMPANY_PILLAR_ONE_TITLE: "灵感启示",
+    "With over thirty years of practiced expertise spanning across two continents, the Skyllen Group is committed to exceeding Vancouver's real estate development goals with quality homes that prioritize revolutionary design and thoughtful functionality.",
+  COMPANY_PILLAR_ONE_TITLE: "INSPIRATION",
   COMPANY_PILLAR_ONE_PARAGRAPH_1:
-    "Skyllen Pacific 受到最近城市风景演变中涌现的城市化和可持续性不断演绎的启发。",
+    "Skyllen Pacific is inspired by the evolving interpretations of urbanity and sustainability emerging from recent cityscapes.",
   COMPANY_PILLAR_ONE_PARAGRAPH_2:
-    "在管理过程中重视负责任的投资，Skyllen Pacific 在倡导可持续实践的同时，致力于改善当地基础设施和公共空间。",
-  COMPANY_PILLAR_TWO_TITLE: "协同合作",
+    "Valuing responsible investment, Skyllen champions sustainable practices during the management process to improve local infrastructure and public spaces.",
+  COMPANY_PILLAR_TWO_TITLE: "COLLABORATION",
   COMPANY_PILLAR_TWO_PARAGRAPH_1:
-    "每个Skyllen Pacific 项目都涉及在项目背景和现代设计之间进行深思熟虑的协作。",
+    "Every Skyllen Pacific project involves thoughtful collaboration between project context and contemporary design.",
   COMPANY_PILLAR_TWO_PARAGRAPH_2:
-    "通过与经验丰富的行业专业人士合作，Skyllen Pacific 利用先进的研究和开发方法，将创造性的解决方案推向高质量的成果。",
-  COMPANY_PILLAR_THREE_TITLE: "改革创新",
+    "Engaging experienced industry professionals, Skyllen leverages progressive research and development methods to propel creative solutions into high-quality results.",
+  COMPANY_PILLAR_THREE_TITLE: "INNOVATION",
   COMPANY_PILLAR_THREE_PARAGRAPH_1:
-    "丰富的生活源于创新的规划和设计。Skyllen Pacific 与客户合作，将想法转化为现实。",
+    "An enriched life stems from innovative planning and design. Skyllen works with clients to transform ideas into actuality.",
   COMPANY_PILLAR_THREE_PARAGRAPH_2:
-    "该公司对早期蓝图制定的执着奠定了创新的模板，引领着周到规划的项目，散发出卓越的设计和现代体验。",
+    "The firm’s dedication to early blueprinting sets the template for innovation, leading to conscientiously planned projects that radiate eminent design and modern experience.",
   COMPANY_TRAIN_SECTION_PARAGRAPH:
-    "我们受到最近城市风景演变中涌现的城市化和可持续性不断演绎的启发。",
-  COMPANY_PROJECT_MANAGEMENT_TITLE: "项目管理",
+    "We are inspired by the evolving interpretations of urbanity and sustainability emerging from recent cityscapes.",
+  COMPANY_PROJECT_MANAGEMENT_TITLE: "PROJECT MANAGEMENT",
   COMPANY_PROJECT_MANAGEMENT_PARAGRAPH_1:
-    "Skyllen Pacific 以多年的管理经验而自豪，涵盖独立住宅、混合用途和商业项目。",
+    "Skyllen Pacific boasts years of experience managing detached residential, mixed-use, and commercial projects.",
   COMPANY_PROJECT_MANAGEMENT_PARAGRAPH_2:
-    "凭借从项目开始到完成的实际经验，Skyllen Pacific 对整个开发过程了如指掌，并有资格为各类项目提供相关见解。",
-  COMPANY_DEVELOPMENT_TITLE: "项目开发",
+    "With hands-on experience from project inception to completion, Skyllen is well-informed with the entire development process and is qualified to provide relevant insight for all types of projects.",
+  COMPANY_DEVELOPMENT_TITLE: "DEVELOPMENT",
   COMPANY_DEVELOPMENT_PARAGRAPH_1:
-    "我们的端到端服务模型将项目从概念推进到完成，我们的专业团队在每个步骤都密切合作。",
+    "Our end-to-end service model moves projects from concept to completion, with our expert teams collaborating every step of the way.",
   COMPANY_DEVELOPMENT_PARAGRAPH_2:
-    "我们成功的关键在于我们内部专家的协同工作方式。我们的综合系统将项目从概念推进到完成，每次都实现对客户的承诺。",
+    "Our winning formula lies in how our in-house experts work together. Our integrated systems move projects from concept to completion, delivering on the promise we make to our customers, every time.",
 
   // FOOTER
-  FOOTER_CONNECT: "联系我们",
-  FOOTER_PROJECTS: "项目",
-  FOOTER_FOLLOW: "关注我们",
+  FOOTER_CONNECT: "LET'S CONNECT",
+  FOOTER_PROJECTS: "PROJECTS",
+  FOOTER_FOLLOW: "FOLLOW US",
 
   // MENU
-  PROJECT: "项目概览",
-  COMPANY: "公司简介",
-  NEWS: "媒体新闻",
-  CONTACT: "联系我们",
+  PROJECT: "Projects",
+  COMPANY: "Company",
+  NEWS: "News",
+  CONTACT: "Contact",
 } satisfies BaseTranslation;
 
 export default en;
