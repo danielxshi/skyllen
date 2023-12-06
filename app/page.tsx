@@ -1,3 +1,4 @@
+"use client"
 import { draftMode } from "next/headers";
 import { getAllPosts } from "@/lib/api";
 import Landing from "./components/landing";
@@ -7,17 +8,11 @@ import Headline from "./components/headline";
 import React, { useRef, useEffect } from "react";
 import SocialGallery from "./components/SocialGallery";
 import ScrollParallaxVideo from "./components/ScrollVideo/ScrollParallaxVideo";
-
+import { getLocalizedMessages } from "@/src/i18n";
 
 export default function Page() {
-  const { isEnabled } = draftMode();
-  // const allPosts = await getAllPosts(isEnabled);
-  // const heroPost = allPosts[0];
-  // const morePosts = allPosts.slice(1);
-
-  // Loader
-  // const [loading, setLoading] = useState(true);
-
+  // const { isEnabled } = draftMode();
+  const localizedMessages = getLocalizedMessages();
 
   return (
     <div className="">
@@ -28,8 +23,8 @@ export default function Page() {
       <PageSection style={"container min-h-screen pt-16 pb-16"}>
         <ProjectGallery>
           <Headline
-            overline="our projects"
-            title="Smart Design and Distinct Spaces"
+            overline={localizedMessages.PROJECT_GALLERY_OVERLINE}
+            title={localizedMessages.PROJECT_GALLERY_HEADLINE}
           />
         </ProjectGallery>
       </PageSection>

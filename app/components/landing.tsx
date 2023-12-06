@@ -42,7 +42,7 @@ export default function Landing() {
                 <br/>
                 {localizedMessages.HEADER_PT_2}
               </h1>
-              <a className="absolute left-2/4 bottom-16" href="#demo">
+              <a className="absolute left-2/4 bottom-16" >
                 <div className="box">
                   <span></span>
                   <span></span>
