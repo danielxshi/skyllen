@@ -29,11 +29,12 @@ const en = {
   CONTACT_FORM_Q_REALTOR: "ARE YOU A REALTOR",
   YES: "yes",
   NO: "no",
-  CONTACT_FORM_EMPLOYER: "Employer/Brokerage",
+  CONTACT_FORM_EMPLOYER: "Employer/Brokerage", // not found
   CONTACT_FORM_DISCLAIMER:
-    "I hereby consent to receive emails from Skyllen Pacific and their respective current and future affiliates and subsidiaries. This may include pricing, floor plans for current and future products, sales updates, event invitations, announcements, corporate newsletters, and other contact. I understand that I can unsubscribe at any time.",
+    "I hereby consent to receive emails from Skyllen Pacific and their respective current and future affiliates and subsidiaries. This may include pricing, floor plans for current and future products, sales updates, event invitations, announcements, corporate newsletters, and other contact. I understand that I can unsubscribe at any time.", // not found
 
-  // PROJECTS
+  // PROJECTS 
+  // TODO: these are hard coded inside app/pprojects/page.tsx
   PROJECT_HEADLINE:
     "We prioritizes smart design and distinct spaces to craft enduring homes and workplaces.",
   PROJECT_OVERLINE: "PROJECT",
@@ -42,7 +43,7 @@ const en = {
   PROJECT_1650_EXCERPT:
     "A vibrant four-storey centerpiece providing bright showroom and office opportunities set in Kitsilano's trendiest business district.",
   PROJECT_EDITION_EXCERPT:
-    "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.",
+    "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.", 
 
   // COMPANY
   COMPANY_HEADER:

@@ -10,6 +10,9 @@ import Button from "../components/Button/FillButton";
 import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import test from "../images/SkyllenSign.webp";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const montserratt = localFont({
   src: [
@@ -81,7 +84,7 @@ export default function Contact() {
         <div className="container grid-container form-container">
           <div className="md:col-span-6 md:col-start-5">
             <form id="contact-form" method="post" onSubmit={handleOnSubmit}>
-              <label htmlFor="name">Full name</label>
+              <label htmlFor="name">{localizedMessages.CONTACT_FORM_FULL_NAME}</label>
               <input
                 type="text"
                 id="name"
@@ -89,7 +92,7 @@ export default function Contact() {
                 placeholder="Your Full Name"
                 required
               />
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">{localizedMessages.CONTACT_FORM_EMAIL}</label>
               <input
                 type="email"
                 id="email"
@@ -97,7 +100,7 @@ export default function Contact() {
                 placeholder="Your Email Address"
                 required
               />
-              <label htmlFor="email">Phone</label>
+              <label htmlFor="email">{localizedMessages.CONTACT_FORM_PHONE}</label>
               <input
                 type="email"
                 id="email"
@@ -105,7 +108,7 @@ export default function Contact() {
                 placeholder="Your Phone"
                 required
               />
-              <label htmlFor="email">Postal Code</label>
+              <label htmlFor="email">{localizedMessages.CONTACT_FORM_POSTAL_CODE}</label>
               <input
                 type="email"
                 id="email"
@@ -113,7 +116,7 @@ export default function Contact() {
                 placeholder="Your Postal Code"
                 required
               />
-              <label htmlFor="email">Are you a realtor</label>
+              <label htmlFor="email">{localizedMessages.CONTACT_FORM_Q_REALTOR}</label>
               <input
                 type="email"
                 id="email"
@@ -122,8 +125,8 @@ export default function Contact() {
                 required
               />
               {/* <select id="cars" name="cars">
-                <option value="volvo">Yes</option>
-                <option value="saab">No</option>
+                <option value="volvo">{localizedMessages.YES}</option>
+                <option value="saab">{localizedMessages.NO}</option>
               </select> */}
               {/* <label htmlFor="email">Email Address</label>
   <input type="email" id="email" name="email" placeholder="Your Email Address" required>

@@ -43,6 +43,9 @@ import {
 } from "./Animation";
 import FooterMessages from "../JSON/FooterItems";
 import ContentfulImage from "@/lib/contentful-image";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 type Props = {
   showModal;
@@ -328,7 +331,7 @@ export const BurgerModal = ({
                                         ListClick.onClick();
                                       }}
                                     >
-                                      Projects
+                                      {localizedMessages.PROJECT}
                                     </Link>
                                   </li>
                                   <li>
@@ -341,7 +344,7 @@ export const BurgerModal = ({
                                         ListClick.onClick();
                                       }}
                                     >
-                                      Company
+                                      {localizedMessages.COMPANY}
                                     </Link>
                                   </li>
                                   <li>
@@ -354,7 +357,7 @@ export const BurgerModal = ({
                                         ListClick.onClick();
                                       }}
                                     >
-                                      News
+                                      {localizedMessages.NEWS}
                                     </Link>
                                   </li>
 
@@ -368,7 +371,7 @@ export const BurgerModal = ({
                                         ListClick.onClick();
                                       }}
                                     >
-                                      Contact
+                                      {localizedMessages.CONTACT}
                                     </Link>
                                   </li>
                                 </ul>

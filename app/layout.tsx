@@ -13,6 +13,9 @@ import Logo from "./images/logo-landing.webp";
 import ContentfulImage from "@/lib/contentful-image";
 import React from "react";
 import localFont from "next/font/local";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const quicksand = localFont({
   src: [
@@ -55,7 +58,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-span-3">
           <p className={`mb-4 uppercase ${montserrat.className}`}>
-            Let's Connect
+          {localizedMessages.FOOTER_CONNECT}
           </p>
           <ul>
             {test2.map((item, index) => (
@@ -72,7 +75,9 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "projects":
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-start-6 md:col-span-2">
-          <p className={`mb-4 uppercase ${montserrat.className}`}>Projects</p>
+          <p className={`mb-4 uppercase ${montserrat.className}`}>
+          {localizedMessages.FOOTER_PROJECTS}
+          </p>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
               <li className="underscore-cta">
@@ -88,7 +93,9 @@ export const renderSwitch = (params: { [x: string]: any }) => {
     case "socials":
       return (
         <div className="md:col-start-8 md:col-span-2">
-          <p className={`mb-4 uppercase ${montserrat.className}`}>Follow Us</p>
+          <p className={`mb-4 uppercase ${montserrat.className}`}>
+          {localizedMessages.FOOTER_FOLLOW}
+          </p>
           <ul>
             {test2.map((item, index) => (
               <>
