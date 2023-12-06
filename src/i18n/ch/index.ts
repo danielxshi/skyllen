@@ -17,8 +17,7 @@ const ch = {
   NOW_SELLING: "现正发售",
   COMING_SOON: "即将推出",
   // NEWS
-  NEWS_HEADER_PT_1: "我们受到最近城市景观中不断演变的",
-  NEWS_HEADER_PT_2: "城市化和可持续性解读的启发。",
+  NEWS_HEADER: "我们受到最近城市景观中不断演变的城市化和可持续性解读的启发。",
   NEWS_HEADER_OVERLINE: "媒体新闻",
   NEWS_SECTION_TITLE: "我们的最新消息",
   NEWS_SECTION_OVERLINE: "媒体新闻",
@@ -95,6 +94,28 @@ const ch = {
   COMPANY: "公司简介",
   NEWS: "媒体新闻",
   CONTACT: "联系我们",
+
+  //618 Slug should be "618-carnavron"
+  TEST_PROJECT_618_TITLE: "618 CARNAVRON is NOW CHINESE",
+  TEST_PROJECT_618_EXCERPT: "Community · Convienence",
+  TEST_PROJECT_618_SLUG: "618-carnavron",
+  TEST_PROJECT_618_COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_TYPE: "Residential | Office | Retail",
+  TEST_PROJECT_618_COUNT: "262",
+  TEST_PROJECT_618_STATUS: "Register Now",
+  TEST_PROJECT_618_ESTIMATE: "Completed",
+  TEST_PROJECT_618_LOCATION: "New Westminster, BC",
+  TEST_PROJECT_618_WEBSITE: "http://www.618carnarvon.com",
+  TEST_PROJECT_618_RENDER: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_DESCRIPTION: "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
+  TEST_PROJECT_618_PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_BUBBLE_ONE: "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
+  TEST_PROJECT_618_BUBBLE_TWO: "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
+  TEST_PROJECT_618_BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
 } satisfies Translation;
 
 export default ch;

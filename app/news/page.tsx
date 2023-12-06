@@ -10,6 +10,9 @@ import bgBanner from "../images/news.webp";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import localFont from "next/font/local";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const montserrattBold = localFont({
   src: [
@@ -100,9 +103,9 @@ export default function Page() {
         <Banner
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
-          overline="NEWS"
+          overline={localizedMessages.NEWS_HEADER_OVERLINE}
         >
-          We are inspired by the{" "}
+          {/* We are inspired by the{" "}
           <strong className={` ${montserrattBold.className}`}>
             evolving interpretations
           </strong>{" "}
@@ -112,12 +115,14 @@ export default function Page() {
           <strong className={` ${montserrattBold.className}`}>
             sustainability
           </strong>{" "}
-          emerging from recent cityscapes.
+          emerging from recent cityscapes. */}
+          {localizedMessages.NEWS_HEADER}
+
         </Banner>
       </ParallaxBG>
 
       <PageSection style="container pt-16 pb-16 md:pb-32">
-        <Headline overline="news" title="Stay updated with Skyllen" />
+        <Headline overline={localizedMessages.NEWS_SECTION_OVERLINE} title={localizedMessages.NEWS_SECTION_TITLE} />
         <NewsGalleryItem />
       </PageSection>
     </>

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "../../public/images/logo-full.webp";
 import ContentfulImage from "@/lib/contentful-image";
 import { getLocale, toggleLocale } from "@/src/i18n";
+import Navbar from "./Navbar";
 
 type Props = {
   onClick;
@@ -27,8 +28,8 @@ class SlugNav extends Component<Props, any> {
   render() {
     const locale = getLocale();
     return (
-      <AnimatePresence>
-        <header className="navbar">
+      // <AnimatePresence>
+        <Navbar>
           <motion.nav
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,8 +47,8 @@ class SlugNav extends Component<Props, any> {
                     href="/"
                   >
                     <ContentfulImage
-                      width={120}
-                      height={120}
+                      width={150}
+                      height={150}
                       quality={85}
                       src={logo}
                     />
@@ -81,8 +82,8 @@ class SlugNav extends Component<Props, any> {
               </div>
             </div>
           </motion.nav>
-        </header>
-      </AnimatePresence>
+        </Navbar>
+      // </AnimatePresence>
     );
   }
 }

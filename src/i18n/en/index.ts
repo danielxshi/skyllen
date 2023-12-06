@@ -19,6 +19,13 @@ const en = {
   NOW_SELLING: "NOW SELLING",
   COMING_SOON: "COMING SOON",
 
+  // NEWS
+  NEWS_HEADER:
+    "We are inspired by the evolving interpretations of urbanity and sustainability emerging from recent cityscapes.",
+  NEWS_HEADER_OVERLINE: "NEWS",
+  NEWS_SECTION_TITLE: "Stay updated with Skyllen",
+  NEWS_SECTION_OVERLINE: "NEWS",
+
   // CONTACT
   CONTACT_HEADER: "Connect with Us",
   CONTACT_HEADER_OVERRLINE: "CONTACT",
@@ -33,7 +40,7 @@ const en = {
   CONTACT_FORM_DISCLAIMER:
     "I hereby consent to receive emails from Skyllen Pacific and their respective current and future affiliates and subsidiaries. This may include pricing, floor plans for current and future products, sales updates, event invitations, announcements, corporate newsletters, and other contact. I understand that I can unsubscribe at any time.", // not found
 
-  // PROJECTS 
+  // PROJECTS
   // TODO: these are hard coded inside app/pprojects/page.tsx
   PROJECT_HEADLINE:
     "We prioritizes smart design and distinct spaces to craft enduring homes and workplaces.",
@@ -43,7 +50,7 @@ const en = {
   PROJECT_1650_EXCERPT:
     "A vibrant four-storey centerpiece providing bright showroom and office opportunities set in Kitsilano's trendiest business district.",
   PROJECT_EDITION_EXCERPT:
-    "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.", 
+    "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.",
 
   // COMPANY
   COMPANY_HEADER:
@@ -92,6 +99,28 @@ const en = {
   COMPANY: "Company",
   NEWS: "News",
   CONTACT: "Contact",
+
+  //618 Slug should be "618-carnavron"
+  TEST_PROJECT_618_TITLE: "618 CARNAVRON",
+  TEST_PROJECT_618_EXCERPT: "Community · Convienence",
+  TEST_PROJECT_618_SLUG: "618-carnavron", // This is slug
+  TEST_PROJECT_618_COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_TYPE: "Residential | Office | Retail",
+  TEST_PROJECT_618_COUNT: "262",
+  TEST_PROJECT_618_STATUS: "Register Now",
+  TEST_PROJECT_618_ESTIMATE: "Completed",
+  TEST_PROJECT_618_LOCATION: "New Westminster, BC",
+  TEST_PROJECT_618_WEBSITE: "http://www.618carnarvon.com",
+  TEST_PROJECT_618_RENDER: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_DESCRIPTION: "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
+  TEST_PROJECT_618_PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_BUBBLE_ONE: "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
+  TEST_PROJECT_618_BUBBLE_TWO: "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
+  TEST_PROJECT_618_BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
 } satisfies BaseTranslation;
 
 export default en;

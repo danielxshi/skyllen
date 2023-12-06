@@ -139,7 +139,7 @@ export const renderSwitch2 = (
   switch (keys[0]) {
     case "contact":
       return (
-        <div className="footer-contact-container hidden">
+        <div className="footer-contact-container ">
           <ul>
             {test2.map(
               (
@@ -377,10 +377,7 @@ export const BurgerModal = ({
                                 </ul>
                               </nav>
 
-                              <div
-                                // ref={(el) => (info = el)}
-                                className="info"
-                              >
+                              <div className="info">
                                 {FooterMessages.FooterItems.map(
                                   (item, index) => {
                                     return (
@@ -392,9 +389,8 @@ export const BurgerModal = ({
                                 )}
                               </div>
                               <div className="locations">
-                                PROJECTS:
-                                {cities.map((el) => (
-                                  // <div className="underscore-cta">
+                                <div className="location-content">
+                                  {cities.map((el) => (
                                     <Link
                                       onClick={() => {
                                         ListClick.onClick();
@@ -409,8 +405,8 @@ export const BurgerModal = ({
                                     >
                                       {el.name}
                                     </Link>
-                                  // </div>
-                                ))}
+                                  ))}
+                                </div>
                               </div>
                             </div>
                           </div>
