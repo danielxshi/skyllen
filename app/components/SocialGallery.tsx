@@ -9,7 +9,9 @@ import image3 from "@/public/images/ig/ig3.webp";
 import image4 from "@/public/images/ig/ig4.webp";
 import image5 from "@/public/images/ig/ig5.webp";
 import image6 from "@/public/images/ig/ig6.webp";
-import EN from "../../src/i18n/en";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const content = [
   {
@@ -54,9 +56,14 @@ const content = [
 ];
 
 export default function first(props) {
+  const localizedMessages = getLocalizedMessages();
+
   return (
     <>
-      <Headline overline="social media" title="Stay updated with us" />
+      <Headline
+        overline={localizedMessages.SOCIAL_OVERLINE}
+        title={localizedMessages.SOCIAL_HEADLINE}
+      />
 
       <div className="social-media-container overflow-x-scroll">
         {content.map((el) => (
@@ -86,7 +93,7 @@ export default function first(props) {
           target="_blank"
           href="https://www.instagram.com/skyllenpacific/"
         >
-          {EN.SOCIAL_CTA}
+          {localizedMessages.SOCIAL_CTA}{" "}
         </Link>
       </div>
     </>

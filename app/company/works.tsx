@@ -7,6 +7,9 @@ import image1 from "../../public/images/INSPIRATION.webp";
 import image2 from "../../public/images/COLLABORATION.webp";
 import image3 from "../../public/images/INNOVATION.webp";
 import localFont from "next/font/local";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const montserrattBold = localFont({
   src: [
@@ -20,31 +23,26 @@ const montserrattBold = localFont({
 
 const content = [
   {
-    name: "INSPIRATION",
+    name: localizedMessages.COMPANY_PILLAR_ONE_TITLE,
     page: 0,
     image: image1,
-    textOne:
-      "Skyllen Pacific is inspired by the evolving interpretations of urbanity and sustainability emerging from recent cityscapes.",
-    textTwo:
-      "Valuing responsible investment, Skyllen champions sustainable practices during the management process to improve local infrastructure and public spaces.",
+    textOne: localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_1,
+    textTwo: localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2,
   },
   {
-    name: "COLLABORATION",
+    name: localizedMessages.COMPANY_PILLAR_TWO_TITLE,
+
     page: 1,
     image: image2,
-    textOne:
-      "Every Skyllen Pacific project involves thoughtful collaboration between project context and contemporary design.",
-    textTwo:
-      "Engaging experienced industry professionals, Skyllen leverages progressive research and development methods to propel creative solutions into high-quality results.",
+    textOne: localizedMessages.COMPANY_PILLAR_TWO_PARAGRAPH_1,
+    textTwo: localizedMessages.COMPANY_PILLAR_TWO_PARAGRAPH_2,
   },
   {
-    name: "INNOVATION",
+    name: localizedMessages.COMPANY_PILLAR_THREE_TITLE,
     page: 2,
     image: image3,
-    textOne:
-      "An enriched life stems from innovative planning and design. Skyllen works with clients to transform ideas into actuality. ",
-    textTwo:
-      "The firm’s dedication to early blueprinting sets the template for innovation, leading to conscientiously planned projects that radiate eminent design and modern experience.",
+    textOne: localizedMessages.COMPANY_PILLAR_THREE_PARAGRAPH_1,
+    textTwo: localizedMessages.COMPANY_PILLAR_THREE_PARAGRAPH_2,
   },
 ];
 

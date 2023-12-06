@@ -13,6 +13,8 @@ import React, {
   Children,
   useState,
 } from "react";
+import { getLocalizedMessages } from "@/src/i18n";
+const localizedMessages = getLocalizedMessages();
 
 type Props = {
   children?: React.ReactNode;
@@ -23,21 +25,21 @@ const cities = [
     name: "1650 ON SECOND",
     image: gallery1,
     location: "Kitsilano, BC",
-    status: "NOW LEASING",
+    status: localizedMessages.NOW_LEASING,
     url: "/posts/1650-on-second",
   },
   {
     name: "618 CARNAVRON",
     image: gallery2,
     location: "New Westminister, BC",
-    status: "NOW SELLING",
+    status: localizedMessages.NOW_SELLING,
     url: "/posts/618-carnavron",
   },
   {
     name: "PENDRELL ST",
     image: gallery3,
     location: "Downtown Vancouver, BC",
-    status: "COMING SOON",
+    status: localizedMessages.COMING_SOON,
     url: "/posts/pendrell-street",
   },
 ];

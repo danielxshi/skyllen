@@ -16,7 +16,9 @@ import testImage from "@/public/images/1650-night.webp";
 import ParallaxFooter from "../components/VideoParallax";
 import Logo from "@/public/images/logo-landing.webp";
 import localFont from "next/font/local";
-// import test from "./train.gif"
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const montserratt = localFont({
   src: [
@@ -31,20 +33,16 @@ const montserratt = localFont({
 const descriptions = [
   {
     image: DescriptionImage1,
-    service: "PROJECT MANAGEMENT",
-    paragraphOne:
-      "Skyllen Pacific boasts years of experience managing detached residential, mixed-use, and commercial projects. ",
-    paragraphTwo:
-      "With hands-on experience from project inception to completion, Skyllen is well-informed with the entire development process and is qualified to provide relevant insight for all types of projects.",
+    service: localizedMessages.COMPANY_PROJECT_MANAGEMENT_TITLE,
+    paragraphOne: localizedMessages.COMPANY_PROJECT_MANAGEMENT_PARAGRAPH_1,
+    paragraphTwo: localizedMessages.COMPANY_PROJECT_MANAGEMENT_PARAGRAPH_2,
   },
 
   {
     image: DescriptionImage2,
-    service: "DEVELOPMENT",
-    paragraphOne:
-      "Our end-to-end service model moves projects from concept to completion, with our expert teams collaborating every step of the way. ",
-    paragraphTwo:
-      "Our winning formula lies in how our in-house experts work together. Our integrated systems move projects from concept to completion, delivering on the promise we make to our customers, every time.",
+    service: localizedMessages.COMPANY_DEVELOPMENT_TITLE,
+    paragraphOne: localizedMessages.COMPANY_DEVELOPMENT_PARAGRAPH_1,
+    paragraphTwo: localizedMessages.COMPANY_DEVELOPMENT_PARAGRAPH_2,
   },
 ];
 
@@ -55,46 +53,33 @@ export default function Page() {
         <Banner
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
-          overline="COMPANY"
+          overline={localizedMessages.COMPANY_OVERLINE}
         >
-          We're a{" "}
+          {/* We're a{" "}
           <strong className={` ${montserratt.className}`}>
             multi-disciplinary
           </strong>{" "}
           Real Estate development firm focusing on developing properties that
           connect{" "}
           <strong className={` ${montserratt.className}`}>Nature</strong>,{" "}
-          <strong className={` ${montserratt.className}`}>
-            Architecture
-          </strong>
-          ,{" "}
-          <strong className={` ${montserratt.className}`}>
-            Technology
-          </strong>
-          , and{" "}
-          <strong className={` ${montserratt.className}`}>
-            Functionality
-          </strong>
-          .
+          <strong className={` ${montserratt.className}`}>Architecture</strong>,{" "}
+          <strong className={` ${montserratt.className}`}>Technology</strong>,
+          and{" "}
+          <strong className={` ${montserratt.className}`}>Functionality</strong>
+          . */}
+          {localizedMessages.COMPANY_HEADER}
         </Banner>
       </ParallaxFooter>
       <PageSection style="pt-16 pb-16 md:h-128 flex">
         <div className="grid-container m-auto container">
           <h3 className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3">
-            Our History
+            {localizedMessages.COMPANY_SECTION_TITLE}
           </h3>
           <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3">
             <p className="pb-8">
-              Since 2008, Skyllen Pacific has been active throughout Metro
-              Vancouver observing market needs and acquiring lands in strategic
-              parts of the region.{" "}
+              {localizedMessages.COMPANY_SECTION_PARAGRAPH_1}
             </p>
-            <p>
-              With over thirty years of practiced expertise spanning across two
-              continents, the Skyllen Group is committed to exceeding
-              Vancouver's real estate development goals with quality homes that
-              prioritize revolutionary design and thoughtful functionality.
-            </p>
+            <p>{localizedMessages.COMPANY_SECTION_PARAGRAPH_2}</p>
           </div>
         </div>
       </PageSection>
@@ -110,17 +95,9 @@ export default function Page() {
             </div>
             <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3 text-white">
               <p className="pb-8">
-                Since 2008, Skyllen Pacific has been active throughout Metro
-                Vancouver observing market needs and acquiring lands in
-                strategic parts of the region.{" "}
+                {localizedMessages.COMPANY_SECTION_PARAGRAPH_1}
               </p>
-              <p>
-                With over thirty years of practiced expertise spanning across
-                two continents, the Skyllen Group is committed to exceeding
-                Vancouver's real estate development goals with quality homes
-                that prioritize revolutionary design and thoughtful
-                functionality.
-              </p>
+              <p>{localizedMessages.COMPANY_SECTION_PARAGRAPH_2}</p>
             </div>
           </div>
         </ParallaxFooter>

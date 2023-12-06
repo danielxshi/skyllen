@@ -39,7 +39,7 @@ import ContentfulImage from "@/lib/contentful-image";
 import localFont from "next/font/local";
 import ParallaxFooter from "../ParallaxFooter";
 import Banner from "../banner";
-import EN from "../../../src/i18n/en";
+import { getLocalizedMessages } from "@/src/i18n";
 
 const quicksand = localFont({
   src: [
@@ -53,6 +53,8 @@ const quicksand = localFont({
 
 const ParallaxScrollVideo = () => {
   const videoRef = useRef() as MutableRefObject<HTMLVideoElement>;
+  const localizedMessages = getLocalizedMessages();
+
   const [videoScrollDistance, setVideoScrollDistance] = useState(0);
 
   const scrollSectionRef = useRef<HTMLDivElement>(null);
@@ -63,15 +65,17 @@ const ParallaxScrollVideo = () => {
   const projects = [
     {
       page: 0,
-      description: EN.STORY1,
+      description: localizedMessages.STORY1,
     },
     {
       page: 1,
-      description: EN.STORY2,
+      description: localizedMessages.STORY2,
+
     },
     {
       page: 2,
-      description: EN.STORY3,
+      description: localizedMessages.STORY3,
+
     },
   ];
 
