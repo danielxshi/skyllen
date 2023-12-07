@@ -172,148 +172,69 @@ function HeaderModal() {
   );
 }
 
-// export function getLocale() {
-//   if (
-//     typeof window !== "undefined" &&
-//     typeof document !== "undefined" &&
-//     window.localStorage
-//   ) {
-//     return window.localStorage.getItem("locale") ?? "en";
-//   } else {
-//     return "en";
-//   }
-// }
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  if (
-    typeof window !== "undefined" &&
-    typeof document !== "undefined" &&
-    window.localStorage
-  ) {
-    return (
-      <BrowserRouter>
-        <ScrollObserver>
-          <html lang="en" className={`${quicksand.className}`}>
-            <body>
-              <section className="min-h-screen">
-                <HeaderModal />
-                {/* <motion.div
-              initial={{ opacity: 1 }}
-              animate={{
-                opacity: 0,
-                transitionEnd: {
-                  display: "none",
-                },
-              }}
-              transition={{
-                delay: 0.5,
-                duration: 4.5,
-                ease: "easeInOut",
-                type: "tween",
-              }}
-              className="wrapper2"
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
+  return (
+    // <BrowserRouter>
+      <ScrollObserver>
+        <html lang="en" className={`${quicksand.className}`}>
+          <body>
+            <section className="min-h-screen">
+              <HeaderModal />
+              {/* <motion.div
+                initial={{ opacity: 1 }}
                 animate={{
-                  opacity: 1,
+                  opacity: 0,
+                  transitionEnd: {
+                    display: "none",
+                  },
                 }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-                className="loader--hero "
+                transition={{
+                  delay: 0.5,
+                  duration: 4.5,
+                  ease: "easeInOut",
+                  type: "tween",
+                }}
+                className="wrapper2"
               >
-                <ContentfulImage
-                  src={Logo}
-                  width={100}
-                  height={100}
-                  quality={85}
-                />
-              </motion.div>
-            </motion.div> */}
-                <motion.main
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  transition={{ duration: 2, ease: "easeInOut" }}
+                  className="loader--hero "
+                >
+                  <ContentfulImage
+                    src={Logo}
+                    width={100}
+                    height={100}
+                    quality={85}
+                  />
+                </motion.div>
+              </motion.div> */}
+              <motion.main
                 // initial={{ opacity: 0 }}
                 // animate={{ opacity: 1, y: 0 }}
                 // exit={{ opacity: 0 }}
                 // transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
-                >
-                  {children}
-                </motion.main>
-
-                <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
-                  {/* <div className="parallax-bg z-0">
-        <ContentfulImage src={props.url} fill={true} />
-      </div> */}
-                  <Footer />
-                </ParallaxBG>
-              </section>
-            </body>
-          </html>
-        </ScrollObserver>
-      </BrowserRouter>
-    );
-  } else {
-    return (
-      <BrowserRouter>
-        <ScrollObserver>
-          <html lang="en" className={`${quicksand.className}`}>
-            <body>
-              <section className="min-h-screen">
-                <HeaderModal />
-                {/* <motion.div
-              initial={{ opacity: 1 }}
-              animate={{
-                opacity: 0,
-                transitionEnd: {
-                  display: "none",
-                },
-              }}
-              transition={{
-                delay: 0.5,
-                duration: 4.5,
-                ease: "easeInOut",
-                type: "tween",
-              }}
-              className="wrapper2"
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-                className="loader--hero "
               >
-                <ContentfulImage
-                  src={Logo}
-                  width={100}
-                  height={100}
-                  quality={85}
-                />
-              </motion.div>
-            </motion.div> */}
-                <motion.main
-                // initial={{ opacity: 0 }}
-                // animate={{ opacity: 1, y: 0 }}
-                // exit={{ opacity: 0 }}
-                // transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
-                >
-                  {children}
-                </motion.main>
+                {children}
+              </motion.main>
 
-                <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
-                  {/* <div className="parallax-bg z-0">
+              <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
+                {/* <div className="parallax-bg z-0">
         <ContentfulImage src={props.url} fill={true} />
       </div> */}
-                  <Footer />
-                </ParallaxBG>
-              </section>
-            </body>
-          </html>
-        </ScrollObserver>
-      </BrowserRouter>
-    );
-  }
+                <Footer />
+              </ParallaxBG>
+            </section>
+          </body>
+        </html>
+      </ScrollObserver>
+    // </BrowserRouter>
+  );
 }

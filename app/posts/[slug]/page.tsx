@@ -1,6 +1,6 @@
 "use client";
 // import { draftMode } from "next/headers";
-import { Route, Link, Routes, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import PageSection from "@/app/components/page-section";
 import ProjectGallery from "@/app/components/project-gallery";
@@ -20,12 +20,12 @@ import localFont from "next/font/local";
 import { getLocalizedMessages, getLocalizedProjects } from "@/src/i18n";
 import { useRouter } from "next/router";
 import Banner from "../banner";
+import { usePathname } from "next/navigation";
 
 const localizedMessages = getLocalizedMessages();
 const PROJECT_PATHNAME_0 = "/posts/618-carnavron";
 const PROJECT_PATHNAME_1 = "/posts/1650-on-second";
 const PROJECT_PATHNAME_2 = "/posts/pendrell-street";
-
 
 const montserratt = localFont({
   src: [
@@ -37,21 +37,25 @@ const montserratt = localFont({
   ],
 });
 
-
 export default function Page() {
-  const location = useLocation();
-  // console.log("cool " + location.pathname);
+  // const location = useLocation();
+  const location = usePathname();
+  let url = location;
+  var id = url.substring(url.lastIndexOf("/" + 1));
+
+  // console.log("cool " + {location});
 
   const localizedProjects = getLocalizedProjects();
   let project;
-  if (location.pathname == PROJECT_PATHNAME_0)
+  if (id == PROJECT_PATHNAME_0) {
     project = localizedProjects[0];
-  else if (location.pathname == PROJECT_PATHNAME_1)
+    console.log("win 1");
+  } else if (id == PROJECT_PATHNAME_1) {
     project = localizedProjects[1];
-  else if (location.pathname == PROJECT_PATHNAME_2)
+    console.log("win 2")
+  } else if (id == PROJECT_PATHNAME_2)
     project = localizedProjects[2];
-  else 
-    project = localizedProjects[0];
+  else project = localizedProjects[0];
 
   //   const test = post.projectDetails["status"];
 
@@ -59,6 +63,9 @@ export default function Page() {
   //   let dataKeys = Object.keys(post.projectDetails["images"]);
   //   let dataValue = Object.values(post.projectDetails["images"]);
   //   let dataValue2 = Object.values(post.projectDetails);
+  console.log("swag ID" + id);
+  console.log("swag PATH" + PROJECT_PATHNAME_1);
+
   return (
     <>
       {/* <h1>test</h1> */}
