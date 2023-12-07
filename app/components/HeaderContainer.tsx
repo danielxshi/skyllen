@@ -24,65 +24,64 @@ class SlugNav extends Component<Props, any> {
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
-
   render() {
     const locale = getLocale();
     return (
       // <AnimatePresence>
-        <Navbar>
-          <motion.nav
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.25, ease: "easeInOut" }}
-            className="container"
-          >
-            <div>
-              <div className="inner-header">
-                <div className="logo">
-                  <Link
-                    onClick={() => {
-                      this.props.onLogoClick();
-                    }}
-                    href="/"
-                  >
-                    <ContentfulImage
-                      width={150}
-                      height={150}
-                      quality={85}
-                      src={logo}
-                    />
-                  </Link>
-                </div>
-                <div className="menu">
-                  <button
-                    //Change this to toggleLanguage
-                    onClick={() => localeClicked()}
-                    className="z-10 text-white text-lg lang-btn"
-                  >
-                    {locale}
-                  </button>
+      <Navbar>
+        <motion.nav
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.25, ease: "easeInOut" }}
+          className="container"
+        >
+          <div>
+            <div className="inner-header">
+              <div className="logo">
+                <Link
+                  onClick={() => {
+                    this.props.onLogoClick();
+                  }}
+                  href="/"
+                >
+                  <ContentfulImage
+                    width={150}
+                    height={150}
+                    quality={85}
+                    src={logo}
+                  />
+                </Link>
+              </div>
+              <div className="menu">
+                <button
+                  //Change this to toggleLanguage
+                  onClick={() => localeClicked()}
+                  className="z-10 text-white text-lg lang-btn"
+                >
+                  {locale}
+                </button>
 
-                  <button
-                    id="nav-icon2"
-                    className={this.state.clicked ? "open" : "closed"}
-                    onClick={() => {
-                      this.props.onClick();
-                      this.handleClick();
-                    }}
-                  >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </button>
-                </div>
+                <button
+                  id="nav-icon2"
+                  className={this.state.clicked ? "open" : "closed"}
+                  onClick={() => {
+                    this.props.onClick();
+                    this.handleClick();
+                  }}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
               </div>
             </div>
-          </motion.nav>
-        </Navbar>
+          </div>
+        </motion.nav>
+      </Navbar>
       // </AnimatePresence>
     );
   }

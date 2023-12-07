@@ -14,6 +14,7 @@ import ContentfulImage from "@/lib/contentful-image";
 import React from "react";
 import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
+import { BrowserRouter } from "react-router-dom";
 
 const localizedMessages = getLocalizedMessages();
 
@@ -58,7 +59,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-span-3">
           <p className={`mb-4 uppercase ${montserrat.className}`}>
-          {localizedMessages.FOOTER_CONNECT}
+            {localizedMessages.FOOTER_CONNECT}
           </p>
           <ul>
             {test2.map((item, index) => (
@@ -76,7 +77,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
       return (
         <div className="col-span-full mb-8 md:mb-0 md:col-start-6 md:col-span-2">
           <p className={`mb-4 uppercase ${montserrat.className}`}>
-          {localizedMessages.FOOTER_PROJECTS}
+            {localizedMessages.FOOTER_PROJECTS}
           </p>
           <ul className="flex flex-col">
             {test2.map((item, index) => (
@@ -94,7 +95,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
       return (
         <div className="md:col-start-8 md:col-span-2">
           <p className={`mb-4 uppercase ${montserrat.className}`}>
-          {localizedMessages.FOOTER_FOLLOW}
+            {localizedMessages.FOOTER_FOLLOW}
           </p>
           <ul>
             {test2.map((item, index) => (
@@ -177,12 +178,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ScrollObserver>
-      <html lang="en" className={`${quicksand.className}`}>
-        <body>
-          <section className="min-h-screen">
-            <HeaderModal />
-            {/* <motion.div
+    <BrowserRouter>
+      <ScrollObserver>
+        <html lang="en" className={`${quicksand.className}`}>
+          <body>
+            <section className="min-h-screen">
+              <HeaderModal />
+              {/* <motion.div
               initial={{ opacity: 1 }}
               animate={{
                 opacity: 0,
@@ -214,24 +216,25 @@ export default function RootLayout({
                 />
               </motion.div>
             </motion.div> */}
-            <motion.main
+              <motion.main
               // initial={{ opacity: 0 }}
               // animate={{ opacity: 1, y: 0 }}
               // exit={{ opacity: 0 }}
               // transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
-            >
-              {children}
-            </motion.main>
+              >
+                {children}
+              </motion.main>
 
-            <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
-              {/* <div className="parallax-bg z-0">
+              <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
+                {/* <div className="parallax-bg z-0">
         <ContentfulImage src={props.url} fill={true} />
       </div> */}
-              <Footer />
-            </ParallaxBG>
-          </section>
-        </body>
-      </html>
-    </ScrollObserver>
+                <Footer />
+              </ParallaxBG>
+            </section>
+          </body>
+        </html>
+      </ScrollObserver>
+    </BrowserRouter>
   );
 }

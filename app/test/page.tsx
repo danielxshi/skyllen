@@ -1,6 +1,6 @@
-"use client"
+"use client";
 // import { draftMode } from "next/headers";
-import { Route, Link, Routes, useLocation } from 'react-router-dom';
+import { Route, Link, Routes, useLocation } from "react-router-dom";
 
 import Banner from "../posts/banner";
 import PageSection from "@/app/components/page-section";
@@ -19,6 +19,7 @@ import {
 } from "@/lib/api";
 import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
+import { useRouter } from "next/router";
 
 const localizedMessages = getLocalizedMessages();
 
@@ -33,6 +34,8 @@ const montserratt = localFont({
 });
 
 export default function Page() {
+  const location = useLocation();
+  console.log("cool " + location.pathname);
   //   const test = post.projectDetails["status"];
 
   // Data from Contentful
