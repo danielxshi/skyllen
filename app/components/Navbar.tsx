@@ -12,10 +12,7 @@ const Navbar = ({ children, ...props }) => {
 
   const [hidden, setHidden] = useState(false);
 
-  useEffect(() => {
-    console.log(scrollY);
-    console.log(setHidden);
-  }, [scrollY]);
+  useEffect(() => {}, [scrollY]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
