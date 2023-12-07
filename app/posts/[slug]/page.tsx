@@ -77,29 +77,29 @@ export default function Page() {
         url={project.COVER_IMAGE}
       >
         <div className="md:flex md:w-full justify-between">
-          <div className="flex flex-col">
-            <span className={`mb-8 font-bold ${montserratt.className}`}>
+          <div className="md:mb-0 mb-8 flex flex-col">
+            <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
               Status
             </span>
             <p>{project.STATUS}</p>
           </div>
 
-          <div className="flex flex-col">
-            <span className={`mb-8 font-bold ${montserratt.className}`}>
+          <div className="md:mb-0 mb-8 flex flex-col">
+            <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
               Type
             </span>
             <p>{project.TYPE}</p>
           </div>
 
-          <div className="flex flex-col">
-            <span className={`mb-8 font-bold ${montserratt.className}`}>
+          <div className="md:mb-0 mb-8 flex flex-col">
+            <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
               Location
             </span>
             <p>{project.LOCATION}</p>
           </div>
 
-          <div className="flex flex-col">
-            <span className={`mb-8 font-bold ${montserratt.className}`}>
+          <div className="md:mb-0 mb-8 flex flex-col">
+            <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
               Estimated Completion
             </span>
             <p>{project.ESTIMATE}</p>
@@ -110,7 +110,7 @@ export default function Page() {
             className={`flex flex-col 
           ${project.COUNT}`}
           >
-            <span className={`mb-8 font-bold ${montserratt.className}`}>
+            <span className={`mb-4 md:mb-8 font-bold ${montserratt.className}`}>
               Homes
             </span>
             <p>{project.COUNT}</p>
@@ -129,9 +129,9 @@ export default function Page() {
 
       <div className={`${project.HIDDEN_PROJECT}`}>
         <PageSection
-          style={"container grid-container md:pb-16 pt-16 flex flex-col"}
+          style={"container grid-container md:pb-16 pt-8 flex flex-col"}
         >
-          <div className="flex h-full md:col-start-1 md:col-span-3 col-span-full flex-col md:pb-0 pb-16">
+          <div className="flex h-full md:col-start-1 md:col-span-3 col-span-full flex-col md:pb-0 pb-8">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
               <ContentfulImage src={project.PROJECT_IMAGE_ONE} fill={true} />
             </div>
@@ -140,8 +140,8 @@ export default function Page() {
             </p> */}
           </div>
 
-          <div className="flex  md:col-start-5 md:col-span-3 flex-col col-span-full">
-            <div>
+          <div className="flex md:col-start-5 md:col-span-3 flex-col col-span-full">
+            <div className="md:mb-0 mb-4">
               <div className="w-full h-300 relative flex flex-col">
                 <ContentfulImage src={project.PROJECT_IMAGE_TWO} fill={true} />
               </div>
@@ -150,22 +150,22 @@ export default function Page() {
               </p> */}
             </div>
 
-            <div className="mt-auto w-300">
+            <div className="mt-auto md:w-300">
               <p className="text-bubble-content">{project.BUBBLE_ONE}</p>
             </div>
           </div>
         </PageSection>
 
         <PageSection
-          style={"container grid-container md:pb-16 pt-16 flex flex-col"}
+          style={"container grid-container md:pb-16 pt-8 flex flex-col"}
         >
-          <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-16 md:pb-0">
+          <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-8 md:pb-0">
             <div className="mt-auto">
               <p className="text-bubble-content">{project.BUBBLE_TWO}</p>
             </div>
           </div>
 
-          <div className="flex  md:col-start-4 md:col-span-4 flex-col col-span-full">
+          <div className="flex  md:col-start-4 md:col-span-4 pb-4 flex-col col-span-full">
             <div>
               <div className="w-full h-450 relative flex flex-col">
                 <ContentfulImage
@@ -181,9 +181,9 @@ export default function Page() {
         </PageSection>
 
         <PageSection
-          style={"container grid-container md:pb-16 pt-16 flex flex-col"}
+          style={"container grid-container md:pb-16 pt-4 flex flex-col"}
         >
-          <div className="flex h-full md:col-start-1 md:col-span-3 flex-col col-span-full md:pb-0 pb-16">
+          <div className="flex h-full md:col-start-1 md:col-span-3 flex-col col-span-full md:pb-0 pb-8">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
               <ContentfulImage src={project.PROJECT_IMAGE_FOUR} fill={true} />
             </div>
@@ -202,14 +202,14 @@ export default function Page() {
               </p> */}
             </div>
 
-            <div className="mt-auto">
+            <div className="mt-auto pt-4">
               <p className="text-bubble-content">{project.BUBBLE_THREE}</p>
             </div>
           </div>
         </PageSection>
       </div>
 
-      <PageSection style={"container md:pb-16 pt-16 flex flex-col"}>
+      <PageSection style={"container md:pb-16 py-32 flex flex-col"}>
         <div className="flex h-full relative w-11/12 m-auto">
           <div className="w-full h-screen-3/4 ">
             <ContentfulImage
@@ -222,7 +222,7 @@ export default function Page() {
       </PageSection>
 
       <PageSection
-        style={`container pt-16 pb-16 md:pb-32 relative h-screen-3/4 relative w-full ${project.HOMEOWNER_CARE}`}
+        style={`w-screen py-32 md:pb-32 relative h-screen-3/4 relative w-full ${project.HOMEOWNER_CARE}`}
       >
         {/* <div className="bg-black/[0.2] h-full w-full z-10 absolute"></div> */}
         <div className="hover:cursor-pointer flex justify-center items-center h-full">
@@ -234,7 +234,9 @@ export default function Page() {
           />
         </div>
 
-        <div className={`flex absolute z-50 flex-col justify-center self-center m-auto w-full ${project.HOMEOWNER_CARE}`}>
+        <div
+          className={`flex absolute z-50 flex-col justify-center self-center m-auto w-full ${project.HOMEOWNER_CARE}`}
+        >
           <h3 className="m-auto text-white mb-4">Homeowner Care</h3>
           <Button
             style="m-auto h-fit"

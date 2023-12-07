@@ -87,7 +87,7 @@ export default function Page() {
 
       <PageSection style="pb-16 ">
         <ParallaxFooter style="company-parallax" url={require("./train.gif")}>
-          <div className="grid-container m-auto container md:py-16 py-8">
+          <div className="grid-container m-auto container md:py-16 py-16">
             <div className="col-start-1 col-span-full mb-8 md:col-start-2 md:col-span-3 flex">
               <div className="image-container relative">
                 <ContentfulImage src={Logo} fill={true} quality={85} />
@@ -103,17 +103,17 @@ export default function Page() {
         </ParallaxFooter>
       </PageSection>
 
-      <PageSection style="h-min pt-16 pb-16 md:pb-32 lrg-padding-top company-section">
+      <PageSection style="pt-16 pb-16 md:pb-32 lrg-padding-top company-section flex flex-col">
         {descriptions.map((el) => (
-          <div className="container grid-container company-service">
+          <div className="container md:grid md:grid-cols-8 flex flex-col relative w-full company-service">
             <ProjectDescription
               key={el.service}
               paragraphOne={el.paragraphOne}
               paragraphTwo={el.paragraphTwo}
               title={el.service}
-              style="md:mb-16 col-span-full md:col-start-1 md:col-end-4 "
+              style="md:mb-16 w-full md:col-start-1 md:col-end-4 "
             />
-            <div className="col-start-1 md:col-start-5 md:col-span-4 relative col-span-full contentful-fill-container">
+            <div className="md:mt-0 mt-4 md:col-start-5 h-300 md:col-span-4 relative w-full contentful-fill-container">
               <ContentfulImage
                 fill={true}
                 src={el.image}

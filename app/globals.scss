@@ -493,22 +493,10 @@ header {
 .button-content {
   font-size: calc(0.12944983818770225vw + 9.514563106796116px);
 }
-.company-parallax {
-  //   position: relative;
-  //   height: 35vh;
-  //   display: flex;
-  //   color: white;
-}
-
-.company-section {
-}
 
 .project-page {
-  .project-card-content {
-    // width: 100%;
-  }
   .text-content {
-    width: 25ch;
+    width: 20ch;
     height: 30rem;
     margin-left: auto;
     margin-right: auto;
@@ -710,7 +698,7 @@ form {
 input,
 textarea,
 label {
-  width: 40vw;
+  width: 90vw;
   display: block;
   margin-left: auto;
 }
@@ -1103,12 +1091,30 @@ img {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .logo img {
-    scale:calc(0.8)
+    scale: calc(0.8);
+  }
+  .project-page {
+    .text-content {
+      width: 17ch !important;
+      height: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .projects-text-works-bleed-block {
+      display: none;
+      width: 25vw;
+    }
   }
 }
+
 @media only screen and (min-width: 800px) {
+  input,
+  textarea,
+  label {
+    width: 40vw;
+  }
   .company-parallax {
     .image-container {
       width: 12rem;

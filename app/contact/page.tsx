@@ -81,7 +81,7 @@ export default function Contact() {
         </div>
       </ParallaxBG>
       <PageSection style="pt-16 pb-16  flex md:pb-32">
-        <div className="container grid-container form-container">
+        <div className="container md:grid-cols-8 flex flex-col-reverse form-container">
           <div className="md:col-span-6 md:col-start-5">
             <form id="contact-form" method="post" onSubmit={handleOnSubmit}>
               <label htmlFor="name">{localizedMessages.CONTACT_FORM_FULL_NAME}</label>
