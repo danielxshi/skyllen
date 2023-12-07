@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react";
 import en, { en_project0, en_project1, en_project2 } from "@/src/i18n/en";
 import ch, { ch_project0, ch_project1, ch_project2 } from "@/src/i18n/ch";
