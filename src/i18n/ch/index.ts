@@ -121,18 +121,44 @@ const ch = {
 
 // 0: 618 Carnarvon
 const ch_project0 = {
-  TITLE: "618 Carnarvon 中文",
-  EXCERPT: "一个历史悠久的社区与现代市中心生活方式的连接，为您提供在新威斯敏斯特市中心的提升生活体验。",
+  //618 Slug should be "618-carnavron"
+  TITLE: "618 CARNAVRON",
+  EXCERPT: "MOCK TRANSLATION! 社区 · 便利",
+  SLUG: "MOCK TRANSLATION! 618-carnavron",
+  TYPE: "MOCK TRANSLATION! 住宅 | 办公 | 零售",
+  COUNT: "MOCK TRANSLATION! 262",
+  STATUS: "MOCK TRANSLATION! 立即注册",
+  ESTIMATE: "MOCK TRANSLATION! 已完成",
+  LOCATION: "MOCK TRANSLATION! 卑诗省新西敏市",
+  PROJECT_DESCRIPTION: "MOCK TRANSLATION! 一个历史悠久的社区连接着丰富的过去和现代都市生活方式 - 618 Carnarvon 在新西敏市中心提供了一种升华的生活方式。",
+  BUBBLE_ONE: "MOCK TRANSLATION! 618 Carnarvon 位于一个以行人为导向、交通便利的社区中心，距离新西敏市中心的主要街道哥伦比亚街仅一个街区之遥，非常便利。",
+  BUBBLE_TWO: "MOCK TRANSLATION! 618 Carnarvon 的住宅设计适合现代都市生活。受到独栋住宅的启发，入口通向开放的生活空间，可供家庭活动使用，相邻的卧室在需要时提供隐私。",
+  BUBBLE_THREE: "MOCK TRANSLATION! 618 Carnarvon 将为居民提供超过30,000平方英尺的绿化空间，专供居民使用，以及一个社区可进入的角落公园。",
+  COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
+  WEBSITE: "http://www.618carnarvon.com",
+  RENDER: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+  OPTIONAL_SECTION_STYLE: "", // TODO - use this to hide the missing block on the last project
 } satisfies Translation;
+
 // 1: 1650 West 2nd
 const ch_project1 = {
   TITLE: "1650 West 2nd 中文",
+  LOCATION: "MOCK TRANSLATION! 1650-on-second",
   EXCERPT: "一个充满活力的四层中心，提供明亮的展示厅和办公机会，坐落在基斯拉诺最时尚的商业区。",
+  OPTIONAL_SECTION_STYLE: "", // TODO - use this to hide the missing block on the last project
 } satisfies Translation;
+
 // 2: Pendrell St
 const ch_project2 = {
   TITLE: "Pendrell St 中文",
+  LOCATION: "MOCK TRANSLATION! pendrell-street",
   EXCERPT: "嵌套在自然奇观和繁华街道之间，Skyllen Pacific 即将推出的市中心项目将提供对温哥华美景的美丽景观，同时拥有现代便利和奢华的便利性。",
+  OPTIONAL_SECTION_STYLE: "display: none", // TODO - use this to hide the missing block on the last project
 } satisfies Translation;
 
 
