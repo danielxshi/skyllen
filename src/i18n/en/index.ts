@@ -123,4 +123,20 @@ const en = {
   TEST_PROJECT_618_BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
 } satisfies BaseTranslation;
 
+const en_project0 = {
+  TITLE: "618 Carnarvon",
+  EXCERPT: "A connection between a historic community and modern downtown lifestyle, providing you with an elevated living experience in downtown New Westminster.",
+} satisfies BaseTranslation;
+const en_project1 = {
+  TITLE: "1650 West 2nd",
+  EXCERPT: "A vibrant four-story hub offering bright showrooms and office opportunities, located in Kitsilano's most fashionable business district.",
+} satisfies BaseTranslation;
+const en_project2 = {
+  TITLE: "Pendrell St",
+  EXCERPT: "Nestled between natural wonders and bustling streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's scenery, along with modern convenience and luxury.",
+} satisfies BaseTranslation;
+
+
+
 export default en;
+export { en_project0, en_project1, en_project2 };

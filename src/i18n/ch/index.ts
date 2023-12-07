@@ -96,7 +96,7 @@ const ch = {
   CONTACT: "联系我们",
 
   //618 Slug should be "618-carnavron"
-  TEST_PROJECT_618_TITLE: "618 CARNAVRON is NOW CHINESE",
+  TEST_PROJECT_618_TITLE: "中文 618 CARNAVRON is NOW CHINESE",
   TEST_PROJECT_618_EXCERPT: "Community · Convienence",
   TEST_PROJECT_618_SLUG: "618-carnavron",
   TEST_PROJECT_618_COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
@@ -118,4 +118,23 @@ const ch = {
   TEST_PROJECT_618_BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
 } satisfies Translation;
 
+
+// 0: 618 Carnarvon
+const ch_project0 = {
+  TITLE: "618 Carnarvon 中文",
+  EXCERPT: "一个历史悠久的社区与现代市中心生活方式的连接，为您提供在新威斯敏斯特市中心的提升生活体验。",
+} satisfies Translation;
+// 1: 1650 West 2nd
+const ch_project1 = {
+  TITLE: "1650 West 2nd 中文",
+  EXCERPT: "一个充满活力的四层中心，提供明亮的展示厅和办公机会，坐落在基斯拉诺最时尚的商业区。",
+} satisfies Translation;
+// 2: Pendrell St
+const ch_project2 = {
+  TITLE: "Pendrell St 中文",
+  EXCERPT: "嵌套在自然奇观和繁华街道之间，Skyllen Pacific 即将推出的市中心项目将提供对温哥华美景的美丽景观，同时拥有现代便利和奢华的便利性。",
+} satisfies Translation;
+
+
 export default ch;
+export { ch_project0, ch_project1, ch_project2 };

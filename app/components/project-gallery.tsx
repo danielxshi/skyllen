@@ -13,8 +13,9 @@ import React, {
   Children,
   useState,
 } from "react";
-import { getLocalizedMessages } from "@/src/i18n";
+import { getLocalizedMessages, getLocalizedProjects } from "@/src/i18n";
 const localizedMessages = getLocalizedMessages();
+const localizedProjects = getLocalizedProjects();
 
 type Props = {
   children?: React.ReactNode;
@@ -22,6 +23,7 @@ type Props = {
 
 const cities = [
   {
+    // name: localizedProjects[0].TITLE, 
     name: "1650 ON SECOND",
     image: gallery1,
     location: "Kitsilano, BC",
@@ -73,7 +75,7 @@ const ProjectGallery = ({ children }: Props) => {
           >
             <GalleryButton
               url={el.image}
-              projectName={el.name}
+              projectName={el.name} // TODO: change to localizedMessages
               location={el.location}
               status={el.status}
               link={el.url}
