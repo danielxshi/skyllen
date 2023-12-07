@@ -123,4 +123,45 @@ const en = {
   TEST_PROJECT_618_BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
 } satisfies BaseTranslation;
 
+// 0: 618 Carnarvon
+const en_project0 = {
+  TITLE: "618 CARNAVRON",
+  EXCERPT: "Community · Convenience",
+  SLUG: "618-carnavron",
+  TYPE: "Residential | Office | Retail",
+  COUNT: "262",
+  STATUS: "Register Now",
+  ESTIMATE: "Completed",
+  LOCATION: "New Westminster, BC",
+  PROJECT_DESCRIPTION: "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
+  BUBBLE_ONE: "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
+  BUBBLE_TWO: "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
+  BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
+  COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
+  WEBSITE: "http://www.618carnarvon.com",
+  RENDER: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+} satisfies BaseTranslation;
+
+// 1: 1650 West 2nd
+const en_project1 = {
+  TITLE: "1650 West 2nd",
+  LOCATION: "1650-on-second",
+  EXCERPT: "A vibrant four-story hub offering bright showrooms and office opportunities, located in Kitsilano's most fashionable business district.",
+} satisfies BaseTranslation;
+
+// 2: Pendrell St
+const en_project2 = {
+  TITLE: "Pendrell St",
+  LOCATION: "1650-on-second",
+  EXCERPT: "Nestled between natural wonders and bustling streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's scenery, along with modern convenience and luxury.",
+} satisfies BaseTranslation;
+
+
+
 export default en;
+export { en_project0, en_project1, en_project2 };

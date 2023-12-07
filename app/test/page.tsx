@@ -18,10 +18,14 @@ import {
   getAllPostsLocalized,
 } from "@/lib/api";
 import localFont from "next/font/local";
-import { getLocalizedMessages } from "@/src/i18n";
+import { getLocalizedMessages, getLocalizedProjects } from "@/src/i18n";
 import { useRouter } from "next/router";
 
 const localizedMessages = getLocalizedMessages();
+const PROJECT_PATHNAME_0 = "/posts/618-carnavron";
+const PROJECT_PATHNAME_1 = "/posts/1650-on-second";
+const PROJECT_PATHNAME_2 = "/posts/pendrell-street";
+
 
 const montserratt = localFont({
   src: [
@@ -35,7 +39,19 @@ const montserratt = localFont({
 
 export default function Page() {
   const location = useLocation();
-  console.log("cool " + location.pathname);
+  // console.log("cool " + location.pathname);
+
+  const localizedProjects = getLocalizedProjects();
+  let project;
+  if (location.pathname == PROJECT_PATHNAME_0)
+    project = localizedProjects[0];
+  else if (location.pathname == PROJECT_PATHNAME_1)
+    project = localizedProjects[1];
+  else if (location.pathname == PROJECT_PATHNAME_2)
+    project = localizedProjects[2];
+  else 
+    project = localizedProjects[0];
+
   //   const test = post.projectDetails["status"];
 
   // Data from Contentful
@@ -47,37 +63,37 @@ export default function Page() {
       {/* <h1>test</h1> */}
       <Banner
         website={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
-        title={localizedMessages.TEST_PROJECT_618_TITLE}
-        excerpt={localizedMessages.TEST_PROJECT_618_EXCERPT}
-        url={localizedMessages.TEST_PROJECT_618_COVER_IMAGE}
+        title={project.TITLE}
+        excerpt={project.EXCERPT}
+        url={project.COVER_IMAGE}
       >
         <div className="md:flex md:w-full justify-between">
           <div className="flex flex-col">
             <span className={`mb-8 font-bold ${montserratt.className}`}>
               Status
             </span>
-            <p>{localizedMessages.TEST_PROJECT_618_STATUS}</p>
+            <p>{project.STATUS}</p>
           </div>
 
           <div className="flex flex-col">
             <span className={`mb-8 font-bold ${montserratt.className}`}>
               Type
             </span>
-            <p>{localizedMessages.TEST_PROJECT_618_TYPE}</p>
+            <p>{project.TYPE}</p>
           </div>
 
           <div className="flex flex-col">
             <span className={`mb-8 font-bold ${montserratt.className}`}>
               Location
             </span>
-            <p>{localizedMessages.TEST_PROJECT_618_LOCATION}</p>
+            <p>{project.LOCATION}</p>
           </div>
 
           <div className="flex flex-col">
             <span className={`mb-8 font-bold ${montserratt.className}`}>
               Estimated Completion
             </span>
-            <p>{localizedMessages.TEST_PROJECT_618_ESTIMATE}</p>
+            <p>{project.ESTIMATE}</p>
           </div>
 
           {/* display NONE the class name should be "hidden" */}
