@@ -8,7 +8,7 @@ import { getLocalizedMessages } from "@/src/i18n";
 const montserratt = localFont({
   src: [
     {
-      path: "../fonts/montserrat/Montserrat-Bold.ttf",
+      path: "../fonts/montserrat/Montserrat-Medium.ttf",
       weight: "400",
       style: "normal",
     },

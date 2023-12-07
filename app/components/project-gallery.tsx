@@ -67,10 +67,10 @@ const ProjectGallery = ({ children }: Props) => {
   return (
     <section>
       {children}
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:grid md:grid-cols-9 gap-8">
         {cities.map((el) => (
           <div
-            className="gallery-button-container mb-16 last:mb-0 md:mb-0"
+            className="gallery-button-container mb-16 last:mb-0 md:mb-0 md:col-span-3"
             key={el.name}
           >
             <GalleryButton

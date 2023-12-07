@@ -88,7 +88,7 @@ const cities = [
   },
   {
     url: "/posts/pendrell-street",
-    name: "PENDRELL ST",
+    name: "EDITION",
     image: "https://i.imgur.com/3loZccM.jpeg",
   },
 ];

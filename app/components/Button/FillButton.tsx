@@ -8,6 +8,7 @@ import localFont from "next/font/local";
 type Props = {
   children?: React.ReactNode;
   url: string;
+  style: string;
 };
 
 const montserratt = localFont({
@@ -20,7 +21,7 @@ const montserratt = localFont({
   ],
 });
 
-const Button = ({ children, url }: Props) => {
+const Button = ({ children, url, style }: Props) => {
   return (
     <motion.div
       initial={{
@@ -31,7 +32,7 @@ const Button = ({ children, url }: Props) => {
         color: "#AACAE6",
         fontWeight: "bold",
       }}
-      className="btn-wrap min-w-max align-middle w-24 font-mono font-medium text-small leading-none px-6 py-4 border-solid border border-black rounded-full"
+      className={`btn-wrap min-w-max align-middle w-24 font-mono font-medium text-small leading-none px-6 py-4 border-solid border border-black rounded-full ${style}`}
     >
       <Link
         href={url}

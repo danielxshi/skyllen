@@ -1,4 +1,8 @@
 import type { BaseTranslation } from "../i18n-types";
+import P1 from "../../../public/images/dec7/P1.webp";
+import P2 from "../../../public/images/dec7/20190118_618Carnarvon_Int_H6_0147 copy.webp";
+import P3 from "../../../public/images/dec7/edition-close.webp";
+import P4 from "../../../public/images/dec7/edition-wide.webp";
 
 const en = {
   // TODO: your translations go here
@@ -51,6 +55,13 @@ const en = {
     "A vibrant four-storey centerpiece providing bright showroom and office opportunities set in Kitsilano's trendiest business district.",
   PROJECT_EDITION_EXCERPT:
     "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.",
+
+  // PROJECT DETAILS
+  PROJECT_DETAILS_STATUS: "STATUS",
+  PROJECT_DETAILS_TYPE: "TYPE",
+  PROJECT_DETAILS_LOCATION: "LOCATION",
+  PROJECT_DETAILS_ESTIMATE: "ESTIMATED COMPLETION",
+  PROJECT_DETAILS_HOMES: "HOMES",
 
   // COMPANY
   COMPANY_HEADER:
@@ -112,56 +123,114 @@ const en = {
   TEST_PROJECT_618_LOCATION: "New Westminster, BC",
   TEST_PROJECT_618_WEBSITE: "http://www.618carnarvon.com",
   TEST_PROJECT_618_RENDER: "https://i.imgur.com/wYTCtRu.jpeg",
-  TEST_PROJECT_618_PROJECT_DESCRIPTION: "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
+  TEST_PROJECT_618_PROJECT_DESCRIPTION:
+    "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
   TEST_PROJECT_618_PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
   TEST_PROJECT_618_PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
   TEST_PROJECT_618_PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
   TEST_PROJECT_618_PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   TEST_PROJECT_618_PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
-  TEST_PROJECT_618_BUBBLE_ONE: "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
-  TEST_PROJECT_618_BUBBLE_TWO: "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
-  TEST_PROJECT_618_BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
+  TEST_PROJECT_618_BUBBLE_ONE:
+    "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
+  TEST_PROJECT_618_BUBBLE_TWO:
+    "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
+  TEST_PROJECT_618_BUBBLE_THREE:
+    "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
 } satisfies BaseTranslation;
 
 // 0: 618 Carnarvon
 const en_project0 = {
-  TITLE: "618 CARNAVRON",
+  TITLE: "618 Carnavron",
   EXCERPT: "Community · Convenience",
   SLUG: "618-carnavron",
-  TYPE: "Residential | Office | Retail",
+  TYPE: "Residential | Retail",
   COUNT: "262",
   STATUS: "Register Now",
   ESTIMATE: "Completed",
   LOCATION: "New Westminster, BC",
-  PROJECT_DESCRIPTION: "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
-  BUBBLE_ONE: "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
-  BUBBLE_TWO: "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
-  BUBBLE_THREE: "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
-  COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
+  PROJECT_DESCRIPTION:
+    "An established neighbourhood connecting a rich past to a modern downtown lifestyle – 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
+  BUBBLE_ONE:
+    "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
+  BUBBLE_TWO:
+    "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
+  BUBBLE_THREE:
+    "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
+  COVER_IMAGE: "https://i.imgur.com/PPFrbgo.jpg",
   WEBSITE: "http://www.618carnarvon.com",
-  RENDER: "https://i.imgur.com/wYTCtRu.jpeg",
+  WEBSITE_TEXT: "VISIT THE WEBSITE",
+  WEBSITE_BTN_STATE: "",
+  RENDER: "https://i.imgur.com/6YvLA11.jpg",
+  PROJECT_IMAGE_ONE: "https://i.imgur.com/ls9Sob1.jpg",
+  PROJECT_IMAGE_TWO: "https://i.imgur.com/tIMZDf5.png",
+  PROJECT_IMAGE_THREE: "https://i.imgur.com/PBS1qoj.jpg",
+  PROJECT_IMAGE_FOUR: "https://i.imgur.com/sie7QhV.jpg",
+  PROJECT_IMAGE_FIVE: "https://i.imgur.com/Q2hfWf2.jpg",
+  HOMEOWNER_CARE: "flex",
+  HIDDEN_PROJECT: "",
+} satisfies BaseTranslation;
+
+// 1: 1650 West 2nd
+const en_project1 = {
+  TITLE: "1650 On Second",
+  EXCERPT: "Work · Live · Nature",
+  SLUG: "1650-on-second",
+  TYPE: "Office | Retail",
+  COUNT: "hidden",
+  STATUS: "Now Leasing",
+  ESTIMATE: "Completed",
+  LOCATION: "Kitsilano, BC",
+  PROJECT_DESCRIPTION:
+    "A vibrant four-storey centerpiece providing bright showroom and office opportunities set in Kitsilano’s trendiest business district.",
+  BUBBLE_ONE:
+    "1650 On Second offers four-storeys of versatile office space complemented by two levels of underground parking. The first two floors provide 18,260 square feet of retail and showroom options, with 8,120 square feet on the ground floor and 10,140 square feet on the second.",
+  BUBBLE_TWO:
+    "Striving to revitalize West 2nd Avenue’s aged façade with a contemporary approach, 1650 On Second is thoughtfully designed to reflect the area’s vivid growth while preserving its creative heritage through the building’s bold architecture and vibrant accents. The floor-to-ceiling windows soften street context with full-frontage displays, providing abundant light flow and elegantly framing Vancouver’s verdant skyline.",
+  BUBBLE_THREE:
+    "The top two levels grant 9,800 square feet of bright office space featuring spectacular views of downtown Vancouver, exclusive rear outdoor patios, and a rooftop deck.",
+  COVER_IMAGE: "https://i.imgur.com/sIcItF2.jpg",
+  WEBSITE: "",
+  WEBSITE_TEXT: "COMING SOON",
+  WEBSITE_BTN_STATE: "hidden",
+  RENDER: "https://i.imgur.com/sIcItF2.jpg",
+  PROJECT_IMAGE_ONE: "https://i.imgur.com/vzOfDqp.jpg",
+  PROJECT_IMAGE_TWO: "https://i.imgur.com/HsKibgO.jpg",
+  PROJECT_IMAGE_THREE: "https://i.imgur.com/HfhKfI9.jpg",
+  PROJECT_IMAGE_FOUR: "https://i.imgur.com/TgNvkys.jpg",
+  PROJECT_IMAGE_FIVE: "https://i.imgur.com/zQU5GRI.jpg",
+  HIDDEN_PROJECT: "",
+} satisfies BaseTranslation;
+
+// 2: Pendrell St
+const en_project2 = {
+  TITLE: "Edition",
+  EXCERPT: "Community · Convenience",
+  SLUG: "edition",
+  TYPE: "Residential | Office | Retail",
+  COUNT: "TBC",
+  STATUS: "Coming Soon",
+  ESTIMATE: "2026",
+  LOCATION: "New Westminster, BC",
+  PROJECT_DESCRIPTION:
+    "Coming soon to downtown Vancouver",
+  BUBBLE_ONE:
+    "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
+  BUBBLE_TWO:
+    "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
+  BUBBLE_THREE:
+    "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
+  COVER_IMAGE: "https://i.imgur.com/mleUS0f.jpg",
+  WEBSITE: "",
+  WEBSITE_TEXT: "COMING SOON",
+  WEBSITE_BTN_STATE: "no-select",
+  RENDER: "https://i.imgur.com/KxcoCCf.png",
   PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+  HIDDEN_PROJECT: "hidden",
 } satisfies BaseTranslation;
-
-// 1: 1650 West 2nd
-const en_project1 = {
-  TITLE: "1650 West 2nd",
-  LOCATION: "1650-on-second",
-  EXCERPT: "A vibrant four-story hub offering bright showrooms and office opportunities, located in Kitsilano's most fashionable business district.",
-} satisfies BaseTranslation;
-
-// 2: Pendrell St
-const en_project2 = {
-  TITLE: "Pendrell St",
-  LOCATION: "1650-on-second",
-  EXCERPT: "Nestled between natural wonders and bustling streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's scenery, along with modern convenience and luxury.",
-} satisfies BaseTranslation;
-
-
 
 export default en;
 export { en_project0, en_project1, en_project2 };

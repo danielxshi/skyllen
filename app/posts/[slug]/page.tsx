@@ -49,13 +49,13 @@ export default function Page() {
   let project;
   if (id == PROJECT_PATHNAME_0) {
     project = localizedProjects[0];
-    console.log("win 1");
+    // console.log("win 1");
   } else if (id == PROJECT_PATHNAME_1) {
     project = localizedProjects[1];
-    console.log("win 2")
-  } else if (id == PROJECT_PATHNAME_2)
+    // console.log("win 2")
+  } else if (id == PROJECT_PATHNAME_2) {
     project = localizedProjects[2];
-  else project = localizedProjects[0];
+  } else project = localizedProjects[1];
 
   //   const test = post.projectDetails["status"];
 
@@ -63,14 +63,14 @@ export default function Page() {
   //   let dataKeys = Object.keys(post.projectDetails["images"]);
   //   let dataValue = Object.values(post.projectDetails["images"]);
   //   let dataValue2 = Object.values(post.projectDetails);
-  console.log("swag ID" + id);
-  console.log("swag PATH" + PROJECT_PATHNAME_1);
+  // console.log("swag ID" + id);
+  // console.log("swag PATH" + PROJECT_PATHNAME_1);
 
   return (
     <>
       {/* <h1>test</h1> */}
       <Banner
-        website={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+        website={project.TYPE}
         title={project.TITLE}
         excerpt={project.EXCERPT}
         url={project.COVER_IMAGE}
@@ -105,61 +105,61 @@ export default function Page() {
           </div>
 
           {/* display NONE the class name should be "hidden" */}
-          {/* <div className={`flex flex-col 
-          ${post.projectDetails["count"]}`
-        }
+          <div
+            className={`flex flex-col 
+          ${project.COUNT}`}
           >
             <span className={`mb-8 font-bold ${montserratt.className}`}>
               Homes
             </span>
-            <p>{localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}</p>
-          </div> */}
+            <p>{project.COUNT}</p>
+          </div>
         </div>
       </Banner>
 
       <PageSection style={"container pb-16 pt-16"}>
         <h2 className="md:w-600">
-          {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+          {project.PROJECT_DESCRIPTION}
         </h2>
         <div className="mt-4">
-          <Button url={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}>
-            VISIT THE WEBSITE
+          <Button style={project.WEBSITE_BTN_STATE} url={project.WEBSITE}>
+            {project.WEBSITE_TEXT}
           </Button>
         </div>
       </PageSection>
 
-      <div className={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}>
+      <div className={`${project.HIDDEN_PROJECT}`}>
         <PageSection
           style={"container grid-container md:pb-16 pt-16 flex flex-col"}
         >
           <div className="flex h-full md:col-start-1 md:col-span-3 col-span-full flex-col md:pb-0 pb-16">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
               <ContentfulImage
-                src={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                src={project.PROJECT_IMAGE_ONE}
                 fill={true}
               />
             </div>
-            <p className="mt-4 sub">
-              {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
-            </p>
+            {/* <p className="mt-4 sub">
+              {project.BUBBLE_ONE}
+            </p> */}
           </div>
 
           <div className="flex  md:col-start-5 md:col-span-3 flex-col col-span-full">
             <div>
               <div className="w-full h-300 relative flex flex-col">
                 <ContentfulImage
-                  src={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                  src={project.PROJECT_IMAGE_TWO}
                   fill={true}
                 />
               </div>
-              <p className="mt-4 sub">
-                {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
-              </p>
+              {/* <p className="mt-4 sub">
+                {project.TYPE}
+              </p> */}
             </div>
 
             <div className="mt-auto w-300">
               <p className="text-bubble-content">
-                {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+              {project.BUBBLE_ONE}
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function Page() {
           <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-16 md:pb-0">
             <div className="mt-auto">
               <p className="text-bubble-content">
-                {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                {project.BUBBLE_TWO}
               </p>
             </div>
           </div>
@@ -180,13 +180,13 @@ export default function Page() {
             <div>
               <div className="w-full h-450 relative flex flex-col">
                 <ContentfulImage
-                  src={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                  src={project.PROJECT_IMAGE_THREE}
                   fill={true}
                 />
               </div>
-              <p className="mt-4 sub">
-                {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
-              </p>
+              {/* <p className="mt-4 sub">
+                {project.TYPE}
+              </p> */}
             </div>
           </div>
         </PageSection>
@@ -197,31 +197,31 @@ export default function Page() {
           <div className="flex h-full md:col-start-1 md:col-span-3 flex-col col-span-full md:pb-0 pb-16">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
               <ContentfulImage
-                src={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                src={project.PROJECT_IMAGE_FOUR}
                 fill={true}
               />
             </div>
-            <p className="mt-4 sub">
-              {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
-            </p>
+            {/* <p className="mt-4 sub">
+              {project.TYPE}
+            </p> */}
           </div>
 
           <div className="flex  md:col-start-6 md:col-span-2 flex-col col-span-full">
             <div>
               <div className="w-full h-450 relative flex flex-col">
                 <ContentfulImage
-                  src={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                  src={project.PROJECT_IMAGE_FIVE}
                   fill={true}
                 />
               </div>
-              <p className="mt-4 sub">
-                {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
-              </p>
+              {/* <p className="mt-4 sub">
+                {project.TYPE}
+              </p> */}
             </div>
 
             <div className="mt-auto">
               <p className="text-bubble-content">
-                {localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+                {project.BUBBLE_THREE}
               </p>
             </div>
           </div>
@@ -232,7 +232,8 @@ export default function Page() {
         <div className="flex h-full relative w-11/12 m-auto">
           <div className="w-full h-screen-3/4 ">
             <ContentfulImage
-              src={localizedMessages.COMPANY_PILLAR_ONE_PARAGRAPH_2}
+              // src={require(project.RENDER)}
+              src={project.RENDER}
               fill={true}
             />
           </div>
