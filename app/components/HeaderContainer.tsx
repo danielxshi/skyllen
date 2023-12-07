@@ -1,4 +1,5 @@
 //Represents Slug Nav
+"use client"
 
 import Link from "next/link";
 import React, { Component } from "react";
