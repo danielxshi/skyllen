@@ -113,7 +113,7 @@ export default function Page() {
               title={el.service}
               style="md:mb-16 w-full md:col-start-1 md:col-end-4 "
             />
-            <div className="md:mt-0 mt-4 md:col-start-5 h-300 md:col-span-4 relative w-full contentful-fill-container">
+            <div className="md:mt-0 mt-4 md:col-start-5 h-450 md:col-span-4 relative w-full contentful-fill-container">
               <ContentfulImage
                 fill={true}
                 src={el.image}

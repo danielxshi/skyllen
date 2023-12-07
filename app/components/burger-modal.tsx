@@ -400,7 +400,7 @@ export const BurgerModal = ({
                                   }
                                 )}
                               </div>
-                              <div className="locations md:block hidden">
+                              {/* <div className="locations md:block hidden">
                                 <div className="location-content ">
                                   {cities.map((el) => (
                                     <Link
@@ -419,7 +419,7 @@ export const BurgerModal = ({
                                     </Link>
                                   ))}
                                 </div>
-                              </div>
+                              </div> */}
                             </div>
                           </div>
                         </motion.div>

@@ -38,10 +38,10 @@ const renderSwitch = (params) => {
           <ul>
             {test2.map((item, index) => (
               <div key={index}>
-                <li className="underscore-cta">{item["email"]}</li>
-                <li className="underscore-cta">{item["address"]}</li>
-                <li className="underscore-cta">{item["city"]}</li>
-                <li className="underscore-cta">{item["phone"]}</li>
+                <li>{item["email"]}</li>
+                <li>{item["address"]}</li>
+                <li>{item["city"]}</li>
+                <li>{item["phone"]}</li>
               </div>
             ))}
           </ul>
@@ -69,55 +69,76 @@ export default function Contact() {
       <ParallaxBG url="../images/SkyllenSign.webp">
         <div className="h-screen md:h-screen-3/4 flex">
           <Banner
-            style="m-auto"
+            style="m-auto md:pb-16"
             // title={ProjectMessages.CompanyTitle}
-            overline="CONTACT"
+            overline={localizedMessages.CONTACT_HEADER_OVERRLINE}
           >
             <strong className={` ${montserratt.className}`}>
               {" "}
-              Get in Touch.
+              {localizedMessages.CONTACT_HEADER}
             </strong>
           </Banner>
         </div>
       </ParallaxBG>
-      <PageSection style="pt-16 pb-16  flex md:pb-32">
-        <div className="container md:grid-cols-8 flex flex-col-reverse form-container">
+      <PageSection style="pt-16 pb-16 flex md:pb-32">
+        <div className="container md:grid md:grid-cols-8 flex flex-col-reverse form-container">
           <div className="md:col-span-6 md:col-start-5">
-            <form id="contact-form" method="post" onSubmit={handleOnSubmit}>
-              <label htmlFor="name">{localizedMessages.CONTACT_FORM_FULL_NAME}</label>
+            <form
+              id="contact-form"
+              className="md:w-fit"
+              method="post"
+              onSubmit={handleOnSubmit}
+            >
+              <label className="required" htmlFor="name">
+                {localizedMessages.CONTACT_FORM_FULL_NAME}
+              </label>
               <input
+                required
+                className="required"
+                aria-required="true"
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your Full Name"
-                required
               />
-              <label htmlFor="email">{localizedMessages.CONTACT_FORM_EMAIL}</label>
+              <label className="required" htmlFor="email">
+                {localizedMessages.CONTACT_FORM_EMAIL}
+              </label>
               <input
+                aria-required="true"
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Your Email Address"
                 required
               />
-              <label htmlFor="email">{localizedMessages.CONTACT_FORM_PHONE}</label>
+              <label className="required" htmlFor="email">
+                {localizedMessages.CONTACT_FORM_PHONE}
+              </label>
               <input
+                aria-required="true"
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Your Phone"
                 required
               />
-              <label htmlFor="email">{localizedMessages.CONTACT_FORM_POSTAL_CODE}</label>
+              <label className="required" htmlFor="email">
+                {localizedMessages.CONTACT_FORM_POSTAL_CODE}
+              </label>
               <input
+                aria-required="true"
                 type="email"
                 id="email"
                 name="email"
                 placeholder="Your Postal Code"
                 required
               />
-              <label htmlFor="email">{localizedMessages.CONTACT_FORM_Q_REALTOR}</label>
+              <label className="required" htmlFor="email">
+                {localizedMessages.CONTACT_FORM_Q_REALTOR}
+              </label>
               <input
+                aria-required="true"
                 type="email"
                 id="email"
                 name="email"
@@ -128,9 +149,10 @@ export default function Contact() {
                 <option value="volvo">{localizedMessages.YES}</option>
                 <option value="saab">{localizedMessages.NO}</option>
               </select> */}
-              {/* <label htmlFor="email">Email Address</label>
-  <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-      <label htmlFor="message">Message</label>
+              {/* <label className="required"  htmlFor="email">Email Address</label>
+  <input
+  aria-required="true" type="email" id="email" name="email" placeholder="Your Email Address" required>
+      <label className="required"  htmlFor="message">Message</label>
   <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea> */}
 
               <motion.div

@@ -490,6 +490,10 @@ header {
   margin-bottom: $med-space;
 }
 
+[ng-required]:after {
+  content: "*";
+}
+
 .button-content {
   font-size: calc(0.12944983818770225vw + 9.514563106796116px);
 }
@@ -501,6 +505,11 @@ header {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.required::after {
+  content: " *";
+  color: red;
 }
 
 // project page
@@ -1076,9 +1085,10 @@ img {
 // }
 .menu-links {
   nav li {
-    height: 7vw !important;
+    height: 5.5vw !important;
     a {
-      font-size: 7vw !important;
+      font-size: 4.5vw !important;
+      
       text-align: center;
       line-height: 140%;
       width: 100%;
