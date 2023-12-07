@@ -58,7 +58,7 @@ class SlugNav extends Component<Props, any> {
                 <button
                   //Change this to toggleLanguage
                   onClick={() => localeClicked()}
-                  className="z-10 text-white text-lg lang-btn"
+                  className="z-10 text-white text-lg lang-btn uppercase"
                 >
                   {locale}
                 </button>

@@ -7,6 +7,7 @@ import ProjectGallery from "@/app/components/project-gallery";
 
 import ContentfulImage from "@/lib/contentful-image";
 import Headline from "@/app/components/headline";
+import HCIMG from "../../../public/images/dec7/iStock-1096578336.webp";
 
 import { Markdown } from "@/lib/markdown";
 import Button from "@/app/components/Button/FillButton";
@@ -118,9 +119,7 @@ export default function Page() {
       </Banner>
 
       <PageSection style={"container pb-16 pt-16"}>
-        <h2 className="md:w-600">
-          {project.PROJECT_DESCRIPTION}
-        </h2>
+        <h2 className="md:w-600">{project.PROJECT_DESCRIPTION}</h2>
         <div className="mt-4">
           <Button style={project.WEBSITE_BTN_STATE} url={project.WEBSITE}>
             {project.WEBSITE_TEXT}
@@ -134,10 +133,7 @@ export default function Page() {
         >
           <div className="flex h-full md:col-start-1 md:col-span-3 col-span-full flex-col md:pb-0 pb-16">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
-              <ContentfulImage
-                src={project.PROJECT_IMAGE_ONE}
-                fill={true}
-              />
+              <ContentfulImage src={project.PROJECT_IMAGE_ONE} fill={true} />
             </div>
             {/* <p className="mt-4 sub">
               {project.BUBBLE_ONE}
@@ -147,10 +143,7 @@ export default function Page() {
           <div className="flex  md:col-start-5 md:col-span-3 flex-col col-span-full">
             <div>
               <div className="w-full h-300 relative flex flex-col">
-                <ContentfulImage
-                  src={project.PROJECT_IMAGE_TWO}
-                  fill={true}
-                />
+                <ContentfulImage src={project.PROJECT_IMAGE_TWO} fill={true} />
               </div>
               {/* <p className="mt-4 sub">
                 {project.TYPE}
@@ -158,9 +151,7 @@ export default function Page() {
             </div>
 
             <div className="mt-auto w-300">
-              <p className="text-bubble-content">
-              {project.BUBBLE_ONE}
-              </p>
+              <p className="text-bubble-content">{project.BUBBLE_ONE}</p>
             </div>
           </div>
         </PageSection>
@@ -170,9 +161,7 @@ export default function Page() {
         >
           <div className="flex h-full md:col-start-1 md:col-span-2 flex-col col-span-full pb-16 md:pb-0">
             <div className="mt-auto">
-              <p className="text-bubble-content">
-                {project.BUBBLE_TWO}
-              </p>
+              <p className="text-bubble-content">{project.BUBBLE_TWO}</p>
             </div>
           </div>
 
@@ -196,10 +185,7 @@ export default function Page() {
         >
           <div className="flex h-full md:col-start-1 md:col-span-3 flex-col col-span-full md:pb-0 pb-16">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
-              <ContentfulImage
-                src={project.PROJECT_IMAGE_FOUR}
-                fill={true}
-              />
+              <ContentfulImage src={project.PROJECT_IMAGE_FOUR} fill={true} />
             </div>
             {/* <p className="mt-4 sub">
               {project.TYPE}
@@ -209,10 +195,7 @@ export default function Page() {
           <div className="flex  md:col-start-6 md:col-span-2 flex-col col-span-full">
             <div>
               <div className="w-full h-450 relative flex flex-col">
-                <ContentfulImage
-                  src={project.PROJECT_IMAGE_FIVE}
-                  fill={true}
-                />
+                <ContentfulImage src={project.PROJECT_IMAGE_FIVE} fill={true} />
               </div>
               {/* <p className="mt-4 sub">
                 {project.TYPE}
@@ -220,9 +203,7 @@ export default function Page() {
             </div>
 
             <div className="mt-auto">
-              <p className="text-bubble-content">
-                {project.BUBBLE_THREE}
-              </p>
+              <p className="text-bubble-content">{project.BUBBLE_THREE}</p>
             </div>
           </div>
         </PageSection>
@@ -239,6 +220,43 @@ export default function Page() {
           </div>
         </div>
       </PageSection>
+
+      <PageSection
+        style={`container pt-16 pb-16 md:pb-32 relative h-screen-3/4 relative w-full ${project.HOMEOWNER_CARE}`}
+      >
+        {/* <div className="bg-black/[0.2] h-full w-full z-10 absolute"></div> */}
+        <div className="hover:cursor-pointer flex justify-center items-center h-full">
+          <ContentfulImage
+            src={HCIMG}
+            alt="Family fun"
+            quality={50}
+            fill={true}
+          />
+        </div>
+
+        <div className={`flex absolute z-50 flex-col justify-center self-center m-auto w-full ${project.HOMEOWNER_CARE}`}>
+          <h3 className="m-auto text-white mb-4">Homeowner Care</h3>
+          <Button
+            style="m-auto h-fit"
+            url="
+https://app.tribehome.com/developments/1446303707191840768/loop"
+          >
+            Homeowner Care
+          </Button>
+          {/* <motion.span
+            whileHover={{
+              scale: 0.85,
+              transition: { duration: 1 },
+            }}
+            className="flex heavy-med m-auto w-full tracking-tighter text-center font-bold relative text-white h-full align-middle justify-center items-center"
+          >
+            <strong className={`${montserrat.className}`}>
+              {props.status}
+            </strong>
+          </motion.span> */}
+        </div>
+      </PageSection>
+
       <PageSection style={"container min-h-screen pt-16 pb-16 md:pb-32"}>
         <ProjectGallery />
       </PageSection>

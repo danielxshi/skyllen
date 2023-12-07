@@ -139,8 +139,8 @@ export const renderSwitch2 = (
   switch (keys[0]) {
     case "contact":
       return (
-        <div className="footer-contact-container ">
-          <ul>
+        <div className="footer-contact-container w-full flex">
+          <ul className="w-full flex justify-between">
             {test2.map(
               (
                 item: {
@@ -161,10 +161,22 @@ export const renderSwitch2 = (
                 index: any
               ) => (
                 <>
-                  <li className="underscore-cta">{item["email"]}</li>
-                  <li className="underscore-cta">{item["address"]}</li>
-                  <li className="underscore-cta">{item["city"]}</li>
-                  <li className="underscore-cta">{item["phone"]}</li>
+                  <div className="mb-0">
+                    <li className="underscore-cta mb-0 text-left">
+                      {item["phone"]}
+                    </li>
+                    <li className="underscore-cta mb-0 text-left">
+                      {item["email"]}
+                    </li>
+                  </div>
+                  <div className="mb-0 w-2/6">
+                    <li className="underscore-cta mb-0 text-right">
+                      {item["address"]}
+                    </li>
+                    <li className="underscore-cta mb-0 text-right">
+                      {item["city"]}
+                    </li>
+                  </div>
                 </>
               )
             )}
@@ -377,7 +389,7 @@ export const BurgerModal = ({
                                 </ul>
                               </nav>
 
-                              <div className="info">
+                              <div className="info w-full">
                                 {FooterMessages.FooterItems.map(
                                   (item, index) => {
                                     return (
@@ -388,8 +400,8 @@ export const BurgerModal = ({
                                   }
                                 )}
                               </div>
-                              <div className="locations">
-                                <div className="location-content">
+                              <div className="locations md:block hidden">
+                                <div className="location-content ">
                                   {cities.map((el) => (
                                     <Link
                                       onClick={() => {

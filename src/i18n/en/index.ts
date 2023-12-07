@@ -44,6 +44,10 @@ const en = {
   CONTACT_FORM_DISCLAIMER:
     "I hereby consent to receive emails from Skyllen Pacific and their respective current and future affiliates and subsidiaries. This may include pricing, floor plans for current and future products, sales updates, event invitations, announcements, corporate newsletters, and other contact. I understand that I can unsubscribe at any time.", // not found
 
+
+  // COMMON
+  LEARN_MORE: "LEARN MORE",
+
   // PROJECTS
   // TODO: these are hard coded inside app/pprojects/page.tsx
   PROJECT_HEADLINE:

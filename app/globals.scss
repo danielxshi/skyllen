@@ -255,14 +255,13 @@ header {
           }
           .info {
             color: #fff;
-            width: 300px;
-            z-index: 99;
+            z-index: 0;
             display: block;
             position: absolute;
             bottom: 10vh;
             right: 0;
             li {
-              text-align: right;
+              // text-align: right;
             }
             li:last-child {
               margin-bottom: 0;
@@ -284,7 +283,7 @@ header {
           margin-top: 16px;
           font-size: 0.8rem;
           font-weight: 600;
-          display: block;
+          // display: block;
           width: 100%;
 
           .location-content {
@@ -1104,6 +1103,11 @@ img {
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .logo img {
+    scale:calc(0.8)
+  }
+}
 @media only screen and (min-width: 800px) {
   .company-parallax {
     .image-container {

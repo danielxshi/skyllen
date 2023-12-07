@@ -7,13 +7,16 @@ import Button from "../components/button";
 import dallas from "../images/dallas.webp";
 import { Parallax, Background } from "react-parallax";
 import ParallaxBG from "../components/ParallaxBG";
-import projectImageL1 from "../images/living-space-landing.webp";
+import projectImageL1 from "../../public/images/dec7/P5.webp";
 import projectImageR1 from "../../public/images/carnavron/618-Hero.webp";
 import projectImageL2 from "../../public/images/second/1650-signage.webp";
 import projectImageR2 from "../images/1650-night.webp";
 import projectImageL3 from "../images/pendrell-aerial.webp";
 import projectImageR3 from "../../public/images/pendrell/Hero-Pendrell.webp";
 import localFont from "next/font/local";
+import { getLocalizedMessages } from "@/src/i18n";
+
+const localizedMessages = getLocalizedMessages();
 
 const montserratt = localFont({
   src: [
@@ -58,8 +61,7 @@ const projects = [
     imageOne: projectImageL1,
     imageTwo: projectImageR1,
     link: "/posts/618-carnavron",
-    description:
-      "An established neighbourhood connecting a rich past to a modern downtown lifestle - 618 Carnarvon provides an elevated lifestyle in the heart of New Westminster.",
+    description: localizedMessages.PROJECT_618_EXCERPT,
   },
   {
     name: "1650 ON SECOND",
@@ -68,17 +70,15 @@ const projects = [
     imageOne: projectImageL2,
     imageTwo: projectImageR2,
     link: "/posts/1650-on-second",
-    description:
-      "A vibrant four-storey centerpiece providing bright showroom and office opportunities set in Kitsilano's trendiest business district.",
+    description: localizedMessages.PROJECT_1650_EXCERPT,
   },
   {
-    name: "PENDRELL ST",
+    name: "EDITION",
     page: 2,
     imageOne: projectImageL3,
     imageTwo: projectImageR3,
     link: "/posts/pendrell-street",
-    description:
-      "Nested amongst natural wonders and thriving streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's vistas while boasting proximity to modern day conveniences and luxuries.",
+    description: localizedMessages.PROJECT_EDITION_EXCERPT,
   },
 ];
 
@@ -96,9 +96,9 @@ export default function Page() {
         <Banner
           style="min-h-screen flex"
           // title={ProjectMessages.CompanyTitle}
-          overline="PROJECT"
+          overline={localizedMessages.PROJECT_OVERLINE}
         >
-          We prioritizes{" "}
+          {/* We prioritizes{" "}
           <strong className={` ${montserrattBold.className}`}>
             smart design
           </strong>{" "}
@@ -114,7 +114,9 @@ export default function Page() {
           <strong className={` ${montserrattBold.className}`}>
             workplaces
           </strong>
-          .
+          . */}
+
+          {localizedMessages.PROJECT_HEADLINE}
         </Banner>
       </Parallax>
 
@@ -145,7 +147,7 @@ export default function Page() {
                             }}
                             url={el.link}
                           >
-                            Learn More
+                            {localizedMessages.LEARN_MORE}
                           </Button>
                         </div>
                       </div>
@@ -159,7 +161,7 @@ export default function Page() {
                     />
                   </WorkBleedProject>
                   <WorkBleed progress={progress}>
-                    <div className="project-card-content w-screen md:w-screen-1/2 md:w-2/4 md:w-w-screen-1/2">
+                    <div className="project-card-content w-screen md:w-2/4 md:w-w-screen-1/2">
                       <ContentfulImage
                         height="100"
                         quality={75}

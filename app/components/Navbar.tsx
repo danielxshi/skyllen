@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const Navbar = ({ children, ...props }) => {
   const { scrollY } = useScroll();
 
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(true);
   const [brandHidden, setHiddenBranding] = useState(false);
 
   useEffect(() => {
@@ -20,51 +20,31 @@ const Navbar = ({ children, ...props }) => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
-    if (
-      (latest > previous &&
-        latest > 1 &&
-        window.scrollY > 0 &&
-        window.scrollY < 150) ||
-      window.scrollY == 0
-    ) {
-      setHidden(true);
-    } else if (window.scrollY >= 0) {
+    if (window.scrollY > 0) {
       setHidden(false);
+    } else if (window.scrollY >= 0 || window.scrollY <= 25) {
+      setHidden(true);
       setHiddenBranding(false);
-    }
-    if (window.scrollY == 0) {
+    } else if (window.scrollY <= 10) {
       setHiddenBranding(false);
-    }
-    if (latest > previous && latest > 150) {
-    //   setHiddenBranding(true);
+    } else if (latest > previous && latest > 150) {
+      //   setHiddenBranding(true);
     }
   });
 
   return (
     <section className={`${props.style}`}>
-      <motion.header
-        // variants={{
-        //   brandVisible: { y: 0, opacity: 1 },
-        //   brandHidden: { y: "-100%", opacity: 0 },
-        // }}
-        // animate={brandHidden ? "brandHidden" : "brandVisible"}
-        // transition={{ duration: 1.25, ease: "easeInOut" }}
-        // className={`drop-shadow-sm	 navbar blur-bg ${
-        //   hidden ? "bg-none" : "bg-black/[0.95]"
-        // }`}
-      >
-        {children}
-      </motion.header>
+      <header>{children}</header>
       <motion.div
         initial={{ opacity: 0 }}
         variants={{
-          visible: { y: 0, opacity: 0.95 },
-          hidden: { y: "-100%",  },
+          visible: { y: 0, opacity: 0.85 },
+          hidden: { y: "-100%" },
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.95, ease: "easeInOut", delay: 0.25 }}
-        className={`navbar top-0 z-10 fixed h-24 w-screen ${
-          hidden ? "bg-black/[0.5] " : "bg-black  "
+        className={`navbar top-0 z-10 fixed h-24 w-screen z-20 ${
+          hidden ? "bg-black/[0.88] " : "bg-black/[0.88]  "
         }`}
       ></motion.div>
     </section>

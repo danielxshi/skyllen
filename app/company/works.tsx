@@ -3,9 +3,10 @@ import React from "react";
 import { Tile, TileBackground, TileContent, TileWrapper } from "./tile";
 import { WorkBackground, WorkContainer, WorkBleed } from "./work";
 import ContentfulImage from "@/lib/contentful-image";
-import image1 from "../../public/images/INSPIRATION.webp";
-import image2 from "../../public/images/COLLABORATION.webp";
-import image3 from "../../public/images/INNOVATION.webp";
+import image1 from "../../public/images/dec7/_INSPIRATION-2.webp";
+import image2 from "../../public/images/dec7/_COLLABORATION-2.webp";
+import image3 from "../../public/images/dec7/_INNOVATION-2.webp";
+
 import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
 

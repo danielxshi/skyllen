@@ -94,7 +94,7 @@ const ParallaxScrollVideo = () => {
             renderContent={({ progress }) => (
               <div>
                 <div className="h-screen flex flex-col-reverse p-8 w-screen absolute z-50 text-white bg-blur-black">
-                  <div className="mb-auto text-content h-3/4 mt-auto flex flex-col mr-auto ml-auto w-600 justify-center">
+                  <div className="mb-auto text-content h-3/4 mt-auto flex flex-col mr-auto ml-auto md:w-600 justify-center">
                     <div>
                       <h3 className="tracking-tight pb-8 text-center">
                         {el.description}

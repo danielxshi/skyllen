@@ -15,6 +15,7 @@ import React from "react";
 import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
 import { BrowserRouter } from "react-router-dom";
+import FooterImg from "../public/images/dec7/Footer1.webp"
 
 const localizedMessages = getLocalizedMessages();
 
@@ -184,7 +185,7 @@ export default function RootLayout({
           <body>
             <section className="min-h-screen">
               <HeaderModal />
-              {/* <motion.div
+              <motion.div
                 initial={{ opacity: 1 }}
                 animate={{
                   opacity: 0,
@@ -215,17 +216,17 @@ export default function RootLayout({
                     quality={85}
                   />
                 </motion.div>
-              </motion.div> */}
+              </motion.div>
               <motion.main
-                // initial={{ opacity: 0 }}
-                // animate={{ opacity: 1, y: 0 }}
-                // exit={{ opacity: 0 }}
-                // transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
               >
                 {children}
               </motion.main>
 
-              <ParallaxBG url="https://i.imgur.com/89JfMAp.png">
+              <ParallaxBG url="https://i.imgur.com/kEUkm79.png">
                 {/* <div className="parallax-bg z-0">
         <ContentfulImage src={props.url} fill={true} />
       </div> */}

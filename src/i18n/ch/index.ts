@@ -5,16 +5,17 @@ const ch = {
   HEADER_PT_1: "卓越，宜居",
   HEADER_PT_2: "现代，便捷。",
   STORY1:
-    "我们是一家多学科的房地产开发公司，专注于开发能够融合自然、建筑、技术和功能的物业。",
-  STORY2: "我们受到最近城市风景演变中涌现的城市化和可持续性不断演绎的启发。",
-  STORY3: "我们优先考虑智能设计和独特的空间，打造持久的家居和工作场所。",
+    "我们是一家位于温哥华的综合型房地产开发公司，专注于开发能够融合自然、建筑、技术和功能性的地产项目。",
+  STORY2:
+    "Skyllen Pacific 受到城市化生活方式的启发，留意到当今社会对可持续性发展的需求。",
+  STORY3: "我们着重于智能设计及独特地段的发掘，以造就经典住宅与办公空间",
   SOCIAL_HEADLINE: "我们的最新消息",
   SOCIAL_OVERLINE: "社交媒体",
   PROJECT_GALLERY_OVERLINE: "项目",
   PROJECT_GALLERY_HEADLINE: "智能设计与独特空间",
   SOCIAL_CTA: "关注我们",
-  NOW_LEASING: "现正出租",
-  NOW_SELLING: "现正发售",
+  NOW_LEASING: "现正招租",
+  NOW_SELLING: "现正热售",
   COMING_SOON: "即将推出",
   // NEWS
   NEWS_HEADER: "我们受到最近城市景观中不断演变的城市化和可持续性解读的启发。",
@@ -36,16 +37,19 @@ const ch = {
   CONTACT_FORM_DISCLAIMER:
     "本人同意接收Skyllen Pacific 发出的电⼦邮件。其可能包括项目价格、当前和未来产品的建筑平⾯图、最新销售活动、活动邀请、公告、公司电⼦报和其他联系资讯。本人了解可以随时取消订阅。",
 
+  // COMMON
+  LEARN_MORE: "具体详情",
+
   // PROJECTS
   PROJECT_HEADLINE:
     "我们优先考虑智能设计和独特的空间，打造持久的家居和工作场所。",
   PROJECT_OVERLINE: "项目简介",
   PROJECT_618_EXCERPT:
-    "618 Carnarvon 连接了一个历史悠久的社区与现代市中心生活方式，为您提供在新威斯敏斯特市中心的提升生活体验。",
+    "大楼地处新西敏市中心地带的成熟社区，将该区域特有的历史厚重感与现代都市轻快的生活节奏联系起来，为住户提供了一种全新的生活方式。",
   PROJECT_1650_EXCERPT:
-    "一个充满活力的四层中心，提供明亮的展示厅和办公机会，坐落在基斯拉诺最时尚的商业区。",
+    "一个充满活力的四层办公中心，于基斯兰奴的商业核心区域提供窗明几净，采光绝佳的展厅与办公场所。",
   PROJECT_EDITION_EXCERPT:
-    "嵌套在自然奇观和繁华街道之间，Skyllen Pacific 即将推出的市中心项目将提供对温哥华美景的美丽景观，同时拥有现代便利和奢华的便利性。",
+    "坐落于自然美景与繁华街道之间，由Skyllen Pacific团队开发的高层住宅项目即将于温哥华市中心揭晓。该项目将为住户提供海岸与山脉交织的美丽景色，现代化的便捷设施，与超一线品质的奢华住宅。",
 
   // PROJECT DETAILS
   PROJECT_DETAILS_STATUS: "项目现况",
@@ -56,40 +60,39 @@ const ch = {
 
   // COMPANY
   COMPANY_HEADER:
-    "我们是一家多学科的房地产开发公司，专注于开发能够融合自然、建筑、技术和功能的物业。",
+    "我们是一家位于温哥华的综合型房地产开发公司，专注于开发能够融合自然、建筑、技术和功能性的地产项目。",
   COMPANY_OVERLINE: "公司简介",
   COMPANY_SECTION_TITLE: "品牌故事",
   COMPANY_SECTION_PARAGRAPH_1:
-    "自2008年以来，Skyllen Pacific 一直在大温哥华地区活跃，观察市场需求并在该地区的战略性部分购置土地。",
+    "自 2008 年以来，Skyllen Pacific 一直活跃于大温哥华地区，观察市场需求并于战略性地区购置土地。",
   COMPANY_SECTION_PARAGRAPH_2:
-    "凭借跨足两大洲的三十多年经验，Skyllen Pacific 集团致力于通过注重革命性设计和周到功能的高品质住宅，超越温哥华的房地产发展目标。",
-  COMPANY_PILLAR_ONE_TITLE: "灵感启示",
+    "凭借跨越两大洲三十多年的实践专业知识，Skyllen团队致力于通过优先考虑革命性设计和周到功能的优质住宅来超越温哥华的房地产开发目标。",
+  COMPANY_PILLAR_ONE_TITLE: "启示",
   COMPANY_PILLAR_ONE_PARAGRAPH_1:
-    "Skyllen Pacific 受到最近城市风景演变中涌现的城市化和可持续性不断演绎的启发。",
+    "Skyllen Pacific 受到城市化生活方式的启发，留意到当今社会对可持续性发展的需求。",
   COMPANY_PILLAR_ONE_PARAGRAPH_2:
-    "在管理过程中重视负责任的投资，Skyllen Pacific 在倡导可持续实践的同时，致力于改善当地基础设施和公共空间。",
-  COMPANY_PILLAR_TWO_TITLE: "协同合作",
+    "本着对投资人负责的态度，Skyllen在项目开发管理中充分考虑并实践趋势预测与可持续性设计，改善社区基础设施和公共空间建设，旨在提供更加卓越的生活空间。",
+  COMPANY_PILLAR_TWO_TITLE: "协作",
   COMPANY_PILLAR_TWO_PARAGRAPH_1:
-    "每个Skyllen Pacific 项目都涉及在项目背景和现代设计之间进行深思熟虑的协作。",
+    "Skyllen Pacific致力于项目大局观与现代化设计的完美融合。",
   COMPANY_PILLAR_TWO_PARAGRAPH_2:
-    "通过与经验丰富的行业专业人士合作，Skyllen Pacific 利用先进的研究和开发方法，将创造性的解决方案推向高质量的成果。",
-  COMPANY_PILLAR_THREE_TITLE: "改革创新",
-  COMPANY_PILLAR_THREE_PARAGRAPH_1:
-    "丰富的生活源于创新的规划和设计。Skyllen Pacific 与客户合作，将想法转化为现实。",
+    "团队集结了从业经验丰富的专业人士，不断改善调研与开发进程、创意方案及满足不同需求，终能呈现高于行业水准的优质成果。 ",
+  COMPANY_PILLAR_THREE_TITLE: "革新",
+  COMPANY_PILLAR_THREE_PARAGRAPH_1: "丰饶雅致的生活环境源于超前的规划和设计",
   COMPANY_PILLAR_THREE_PARAGRAPH_2:
-    "该公司对早期蓝图制定的执着奠定了创新的模板，引领着周到规划的项目，散发出卓越的设计和现代体验。",
+    "Skyllen团队致力于帮助客户将理想住宅的愿景变得触手可及。“变革创新，与时俱进”是Skyllen早在公司成立初期便奠定的发展基调，并通过严谨的发展规划，使杰出的设计与现代化生活体验呈现于每个开发项目之中。 ",
   COMPANY_TRAIN_SECTION_PARAGRAPH:
-    "我们受到最近城市风景演变中涌现的城市化和可持续性不断演绎的启发。",
+    "Skyllen Pacific 受到城市化生活方式的启发，留意到当今社会对可持续性发展的需求。",
   COMPANY_PROJECT_MANAGEMENT_TITLE: "项目管理",
   COMPANY_PROJECT_MANAGEMENT_PARAGRAPH_1:
-    "Skyllen Pacific 以多年的管理经验而自豪，涵盖独立住宅、混合用途和商业项目。",
+    "Skyllen Pacific 拥有多年管理住宅项目、商住混合项目与商用大楼项目的经验。",
   COMPANY_PROJECT_MANAGEMENT_PARAGRAPH_2:
-    "凭借从项目开始到完成的实际经验，Skyllen Pacific 对整个开发过程了如指掌，并有资格为各类项目提供相关见解。",
+    "贯穿项目始末的管理与规划，使Skyllen团队对整个开发过程蹈机握杼，并可有效地为不同类型的项目提供最适宜的管理方案。",
   COMPANY_DEVELOPMENT_TITLE: "项目开发",
   COMPANY_DEVELOPMENT_PARAGRAPH_1:
-    "我们的端到端服务模型将项目从概念推进到完成，我们的专业团队在每个步骤都密切合作。",
+    "我们的全方位服务模式使得项目概念一一实现专业协作的团队也懂得在每个步骤密切合作。",
   COMPANY_DEVELOPMENT_PARAGRAPH_2:
-    "我们成功的关键在于我们内部专家的协同工作方式。我们的综合系统将项目从概念推进到完成，每次都实现对客户的承诺。",
+    "我们每一个开发项目成功的关键在于内部系统的合一性，以极高的配合度及专业度，将客户的期许转化为现实。",
 
   // FOOTER
   FOOTER_CONNECT: "联系我们",
@@ -168,7 +171,7 @@ const ch_project1 = {
   SLUG: "1650-on-second",
   TYPE: "Office",
   COUNT: "hidden",
-  STATUS: "Now Leasing",
+  STATUS: "现正招租",
   ESTIMATE: "Completed",
   LOCATION: "温哥华｜基斯兰奴社区, BC",
   PROJECT_DESCRIPTION:
@@ -189,6 +192,7 @@ const ch_project1 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/HfhKfI9.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/TgNvkys.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/zQU5GRI.jpg",
+  HOMEOWNER_CARE: "hidden",
   HIDDEN_PROJECT: "",
 } satisfies Translation;
 
@@ -199,7 +203,7 @@ const ch_project2 = {
   SLUG: "edition",
   TYPE: "Residential | Office | Retail",
   COUNT: "TBC",
-  STATUS: "项目现况",
+  STATUS: "敬请期待",
   ESTIMATE: "2026",
   LOCATION: "温哥华｜市中心, BC",
   PROJECT_DESCRIPTION: "即将登陆温哥华市中心",
@@ -221,6 +225,7 @@ const ch_project2 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+  HOMEOWNER_CARE: "hidden",
   HIDDEN_PROJECT: "hidden",
 } satisfies Translation;
 
