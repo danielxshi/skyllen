@@ -3,12 +3,16 @@ import en, { en_project0, en_project1, en_project2 } from "@/src/i18n/en";
 import ch, { ch_project0, ch_project1, ch_project2 } from "@/src/i18n/ch";
 
 export function getLocale() {
-  return localStorage.getItem("locale") ?? "en";
+  if (typeof window !== 'undefined' && window.localStorage) {
+    return window.localStorage.getItem("locale") ?? "en";
+  } else {
+    return "en";
+  }
 }
 
 export function toggleLocale() {
   const nextLocale = getLocale() === "en" ? "ch" : "en";
-  localStorage.setItem("locale", nextLocale);
+  localStorage?.setItem("locale", nextLocale);
 }
 
 export function getLocalizedMessages() {
