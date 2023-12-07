@@ -146,14 +146,18 @@ const en_project0 = {
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
 } satisfies BaseTranslation;
+
 // 1: 1650 West 2nd
 const en_project1 = {
   TITLE: "1650 West 2nd",
+  LOCATION: "1650-on-second",
   EXCERPT: "A vibrant four-story hub offering bright showrooms and office opportunities, located in Kitsilano's most fashionable business district.",
 } satisfies BaseTranslation;
+
 // 2: Pendrell St
 const en_project2 = {
   TITLE: "Pendrell St",
+  LOCATION: "1650-on-second",
   EXCERPT: "Nestled between natural wonders and bustling streets, Skyllen Pacific's upcoming downtown project will offer beautiful views of Vancouver's scenery, along with modern convenience and luxury.",
 } satisfies BaseTranslation;
 

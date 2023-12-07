@@ -122,6 +122,7 @@ const ch = {
 // 0: 618 Carnarvon
 const ch_project0 = {
   //618 Slug should be "618-carnavron"
+  TITLE: "618 CARNAVRON",
   EXCERPT: "MOCK TRANSLATION! 社区 · 便利",
   SLUG: "MOCK TRANSLATION! 618-carnavron",
   TYPE: "MOCK TRANSLATION! 住宅 | 办公 | 零售",
@@ -143,15 +144,19 @@ const ch_project0 = {
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
   OPTIONAL_SECTION_STYLE: "", // TODO - use this to hide the missing block on the last project
 } satisfies Translation;
+
 // 1: 1650 West 2nd
 const ch_project1 = {
   TITLE: "1650 West 2nd 中文",
+  LOCATION: "MOCK TRANSLATION! 1650-on-second",
   EXCERPT: "一个充满活力的四层中心，提供明亮的展示厅和办公机会，坐落在基斯拉诺最时尚的商业区。",
   OPTIONAL_SECTION_STYLE: "", // TODO - use this to hide the missing block on the last project
 } satisfies Translation;
+
 // 2: Pendrell St
 const ch_project2 = {
   TITLE: "Pendrell St 中文",
+  LOCATION: "MOCK TRANSLATION! pendrell-street",
   EXCERPT: "嵌套在自然奇观和繁华街道之间，Skyllen Pacific 即将推出的市中心项目将提供对温哥华美景的美丽景观，同时拥有现代便利和奢华的便利性。",
   OPTIONAL_SECTION_STYLE: "display: none", // TODO - use this to hide the missing block on the last project
 } satisfies Translation;
