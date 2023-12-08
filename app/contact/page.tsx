@@ -24,6 +24,11 @@ const montserratt = localFont({
   ],
 });
 
+
+type Props = {
+  field: string;
+}
+
 const renderSwitch = (params) => {
   const keys = Object.keys(params);
   const value = keys;
@@ -52,16 +57,12 @@ const renderSwitch = (params) => {
   }
 };
 
-type Props = {
-  field?: string;
-};
-
-const Contact = ({ field }: Props) => {
+export default function Contact() {
   async function handleOnSubmit(e) {
     e.preventDefault();
     const formData = {};
-    // Array.from(e.currentTarget.elements).forEach((field) => {
-    //   if (!field.name) return;
+    // Array.from(e.currentTarget.elements).forEach(field => {
+    //   if(!field.name) return;
     //   formData[field.name] = field.value;
     // });
     console.log(formData);
@@ -210,6 +211,4 @@ const Contact = ({ field }: Props) => {
       </PageSection>
     </>
   );
-};
-
-export default Contact;
+}
