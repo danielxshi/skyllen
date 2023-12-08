@@ -139,7 +139,7 @@ export default function Contact() {
                 placeholder="Your Email Address"
                 required
               />
-              <label className="required">
+              <label className="required label-base">
                 {localizedMessages.CONTACT_FORM_PHONE}
               </label>
               <input
@@ -150,7 +150,7 @@ export default function Contact() {
                 placeholder="Your Phone"
                 required
               />
-              <label className="required">
+              <label className="required label-base">
                 {localizedMessages.CONTACT_FORM_POSTAL_CODE}
               </label>
               <input
@@ -162,7 +162,7 @@ export default function Contact() {
                 required
               />
 
-              <label className="required">
+              <label className="required label-base">
                 {localizedMessages.CONTACT_FORM_Q_REALTOR}
               </label>
               <div className="flex flex-row form-select-wrapper my-4 ">
@@ -190,7 +190,7 @@ export default function Contact() {
                 // className={` ${hidden ? "hidden " : "flex  "}`}
                 // animate={hidden ? "hidden" : "visible"}
               >
-                <label className="required">
+                <label className="required label-base">
                   {localizedMessages.CONTACT_FORM_Q_SELECT_TEXT}
                 </label>
                 <input
@@ -212,7 +212,7 @@ export default function Contact() {
                   required
                   className="w-fit h-4 m-auto self-center"
                 />
-                <label className="required ml-4 w-full">
+                <label className="required ml-4 label-small w-full">
                   {localizedMessages.CONTACT_FORM_DISCLAIMER}
                 </label>
               </div>

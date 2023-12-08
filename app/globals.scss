@@ -725,7 +725,9 @@ label,
 .description {
   color: var(--primary-color);
   text-transform: uppercase;
-  font-size: 0.625rem;
+}
+.label-small {
+  font-size: 0.625rem !important;
 }
 
 form {
@@ -1191,11 +1193,12 @@ img {
   }
 }
 
+.label-base {
+  font-size: $base-font !important;
+}
+
 @media only screen and (max-width: 768px) {
-  label{
-    font-size: $base-font;
-  }
-  .disclaimer label{
+  .disclaimer label {
     font-size: 0.8rem !important;
     text-transform: none;
   }
