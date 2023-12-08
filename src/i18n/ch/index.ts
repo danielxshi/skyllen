@@ -160,7 +160,7 @@ const ch_project0 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/PBS1qoj.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/sie7QhV.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/Q2hfWf2.jpg",
-  HOMEOWNER_CARE: "flex",
+  HOMEOWNER_CARE: "",
   HIDDEN_PROJECT: "",
 } satisfies Translation;
 

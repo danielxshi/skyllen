@@ -898,7 +898,7 @@ input:checked + .slider:before {
   }
 }
 
-.disclaimer{
+.disclaimer {
   width: 40vw;
 }
 
@@ -1046,6 +1046,18 @@ img {
   );
   backdrop-filter: blur(2px);
   z-index: 99999;
+}
+
+.bg-ham-blue {
+  background: linear-gradient(
+    180deg,
+    #c1dce7 0%,
+    #8ab3c3 18.75%,
+    #8ab3c3 29.69%,
+    rgba(111, 148, 164, 0.8) 54.17%,
+    #d1d4d4 92.19%
+  );
+  z-index: 5;
 }
 
 // landing animation

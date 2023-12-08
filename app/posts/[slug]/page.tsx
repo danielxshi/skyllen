@@ -221,31 +221,37 @@ export default function Page() {
         </div>
       </PageSection>
 
-      <PageSection
-        style={`w-screen py-32 md:pb-32 relative h-screen-3/4 relative w-full ${project.HOMEOWNER_CARE}`}
-      >
-        {/* <div className="bg-black/[0.2] h-full w-full z-10 absolute"></div> */}
-        <div className="hover:cursor-pointer flex justify-center items-center h-full">
-          <ContentfulImage
-            src={HCIMG}
-            alt="Family fun"
-            quality={50}
-            fill={true}
-          />
-        </div>
-
-        <div
-          className={`flex absolute z-50 flex-col justify-center self-center m-auto w-full ${project.HOMEOWNER_CARE}`}
+      <div className={`py-64 ${project.HOMEOWNER_CARE}`}>
+        <PageSection
+          style={`container flex py-64 md:pb-32  relative h-screen-3/4 relative w-full md:grid md:grid-cols-9 ${project.HOMEOWNER_CARE}`}
         >
-          <h3 className="m-auto text-white mb-4">Homeowner Care</h3>
-          <Button
-            style="m-auto h-fit"
-            url="
-https://app.tribehome.com/developments/1446303707191840768/loop"
+          <div className="hover:cursor-pointer flex justify-center items-center h-full md:grid-start-1 md:col-span-5 relative">
+            {/* <div className="bg-black/[0.4] h-full w-full z-100 "> </div> */}
+
+            <ContentfulImage
+              src={HCIMG}
+              alt="Family fun"
+              quality={50}
+              fill={true}
+            />
+          </div>
+
+          <div
+            className={`flex flex-col z-50 justify-center self-center m-auto w-full md:col-start-6 col-span-4 bg-ham-blue h-full w-full ${project.HOMEOWNER_CARE}`}
           >
-            Homeowner Care
-          </Button>
-          {/* <motion.span
+            <div className="flex flex-col ">
+              <h3 className="m-auto text-white mb-4">
+                {localizedMessages.LEARN_MORE}
+              </h3>
+              <Button
+                style="m-auto h-fit"
+                url="
+https://app.tribehome.com/developments/1446303707191840768/loop"
+              >
+                Homeowner Care
+              </Button>
+            </div>
+            {/* <motion.span
             whileHover={{
               scale: 0.85,
               transition: { duration: 1 },
@@ -256,8 +262,9 @@ https://app.tribehome.com/developments/1446303707191840768/loop"
               {props.status}
             </strong>
           </motion.span> */}
-        </div>
-      </PageSection>
+          </div>
+        </PageSection>
+      </div>
 
       <PageSection style={"container min-h-screen pt-16 pb-16 md:pb-32"}>
         <ProjectGallery />
