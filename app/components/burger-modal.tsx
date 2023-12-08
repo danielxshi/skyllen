@@ -12,6 +12,7 @@ import React, {
   SetStateAction,
   MutableRefObject,
 } from "react";
+import localFont from "next/font/local";
 
 import ReactDom from "react-dom";
 import { useSpring, animated as a } from "react-spring";
@@ -46,6 +47,16 @@ import ContentfulImage from "@/lib/contentful-image";
 import { getLocalizedMessages } from "@/src/i18n";
 
 const localizedMessages = getLocalizedMessages();
+
+const quicksand = localFont({
+  src: [
+    {
+      path: "../fonts/playfair/PlayfairDisplay-VariableFont_wght.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 type Props = {
   showModal;
@@ -334,7 +345,9 @@ export const BurgerModal = ({
                               <div className="flex flex-col h-fit w-full">
                                 <nav>
                                   <ul>
-                                    <li>
+                                    <li
+                                      className={` ${quicksand.className}`}
+                                    >
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -347,7 +360,9 @@ export const BurgerModal = ({
                                         {localizedMessages.PROJECT}
                                       </Link>
                                     </li>
-                                    <li>
+                                    <li
+                                      className={` ${quicksand.className}`}
+                                    >
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -360,7 +375,9 @@ export const BurgerModal = ({
                                         {localizedMessages.COMPANY}
                                       </Link>
                                     </li>
-                                    <li>
+                                    <li
+                                      className={` ${quicksand.className}`}
+                                    >
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -374,7 +391,9 @@ export const BurgerModal = ({
                                       </Link>
                                     </li>
 
-                                    <li>
+                                    <li
+                                      className={` ${quicksand.className}`}
+                                    >
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}

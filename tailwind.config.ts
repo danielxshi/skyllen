@@ -24,7 +24,8 @@ export default {
         "w-screen-1/2": "50vw",
         "300": "300px",
         "600": "600px",
-        "9/10": "90vw"
+        "9/10": "90vw",
+        "58rem" : "58rem"
       },
       colors: {
         white: "#fff",

@@ -242,10 +242,9 @@ header {
             text-align: center;
             width: fit-content;
             text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.35);
-            font-family: Voyage;
             font-size: 3rem;
             font-style: normal;
-            font-weight: 700;
+            // font-weight: 700;
             line-height: 100%; /* 5.95625rem */
             letter-spacing: -0.11931rem;
             display: block;
@@ -268,6 +267,8 @@ header {
                   width: 100%;
                   position: absolute;
                   white-space: nowrap;
+                  // font-family: Voyage;
+
                   color: #fff;
                   text-decoration: none;
                   &:hover {
@@ -1180,6 +1181,7 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
+
   input,
   textarea,
   label {

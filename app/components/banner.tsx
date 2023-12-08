@@ -33,9 +33,9 @@ type Props = {
 const Banner = ({ children, style, style2, overline }: Props) => {
   return (
     <section className={`banner-container container ${style}`}>
-      <div className={`m-auto h-full flex h-fit flex-col md:w-4/5 ${style2}`}>
+      <div className={`m-auto h-full flex h-fit flex-col ${style2}`}>
         <h1
-          className={`text-center text-xl md:text-5xl ${montserratt.className}`}
+          className={`text-center text-xl md:text-5xl md:w-58rem m-auto ${montserratt.className}`}
         >
           {children}
           {/* We're a{" "}

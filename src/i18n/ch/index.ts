@@ -11,7 +11,7 @@ const ch = {
   STORY3: "我们着重于智能设计及独特地段的发掘，以造就经典住宅与办公空间",
   SOCIAL_HEADLINE: "我们的最新消息",
   SOCIAL_OVERLINE: "社交媒体",
-  PROJECT_GALLERY_OVERLINE: "项目",
+  PROJECT_GALLERY_OVERLINE: "项目概览",
   PROJECT_GALLERY_HEADLINE: "智能设计与独特空间",
   SOCIAL_CTA: "关注我们",
   NOW_LEASING: "现正招租",
@@ -96,7 +96,7 @@ const ch = {
 
   // FOOTER
   FOOTER_CONNECT: "联系我们",
-  FOOTER_PROJECTS: "项目",
+  FOOTER_PROJECTS: "项目概览",
   FOOTER_FOLLOW: "关注我们",
 
   // MENU
@@ -206,7 +206,7 @@ const ch_project2 = {
   EXCERPT: "Community · Convenience",
   SLUG: "edition",
   TYPE: "Residential | Office | Retail",
-  COUNT: "TBC",
+  COUNT: "待定",
   STATUS: "敬请期待",
   ESTIMATE: "2026",
   LOCATION: "温哥华｜市中心, BC",

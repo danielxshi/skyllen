@@ -160,7 +160,7 @@ export default function Page() {
                     />
                   </WorkBleedProject>
                   <WorkBleed progress={progress}>
-                    <div className="project-card-content w-screen md:w-2/4 md:w-w-screen-1/2">
+                    <div className="project-card-content w-screen md:w-w-screen-1/2">
                       <ContentfulImage
                         height="100"
                         quality={75}

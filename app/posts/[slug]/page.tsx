@@ -114,7 +114,7 @@ export default function Page() {
           ${project.COUNT}`}
           >
             <span className={`mb-4 md:mb-8 font-bold ${montserratt.className}`}>
-              Homes
+              {localizedMessages.PROJECT_DETAILS_HOMES}
             </span>
             <p>{project.COUNT}</p>
           </div>
@@ -244,7 +244,7 @@ export default function Page() {
           >
             <div className="flex flex-col ">
               <h3 className="m-auto text-white mb-4">
-                {localizedMessages.LEARN_MORE}
+                {project.HOME_OWNER_CARE_HEADER}
               </h3>
               <Button
                 style="m-auto h-fit"

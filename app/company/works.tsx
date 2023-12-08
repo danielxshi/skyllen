@@ -70,7 +70,7 @@ const Works = ({ style }: { style?: string }) => (
               </WorkBleed>
               <WorkBleed progress={progress}>
                 <div
-                  className={`project-card-content w-screen md:w-2/4 md:p-16 md:px-5 md:w-w-screen-1/2 ${style}`}
+                  className={`project-card-content w-screen md:p-16 md:px-5 md:w-w-screen-1/2 ${style}`}
                 >
                   <div className="justify-between flex flex-col h-5/6 pt-16 md:pt-16 md:h-full content-container container">
                     <div>
