@@ -78,7 +78,7 @@ const ch = {
   COMPANY_PILLAR_TWO_PARAGRAPH_2:
     "团队集结了从业经验丰富的专业人士，不断改善调研与开发进程、创意方案及满足不同需求，终能呈现高于行业水准的优质成果。 ",
   COMPANY_PILLAR_THREE_TITLE: "革新",
-  COMPANY_PILLAR_THREE_PARAGRAPH_1: "丰饶雅致的生活环境源于超前的规划和设计",
+  COMPANY_PILLAR_THREE_PARAGRAPH_1: "丰饶雅致的生活环境源于超前的规划和设计。",
   COMPANY_PILLAR_THREE_PARAGRAPH_2:
     "Skyllen团队致力于帮助客户将理想住宅的愿景变得触手可及。“变革创新，与时俱进”是Skyllen早在公司成立初期便奠定的发展基调，并通过严谨的发展规划，使杰出的设计与现代化生活体验呈现于每个开发项目之中。 ",
   COMPANY_TRAIN_SECTION_PARAGRAPH:
@@ -172,7 +172,7 @@ const ch_project1 = {
   TYPE: "Office",
   COUNT: "hidden",
   STATUS: "现正招租",
-  ESTIMATE: "Completed",
+  ESTIMATE: "已完工",
   LOCATION: "温哥华｜基斯兰奴社区, BC",
   PROJECT_DESCRIPTION:
     "一个充满活力的四层办公中心，于基斯兰奴的商业核心区域提供窗明几净，采光绝佳的展厅与办公场所。",
