@@ -729,9 +729,42 @@ label,
 }
 
 form {
-  // width: 30rem;
-  // max-width: 30rem;
   position: relative;
+}
+
+.placeholder span {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.form-select-wrapper {
+  border-bottom: 1px solid #0b0b0b;
+  .form-select {
+    width: 100%;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    appearance: none;
+  }
+}
+select {
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  opacity: 70%;
+  color: #191919;
+  // margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+select {
+  outline: none;
 }
 
 input,
@@ -1181,7 +1214,6 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
-
   input,
   textarea,
   label {

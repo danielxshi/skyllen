@@ -110,7 +110,7 @@ const ch = {
   TEST_PROJECT_618_EXCERPT: "Community · Convienence",
   TEST_PROJECT_618_SLUG: "618-carnavron",
   TEST_PROJECT_618_COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
-  TEST_PROJECT_618_TYPE: "Residential | Office | Retail",
+  TEST_PROJECT_618_TYPE: "住宅空间｜办公空间｜底层商铺",
   TEST_PROJECT_618_COUNT: "262",
   TEST_PROJECT_618_STATUS: "Register Now",
   TEST_PROJECT_618_ESTIMATE: "Completed",

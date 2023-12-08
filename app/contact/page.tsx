@@ -11,6 +11,7 @@ import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import test from "../images/SkyllenSign.webp";
 import { getLocalizedMessages } from "@/src/i18n";
+import { useState, useEffect } from "react";
 
 const localizedMessages = getLocalizedMessages();
 
@@ -24,10 +25,9 @@ const montserratt = localFont({
   ],
 });
 
-
 type Props = {
   field: string;
-}
+};
 
 const renderSwitch = (params) => {
   const keys = Object.keys(params);
@@ -57,7 +57,29 @@ const renderSwitch = (params) => {
   }
 };
 
+// Define a function to be executed when the select option changes
+function handleSelectChange(event: Event) {
+  // Get the selected value
+  const selectedValue = (event.target as HTMLSelectElement).value;
+
+  // Perform actions based on the selected value
+  console.log(`Selected option: ${selectedValue}`);
+
+  // Add your registration logic here or call another function
+  // based on the selected option.
+}
+
+// Add an event listener to the select element
+const selectElement = document.getElementById('mySelect') as HTMLSelectElement | null;
+
+if (selectElement) {
+  selectElement.addEventListener('change', handleSelectChange);
+}
+
+
 export default function Contact() {
+  const [hidden, setHidden] = useState(true);
+  const [select, setSelect] = useState("b");
   async function handleOnSubmit(e) {
     e.preventDefault();
     const formData = {};
@@ -68,7 +90,7 @@ export default function Contact() {
     console.log(formData);
   }
 
-  console.log(FooterMessages);
+  console.log(select.valueOf)
   return (
     <>
       <ParallaxBG url="../images/SkyllenSign.webp">
@@ -117,39 +139,70 @@ export default function Contact() {
                 placeholder="Your Email Address"
                 required
               />
-              <label className="required" htmlFor="email">
+              <label className="required">
                 {localizedMessages.CONTACT_FORM_PHONE}
               </label>
               <input
                 aria-required="true"
-                type="email"
-                id="email"
-                name="email"
+                // type="email"
+                // id="email"
+                // name="email"
                 placeholder="Your Phone"
                 required
               />
-              <label className="required" htmlFor="email">
+              <label className="required">
                 {localizedMessages.CONTACT_FORM_POSTAL_CODE}
               </label>
               <input
                 aria-required="true"
-                type="email"
-                id="email"
-                name="email"
+                type="text"
+                // id="email"
+                // name="email"
                 placeholder="Your Postal Code"
                 required
               />
-              <label className="required" htmlFor="email">
+
+              <label className="required">
                 {localizedMessages.CONTACT_FORM_Q_REALTOR}
               </label>
-              <input
-                aria-required="true"
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Company"
-                required
-              />
+              <div className="flex flex-row form-select-wrapper my-4 ">
+                {" "}
+                <select
+                  name="agent"
+                  id="mySelect"
+                  className="form-select"
+                  required
+                >
+                  <option
+                    // value={value}
+                    onChange={(e) => {
+                      setSelect(e.target.value);
+                    }}
+                    value="Select Option"
+                  >Select YES/NO</option>
+                  <option value="true">Yes</option>
+                  <option value="false">No</option>
+                  
+                </select>
+              </div>
+
+              <motion.div
+                // className={` ${hidden ? "hidden " : "flex  "}`}
+                animate={hidden ? "hidden" : "visible"}
+              >
+                <label className="required">
+                  {localizedMessages.CONTACT_FORM_Q_REALTOR}
+                </label>
+                <input
+                  aria-required="true"
+                  type="text"
+                  // id="email"
+                  // name="email"
+                  placeholder="Your Company"
+                  required
+                />
+              </motion.div>
+
               <div className="disclaimer w-fit flex align-middle items-center flex-row">
                 <input
                   aria-required="true"
@@ -159,20 +212,10 @@ export default function Contact() {
                   required
                   className="w-fit h-4 m-auto self-center"
                 />
-                <label className="required ml-4" htmlFor="email">
+                <label className="required ml-4">
                   {localizedMessages.CONTACT_FORM_DISCLAIMER}
                 </label>
               </div>
-
-              {/* <select id="cars" name="cars">
-                <option value="volvo">{localizedMessages.YES}</option>
-                <option value="saab">{localizedMessages.NO}</option>
-              </select> */}
-              {/* <label className="required"  htmlFor="email">Email Address</label>
-  <input
-  aria-required="true" type="email" id="email" name="email" placeholder="Your Email Address" required>
-      <label className="required"  htmlFor="message">Message</label>
-  <textarea rows="6" placeholder="Your Message" id="message" name="message" required></textarea> */}
 
               <motion.div
                 initial={{
