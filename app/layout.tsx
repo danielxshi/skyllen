@@ -16,6 +16,7 @@ import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
 import { BrowserRouter } from "react-router-dom";
 import FooterImg from "../public/images/dec7/Footer1.webp"
+import ParallaxFooter from "./components/ParallaxFooter";
 
 const localizedMessages = getLocalizedMessages();
 
@@ -226,12 +227,12 @@ export default function RootLayout({
                 {children}
               </motion.main>
 
-              <ParallaxBG url="https://i.imgur.com/7JJd6so.png">
+              <ParallaxFooter url="https://i.imgur.com/eXGmxHr.png">
                 {/* <div className="parallax-bg z-0">
         <ContentfulImage src={props.url} fill={true} />
       </div> */}
                 <Footer />
-              </ParallaxBG>
+              </ParallaxFooter>
             </section>
           </body>
         </html>
