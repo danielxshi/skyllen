@@ -93,11 +93,10 @@ export default function Page() {
                 <ContentfulImage src={Logo} fill={true} quality={85} />
               </div>
             </div>
-            <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3 text-white">
-              <p className="pb-8">
-                {localizedMessages.COMPANY_SECTION_PARAGRAPH_1}
+            <div className="content col-start-1 col-span-full md:col-start-5 md:col-span-3 text-white flex">
+              <p className="pb-8 m-auto h-fit flex justify-center align-middle">
+                {localizedMessages.COMPANY_TRAIN_SECTION_PARAGRAPH}
               </p>
-              <p>{localizedMessages.COMPANY_SECTION_PARAGRAPH_2}</p>
             </div>
           </div>
         </ParallaxFooter>

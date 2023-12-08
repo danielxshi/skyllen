@@ -133,6 +133,25 @@ header {
       .lang-btn {
         font-size: 1.2rem;
         margin-right: $sm-space;
+        padding: 0.35rem;
+        border-width: 1px;
+        border-color: white;
+        border: solid 1px;
+      }
+      .lang-btn:hover {
+        color: linear-gradient(
+          to top,
+          #c1dce7,
+          #8ab3c3 18.75%,
+          #8ab3c3 29.69%,
+          rgba(111, 148, 164, 0.8) 78.57%,
+          #bdd9e4
+        );
+        color: #8ab3c3;
+        border-color: #8ab3c3;
+        box-shadow: #0b0b0b;
+        transition: 0.3s ease-in-out;
+        // background: $white;
       }
       align-items: center;
       display: flex;
@@ -230,6 +249,7 @@ header {
             line-height: 100%; /* 5.95625rem */
             letter-spacing: -0.11931rem;
             display: block;
+            width: 100%;
             ul {
               margin: 0;
               padding: 0;
@@ -239,9 +259,13 @@ header {
               li {
                 list-style: none;
                 font-weight: 700;
-
+                position: relative;
+                display: flex;
+                justify-content: center;
                 height: 3rem;
                 a {
+                  text-align: center;
+                  width: 100%;
                   position: absolute;
                   white-space: nowrap;
                   color: #fff;
@@ -277,7 +301,7 @@ header {
           }
         }
         .locations {
-          position: absolute;
+          // position: absolute;
           bottom: 10vh;
           color: #fff;
           margin-top: 16px;
@@ -504,6 +528,10 @@ header {
     height: 30rem;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20vw;
+  }
+  .project-card-content {
+    justify-content: center;
   }
 }
 
@@ -733,6 +761,15 @@ textarea {
   padding: 0.5rem 0;
   margin-bottom: 1rem;
   outline: none;
+  color: $black;
+}
+
+input::before {
+  opacity: 0.5;
+}
+
+input::after {
+  opacity: 1 !important;
 }
 
 textarea {
@@ -866,12 +903,23 @@ input:checked + .slider:before {
     height: fit-content;
   }
 }
+input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container input:focus {
+  border-color: #57aecd;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.082);
+  // border-radius: 0.2rem;
+}
 
 .form-container {
   input {
-    opacity: 0.5;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     font-weight: 400;
     font-size: 0.9rem;
+    // border-radius: 0.2rem;
   }
   .btn-wrap {
     margin-left: auto;
@@ -1088,15 +1136,10 @@ img {
     height: 5.5vw !important;
     a {
       font-size: 4.5vw !important;
-      
+
       text-align: center;
       line-height: 140%;
       width: 100%;
-    }
-  }
-  .locations {
-    a {
-      // font-size: $med-font !important;
     }
   }
 }

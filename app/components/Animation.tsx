@@ -57,7 +57,7 @@ export const handleHover = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEve
   gsap.to(e.target, {
     duration: 0.3,
     y: 3,
-    skewX: 4,
+    skewX: -4,
     ease: "power1.inOut"
   });
 };

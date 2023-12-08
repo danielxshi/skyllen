@@ -1,5 +1,5 @@
 //Represents Slug Nav
-"use client"
+"use client";
 
 import Link from "next/link";
 import React, { Component } from "react";
@@ -27,6 +27,7 @@ class SlugNav extends Component<Props, any> {
   };
   render() {
     const locale = getLocale();
+    console.log(locale);
     return (
       // <AnimatePresence>
       <Navbar>
@@ -60,7 +61,7 @@ class SlugNav extends Component<Props, any> {
                   onClick={() => localeClicked()}
                   className="z-10 text-white text-lg lang-btn uppercase"
                 >
-                  {locale}
+                  {locale == "en" ? "中文" : <p>EN</p>}
                 </button>
 
                 <button

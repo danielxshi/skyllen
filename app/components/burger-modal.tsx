@@ -331,63 +331,86 @@ export const BurgerModal = ({
                         >
                           <div className="wrapper">
                             <div className="menu-links">
-                              <nav>
-                                <ul>
-                                  <li>
-                                    <Link
-                                      onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line3 = el)}
-                                      href="/projects"
-                                      onClick={() => {
-                                        ListClick.onClick();
-                                      }}
-                                    >
-                                      {localizedMessages.PROJECT}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link
-                                      onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line1 = el)}
-                                      href="/company"
-                                      onClick={() => {
-                                        ListClick.onClick();
-                                      }}
-                                    >
-                                      {localizedMessages.COMPANY}
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link
-                                      onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line2 = el)}
-                                      href="/news"
-                                      onClick={() => {
-                                        ListClick.onClick();
-                                      }}
-                                    >
-                                      {localizedMessages.NEWS}
-                                    </Link>
-                                  </li>
+                              <div className="flex flex-col h-fit w-full">
+                                <nav>
+                                  <ul>
+                                    <li>
+                                      <Link
+                                        onMouseEnter={(e) => handleHover(e)}
+                                        onMouseOut={(e) => handleHoverExit(e)}
+                                        ref={(el) => (line3 = el)}
+                                        href="/projects"
+                                        onClick={() => {
+                                          ListClick.onClick();
+                                        }}
+                                      >
+                                        {localizedMessages.PROJECT}
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link
+                                        onMouseEnter={(e) => handleHover(e)}
+                                        onMouseOut={(e) => handleHoverExit(e)}
+                                        ref={(el) => (line1 = el)}
+                                        href="/company"
+                                        onClick={() => {
+                                          ListClick.onClick();
+                                        }}
+                                      >
+                                        {localizedMessages.COMPANY}
+                                      </Link>
+                                    </li>
+                                    <li>
+                                      <Link
+                                        onMouseEnter={(e) => handleHover(e)}
+                                        onMouseOut={(e) => handleHoverExit(e)}
+                                        ref={(el) => (line2 = el)}
+                                        href="/news"
+                                        onClick={() => {
+                                          ListClick.onClick();
+                                        }}
+                                      >
+                                        {localizedMessages.NEWS}
+                                      </Link>
+                                    </li>
 
-                                  <li>
-                                    <Link
-                                      onMouseEnter={(e) => handleHover(e)}
-                                      onMouseOut={(e) => handleHoverExit(e)}
-                                      ref={(el) => (line3 = el)}
-                                      href="/contact"
-                                      onClick={() => {
-                                        ListClick.onClick();
-                                      }}
-                                    >
-                                      {localizedMessages.CONTACT}
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </nav>
+                                    <li>
+                                      <Link
+                                        onMouseEnter={(e) => handleHover(e)}
+                                        onMouseOut={(e) => handleHoverExit(e)}
+                                        ref={(el) => (line3 = el)}
+                                        href="/contact"
+                                        onClick={() => {
+                                          ListClick.onClick();
+                                        }}
+                                      >
+                                        {localizedMessages.CONTACT}
+                                      </Link>
+                                    </li>
+                                  </ul>
+                                </nav>
+
+                                <div className="locations md:block hidden">
+                                  <div className="location-content ">
+                                    {cities.map((el) => (
+                                      <Link
+                                        onClick={() => {
+                                          ListClick.onClick();
+                                        }}
+                                        href={el.url}
+                                        onMouseEnter={() =>
+                                          handleCity(el.image, cityBackground)
+                                        }
+                                        onMouseOut={() =>
+                                          handleCityReturn(cityBackground)
+                                        }
+                                      >
+                                        {el.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
 
                               <div className="info w-full">
                                 {FooterMessages.FooterItems.map(

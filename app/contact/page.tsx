@@ -145,6 +145,20 @@ export default function Contact() {
                 placeholder="Your Company"
                 required
               />
+              <div className="">
+                <label className="required" htmlFor="email">
+                  {localizedMessages.CONTACT_FORM_Q_REALTOR}
+                </label>
+                <input
+                  aria-required="true"
+                  type="checkbox"
+                  id="email"
+                  name="email"
+                  placeholder="Your Company"
+                  required
+                />
+              </div>
+
               {/* <select id="cars" name="cars">
                 <option value="volvo">{localizedMessages.YES}</option>
                 <option value="saab">{localizedMessages.NO}</option>
