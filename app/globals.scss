@@ -596,7 +596,8 @@ header {
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    width: fit-content;
+    // width: fit-content;
+    width: 100%;
   }
 }
 

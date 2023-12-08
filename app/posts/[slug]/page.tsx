@@ -66,6 +66,9 @@ export default function Page() {
   //   let dataValue2 = Object.values(post.projectDetails);
   // console.log("swag ID" + id);
   // console.log("swag PATH" + PROJECT_PATHNAME_1);
+  console.log(project.HIDE_CARE)
+  console.log(project.WEBSITE_TEXT)
+
 
   return (
     <>
@@ -221,9 +224,9 @@ export default function Page() {
         </div>
       </PageSection>
 
-      <div className={`py-64 ${project.HOMEOWNER_CARE}`}>
+      <div className={`py-32 ${project.HIDE_CARE}`}>
         <PageSection
-          style={`container flex py-64 md:pb-32  relative h-screen-3/4 relative w-full md:grid md:grid-cols-9 ${project.HOMEOWNER_CARE}`}
+          style={`container flex md:pb-32  relative h-screen-3/4 relative w-full md:grid md:grid-cols-9 ${project.HOMEOWNER_CARE}`}
         >
           <div className="hover:cursor-pointer flex justify-center items-center h-full md:grid-start-1 md:col-span-5 relative">
             {/* <div className="bg-black/[0.4] h-full w-full z-100 "> </div> */}

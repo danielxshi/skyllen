@@ -87,11 +87,10 @@ export default function Page() {
     <div className="project-page">
       {/* Insert background image */}
       <Parallax
-        blur={{ min: -20, max: 15 }}
         bgImage="https://i.imgur.com/D5u2JE0.jpg"
         bgImageAlt="the dog"
         className=""
-        strength={-100}
+        strength={-300}
       >
         <Banner
           style="min-h-screen flex"

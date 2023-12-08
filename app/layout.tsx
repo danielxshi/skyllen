@@ -226,7 +226,7 @@ export default function RootLayout({
                 {children}
               </motion.main>
 
-              <ParallaxBG url="https://i.imgur.com/kEUkm79.png">
+              <ParallaxBG url="https://i.imgur.com/7JJd6so.png">
                 {/* <div className="parallax-bg z-0">
         <ContentfulImage src={props.url} fill={true} />
       </div> */}

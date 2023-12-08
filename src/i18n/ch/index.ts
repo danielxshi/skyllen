@@ -160,7 +160,7 @@ const ch_project0 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/PBS1qoj.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/sie7QhV.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/Q2hfWf2.jpg",
-  HOMEOWNER_CARE: "",
+  HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "",
 } satisfies Translation;
 
@@ -192,7 +192,7 @@ const ch_project1 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/HfhKfI9.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/TgNvkys.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/zQU5GRI.jpg",
-  HOMEOWNER_CARE: "hidden",
+  HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "",
 } satisfies Translation;
 
@@ -225,7 +225,7 @@ const ch_project2 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
-  HOMEOWNER_CARE: "hidden",
+  HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "hidden",
 } satisfies Translation;
 

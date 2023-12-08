@@ -20,11 +20,11 @@ const ParallaxBG = ({ children, style, url }: Props) => {
 
 
       <Parallax
-        // blur={{ min: -20, max: 15 }}
+        // blur={{ min: 0, max: 5 }}
         bgImage={url}
         bgImageAlt="the dog"
         className=""
-        strength={-100}
+        strength={-300}
       >
         {children}
       </Parallax>

@@ -52,15 +52,19 @@ const renderSwitch = (params) => {
   }
 };
 
-export default function Contact() {
+type Props = {
+  field?: string;
+};
+
+const Contact = ({ field }: Props) => {
   async function handleOnSubmit(e) {
     e.preventDefault();
     const formData = {};
-    // Array.from(e.currentTarget.elements).forEach(field => {
-    //   if(!field.name) return;
+    // Array.from(e.currentTarget.elements).forEach((field) => {
+    //   if (!field.name) return;
     //   formData[field.name] = field.value;
     // });
-    // console.log(formData);
+    console.log(formData);
   }
 
   console.log(FooterMessages);
@@ -206,4 +210,6 @@ export default function Contact() {
       </PageSection>
     </>
   );
-}
+};
+
+export default Contact;
