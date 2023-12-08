@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ContentfulImage from "@/lib/contentful-image";
 import Link from "next/link";
 import localFont from "next/font/local";
-import test from "../fonts/montserrat/"
+
 
 
 const montserrat = localFont({
