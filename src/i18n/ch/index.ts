@@ -162,7 +162,7 @@ const ch_project0 = {
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/Q2hfWf2.jpg",
   HOME_OWNER_CARE_HEADER: "业主服务",
   HOMEOWNER_CARE_TEXT: "具体详情",
-  HIDE_CARE: "hidden",
+  HIDE_CARE: "",
   HIDDEN_PROJECT: "",
 } satisfies Translation;
 
