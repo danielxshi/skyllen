@@ -188,7 +188,7 @@ export default function Contact() {
 
               <motion.div
                 // className={` ${hidden ? "hidden " : "flex  "}`}
-                animate={hidden ? "hidden" : "visible"}
+                // animate={hidden ? "hidden" : "visible"}
               >
                 <label className="required">
                   {localizedMessages.CONTACT_FORM_Q_REALTOR}
