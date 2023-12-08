@@ -4,8 +4,10 @@ const FooterItems = [
       content: [
         {
           email: "info@skyellenpacific.com",
-          address: "430 - 1650 WEST 2ND AVENUE",
-          city: "VANCOUVER, BC V6J 1H4",
+          address: "430 - 1650", 
+          address2: "WEST 2ND AVENUE",
+          city: "VANCOUVER, BC",
+          postal: "V6J 1H4",
           phone: "+1 604 629 8402",
         },
       ],

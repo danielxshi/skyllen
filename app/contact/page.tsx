@@ -44,8 +44,8 @@ const renderSwitch = (params) => {
             {test2.map((item, index) => (
               <div key={index}>
                 <li>{item["email"]}</li>
-                <li>{item["address"]}</li>
-                <li>{item["city"]}</li>
+                <li>{item["address"]}&nbsp;{item["address2"]}</li>
+                <li>{item["city"]}&nbsp;{item["postal"]}</li>
                 <li>{item["phone"]}</li>
               </div>
             ))}

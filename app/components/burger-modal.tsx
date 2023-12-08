@@ -182,10 +182,10 @@ export const renderSwitch2 = (
                   </div>
                   <div className="mb-0 w-2/6">
                     <li className="underscore-cta mb-0 text-right">
-                      {item["address"]}
+                      {item["address"]} <br className="md:hidden"/> {item["address2"]}
                     </li>
                     <li className="underscore-cta mb-0 text-right">
-                      {item["city"]}
+                      {item["city"]} <br className="md:hidden"/> {item["postal"]}
                     </li>
                   </div>
                 </>
@@ -401,8 +401,8 @@ export const BurgerModal = ({
                                   </ul>
                                 </nav>
 
-                                <div className="locations md:hidden block pt-8">
-                                  <div className="location-content ">
+                                <div className="locations md:hidden block pt-8 mobile-locations">
+                                  <div className="location-content flex flex-col justify-center w-full">
                                     {cities.map((el) => (
                                       <Link
                                         onClick={() => {

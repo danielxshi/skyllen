@@ -241,7 +241,7 @@ header {
 
             text-align: center;
             width: fit-content;
-            text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.35);
+            text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
             font-size: 3rem;
             font-style: normal;
             // font-weight: 700;
@@ -283,7 +283,7 @@ header {
             z-index: 0;
             display: block;
             position: absolute;
-            bottom: 10vh;
+            bottom: 2rem;
             right: 0;
             li {
               // text-align: right;
@@ -1198,6 +1198,14 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
+  .mobile-locations {
+    a {
+      margin: auto !important;
+      width: fit-content !important;
+      margin-bottom: 1rem !important;
+      font-size: 1rem !important;
+    }
+  }
   .disclaimer label {
     font-size: 0.8rem !important;
     text-transform: none;
@@ -1232,6 +1240,9 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
+  .menu-links nav {
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.35);
+  }
   .disclaimer {
     width: 40vw;
   }

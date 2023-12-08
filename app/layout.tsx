@@ -67,8 +67,8 @@ export const renderSwitch = (params: { [x: string]: any }) => {
             {test2.map((item, index) => (
               <div key={index}>
                 <li>{item["email"]}</li>
-                <li className="">{item["address"]}</li>
-                <li className="">{item["city"]}</li>
+                <li className="">{item["address"]}&nbsp;{item["address2"]}</li>
+                <li className="">{item["city"]}&nbsp;{item["postal"]}</li>
                 <li className="">{item["phone"]}</li>
               </div>
             ))}
