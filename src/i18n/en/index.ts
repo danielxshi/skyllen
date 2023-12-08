@@ -37,13 +37,13 @@ const en = {
   CONTACT_FORM_EMAIL: "EMAIL ADDRESS",
   CONTACT_FORM_PHONE: "PHONE",
   CONTACT_FORM_POSTAL_CODE: "POSTAL CODE",
+  CONTACT_FORM_Q_SELECT_TEXT: "EMPLOYER/BROKERAGE",
   CONTACT_FORM_Q_REALTOR: "ARE YOU A REALTOR",
-  YES: "yes",
-  NO: "no",
+  YES: "Yes",
+  NO: "No",
   CONTACT_FORM_EMPLOYER: "Employer/Brokerage", // not found
   CONTACT_FORM_DISCLAIMER:
     "I hereby consent to receive emails from Skyllen Pacific and their respective current and future affiliates and subsidiaries. This may include pricing, floor plans for current and future products, sales updates, event invitations, announcements, corporate newsletters, and other contact. I understand that I can unsubscribe at any time.", // not found
-
 
   // COMMON
   LEARN_MORE: "LEARN MORE",
@@ -170,9 +170,9 @@ const en_project0 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/PBS1qoj.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/sie7QhV.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/Q2hfWf2.jpg",
-  HOME_OWNER_CARE_HEADER: "Homeowner Care",
-  HOMEOWNER_CARE_TEXT: "Learn More",  
-  HOMEOWNER_CARE: "flex",  
+  HOME_OWNER_CARE_HEADER: "HOMEOWNER CARE",
+  HOMEOWNER_CARE_TEXT: "LEARN MORE",
+  HOMEOWNER_CARE: "flex",
   HIDE_CARE: "",
   HIDDEN_PROJECT: "",
 } satisfies BaseTranslation;
@@ -205,8 +205,8 @@ const en_project1 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/HfhKfI9.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/TgNvkys.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/zQU5GRI.jpg",
-  HOME_OWNER_CARE_HEADER: "Homeowner Care",
-  HOMEOWNER_CARE_TEXT: "Learn More",  
+  HOME_OWNER_CARE_HEADER: "HOMEOWNER CARE",
+  HOMEOWNER_CARE_TEXT: "LEARN MORE",
   HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "",
 } satisfies BaseTranslation;
@@ -221,8 +221,7 @@ const en_project2 = {
   STATUS: "Coming Soon",
   ESTIMATE: "2026",
   LOCATION: "New Westminster, BC",
-  PROJECT_DESCRIPTION:
-    "Coming soon to downtown Vancouver",
+  PROJECT_DESCRIPTION: "Coming soon to downtown Vancouver",
   BUBBLE_ONE:
     "Located in the heart of a pedestrian-oriented, transit-friendly community, 618 Carnarvon is conveniently set one block from Columbia Street, downtown New Westminster’s main street.",
   BUBBLE_TWO:
@@ -239,8 +238,8 @@ const en_project2 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
-  HOME_OWNER_CARE_HEADER: "Homeowner Care",
-  HOMEOWNER_CARE_TEXT: "Learn More",  
+  HOME_OWNER_CARE_HEADER: "HOMEOWNER CARE",
+  HOMEOWNER_CARE_TEXT: "LEARN MORE",
   HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "hidden",
 } satisfies BaseTranslation;

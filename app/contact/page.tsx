@@ -179,9 +179,9 @@ export default function Contact() {
                     //   setSelect(e.target.value);
                     // }}
                     value="Select Option"
-                  >Select YES/NO</option>
-                  <option value="true">Yes</option>
-                  <option value="false">No</option>
+                  >{localizedMessages.YES}/{localizedMessages.NO}</option>
+                  <option value="true">{localizedMessages.YES}</option>
+                  <option value="false">{localizedMessages.NO}</option>
                   
                 </select>
               </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                 // animate={hidden ? "hidden" : "visible"}
               >
                 <label className="required">
-                  {localizedMessages.CONTACT_FORM_Q_REALTOR}
+                  {localizedMessages.CONTACT_FORM_Q_SELECT_TEXT}
                 </label>
                 <input
                   aria-required="true"
@@ -212,7 +212,7 @@ export default function Contact() {
                   required
                   className="w-fit h-4 m-auto self-center"
                 />
-                <label className="required ml-4">
+                <label className="required ml-4 w-full">
                   {localizedMessages.CONTACT_FORM_DISCLAIMER}
                 </label>
               </div>

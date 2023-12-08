@@ -345,9 +345,7 @@ export const BurgerModal = ({
                               <div className="flex flex-col h-fit w-full">
                                 <nav>
                                   <ul>
-                                    <li
-                                      className={` ${quicksand.className}`}
-                                    >
+                                    <li className={` ${quicksand.className}`}>
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -360,9 +358,7 @@ export const BurgerModal = ({
                                         {localizedMessages.PROJECT}
                                       </Link>
                                     </li>
-                                    <li
-                                      className={` ${quicksand.className}`}
-                                    >
+                                    <li className={` ${quicksand.className}`}>
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -375,9 +371,7 @@ export const BurgerModal = ({
                                         {localizedMessages.COMPANY}
                                       </Link>
                                     </li>
-                                    <li
-                                      className={` ${quicksand.className}`}
-                                    >
+                                    <li className={` ${quicksand.className}`}>
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -391,9 +385,7 @@ export const BurgerModal = ({
                                       </Link>
                                     </li>
 
-                                    <li
-                                      className={` ${quicksand.className}`}
-                                    >
+                                    <li className={` ${quicksand.className}`}>
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -408,6 +400,27 @@ export const BurgerModal = ({
                                     </li>
                                   </ul>
                                 </nav>
+
+                                <div className="locations md:hidden block pt-8">
+                                  <div className="location-content ">
+                                    {cities.map((el) => (
+                                      <Link
+                                        onClick={() => {
+                                          ListClick.onClick();
+                                        }}
+                                        href={el.url}
+                                        // onMouseEnter={() =>
+                                        //   handleCity(el.image, cityBackground)
+                                        // }
+                                        // onMouseOut={() =>
+                                        //   handleCityReturn(cityBackground)
+                                        // }
+                                      >
+                                        {el.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
 
                                 <div className="locations md:block hidden">
                                   <div className="location-content ">

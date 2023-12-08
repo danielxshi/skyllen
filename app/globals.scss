@@ -933,10 +933,6 @@ input:checked + .slider:before {
   }
 }
 
-.disclaimer {
-  width: 40vw;
-}
-
 .news-content-container {
   .img-content {
     height: fit-content;
@@ -1196,6 +1192,25 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
+  label{
+    font-size: $base-font;
+  }
+  .disclaimer label{
+    font-size: 0.8rem !important;
+    text-transform: none;
+  }
+  .menu-links {
+    nav li {
+      height: 5.5vw * 1.5 !important;
+      a {
+        font-size: 4.5vw * 2 !important;
+
+        text-align: center;
+        line-height: 140%;
+        width: 100%;
+      }
+    }
+  }
   .logo img {
     scale: calc(0.8);
   }
@@ -1214,6 +1229,9 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
+  .disclaimer {
+    width: 40vw;
+  }
   input,
   textarea,
   label {

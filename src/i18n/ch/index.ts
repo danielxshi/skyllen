@@ -30,6 +30,7 @@ const ch = {
   CONTACT_FORM_EMAIL: "邮箱",
   CONTACT_FORM_PHONE: "手机",
   CONTACT_FORM_POSTAL_CODE: "邮政编码",
+  CONTACT_FORM_Q_SELECT_TEXT: "公司/经纪公司名称",
   CONTACT_FORM_Q_REALTOR: "您是地产经纪吗",
   YES: "是",
   NO: "不是",

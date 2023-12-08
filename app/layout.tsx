@@ -121,6 +121,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
               <>
                 <footer key={index}>
                   &copy; {item["text"]}&nbsp;{" "}
+                  <br className="md:hidden"/>
                   <Link href={item["url"]}>{item["copy"]}</Link>
                 </footer>
               </>
@@ -136,7 +137,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
 function Footer() {
   return (
     <footer className="text-white bg-accent-1 flex footer-container overflow-hidden">
-      <div className="content container grid-container">
+      <div className="content container md:grid-cols-8 ">
         {FooterMessages.FooterItems.map((item, index) => {
           return <>{renderSwitch(item)}</>;
         })}
