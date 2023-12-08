@@ -11,7 +11,7 @@ import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import test from "../images/SkyllenSign.webp";
 import { getLocalizedMessages } from "@/src/i18n";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const localizedMessages = getLocalizedMessages();
 
@@ -58,28 +58,28 @@ const renderSwitch = (params) => {
 };
 
 // Define a function to be executed when the select option changes
-function handleSelectChange(event: Event) {
-  // Get the selected value
-  const selectedValue = (event.target as HTMLSelectElement).value;
+// function handleSelectChange(event: Event) {
+//   // Get the selected value
+//   const selectedValue = (event.target as HTMLSelectElement).value;
 
-  // Perform actions based on the selected value
-  console.log(`Selected option: ${selectedValue}`);
+//   // Perform actions based on the selected value
+//   console.log(`Selected option: ${selectedValue}`);
 
-  // Add your registration logic here or call another function
-  // based on the selected option.
-}
+//   // Add your registration logic here or call another function
+//   // based on the selected option.
+// }
 
-// Add an event listener to the select element
-const selectElement = document.getElementById('mySelect') as HTMLSelectElement | null;
+// // Add an event listener to the select element
+// const selectElement = document.getElementById('mySelect') as HTMLSelectElement | null;
 
-if (selectElement) {
-  selectElement.addEventListener('change', handleSelectChange);
-}
+// if (selectElement) {
+//   selectElement.addEventListener('change', handleSelectChange);
+// }
 
 
 export default function Contact() {
   const [hidden, setHidden] = useState(true);
-  const [select, setSelect] = useState("b");
+  // const [select, setSelect] = useState("b");
   async function handleOnSubmit(e) {
     e.preventDefault();
     const formData = {};
@@ -90,7 +90,7 @@ export default function Contact() {
     console.log(formData);
   }
 
-  console.log(select.valueOf)
+  // console.log(select.valueOf)
   return (
     <>
       <ParallaxBG url="../images/SkyllenSign.webp">
