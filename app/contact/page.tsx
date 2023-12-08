@@ -78,7 +78,7 @@ const renderSwitch = (params) => {
 
 
 export default function Contact() {
-  const [hidden, setHidden] = useState(true);
+  // const [hidden, setHidden] = useState(true);
   // const [select, setSelect] = useState("b");
   async function handleOnSubmit(e) {
     e.preventDefault();
