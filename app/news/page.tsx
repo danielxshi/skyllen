@@ -47,7 +47,7 @@ const NewsContent = [
   },
   {
     // url: "/posts/cool-dogs",
-    name: "PENDRELL ST",
+    name: "EDITION",
     date: "12.17.23",
     url: "/article/pendrell-news",
     excerpt:

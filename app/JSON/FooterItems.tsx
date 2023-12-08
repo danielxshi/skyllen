@@ -23,7 +23,7 @@ const FooterItems = [
           url: "/posts/1650-on-second",
         },
         {
-          project: "Pendrell St",
+          project: "Edition",
           url: "/posts/pendrell-street",
         },
       ],

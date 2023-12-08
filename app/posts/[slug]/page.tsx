@@ -79,28 +79,28 @@ export default function Page() {
         <div className="md:flex md:w-full justify-between">
           <div className="md:mb-0 mb-8 flex flex-col">
             <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
-              Status
+              {localizedMessages.PROJECT_DETAILS_STATUS}
             </span>
             <p>{project.STATUS}</p>
           </div>
 
           <div className="md:mb-0 mb-8 flex flex-col">
             <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
-              Type
+              {localizedMessages.PROJECT_DETAILS_TYPE}
             </span>
             <p>{project.TYPE}</p>
           </div>
 
           <div className="md:mb-0 mb-8 flex flex-col">
             <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
-              Location
+              {localizedMessages.PROJECT_DETAILS_LOCATION}
             </span>
             <p>{project.LOCATION}</p>
           </div>
 
           <div className="md:mb-0 mb-8 flex flex-col">
             <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
-              Estimated Completion
+              {localizedMessages.PROJECT_DETAILS_ESTIMATE}
             </span>
             <p>{project.ESTIMATE}</p>
           </div>

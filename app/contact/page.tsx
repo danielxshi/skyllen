@@ -145,18 +145,18 @@ export default function Contact() {
                 placeholder="Your Company"
                 required
               />
-              <div className="">
-                <label className="required" htmlFor="email">
-                  {localizedMessages.CONTACT_FORM_Q_REALTOR}
-                </label>
+              <div className="disclaimer w-fit flex align-middle items-center flex-row">
                 <input
                   aria-required="true"
                   type="checkbox"
-                  id="email"
-                  name="email"
-                  placeholder="Your Company"
+                  id="checkbox"
+                  name="checkbox"
                   required
+                  className="w-fit h-4 m-auto self-center"
                 />
+                <label className="required ml-4" htmlFor="email">
+                  {localizedMessages.CONTACT_FORM_DISCLAIMER}
+                </label>
               </div>
 
               {/* <select id="cars" name="cars">

@@ -38,7 +38,7 @@ const cities = [
     url: "/posts/618-carnavron",
   },
   {
-    name: "PENDRELL ST",
+    name: "EDITION",
     image: gallery3,
     location: "Downtown Vancouver, BC",
     status: localizedMessages.COMING_SOON,
