@@ -251,7 +251,7 @@ export default function Page() {
                 url="
 https://app.tribehome.com/developments/1446303707191840768/loop"
               >
-                Homeowner Care
+                {project.HOMEOWNER_CARE_TEXT}
               </Button>
             </div>
             {/* <motion.span
