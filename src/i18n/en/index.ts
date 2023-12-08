@@ -170,6 +170,8 @@ const en_project0 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/PBS1qoj.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/sie7QhV.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/Q2hfWf2.jpg",
+  HOME_OWNER_CARE_HEADER: "Homeowner Care",
+  HOMEOWNER_CARE_TEXT: "Learn More",  
   HOMEOWNER_CARE: "flex",  
   HIDE_CARE: "",
   HIDDEN_PROJECT: "",
@@ -203,6 +205,8 @@ const en_project1 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/HfhKfI9.jpg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/TgNvkys.jpg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/zQU5GRI.jpg",
+  HOME_OWNER_CARE_HEADER: "Homeowner Care",
+  HOMEOWNER_CARE_TEXT: "Learn More",  
   HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "",
 } satisfies BaseTranslation;
@@ -235,6 +239,8 @@ const en_project2 = {
   PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FOUR: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_FIVE: "https://i.imgur.com/wYTCtRu.jpeg",
+  HOME_OWNER_CARE_HEADER: "Homeowner Care",
+  HOMEOWNER_CARE_TEXT: "Learn More",  
   HIDE_CARE: "hidden",
   HIDDEN_PROJECT: "hidden",
 } satisfies BaseTranslation;

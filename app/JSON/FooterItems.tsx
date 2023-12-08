@@ -48,7 +48,7 @@ const FooterItems = [
       content: [
         {
           text: "2024 Skyllen Pacific | All Rights Reserved",
-          copy: "| Site by A-Lab Creative",
+          copy: "| Site by ALab Creative",
           url: "https://www.alabcreative.com",
         },
       ],
