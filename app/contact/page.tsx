@@ -175,9 +175,9 @@ export default function Contact() {
                 >
                   <option
                     // value={value}
-                    onChange={(e) => {
-                      setSelect(e.target.value);
-                    }}
+                    // onChange={(e) => {
+                    //   setSelect(e.target.value);
+                    // }}
                     value="Select Option"
                   >Select YES/NO</option>
                   <option value="true">Yes</option>
