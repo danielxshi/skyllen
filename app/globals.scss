@@ -1198,6 +1198,12 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
+  .burger-menu {
+    * {
+      color: white;
+      font-size: 0.8rem;
+    }
+  }
   .mobile-locations {
     a {
       margin: auto !important;

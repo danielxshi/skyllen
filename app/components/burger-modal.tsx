@@ -150,49 +150,98 @@ export const renderSwitch2 = (
   switch (keys[0]) {
     case "contact":
       return (
-        <div className="footer-contact-container w-full flex">
-          <ul className="w-full flex justify-between">
-            {test2.map(
-              (
-                item: {
-                  [x: string]:
-                    | string
-                    | number
-                    | boolean
-                    | React.ReactElement<
-                        any,
-                        string | React.JSXElementConstructor<any>
-                      >
-                    | Iterable<React.ReactNode>
-                    | React.ReactPortal
-                    | React.PromiseLikeOfReactNode
-                    | null
-                    | undefined;
-                },
-                index: any
-              ) => (
-                <>
-                  <div className="mb-0">
-                    <li className="underscore-cta mb-0 text-left">
-                      {item["phone"]}
-                    </li>
-                    <li className="underscore-cta mb-0 text-left">
-                      {item["email"]}
-                    </li>
-                  </div>
-                  <div className="mb-0 w-2/6">
-                    <li className="underscore-cta mb-0 text-right">
-                      {item["address"]} <br className="md:hidden"/> {item["address2"]}
-                    </li>
-                    <li className="underscore-cta mb-0 text-right">
-                      {item["city"]} <br className="md:hidden"/> {item["postal"]}
-                    </li>
-                  </div>
-                </>
-              )
-            )}
-          </ul>
-        </div>
+        <>
+          {/* <div className="footer-contact-container w-full flex md:hidden">
+            <ul className="w-full flex justify-between">
+              {test2.map(
+                (
+                  item: {
+                    [x: string]:
+                      | string
+                      | number
+                      | boolean
+                      | React.ReactElement<
+                          any,
+                          string | React.JSXElementConstructor<any>
+                        >
+                      | Iterable<React.ReactNode>
+                      | React.ReactPortal
+                      | React.PromiseLikeOfReactNode
+                      | null
+                      | undefined;
+                  },
+                  index: any
+                ) => (
+                  <>
+                    <div className="mb-0">
+                      <li className="underscore-cta mb-0 text-left">
+                        {item["phone"]}
+                      </li>
+                      <li className="underscore-cta mb-0 text-left">
+                        {item["email"]}
+                      </li>
+                      <li className="underscore-cta mb-0 text-left">
+                        {item["address"]}
+                        &nbsp;
+                        {item["address2"]}
+                      </li>
+                      <li className="underscore-cta mb-0 text-left">
+                        {item["city"]} &nbsp;
+                        {item["postal"]}
+                      </li>
+                    </div>
+                  </>
+                )
+              )}
+            </ul>
+          </div> */}
+
+          <div className="footer-contact-container w-full flex">
+            <ul className="w-full flex justify-between">
+              {test2.map(
+                (
+                  item: {
+                    [x: string]:
+                      | string
+                      | number
+                      | boolean
+                      | React.ReactElement<
+                          any,
+                          string | React.JSXElementConstructor<any>
+                        >
+                      | Iterable<React.ReactNode>
+                      | React.ReactPortal
+                      | React.PromiseLikeOfReactNode
+                      | null
+                      | undefined;
+                  },
+                  index: any
+                ) => (
+                  <>
+                    <div className="mb-0">
+                      <li className="underscore-cta mb-0 text-left">
+                        {item["phone"]}
+                      </li>
+                      <li className="underscore-cta mb-0 text-left">
+                        {item["email"]}
+                      </li>
+                    </div>
+                    <div className="mb-0 w-2/6">
+                      <li className="underscore-cta mb-0 text-right">
+                        {item["address"]} <br className="md:hidden" />{" "}
+                        {item["address2"]}
+                      </li>
+                      <li className="underscore-cta mb-0 text-right">
+                        {item["city"]} <br className="md:hidden" />{" "}
+                        {item["postal"]}
+                      </li>
+                    </div>
+                  </>
+                )
+              )}
+            </ul>
+          </div>
+        </>
       );
 
     default:
@@ -401,7 +450,7 @@ export const BurgerModal = ({
                                   </ul>
                                 </nav>
 
-                                <div className="locations md:hidden block pt-8 mobile-locations">
+                                <div className="locations md:hidden block md:pt-8 pt-4 mobile-locations">
                                   <div className="location-content flex flex-col justify-center w-full">
                                     {cities.map((el) => (
                                       <Link
