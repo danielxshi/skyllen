@@ -25,7 +25,8 @@ export const WorkBleed: React.FC<{
   children: React.ReactNode;
 }> = ({ children, progress }) => {
   let translateY = Math.max(0, 50 - progress * 3 * 50);
-  if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50);
+  if (progress > 0.85) translateY 
+  // = Math.max(-50, -(progress - 0.85) * 2 * 50);
   return (
     <div
       className='h-screen absolute flex flex-col items-center justify-center text-3xl lg:text-3xl md:right-0 md:w-screen-1/2 projects-text-works-bleed-block test'
@@ -43,7 +44,8 @@ export const WorkBleedR: React.FC<{
   children: React.ReactNode;
 }> = ({ children, progress }) => {
   let translateY = Math.max(0, 50 - progress * 3 * 50);
-  if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50);
+  if (progress > 0.85) translateY 
+  // = Math.max(-50, -(progress - 0.85) * 2 * 50);
   return (
     <div
       className="h-screen absolute flex flex-col items-center justify-center text-3xl lg:text-3xl md:right-0"
@@ -62,7 +64,8 @@ export const WorkBleedProject: React.FC<{
   children: React.ReactNode;
 }> = ({ children, progress }) => {
   let translateY = Math.max(0, 50 - progress * 3 * 50);
-  if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50);
+  if (progress > 0.85) translateY 
+  // = Math.max(-50, -(progress - 0.85) * 2 * 50);
   return (
     <div
       className="md:w-full h-screen absolute flex flex-col items-center justify-center text-3xl lg:text-3xl "

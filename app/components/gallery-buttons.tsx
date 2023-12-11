@@ -19,13 +19,13 @@ export default function GalleryButton(props) {
   return (
     <div>
       <Link href={props.link}>
-        <div className="overflow-hidden mb-8">
+        <div className="overflow-hidden mb-8 ">
           <motion.div
             whileHover={{
               scale: 1.05,
               transition: { duration: 1 },
             }}
-            className="relative z-10 block overflow-hidden"
+            className="relative z-10 block overflow-hidden "
           >
             <div className="hover:cursor-pointer flex justify-center items-center h-full">
               <div className="bg-gradient"></div>
@@ -37,7 +37,7 @@ export default function GalleryButton(props) {
               />
             </div>
 
-            <div className="gallery-bg mb-8 flex z-0">
+            <div className="gallery-bg flex z-0">
               <motion.span
                 whileHover={{
                   scale: 0.85,

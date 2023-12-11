@@ -15,6 +15,7 @@ import projectImageL3 from "../images/pendrell-aerial.webp";
 import projectImageR3 from "../../public/images/pendrell/Hero-Pendrell.webp";
 import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
+import test from "../../public/images/dec7/P6.webp"
 
 const localizedMessages = getLocalizedMessages();
 
@@ -76,7 +77,7 @@ const projects = [
     name: "EDITION",
     page: 2,
     imageOne: projectImageL3,
-    imageTwo: projectImageR3,
+    imageTwo: test,
     link: "/posts/pendrell-street",
     description: localizedMessages.PROJECT_EDITION_EXCERPT,
   },

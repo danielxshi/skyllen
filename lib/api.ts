@@ -131,8 +131,8 @@ export async function getAllPostsLocalized(
       isDraftMode,
     );
   
-    // console.log("\n\n\ngetAllPosts: \n")
-    // console.dir(entries, { depth: null }); 
+
+
   
     return extractPostEntries(entries);
 }
@@ -177,8 +177,8 @@ export async function getPostAndMorePostsLocalized(
     preview
   );
 
-  // console.log("\n\n\ngetPostAndMorePosts: \n");
-  // console.dir(entries, { depth: null }); 
+
+
   
   return {
     post: extractPost(entry),

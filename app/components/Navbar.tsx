@@ -38,12 +38,12 @@ const Navbar = ({ children, ...props }) => {
       <motion.div
         initial={{ opacity: 0 }}
         variants={{
-          visible: { y: 0, opacity: 0.85 },
-          hidden: { y: "-100%" },
+          visible: { opacity: 0.85 },
+          hidden: { opacity: 0 },
         }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.95, ease: "easeInOut", delay: 0.25 }}
-        className={`navbar top-0 z-10 fixed h-24 w-screen z-20 ${
+        className={`navbar top-0 z-10 fixed h-20 w-screen z-20 ${
           hidden ? "bg-black/[0.88] " : "bg-black/[0.88]  "
         }`}
       ></motion.div>

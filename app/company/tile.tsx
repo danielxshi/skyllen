@@ -55,7 +55,7 @@ export const TileWrapper: React.FC<WrapperProps> = ({
 export const TileBackground: React.FC<{ children: any }> = ({
   children,
 }: any) => {
-  return <div className="absolute h-full w-full bg-black">{children}</div>;
+  return <div className="absolute h-full w-full ">{children}</div>;
 };
 
 export const TileContent: React.FC<{ children: any }> = ({ children }: any) => {

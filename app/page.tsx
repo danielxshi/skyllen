@@ -20,7 +20,7 @@ export default function Page() {
       <PageSection style={"h-fit pb-16"}>
         <ScrollParallaxVideo />
       </PageSection>
-      <PageSection style={"container min-h-screen pt-16 pb-16"}>
+      <PageSection style={"container pt-16 pb-16"}>
         <ProjectGallery>
           <Headline
             overline={localizedMessages.PROJECT_GALLERY_OVERLINE}

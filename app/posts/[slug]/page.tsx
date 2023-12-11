@@ -1,5 +1,4 @@
 "use client";
-// import { draftMode } from "next/headers";
 import { useLocation } from "react-router-dom";
 
 import PageSection from "@/app/components/page-section";
@@ -7,7 +6,7 @@ import ProjectGallery from "@/app/components/project-gallery";
 
 import ContentfulImage from "@/lib/contentful-image";
 import Headline from "@/app/components/headline";
-import HCIMG from "../../../public/images/dec7/iStock-1096578336.webp";
+import HCIMG from "../../../public/images/dec7/P7.webp";
 
 import { Markdown } from "@/lib/markdown";
 import Button from "@/app/components/Button/FillButton";
@@ -44,35 +43,18 @@ export default function Page() {
   let url = location;
   var id = url.substring(url.lastIndexOf("/" + 1));
 
-  // console.log("cool " + {location});
-
   const localizedProjects = getLocalizedProjects();
   let project;
   if (id == PROJECT_PATHNAME_0) {
     project = localizedProjects[0];
-    // console.log("win 1");
   } else if (id == PROJECT_PATHNAME_1) {
     project = localizedProjects[1];
-    // console.log("win 2")
   } else if (id == PROJECT_PATHNAME_2) {
     project = localizedProjects[2];
   } else project = localizedProjects[1];
 
-  //   const test = post.projectDetails["status"];
-
-  // Data from Contentful
-  //   let dataKeys = Object.keys(post.projectDetails["images"]);
-  //   let dataValue = Object.values(post.projectDetails["images"]);
-  //   let dataValue2 = Object.values(post.projectDetails);
-  // console.log("swag ID" + id);
-  // console.log("swag PATH" + PROJECT_PATHNAME_1);
-  console.log(project.HIDE_CARE)
-  console.log(project.WEBSITE_TEXT)
-
-
   return (
     <>
-      {/* <h1>test</h1> */}
       <Banner
         website={project.TYPE}
         title={project.TITLE}
@@ -82,7 +64,7 @@ export default function Page() {
         <div className="md:flex md:w-full justify-between">
           <div className="md:mb-0 mb-8 flex flex-col">
             <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
-              {localizedMessages.PROJECT_DETAILS_STATUS}
+              {localizedMessages.PROJECT_mDETAILS_STATUS}
             </span>
             <p>{project.STATUS}</p>
           </div>
@@ -108,7 +90,6 @@ export default function Page() {
             <p>{project.ESTIMATE}</p>
           </div>
 
-          {/* display NONE the class name should be "hidden" */}
           <div
             className={`flex flex-col 
           ${project.COUNT}`}
@@ -136,21 +117,25 @@ export default function Page() {
         >
           <div className="flex h-full md:col-start-1 md:col-span-3 col-span-full flex-col md:pb-0 pb-8">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
-              <ContentfulImage src={project.PROJECT_IMAGE_ONE} fill={true} />
+              <ContentfulImage
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="project image"
+                src={project.PROJECT_IMAGE_ONE}
+                fill={true}
+              />
             </div>
-            {/* <p className="mt-4 sub">
-              {project.BUBBLE_ONE}
-            </p> */}
           </div>
 
           <div className="flex md:col-start-5 md:col-span-3 flex-col col-span-full">
             <div className="md:mb-0 mb-4">
               <div className="w-full h-300 relative flex flex-col">
-                <ContentfulImage src={project.PROJECT_IMAGE_TWO} fill={true} />
+                <ContentfulImage
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  alt="project image"
+                  src={project.PROJECT_IMAGE_TWO}
+                  fill={true}
+                />
               </div>
-              {/* <p className="mt-4 sub">
-                {project.TYPE}
-              </p> */}
             </div>
 
             <div className="mt-auto md:w-300">
@@ -172,13 +157,11 @@ export default function Page() {
             <div>
               <div className="w-full h-450 relative flex flex-col">
                 <ContentfulImage
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   src={project.PROJECT_IMAGE_THREE}
                   fill={true}
                 />
               </div>
-              {/* <p className="mt-4 sub">
-                {project.TYPE}
-              </p> */}
             </div>
           </div>
         </PageSection>
@@ -188,21 +171,25 @@ export default function Page() {
         >
           <div className="flex h-full md:col-start-1 md:col-span-3 flex-col col-span-full md:pb-0 pb-8">
             <div className="w-full relative flex flex-col h-screen-3/4 ">
-              <ContentfulImage src={project.PROJECT_IMAGE_FOUR} fill={true} />
+              <ContentfulImage
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="project image"
+                src={project.PROJECT_IMAGE_FOUR}
+                fill={true}
+              />
             </div>
-            {/* <p className="mt-4 sub">
-              {project.TYPE}
-            </p> */}
           </div>
 
           <div className="flex  md:col-start-6 md:col-span-2 flex-col col-span-full">
             <div>
               <div className="w-full h-450 relative flex flex-col">
-                <ContentfulImage src={project.PROJECT_IMAGE_FIVE} fill={true} />
+                <ContentfulImage
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  alt="project image"
+                  src={project.PROJECT_IMAGE_FIVE}
+                  fill={true}
+                />
               </div>
-              {/* <p className="mt-4 sub">
-                {project.TYPE}
-              </p> */}
             </div>
 
             <div className="mt-auto pt-4">
@@ -212,13 +199,17 @@ export default function Page() {
         </PageSection>
       </div>
 
-      <PageSection style={"container md:pb-16 py-32 flex flex-col"}>
+      <PageSection style={"container py-16 md:py-32 flex flex-col"}>
         <div className="flex h-full relative w-11/12 m-auto">
-          <div className="w-full h-screen-3/4 ">
+          <div className="w-full h-fit ">
             <ContentfulImage
-              // src={require(project.RENDER)}
+              alt="project image"
               src={project.RENDER}
-              fill={true}
+              // fill={true}
+              height={1200}
+              width={1500}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: "fit" }}
             />
           </div>
         </div>
@@ -229,9 +220,8 @@ export default function Page() {
           style={`container flex md:pb-32  relative h-screen-3/4 relative w-full md:grid md:grid-cols-9 ${project.HOMEOWNER_CARE}`}
         >
           <div className="hover:cursor-pointer flex justify-center items-center h-full md:grid-start-1 md:col-span-5 relative">
-            {/* <div className="bg-black/[0.4] h-full w-full z-100 "> </div> */}
-
             <ContentfulImage
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               src={HCIMG}
               alt="Family fun"
               quality={50}
@@ -254,22 +244,11 @@ https://app.tribehome.com/developments/1446303707191840768/loop"
                 {project.HOMEOWNER_CARE_TEXT}
               </Button>
             </div>
-            {/* <motion.span
-            whileHover={{
-              scale: 0.85,
-              transition: { duration: 1 },
-            }}
-            className="flex heavy-med m-auto w-full tracking-tighter text-center font-bold relative text-white h-full align-middle justify-center items-center"
-          >
-            <strong className={`${montserrat.className}`}>
-              {props.status}
-            </strong>
-          </motion.span> */}
           </div>
         </PageSection>
       </div>
 
-      <PageSection style={"container min-h-screen pt-16 pb-16 md:pb-32"}>
+      <PageSection style={"container pb-16 md:pb-32"}>
         <ProjectGallery />
       </PageSection>
     </>

@@ -31,6 +31,7 @@ import newyork from "../images/newyork.webp";
 import gallery1 from "../images/1650-day.webp";
 import gallery2 from "../images/618-lobby.webp";
 import gallery3 from "../images/pendrell-aerial.webp";
+import test from "../../public/images/dec7/P8.webp"
 
 import {
   staggerText,
@@ -95,7 +96,7 @@ const cities = [
   {
     url: "/posts/618-carnavron",
     name: "618 CARNAVRON",
-    image: "https://i.imgur.com/6p4tNs5.jpeg",
+    image: "https://i.imgur.com/Ogkc2c7.jpg"
   },
   {
     url: "/posts/pendrell-street",
@@ -151,51 +152,6 @@ export const renderSwitch2 = (
     case "contact":
       return (
         <>
-          {/* <div className="footer-contact-container w-full flex md:hidden">
-            <ul className="w-full flex justify-between">
-              {test2.map(
-                (
-                  item: {
-                    [x: string]:
-                      | string
-                      | number
-                      | boolean
-                      | React.ReactElement<
-                          any,
-                          string | React.JSXElementConstructor<any>
-                        >
-                      | Iterable<React.ReactNode>
-                      | React.ReactPortal
-                      | React.PromiseLikeOfReactNode
-                      | null
-                      | undefined;
-                  },
-                  index: any
-                ) => (
-                  <>
-                    <div className="mb-0">
-                      <li className="underscore-cta mb-0 text-left">
-                        {item["phone"]}
-                      </li>
-                      <li className="underscore-cta mb-0 text-left">
-                        {item["email"]}
-                      </li>
-                      <li className="underscore-cta mb-0 text-left">
-                        {item["address"]}
-                        &nbsp;
-                        {item["address2"]}
-                      </li>
-                      <li className="underscore-cta mb-0 text-left">
-                        {item["city"]} &nbsp;
-                        {item["postal"]}
-                      </li>
-                    </div>
-                  </>
-                )
-              )}
-            </ul>
-          </div> */}
-
           <div className="footer-contact-container w-full flex">
             <ul className="w-full flex justify-between">
               {test2.map(
@@ -296,17 +252,17 @@ export const renderSwitch = (params: { [x: string]: any }) => {
 
 const handleCity = (city: string, target: gsap.TweenTarget) => {
   gsap.to(target, {
-    duration: 0,
+    duration: .2,
     background: `url(${city}) center center`,
   });
   gsap.to(target, {
-    duration: 0.4,
+    duration: 1.2,
     opacity: 1,
     ease: "power3.inOut",
   });
   gsap.from(target, {
     duration: 0.4,
-    skewY: 2,
+    // skewY: 2,
     transformOrigin: "right top",
   });
 };

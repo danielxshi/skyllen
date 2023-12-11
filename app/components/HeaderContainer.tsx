@@ -27,7 +27,6 @@ class SlugNav extends Component<Props, any> {
   };
   render() {
     const locale = getLocale();
-    console.log(locale);
     return (
       // <AnimatePresence>
       <Navbar>

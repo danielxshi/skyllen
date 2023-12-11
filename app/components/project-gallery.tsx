@@ -4,7 +4,8 @@ import Head from "next/head";
 import GalleryButton from "./gallery-buttons";
 import Headline from "./headline";
 import gallery1 from "../images/1650-day.webp";
-import gallery2 from "../images/618-lobby.webp";
+// import gallery2 from "../images/618-lobby.webp";
+import gallery2 from "../../public/images/dec7/P1.webp";
 import gallery3 from "../images/pendrell-aerial.webp";
 import React, {
   useRef,
@@ -23,7 +24,7 @@ type Props = {
 
 const cities = [
   {
-    // name: localizedProjects[0].TITLE, 
+    // name: localizedProjects[0].TITLE,
     name: "1650 ON SECOND",
     image: gallery1,
     location: "Kitsilano, BC",
@@ -35,7 +36,7 @@ const cities = [
     image: gallery2,
     location: "New Westminister, BC",
     status: localizedMessages.NOW_SELLING,
-    url: "/posts/618-carnavron",
+    url: "../../public/images/dec7/P1.webp",
   },
   {
     name: "EDITION",
@@ -67,7 +68,7 @@ const ProjectGallery = ({ children }: Props) => {
   return (
     <section>
       {children}
-      <div className="flex flex-col md:grid md:grid-cols-9 gap-8">
+      <div className="flex flex-col md:grid md:grid-cols-9 gap-12">
         {cities.map((el) => (
           <div
             className="gallery-button-container mb-16 last:mb-0 md:mb-0 md:col-span-3"

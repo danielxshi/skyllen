@@ -15,7 +15,7 @@ import React from "react";
 import localFont from "next/font/local";
 import { getLocalizedMessages } from "@/src/i18n";
 import { BrowserRouter } from "react-router-dom";
-import FooterImg from "../public/images/dec7/Footer1.webp"
+import FooterImg from "../public/images/dec7/Footer1.webp";
 import ParallaxFooter from "./components/ParallaxFooter";
 
 const localizedMessages = getLocalizedMessages();
@@ -67,8 +67,12 @@ export const renderSwitch = (params: { [x: string]: any }) => {
             {test2.map((item, index) => (
               <div key={index}>
                 <li>{item["email"]}</li>
-                <li className="">{item["address"]}&nbsp;{item["address2"]}</li>
-                <li className="">{item["city"]}&nbsp;{item["postal"]}</li>
+                <li className="">
+                  {item["address"]}&nbsp;{item["address2"]}
+                </li>
+                <li className="">
+                  {item["city"]}&nbsp;{item["postal"]}
+                </li>
                 <li className="">{item["phone"]}</li>
               </div>
             ))}
@@ -120,8 +124,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
             {test2.map((item, index) => (
               <>
                 <footer key={index}>
-                  &copy; {item["text"]}&nbsp;{" "}
-                  <br className="md:hidden"/>
+                  &copy; {item["text"]}&nbsp; <br className="md:hidden" />
                   <Link href={item["url"]}>{item["copy"]}</Link>
                 </footer>
               </>
@@ -137,7 +140,7 @@ export const renderSwitch = (params: { [x: string]: any }) => {
 function Footer() {
   return (
     <footer className="text-white bg-accent-1 flex footer-container overflow-hidden">
-      <div className="content container md:grid-cols-8 ">
+      <div className="content container md:grid-cols-8 md:grid">
         {FooterMessages.FooterItems.map((item, index) => {
           return <>{renderSwitch(item)}</>;
         })}
@@ -156,7 +159,7 @@ function HeaderModal() {
   };
 
   const closeModal2 = (e) => {
-    console.log("close modal");
+    // console.log("close modal");
     if (modalRef.current === e.target) {
       setShowModal(false);
     }
@@ -181,63 +184,58 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // <BrowserRouter>
-      <ScrollObserver>
-        <html lang="en" className={`${quicksand.className}`}>
-          <body>
-            <section className="min-h-screen">
-              <HeaderModal />
+    <ScrollObserver>
+      <html lang="en" className={`${quicksand.className}`}>
+        <body>
+          <section className="min-h-screen">
+            <HeaderModal />
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{
+                opacity: 0,
+                transitionEnd: {
+                  display: "none",
+                },
+              }}
+              transition={{
+                delay: 0.5,
+                duration: 4.5,
+                ease: "easeInOut",
+                type: "tween",
+              }}
+              className="wrapper2"
+            >
               <motion.div
-                initial={{ opacity: 1 }}
-                animate={{
-                  opacity: 0,
-                  transitionEnd: {
-                    display: "none",
-                  },
-                }}
-                transition={{
-                  delay: 0.5,
-                  duration: 4.5,
-                  ease: "easeInOut",
-                  type: "tween",
-                }}
-                className="wrapper2"
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: 1,
-                  }}
-                  transition={{ duration: 2, ease: "easeInOut" }}
-                  className="loader--hero "
-                >
-                  <ContentfulImage
-                    src={Logo}
-                    width={100}
-                    height={100}
-                    quality={85}
-                  />
-                </motion.div>
-              </motion.div>
-              <motion.main
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+                className="loader--hero "
               >
-                {children}
-              </motion.main>
+                <ContentfulImage
+                  src={Logo}
+                  width={100}
+                  height={100}
+                  quality={85}
+                />
+              </motion.div>
+            </motion.div>
+            <motion.main
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+            >
+              {children}
+            </motion.main>
 
-              <ParallaxFooter url="https://i.imgur.com/eXGmxHr.png">
-                {/* <div className="parallax-bg z-0">
-        <ContentfulImage src={props.url} fill={true} />
-      </div> */}
-                <Footer />
-              </ParallaxFooter>
-            </section>
-          </body>
-        </html>
-      </ScrollObserver>
-    // </BrowserRouter>
+            <ParallaxFooter url="https://i.imgur.com/eXGmxHr.png">
+              <Footer />
+            </ParallaxFooter>
+          </section>
+        </body>
+      </html>
+    </ScrollObserver>
   );
 }

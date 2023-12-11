@@ -19,6 +19,7 @@ export default {
         "screen-3/4": "75vh",
         "300": "300px",
         "450": "450px",
+        "150vw": "150vw"
       },
       width: {
         "w-screen-1/2": "50vw",
