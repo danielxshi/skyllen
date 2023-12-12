@@ -56,8 +56,8 @@ export const fadeInUp = (node: gsap.TweenTarget) => {
 export const handleHover = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
   gsap.to(e.target, {
     duration: 0.3,
-    y: 3,
-    skewX: -4,
+    // y: 3,
+    // skewX: -4,
     ease: "power1.inOut"
   });
 };
@@ -66,8 +66,8 @@ export const handleHover = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEve
 export const handleHoverExit = (e: MouseEvent<HTMLAnchorElement, globalThis.MouseEvent>) => {
   gsap.to(e.target, {
     duration: 0.3,
-    y: -3,
-    skewX: 0,
+    // y: -3,
+    // skewX: 0,
     ease: "power1.inOut"
   });
 };

@@ -731,11 +731,12 @@ button,
 .description {
   //   font-family: "Jost", sans-serif;
   font-weight: 400;
-  letter-spacing: 0.1rem;
+  // letter-spacing: 0.1rem;
 }
 
 .label-base{
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 label,
