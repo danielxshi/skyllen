@@ -36,7 +36,7 @@ const cities = [
     image: gallery2,
     location: "New Westminister, BC",
     status: localizedMessages.NOW_SELLING,
-    url: "../../public/images/dec7/P1.webp",
+    url: "/posts/618-carnavron",
   },
   {
     name: "EDITION",
