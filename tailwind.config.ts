@@ -24,6 +24,7 @@ export default {
       width: {
         "w-screen-1/2": "50vw",
         "300": "300px",
+        "350": "350px",
         "600": "600px",
         "9/10": "90vw",
         "58rem" : "58rem"

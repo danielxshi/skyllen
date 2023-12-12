@@ -110,7 +110,7 @@ const ch = {
   TEST_PROJECT_618_TITLE: "中文 618 CARNAVRON is NOW CHINESE",
   TEST_PROJECT_618_EXCERPT: "Community · Convienence",
   TEST_PROJECT_618_SLUG: "618-carnavron",
-  TEST_PROJECT_618_COVER_IMAGE: "https://i.imgur.com/wYTCtRu.jpeg",
+  TEST_PROJECT_618_COVER_IMAGE: "https://i.imgur.com/KqTDU1F.jpg",
   TEST_PROJECT_618_TYPE: "住宅空间｜办公空间｜底层商铺",
   TEST_PROJECT_618_COUNT: "262",
   TEST_PROJECT_618_STATUS: "Register Now",
@@ -151,7 +151,7 @@ const ch_project0 = {
     "618 Carnarvon 的住宅专为现代都市生活而设计。灵感来自独立居住的家庭，入口通向开放的生活空间，适合家庭活动，相邻的卧室在需要时保有隐私空间。",
   BUBBLE_THREE:
     "618 Carnarvon 将提供超过30,000平方英尺的专属于居民的景观绿地，并向社区开放一个小型角落公园。",
-  COVER_IMAGE: "https://i.imgur.com/PPFrbgo.jpg",
+  COVER_IMAGE: "https://i.imgur.com/KqTDU1F.jpg",
   WEBSITE: "http://www.618carnarvon.com",
   WEBSITE_TEXT: "项目详情网站",
   WEBSITE_BTN_STATE: "",
@@ -220,7 +220,7 @@ const ch_project2 = {
     "The homes at 618 Carnarvon are designed for modern urban living. Inspired by single-family homes, entrances lead into open living spaces for family activities with adjoining bedrooms providing privacy when preferred.",
   BUBBLE_THREE:
     "618 Carnarvon will provide over 30,000 square feet of landscaped green space exclusive to residents, as well as a corner pocket park accessible to the community.",
-  COVER_IMAGE: "https://i.imgur.com/mleUS0f.jpg",
+  COVER_IMAGE: "https://i.imgur.com/XYMPU3S.jpg",
   WEBSITE: "",
   WEBSITE_TEXT: "敬请期待",
   WEBSITE_BTN_STATE: "no-select",

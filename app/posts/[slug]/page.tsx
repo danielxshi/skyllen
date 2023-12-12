@@ -64,7 +64,7 @@ export default function Page() {
         <div className="md:flex md:w-full justify-between">
           <div className="md:mb-0 mb-8 flex flex-col">
             <span className={`mb-0 md:mb-8 font-bold ${montserratt.className}`}>
-              {localizedMessages.PROJECT_mDETAILS_STATUS}
+              {localizedMessages.PROJECT_DETAILS_STATUS}
             </span>
             <p>{project.STATUS}</p>
           </div>
@@ -138,7 +138,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="mt-auto md:w-300">
+            <div className="mt-auto md:w-350">
               <p className="text-bubble-content">{project.BUBBLE_ONE}</p>
             </div>
           </div>
