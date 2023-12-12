@@ -289,7 +289,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 // type="email"
                 // id="email"
                 // name="email"
-                value={inputs.phone}
+                // value={inputs.phone}
                 onChange={handleOnChange}
                 name="_phone"
                 placeholder="Your Phone"
@@ -304,7 +304,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 // id="email"
                 name="_postal"
                 onChange={handleOnChange}
-                value={inputs.postal}
+                // value={inputs.postal}
                 placeholder="Your Postal Code"
                 required
               />
@@ -341,7 +341,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                   type="text"
                   placeholder="Your Company"
                   name="company"
-                  value={inputs.company}
+                  // value={inputs.company}
                   onChange={handleOnChange}
                 ></input>
               </motion.div>
