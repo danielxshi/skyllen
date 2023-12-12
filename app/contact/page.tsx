@@ -211,8 +211,8 @@ const Contact: React.FC<SelectComponentProps> = () => {
               </div>
 
               <motion.div
-                transition={{ duration: 0.95, ease: "easeInOut",  }}
-                initial={{ opacity: 0 }}
+                // transition={{ duration: 0.95, ease: "easeInOut",  }}
+                // initial={{ opacity: 0 }}
                 className={` ${hidden ? "hidden " : "block  "}`}
                 animate={hidden ? "hidden" : "visible"}
               >
