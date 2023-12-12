@@ -376,7 +376,7 @@ export const BurgerModal = ({
                                         {localizedMessages.COMPANY}
                                       </Link>
                                     </li>
-                                    <li className={` ${quicksand.className}`}>
+                                    {/* <li className={` ${quicksand.className}`}>
                                       <Link
                                         onMouseEnter={(e) => handleHover(e)}
                                         onMouseOut={(e) => handleHoverExit(e)}
@@ -388,7 +388,7 @@ export const BurgerModal = ({
                                       >
                                         {localizedMessages.NEWS}
                                       </Link>
-                                    </li>
+                                    </li> */}
 
                                     <li className={` ${quicksand.className}`}>
                                       <Link
