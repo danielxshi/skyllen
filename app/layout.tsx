@@ -17,6 +17,13 @@ import { getLocalizedMessages } from "@/src/i18n";
 import { BrowserRouter } from "react-router-dom";
 import FooterImg from "../public/images/dec7/Footer1.webp";
 import ParallaxFooter from "./components/ParallaxFooter";
+import { Metadata } from 'next';
+ 
+// export const metadata: Metadata = {
+//   title: 'Skyllen Pacific',
+//   description: 'Skyllen Pacific',
+//   // metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+// }; 
 
 const localizedMessages = getLocalizedMessages();
 
@@ -185,6 +192,9 @@ export default function RootLayout({
 }) {
   return (
     <ScrollObserver>
+      {/* <head>
+        <title>Skyllen Pacific</title>
+      </head> */}
       <html lang="en" className={`${quicksand.className}`}>
         <body>
           <section className="min-h-screen">

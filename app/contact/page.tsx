@@ -62,24 +62,6 @@ const renderSwitch = (params) => {
   }
 };
 
-// Define a function to be executed when the select option changes
-// function handleSelectChange(event: Event) {
-//   // Get the selected value
-//   const selectedValue = (event.target as HTMLSelectElement).value;
-
-//   // Perform actions based on the selected value
-//   console.log(`Selected option: ${selectedValue}`);
-
-//   // Add your registration logic here or call another function
-//   // based on the selected option.
-// }
-
-// // Add an event listener to the select element
-// const selectElement = document.getElementById('mySelect') as HTMLSelectElement | null;
-
-// if (selectElement) {
-//   selectElement.addEventListener('change', handleSelectChange);
-// }
 
 interface SelectComponentProps {
   // Define any additional props you may need
@@ -89,6 +71,83 @@ const Contact: React.FC<SelectComponentProps> = () => {
   const [hidden, setHidden] = useState(true);
   const [selectedValue, setSelectedValue] = useState<string>("");
 
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+ //   Form validation state
+ const [errors, setErrors] = useState({});
+
+ //   Setting button text on form submission
+ const [buttonText, setButtonText] = useState("Send");
+
+ // Setting success or failure messages states
+ const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+ const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+ // Validation check method
+ const handleValidation = () => {
+   let tempErrors = {};
+   let isValid = true;
+
+   if (fullname.length <= 0) {
+     tempErrors["fullname"] = true;
+     isValid = false;
+   }
+   if (email.length <= 0) {
+     tempErrors["email"] = true;
+     isValid = false;
+   }
+   if (subject.length <= 0) {
+     tempErrors["subject"] = true;
+     isValid = false;
+   }
+   if (message.length <= 0) {
+     tempErrors["message"] = true;
+     isValid = false;
+   }
+
+   setErrors({ ...tempErrors });
+   console.log("errors", errors);
+   return isValid;
+ };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let isValidForm = handleValidation();
+
+    if (isValidForm) {
+      setButtonText("Sending");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          // subject: subject,
+          // message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText("Send");
+    }
+    console.log("ok" + fullname, email);
+  };
+
+
   // Event handler to update the state when the select field changes
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue(event.target.value);
@@ -97,10 +156,10 @@ const Contact: React.FC<SelectComponentProps> = () => {
       JSON.stringify({ selectedValue }) ==
       JSON.stringify({ selectedValue: "option1" })
     ) {
-      console.log(hidden + " equals");
+      // console.log(hidden + " equals");
       setHidden(true);
     } else {
-      console.log(hidden + " does not equal");
+      // console.log(hidden + " does not equal");
       setHidden(false);
     }
     // console.log(JSON.stringify({ selectedValue }));
@@ -145,7 +204,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
               method="post"
               onSubmit={handleOnSubmit}
             >
-              <label className="required" htmlFor="name">
+              <label className="required" htmlFor="fullname">
                 {localizedMessages.CONTACT_FORM_FULL_NAME}
               </label>
               <input
@@ -154,7 +213,11 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 aria-required="true"
                 type="text"
                 id="name"
-                name="name"
+                value={fullname}
+                onChange={(e) => {
+                  setFullname(e.target.value);
+                }}
+                name="fullname"
                 placeholder="Your Full Name"
               />
               <label className="required" htmlFor="email">
@@ -166,6 +229,10 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 id="email"
                 name="email"
                 placeholder="Your Email Address"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                }}
                 required
               />
               <label className="required label-base">
@@ -176,6 +243,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 // type="email"
                 // id="email"
                 // name="email"
+                name="phone"
                 placeholder="Your Phone"
                 required
               />
@@ -186,7 +254,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 aria-required="true"
                 type="text"
                 // id="email"
-                // name="email"
+                name="postal"
                 placeholder="Your Postal Code"
                 required
               />
@@ -220,10 +288,9 @@ const Contact: React.FC<SelectComponentProps> = () => {
                   {localizedMessages.CONTACT_FORM_Q_SELECT_TEXT}
                 </label>
                 <input
-                  aria-required="true"
                   type="text"
                   placeholder="Your Company"
-                  required
+                  name="company"
                 />
               </motion.div>
 
@@ -248,7 +315,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 }}
                 whileHover={{
                   color: "#AACAE6",
-                  fontWeight: "bold",
+                  // fontWeight: "bold",
                 }}
                 className="md:mt-8 mt-4 btn-wrap min-w-max align-middle w-24 font-mono font-medium text-small leading-none px-6 py-4 border-solid border border-black rounded-full"
               >
@@ -310,3 +377,4 @@ const Contact: React.FC<SelectComponentProps> = () => {
 // };
 
 export default Contact;
+
