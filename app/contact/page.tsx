@@ -11,7 +11,8 @@ import localFont from "next/font/local";
 import { motion } from "framer-motion";
 import test from "../images/SkyllenSign.webp";
 import { getLocalizedMessages } from "@/src/i18n";
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+// import { SelectedTeam } from "./form";
 
 const localizedMessages = getLocalizedMessages();
 
@@ -44,8 +45,12 @@ const renderSwitch = (params) => {
             {test2.map((item, index) => (
               <div key={index}>
                 <li>{item["email"]}</li>
-                <li>{item["address"]}&nbsp;{item["address2"]}</li>
-                <li>{item["city"]}&nbsp;{item["postal"]}</li>
+                <li>
+                  {item["address"]}&nbsp;{item["address2"]}
+                </li>
+                <li>
+                  {item["city"]}&nbsp;{item["postal"]}
+                </li>
                 <li>{item["phone"]}</li>
               </div>
             ))}
@@ -76,9 +81,33 @@ const renderSwitch = (params) => {
 //   selectElement.addEventListener('change', handleSelectChange);
 // }
 
+interface SelectComponentProps {
+  // Define any additional props you may need
+}
 
-export default function Contact() {
-  // const [hidden, setHidden] = useState(true);
+const Contact: React.FC<SelectComponentProps> = () => {
+  const [hidden, setHidden] = useState(true);
+  const [selectedValue, setSelectedValue] = useState<string>("");
+
+  // Event handler to update the state when the select field changes
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedValue(event.target.value);
+    console.log(selectedValue);
+    if (
+      JSON.stringify({ selectedValue }) ==
+      JSON.stringify({ selectedValue: "option1" })
+    ) {
+      console.log(hidden + " equals");
+      setHidden(true);
+    } else {
+      console.log(hidden + " does not equal");
+      setHidden(false);
+    }
+    // console.log(JSON.stringify({ selectedValue }));
+    // console.log(JSON.stringify({ selectedValue: "option1" }));
+  };
+
+  // console.log("You selected" + {SelectedTeam})
   // const [select, setSelect] = useState("b");
   async function handleOnSubmit(e) {
     e.preventDefault();
@@ -169,35 +198,30 @@ export default function Contact() {
                 {" "}
                 <select
                   name="agent"
-                  id="mySelect"
+                  // id="mySelect"
                   className="form-select"
                   required
+                  id="selectField"
+                  value={selectedValue}
+                  onChange={handleSelectChange}
                 >
-                  <option
-                    // value={value}
-                    // onChange={(e) => {
-                    //   setSelect(e.target.value);
-                    // }}
-                    value="Select Option"
-                  >{localizedMessages.YES}/{localizedMessages.NO}</option>
-                  <option value="true">{localizedMessages.YES}</option>
-                  <option value="false">{localizedMessages.NO}</option>
-                  
+                  <option value="option2"> {localizedMessages.NO}</option>
+                  <option value="option1">{localizedMessages.YES}</option>
                 </select>
               </div>
 
               <motion.div
-                // className={` ${hidden ? "hidden " : "flex  "}`}
-                // animate={hidden ? "hidden" : "visible"}
+                transition={{ duration: 0.95, ease: "easeInOut",  }}
+                initial={{ opacity: 0 }}
+                className={` ${hidden ? "hidden " : "block  "}`}
+                animate={hidden ? "hidden" : "visible"}
               >
-                <label className="required label-base">
+                <label className="label-base">
                   {localizedMessages.CONTACT_FORM_Q_SELECT_TEXT}
                 </label>
                 <input
                   aria-required="true"
                   type="text"
-                  // id="email"
-                  // name="email"
                   placeholder="Your Company"
                   required
                 />
@@ -254,4 +278,35 @@ export default function Contact() {
       </PageSection>
     </>
   );
-}
+};
+
+// import { useState } from 'react';
+
+// interface SelectComponentProps {
+//   // Define any additional props you may need
+// }
+
+// const SelectComponent: React.FC<SelectComponentProps> = () => {
+//   // State to manage the selected value of the select field
+//   const [selectedValue, setSelectedValue] = useState<string>('');
+
+//   // Event handler to update the state when the select field changes
+//   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+//     setSelectedValue(event.target.value);
+//   };
+
+//   return (
+//     <div>
+//       <label htmlFor="selectField">Select Field:</label>
+//       <select id="selectField" value={selectedValue} onChange={handleSelectChange}>
+//         <option value="option1">Option 1</option>
+//         <option value="option2">Option 2</option>
+//         <option value="option3">Option 3</option>
+//       </select>
+
+//       <p>Selected Value: {selectedValue}</p>
+//     </div>
+//   );
+// };
+
+export default Contact;

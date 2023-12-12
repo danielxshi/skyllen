@@ -734,10 +734,13 @@ button,
   letter-spacing: 0.1rem;
 }
 
+.label-base{
+  text-transform: uppercase;
+}
+
 label,
 .description {
   color: var(--primary-color);
-  text-transform: uppercase;
 }
 .label-small {
   font-size: 0.625rem !important;
