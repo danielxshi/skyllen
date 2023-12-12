@@ -224,7 +224,7 @@ const ch_project2 = {
   WEBSITE: "",
   WEBSITE_TEXT: "敬请期待",
   WEBSITE_BTN_STATE: "no-select",
-  RENDER: "https://i.imgur.com/KxcoCCf.png",
+  RENDER: "https://i.imgur.com/R67ibBD.png",
   PROJECT_IMAGE_ONE: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_TWO: "https://i.imgur.com/wYTCtRu.jpeg",
   PROJECT_IMAGE_THREE: "https://i.imgur.com/wYTCtRu.jpeg",
