@@ -12,7 +12,11 @@ import { motion } from "framer-motion";
 import test from "../images/SkyllenSign.webp";
 import { getLocalizedMessages } from "@/src/i18n";
 import { useState, useEffect } from "react";
-// import { SelectedTeam } from "./form";
+// import SendHandler from "./sendHandler"
+import axios from "axios";
+import { useForm, ValidationError } from "@formspree/react";
+
+// End of new Vercel contact form
 
 const localizedMessages = getLocalizedMessages();
 
@@ -62,12 +66,13 @@ const renderSwitch = (params) => {
   }
 };
 
-
 interface SelectComponentProps {
   // Define any additional props you may need
 }
 
 const Contact: React.FC<SelectComponentProps> = () => {
+  const [state, handleSubmit] = useForm("mrgwnvpa");
+
   const [hidden, setHidden] = useState(true);
   const [selectedValue, setSelectedValue] = useState<string>("");
 
@@ -75,78 +80,42 @@ const Contact: React.FC<SelectComponentProps> = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
- //   Form validation state
- const [errors, setErrors] = useState({});
+  //   Form validation state
+  const [errors, setErrors] = useState({});
 
- //   Setting button text on form submission
- const [buttonText, setButtonText] = useState("Send");
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState("Send");
 
- // Setting success or failure messages states
- const [showSuccessMessage, setShowSuccessMessage] = useState(false);
- const [showFailureMessage, setShowFailureMessage] = useState(false);
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
 
- // Validation check method
- const handleValidation = () => {
-   let tempErrors = {};
-   let isValid = true;
+  // Validation check method
+  // const handleValidation = () => {
+  //   let tempErrors = {};
+  //   let isValid = true;
 
-   if (fullname.length <= 0) {
-     tempErrors["fullname"] = true;
-     isValid = false;
-   }
-   if (email.length <= 0) {
-     tempErrors["email"] = true;
-     isValid = false;
-   }
-   if (subject.length <= 0) {
-     tempErrors["subject"] = true;
-     isValid = false;
-   }
-   if (message.length <= 0) {
-     tempErrors["message"] = true;
-     isValid = false;
-   }
+  //   if (fullname.length <= 0) {
+  //     tempErrors["fullname"] = true;
+  //     isValid = false;
+  //   }
+  //   if (email.length <= 0) {
+  //     tempErrors["email"] = true;
+  //     isValid = false;
+  //   }
+  //   if (subject.length <= 0) {
+  //     tempErrors["subject"] = true;
+  //     isValid = false;
+  //   }
+  //   if (message.length <= 0) {
+  //     tempErrors["message"] = true;
+  //     isValid = false;
+  //   }
 
-   setErrors({ ...tempErrors });
-   console.log("errors", errors);
-   return isValid;
- };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    let isValidForm = handleValidation();
-
-    if (isValidForm) {
-      setButtonText("Sending");
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: email,
-          fullname: fullname,
-          // subject: subject,
-          // message: message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText("Send");
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText("Send");
-    }
-    console.log("ok" + fullname, email);
-  };
-
+  //   setErrors({ ...tempErrors });
+  //   console.log("errors", errors);
+  //   return isValid;
+  // };
 
   // Event handler to update the state when the select field changes
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -156,29 +125,99 @@ const Contact: React.FC<SelectComponentProps> = () => {
       JSON.stringify({ selectedValue }) ==
       JSON.stringify({ selectedValue: "option1" })
     ) {
-      // console.log(hidden + " equals");
       setHidden(true);
     } else {
-      // console.log(hidden + " does not equal");
       setHidden(false);
     }
-    // console.log(JSON.stringify({ selectedValue }));
-    // console.log(JSON.stringify({ selectedValue: "option1" }));
   };
-
-  // console.log("You selected" + {SelectedTeam})
-  // const [select, setSelect] = useState("b");
-  async function handleOnSubmit(e) {
-    e.preventDefault();
-    const formData = {};
-    // Array.from(e.currentTarget.elements).forEach(field => {
-    //   if(!field.name) return;
-    //   formData[field.name] = field.value;
-    // });
-    console.log(formData);
+  if (state.succeeded) {
+    console.log("success");
   }
+  // async function handleOnSubmit(e) {
+  //   e.preventDefault();
+  //   const formData = JSON.parse(e.body);
 
-  // console.log(select.valueOf)
+  //   // const replacebleData = {
+  //   //   key: "Value",
+  //   // };
+  //   // await email.sendEmail(emailArray, subjectLine, templateId, replacebleData);
+
+  //   console.log(formData);
+  // }
+
+  // New vercel contact form
+
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
+  const [inputs, setInputs] = useState({
+    email: "",
+    message: "",
+    name: "",
+    _phone: "",
+    postalcode: "",
+    selectedValue: "",
+    _company: "",
+  });
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      });
+      setInputs({
+        email: "",
+        message: "",
+        name: "",
+        _phone: "",
+        postalcode: "",
+        selectedValue: "",
+        _company: "",
+      });
+    } else {
+      // setStatus({
+      //   info: { error: true, msg: msg },
+      // });
+      console.log("404 error");
+    }
+  };
+  const handleOnChange = (e) => {
+    e.persist();
+    setInputs((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    });
+  };
+  // const handleOnSubmit = (e) => {
+  //   e.preventDefault();
+  //   setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+  //   // axios({
+  //   //   method: "POST",
+  //   //   url: "https://formspree.io/https://formspree.io/f/mrgwnvpa",
+  //   //   data: inputs,
+  //   // })
+  //   // handleSubmit
+  //   //   .then((response) => {
+  //   //     handleServerResponse(
+  //   //       true,
+  //   //       "Thank you, your message has been submitted."
+  //   //     );
+  //   //   })
+  //   // .catch((error) => {
+  //   //   handleServerResponse(false, error.response.data.error);
+  //   // });
+  // };
+
+  // End of new vercel contact form
+
   return (
     <>
       <ParallaxBG url="../images/SkyllenSign.webp">
@@ -202,9 +241,9 @@ const Contact: React.FC<SelectComponentProps> = () => {
               id="contact-form"
               className="md:w-fit"
               method="post"
-              onSubmit={handleOnSubmit}
+              onSubmit={handleSubmit}
             >
-              <label className="required" htmlFor="fullname">
+              <label className="required" htmlFor="name">
                 {localizedMessages.CONTACT_FORM_FULL_NAME}
               </label>
               <input
@@ -213,11 +252,12 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 aria-required="true"
                 type="text"
                 id="name"
-                value={fullname}
-                onChange={(e) => {
-                  setFullname(e.target.value);
-                }}
-                name="fullname"
+                value={inputs.name}
+                // onChange={(e) => {
+                //   setEmail(e.target.value);
+                // }}
+                onChange={handleOnChange}
+                name="name"
                 placeholder="Your Full Name"
               />
               <label className="required" htmlFor="email">
@@ -227,13 +267,19 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 aria-required="true"
                 type="email"
                 id="email"
-                name="email"
+                name="_replyto"
                 placeholder="Your Email Address"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value)
-                }}
+                value={inputs.email}
+                // onChange={(e) => {
+                //   setEmail(e.target.value);
+                // }}
+                onChange={handleOnChange}
                 required
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
               />
               <label className="required label-base">
                 {localizedMessages.CONTACT_FORM_PHONE}
@@ -243,7 +289,9 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 // type="email"
                 // id="email"
                 // name="email"
-                name="phone"
+                value={inputs.phone}
+                onChange={handleOnChange}
+                name="_phone"
                 placeholder="Your Phone"
                 required
               />
@@ -254,7 +302,9 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 aria-required="true"
                 type="text"
                 // id="email"
-                name="postal"
+                name="_postal"
+                onChange={handleOnChange}
+                value={inputs.postal}
                 placeholder="Your Postal Code"
                 required
               />
@@ -270,7 +320,7 @@ const Contact: React.FC<SelectComponentProps> = () => {
                   className="form-select"
                   required
                   id="selectField"
-                  value={selectedValue}
+                  value={inputs.selectedValue}
                   onChange={handleSelectChange}
                 >
                   <option value="option2"> {localizedMessages.NO}</option>
@@ -291,7 +341,9 @@ const Contact: React.FC<SelectComponentProps> = () => {
                   type="text"
                   placeholder="Your Company"
                   name="company"
-                />
+                  value={inputs.company}
+                  onChange={handleOnChange}
+                ></input>
               </motion.div>
 
               <div className="disclaimer w-fit flex align-middle items-center flex-row">
@@ -322,13 +374,22 @@ const Contact: React.FC<SelectComponentProps> = () => {
                 <button
                   className={`button-content flex justify-center m-auto align-middle ${montserratt.className}`}
                   type="submit"
+                  disabled={status.submitting}
                   id="submit"
                   name="submit"
                 >
-                  SUBMIT
+                  {!status.submitting
+                    ? !status.submitted
+                      ? "Submit"
+                      : "Submitted"
+                    : "Submitted"}{" "}
                 </button>
               </motion.div>
             </form>
+            {status.info.error && (
+              <div className="error">Error: {status.info.msg}</div>
+            )}
+            {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
           </div>
           <div className="mt-16 pb-16 md:pb-0 md:mt-0 md:col-start-1 md:row-start-1 md:col-span-2">
             <p className={`mb-4 uppercase ${montserratt.className}`}>
@@ -377,4 +438,3 @@ const Contact: React.FC<SelectComponentProps> = () => {
 // };
 
 export default Contact;
-
