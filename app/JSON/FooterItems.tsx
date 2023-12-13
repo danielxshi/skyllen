@@ -3,7 +3,7 @@ const FooterItems = [
     contact: {
       content: [
         {
-          email: "info@skyellenpacific.com",
+          email: "info@skyllenpacific.com",
           address: "430 - 1650", 
           address2: "WEST 2ND AVENUE",
           city: "VANCOUVER, BC",
