@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { draftMode } from "next/headers";
 import { getAllPosts } from "@/lib/api";
 import Landing from "./components/landing";
@@ -7,6 +7,7 @@ import PageSection from "./components/page-section";
 import Headline from "./components/headline";
 import React, { useRef, useEffect } from "react";
 import SocialGallery from "./components/SocialGallery";
+import SocialRetrieve from "./components/SocialRetrieve";
 import ScrollParallaxVideo from "./components/ScrollVideo/ScrollParallaxVideo";
 import { getLocalizedMessages } from "@/src/i18n";
 
@@ -29,7 +30,9 @@ export default function Page() {
         </ProjectGallery>
       </PageSection>
       <PageSection style={"container pt-16 md:pb-32 pb-16 "}>
-        <SocialGallery />
+        <SocialGallery>
+          <SocialRetrieve />
+        </SocialGallery>
       </PageSection>
     </div>
   );
